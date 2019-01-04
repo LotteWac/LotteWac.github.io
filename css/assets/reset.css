@@ -1,0 +1,130 @@
+
+/*font-face*/
+@font-face {
+  font-family: 'lottemart-dream-Bold';
+  font-weight: 900;
+  src: url("../font/lottemart-dream-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: 'lottemart-dream-Medium';
+  font-weight: 700;
+  src: url("../font/lottemart-dream-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'lottemart-dream-Light';
+  font-weight: 300;
+  src: url("../font/lottemart-dream-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'lottemart-happy-Bold';
+  font-weight: 900;
+  src: url("../font/lottemart-happy-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'lottemart-happy-Medium';
+  font-weight: 700;
+  src: url("../font/lottemart-happy-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: 'lottemart-happy-Light';
+  font-weight: 300;
+  src: url("../font/lottemart-happy-Light.woff") format("woff");
+}
+
+
+html,body{width:100%;}
+html{overflow-y:scroll; overflow-x: hidden;}
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,button,header,nav,aside,footer,option,a,.header,.gnb, .login-box, .footer, .inner,.btn-box,input{margin:0; padding:0; font-size: 15px; box-sizing: border-box; font-family: 'lottemart-dream-Medium','lottemart-dream-Medium','Calibri', 'MalgunGothic', 'sans-serif';-webkit-font-size-adjust:none;}
+body,h1,h2,h3,h4,input,button{color:#A6A6A6;-webkit-font-size-adjust: 100%;}
+body{background-color:#fff;*word-break:break-all;-ms-word-break:break-all; font-family:'lottemart-dream-Medium','Calibri', 'MalgunGothic', 'sans-serif';text-align:left; }
+
+img,fieldset,iframe{border:0 none}
+li{list-style:none}
+input,select,button{vertical-align:middle}
+img{vertical-align:top}
+i,em,address{font-style:normal;}
+label,button{cursor:pointer}
+button{margin:0;padding:0;}
+
+
+
+
+/*사파리 인풋 CSS 제거*/
+input {-webkit-appearance: none;}
+/*rem용 폰트 리셋*/
+@media (max-width:360px){html{font-size:10px;}}
+@media (min-width:361px) and (max-width:399px){html{font-size:11px;}}
+@media (min-width:400px) and (max-width:439px){html{font-size:12px;}}
+@media (min-width:440px) and (max-width:479px){html{font-size:13px;}}
+@media (min-width:480px) and (max-width:519px){html{font-size:14px;}}
+@media (min-width:520px) and (max-width:559px){html{font-size:15px;}}
+@media (min-width:560px) and (max-width:599px){html{font-size:16px;}}
+@media (min-width:600px) and (max-width:639px){html{font-size:17px;}}
+@media (min-width:640px) and (max-width:679px){html{font-size:18px;}}
+@media (min-width:680px) and (max-width:719px){html{font-size:19px;}}
+@media (min-width:720px) and (max-width:759px){html{font-size:20px;}}
+@media (min-width:760px) and (max-width:799px){html{font-size:21px;}}
+@media (min-width:800px) and (max-width:839px){html{font-size:22px;}}
+@media (min-width:840px) and (max-width:879px){html{font-size:23px;}}
+@media (min-width:880px) and (max-width:919px){html{font-size:24px;}}
+@media (min-width:920px) and (max-width:959px){html{font-size:25px;}}
+@media (min-width:960px) and (max-width:999px){html{font-size:26px;}}
+@media (min-width:1000px) and (max-width:1039px){html{font-size:27px;}}
+@media (min-width:1040px) and (max-width:1079px){html{font-size:28px;}}
+@media (min-width:1080px) and (max-width:1119px){html{font-size:29px;}}
+@media (min-width:1120px) {html{font-size:30px;}}
+/*@media (min-width:1160px) and (max-width:1199px){html{font-size:31px;}}
+@media (min-width:1200px) and (max-width:1239px){html{font-size:32px;}}
+@media (min-width:1240px){html{font-size:33px;}}*/
+
+
+a{color:#000000;text-decoration:none}
+a:hover{text-decoration:none}
+a:visited, a:focus, a:active, a:hover{ outline:0 none !important; }
+button *{position:relative}
+button img{left:-3px;*left:auto}
+button:visited, button:focus, button:active, button:hover{ outline:0 none !important; }
+html:first-child select{height:20px;padding-right:6px}
+option{padding-right:6px}
+hr{display:none}
+legend{*width:0}
+table{border-collapse:collapse;border-spacing:0}
+
+input::-ms-clear{display:none}
+input::-ms-input-placeholder { color: #A6A6A6; }
+input::-webkit-input-placeholder { color: #A6A6A6; } 
+input::-moz-placeholder { color: #A6A6A6; }
+input::-moz-placeholder { color: #A6A6A6; }
+textarea::-ms-input-placeholder { color: #A6A6A6; }
+textarea::-webkit-input-placeholder { color: #A6A6A6; } 
+textarea::-moz-placeholder { color: #A6A6A6; }
+textarea::-moz-placeholder { color: #A6A6A6; }
+nput[type="text"]:focus,textarea:focus,input[type="file"]:focus,button:focus,input:focus{outline: none;}
+
+
+
+.clear-fix:after{content: ''; display: block; width: 0; height: 0; visibility: hidden; clear:both;}
+
+.inner{max-width: 1200px; width: 100%; margin:0 auto;overflow: hidden;position: relative;}
+.off{display: none;}
+.on{display: block;}
+.left{float: left;}
+.right{float: right;}
+
+/*mobile reset*/
+@media only screen and (max-width: 400px) {
+  .reset_font{font-size: 10px;}
+}
+
+@media only screen and (max-width: 500px) {
+  .reset_font{font-size: 10.5px; line-height: 1.2em}
+}
+
+@media only screen and (max-width: 600px) {
+  .reset_font{font-size: 13px;}
+  .inner{width: 100%; max-width: 600px;position:static;}
+  body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,button,header,nav,aside,footer,a,.header,.gnb, .login-box, .footer, .inner,.btn-box{margin:0; padding:0; font-size: 15px; box-sizing: border-box;font-family:'Calibri', 'MalgunGothic', 'sans-serif';}
+}

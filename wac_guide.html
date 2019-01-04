@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/assets/reset.css">
+    <link rel="stylesheet" href="./css/assets/default.css">
+    <link rel="stylesheet" href="./css/assets/index.css">
+    <link rel="stylesheet" href="./css/assets/atom-one-dark.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="./js/highlight.pack.js"></script>
+
+    
+    <title>롯데마트 웹접근성 가이드</title>
+</head>
+<body>
+        <!-- gnb start -->
+        <header class="gnb">
+          <!-- inner start -->
+          <div class="inner">
+                <h1>
+                <a href="./index.html">Accessibility Guide</a>
+                </h1>
+
+                <ul class="device">
+                    <li><a href="#">PC</a></li>
+                    <li><a href="#">MOBILE</a></li>
+                </ul>
+
+                <ul class="menu">
+                    <li><a href="#">SCRIPT</a></li>
+                    <li><a href="#">UI COMPONENTS</a></li>
+                </ul>
+            </div>
+            <!-- inner end -->
+        </header>
+        <!-- gnb end -->
+        <nav class="btn-fixed-top">
+            <a href="#top">
+                <i class="glyphicon glyphicon-eject"></i>
+            </a>
+        </nav>
+        <!-- container start -->
+        <div class="container" id="top">
+            <!-- inner start -->
+            <div class="inner">
+                <!-- lnb start -->
+                <nav class="lnb">
+                    <h2>PC 접근성</h2>
+                    <ul class="pc depth1-menu">
+                        <li><a href="./index.html">intro</a></li>
+                        <li><a href="#none">PC 접근성 검사항목</a>
+                            <ul class="depth2-menu">
+                                <li><a href="#item01">1. 이미지에 대한 적절한 대체텍스트 제공</a></li>
+                                <li><a href="#item02">2. 자막제공</a></li>
+                                <li><a href="#item03">3. 색에 무관한 콘텐츠 인식</a></li>
+                                <li><a href="#item04">4. 명확한 지시사항 제공</a></li>
+                                <li><a href="#item05">5. 텍스트 콘텐츠의 명도 대비</a></li>
+                                <li><a href="#item06">6. 자동 재생 금지</a></li>
+                                <li><a href="#item07">7. 콘텐츠 간의 구분</a></li>
+                                <li><a href="#item08">8. 키보드 사용 보장 (입력장치 접근성)</a></li>
+                                <li><a href="#item09">9. 초점이동</a></li>
+                                <li><a href="#item10">10. 조작가능</a></li>
+                                <li><a href="#item11">11. 응답시간 조절</a></li>
+                                <li><a href="#item12">12. 정지기능 제공 </a></li>
+                                <li><a href="#item13">13. 깜빡임과 번쩍임 사용 제한 </a></li>
+                                <li><a href="#item14">14. 반복영역 건너뛰기</a></li>
+                                <li><a href="#item15">15. 타이틀 및 제목 제공</a></li>
+                                <li><a href="#item16">16. 적절한 링크 텍스트</a></li>
+                                <li><a href="#item17">17. 기본 언어 표시</a></li>
+                                <li><a href="#item18">18. 사용자 요구에 따른 실행</a></li>
+                                <li><a href="#item19">19. 콘텐츠의 선형화 (콘텐츠의 선형 구조)</a></li>
+                                <li><a href="#item20">20. 표의 구성</a></li>
+                                <li><a href="#item21">21. 레이블 제공</a></li>
+                                <li><a href="#item22">22. 오류정정</a></li>
+                                <li><a href="#item23">23. 마크업오류방지</a></li>
+                                <li><a href="#item24">24. 웹 애플리케이션 접근성 준수</a></li>
+                            </ul>
+                            
+                        
+                        </li>
+                        <li><a href="#wacTestSample">PC 접근성 지표</a></li>
+                    </ul>
+                </nav>
+                <!-- lnb end -->
+
+                <!-- contents start -->
+                <div class="contents">
+                    <!-- #wacExample start -->
+                    <div id="wacExample" class="article">
+                        <h3>PC 접근성 검사항목</h3>
+                        <p>
+                            - PC 웹 접근성 지침에서 검사항목 별, 검사방법을 한 눈에 파악할 수 있도록 별도 정리하여 제공합니다.
+                        </p>
+
+                        <div class="text-alter" id="item01">
+                            <h4>1. 이미지에 대한 적절한 대체텍스트 제공</h4>
+                            <p>
+                                - 텍스트 아닌 콘텐츠는 그 의미나 용도를 이해할 수 있도록 대체 텍스트를 제공해야 한다.<br>
+                                - 대체 텍스트는 중복으로 제공하지 않는다.
+                            </p>
+                            
+                            <div class="definition"> 
+                                <h5>[적용기술]</h5>
+                                <ul>
+                                    <li>
+                                        - &lt;img&gt;, &lt;input type=”image”&gt;, &lt;area&gt;, &lt;applet&gt; : alt 속성으로 의미나 용도를 이해할 수 있도록 적절한 대체 텍스트 제공
+                                    </li>
+                                    <li>
+                                        - 배경이미지 (IR기법) : 의미있는 배경 이미지를 사용하였을 경우, 배경이미지에 대한 대체 텍스트 제공
+                                    </li>
+                                    <li>
+                                        - 링크, 버튼 : 용도가 명확한 이미지 링크, 이미지 버튼 등은 핵심기능에 대한 설명을 구체적으로 대체 텍스트 제공 (아이콘 포함)
+                                    </li>
+                                    <li>
+                                        - 웹 애플리케이션을 제공할 때, 동등한 기능을 수행 할 수 있는 대체 콘텐츠를 함께 제공해야 함.
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <dl class="check-list">
+                                <dt>자동검사방법</dt>
+                                <dd>
+                                    &lt;img&gt;, &lt;input type=”image”&gt;, &lt;area&gt;, &lt;applet&gt; 요소의 alt 속성 유무 체크
+                                </dd>
+
+                                <dt>수동검사방법</dt>
+                                <dd>
+                                    - alt 속성 값이 있는 &lt;img&gt;, &lt;input type=”image”&gt;, &lt;area&gt;, &lt;applet&gt; 요소 중 alt값을 적절한 대체 텍스트로 제공하였는지 체크<br>
+                                    - IR 기법내 적절한 대체 텍스트를 제공 하였는지 체크
+                                </dd>
+                            </dl>
+                            <div class="sample">
+                                <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                <p>
+                                    - 롯데마트 로고 이미지의 대체텍스트 제공
+                                </p>
+                                <img src="http://image.lottemart.com/v3/images/layout/h1_logo_01.gif" alt="롯데마트 Mall 새로운 생활의 큐레이터">
+
+                                <pre><code class="html">&lt;img src="http://image.lottemart.com/v3/images/layout/h1_logo_01.gif" alt="롯데마트 Mall 새로운 생활의 큐레이터"&gt;
+                                </code></pre>
+                            </div>
+
+                            <div class="sample">
+                                <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                <p>
+                                    - 메인 슬라이드 이미지 적용 예시 : 이미지가 제공하는 모든 내용을 alt 속성에 제공하여 이미지의 정보를 이해할 수 있음
+
+                                </p>
+                                <img src="./img/alter-text.png" alt="메인 슬라이드 이미지 적용 예시">
+
+                                <pre><code class="html">&lt;img src="http://image.lottemart.com/lim/static_root/images/front/contents/banner/2018/20181207015150210.jpg" alt="M쿠폰 회원 특별 혜택전 최대 20%  추가할인 상품 다모았다! " width="1600" height="500"&gt;
+                                </code></pre>
+                            </div>
+
+                            <div class="sample">
+                                <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                <p>
+                                    - 아이콘 이미지 대체 텍스트 제공 : 배경이미지 아이콘의 내용과 동일한 대체 텍스트 제공
+
+                                </p>
+                                <img src="./img/alter-text02.png" alt="아이콘 이미지 대체 텍스트 제공">
+
+                                <pre><code class="html">&lt;i class="icon-goods-discount"&gt;&lt;em class="number"&gt;30&lt;/em&gt; &lt;span class="blind"&gt;% 할인&lt;/span&gt;&lt;/i&gt;
+&lt;i class="icon-goods-type1"&gt;살수록 더싸게&lt;/i&gt;
+&lt;i class="icon-band-delivery1"&gt;매장배송&lt;/i&gt;
+                                </code></pre>
+                            </div>
+                        </div>
+                        
+                        <div class="video-caption" id="item02">
+                            <h4>2. 자막제공</h4>
+                            <p>
+                                - 광고성 콘텐츠(자막이 없는 동영상) 의 내용설명 글을 제공한다.<br><br>
+                                
+                                - 음성이 없는 경우 : 영상에 대한 설명글 제공<br>
+                                - 음성이 있는 경우 : 영상에 대한 원고 또는 싱크되는 자막 제공<br>
+                            </p>
+                            
+                            <div class="definition"> 
+                                <h5>[적용기술]</h5>
+                                <ul>
+                                    <li>
+                                       -  멀티미디어 콘텐츠를 장애인도 비장애인과 동등하게 인식할 수 있도록 제작해야 한다. 
+                                    </li>
+                                    <li>
+                                        - 가장 바람직한 방법은 닫힌 자막을 오디오와 동기화시켜 제공하는 것임
+                                    </li>
+                                    <li>
+                                        - 대체 수단 제공 : 다음 중 한 가지 이상의 대체 수단을 제공해야 한다
+                                        <ul>
+                                            <li>자막제공</li>
+                                            <li>대본제공</li>
+                                            <li>수화제공</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <dl class="check-list">
+                                    <dt>자동검사방법</dt>
+                                    <dd>
+                                        -
+                                    </dd>
+    
+                                    <dt>수동검사방법</dt>
+                                    <dd>
+                                        -멀티미디어 콘텐츠에 대한 자막, 원고, 수화 제공 유무 체크
+                                    </dd>
+                                </dl>
+
+
+                        </div>
+
+                        <div class="color" id="item03">
+                            <h4>3. 색에 무관한 콘텐츠 인식</h4>
+                            <p>
+                                - 컨텐츠는 색에 관계없이 인식될 수 있어야 한다.
+                                - 특정한 색을 구분할 수 없는 사용자나 흑백 디스플레이 사용자 등이 색을 배제하여도 컨텐츠를 인식할 수 있도록 제공해야 한다.
+
+                            </p>
+
+                            <div class="definition"> 
+                                <h5>[적용기술]</h5>
+                                <ul>
+                                    <li>
+                                        콘텐츠(그래프, 차트, 지도 등)는 색에 관계없이 인식될 수 있게 제공해야 함
+                                    </li>
+                                    <li>
+                                        콘텐츠에서 제공하는 모든 정보는 색을 배제하여도 특정한 색을 구별할 수 없는 사용자나 흑백 디스플레이 사용자, 흑백 인쇄물을 보는 사용자가 해당 콘텐츠를 인식할 수 있도록 제공해야 함
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <dl class="check-list">
+                                <dt>자동검사방법</dt>
+                                <dd>
+                                    -
+                                </dd>
+
+                                <dt>수동검사방법</dt>
+                                <dd>
+                                    - 색상만으로 콘텐츠(그래프, 차트, 지도, 페이지 네비게이션 등)을 분별 하도록 제공 했는지 체크<br>
+                                    - 페이지 네비게이션, 메뉴, 현재 위치 등의 정보를 명암, 패턴 등의 변화없이 색상만으로 제공 했는지 체크
+                                </dd>
+                            </dl>
+
+
+
+                        </div>
+
+                        <div class="indicator" id="item04">
+                            <h4>4. 명확한 지시사항 제공</h4>
+                            <p>
+                                - 지시사항은 모양, 크기, 위치, 방향, 색, 소리 등에 관계없이 인식될 수 있어야 한다.<br><br>
+
+                                - 특정한 감각(시각, 청각 등)에 의존하여 지시사항을 제공할 경우 해당 감각에 장애가 있다면 인식할 수 없으므로, 다른 감각을 통해서도 인식할 수 있도록 지시사항을 제공해야 한다.<br>
+                                - 지시사항 정보를 특정 감각(색, 크기, 모양, 방향 등)에만 의존하여 제공했는지 체크<br>
+                            </p>
+                            
+                            <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                    <p>
+                                        - 메인화면 전문관 영역의 더보기 버튼 링크의 기능에 대해 정확히 어떤 것을 더 보는 것인지에 대해 설명하는 대체 텍스트를 제공
+                                    </p>
+                                    
+                                    <img src="./img/link-text03.png" alt="전문관 더보기 버튼에대해 타이틀 툴탭이 뜬 이미지" style="width:100%">
+                                    <pre><code>&lt;button type="button" class="md-more" title="메인 전문관 영역의 숨겨진 영역을 열어주는 더보기 버튼"&gt;더보기&lt;/button&gt;
+                                    </code></pre>
+                                </div>
+                        </div>
+
+                        <div class="" id="item05">
+                            <h4>5. 텍스트 콘텐츠의 명도 대비</h4>
+                            <p>
+                                - 전경 콘텐츠와 배경은 4.5:1 이상의 명도 대비를 유지한다.<br>
+                                - 전경 콘텐츠는 정보를 전달하고 있는 '문자, 아이콘, 콘트롤(a, button, input, select, textarea)'의 선과 면을 의미한다.<br>
+                                - 문자 크기가 bold 19px 이상 또는 normal 24px 이상인 경우 3:1 이상의 명도 대비를 유지한다.<br>
+                                - 아이콘, 콘트롤 등 시각 정보가 3px 이상 두꺼운 경우 3:1 이상의 명도 대비를 유지한다.<br>
+                            </p>
+                        </div>
+
+                        <div class="no-bg-music" id="item06">
+                            <h4>6. 자동 재생 금지</h4>
+                            <p>
+                                - 롯데마트 PC 웹에서 해당사항 없음.<br>
+                                - 일부 슬라이드나 자동재생 요소들은 해당영역으로 초점이 진입되는 순간 자동 정지되도록 구현됨.
+                            </p>
+                            <div class="sample">
+                                <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                <p>
+                                    - 롯데마트 메인 비주얼 슬라이드의 경우 초점 진입시 자동 정지됨
+                                </p>
+                                <img src="./img/m-visual-stop.png" alt="롯데마트 메인 비주얼 슬라이드" style="width:100%;">
+
+                                <pre><code class="html">
+var fixGnbLastFocusable = function(){
+    var $gnb = $('#gnbScrollFixed'),
+        $gnbToggles = $gnb.find('.wrap-toggle'),
+        $gnbLastMenu = _wac.getFocusables($gnbToggles.last().find('.wrap-subnav')).last(),
+        $nextEl = $directionFocusables.first();
+
+    var tabHandler = function(e){
+        !_wac.isShiftTabEvent(e)
+            && _wac.isTabEvent(e)
+            && !_wac.isEmpty($nextEl)
+            && _wac.onNextAsync(e, $nextEl);
+            contSlider.stopAuto();
+    };
+
+    _wac.wireUpEventAsync($gnbLastMenu, 'keydown', tabHandler);
+    return $gnbLastMenu;
+};
+                                </code></pre>
+                            </div>
+                        </div>
+
+                        <div class="no-bg-music" id="item07">
+                            <h4>7. 콘텐츠 간의 구분</h4>
+                            <p>
+                                - 롯데마트 PC 웹에서 해당사항 없음.
+                            </p>
+                        </div>
+                        
+                        <div class="keyboard-use" id="item08">
+                            <h4>8. 키보드 사용 보장 (입력장치 접근성)</h4>
+                            <p>
+                                - 모든 기능은 키보드 만으로도 사용할 수 있어야 한다. <br>
+                                - 키보드에 의한 초점은 논리적으로 이동해야 하며, 시각적으로 구별할 수 있어야 한다.<br>
+                            </p>
+
+                            <div class="sample">
+                                <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                <p>
+                                    - 롯데마트 gnb 메뉴의 키보드 이용
+                                </p>
+                                <img src="http://image.lottemart.com/v3/images/layout/h1_logo_01.gif" alt="롯데마트 Mall 새로운 생활의 큐레이터">
+
+                                <pre><code class="html">&lt;img src="http://image.lottemart.com/v3/images/layout/h1_logo_01.gif" alt="롯데마트 Mall 새로운 생활의 큐레이터"&gt;
+                                </code></pre>
+                            </div>
+                        </div>
+
+                        <div class="focus-move" id="item09">
+                            <h4>9. 초점 이동</h4>
+
+                            <div class="sample">
+                                <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                <p>
+                                    - 롯데마트 메인 화면의 BEST 메뉴내의 키보드 이용
+                                </p>
+                                <img src="img/main-best.png" alt="롯데마트 메인 화면의 BEST 메뉴내의 키보드 이용" style="width:100%;">
+
+                                <pre><code class="html">                                
+&lt;article class="main-best"&gt;
+        &lt;div class="best-nav jq-tab"&gt;
+            &lt;a href="#bestFood" class="best-tab01 active" title="현재 선택"&gt;FOOD&lt;/a&gt;
+            &lt;a href="#bestLife" class="best-tab02"&gt;LIFE&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="best-conts js-tabcontents"&gt;
+            &lt;section class="best-cont clear-after best-cont1 active" id="bestFood"&gt;
+                &lt;h3 class="blind"&gt;FOOD&lt;/h3&gt;
+                &lt;nav class="best-tab js-tabnav" id="bestFood"&gt;
+                    &lt;a href="javascript:;" class="nav-link nav-link1-1 active" data-category-id="foodAll" data-tab-index="02" data-current-page="1"&gt;&lt;strong class="inner"&gt;전체&lt;/strong&gt;&lt;/a&gt;
+                    &lt;a href="javascript:;" class="nav-link nav-link1-2" data-category-id="C0010011" data-tab-index="02" data-current-page="2"&gt;&lt;strong class="inner"&gt;쌀/잡곡&lt;/strong&gt;&lt;/a&gt;
+                    &lt;a href="javascript:;" class="nav-link nav-link1-3" data-category-id="C0010012" data-tab-index="02" data-current-page="3"&gt;&lt;strong class="inner"&gt;채소&lt;/strong&gt;&lt;/a&gt;
+                    &lt;a href="javascript:;" class="nav-link nav-link1-4" data-category-id="C0010013" data-tab-index="02" data-current-page="4"&gt;&lt;strong class="inner"&gt;과일&lt;/strong&gt;&lt;/a&gt;
+                    &lt;a href="javascript:;" class="nav-link nav-link1-5" data-category-id="C0010014" data-tab-index="02" data-current-page="5"&gt;&lt;strong class="inner"&gt;정육/계란&lt;/strong&gt;&lt;/a&gt;
+                    &lt;a href="javascript:;" class="nav-link nav-link1-6" data-category-id="C0010015" data-tab-index="02" data-current-page="6"&gt;&lt;strong class="inner"&gt;생선/&lt;br&gt;건해산물&lt;/strong&gt;&lt;/a&gt;
+                    &lt;a href="javascript:;" class="nav-link nav-link1-7" data-category-id="C0010046" data-tab-index="02" data-current-page="7"&gt;&lt;strong class="inner"&gt;견과/선식&lt;/strong&gt;&lt;/a&gt;
+                    &lt;a href="javascript:;" class="nav-link nav-link1-8" data-category-id="C0010016" data-tab-index="02" data-current-page="8"&gt;&lt;strong class="inner"&gt;냉장/냉동/&lt;br&gt;간편식&lt;/strong&gt;&lt;/a&gt;
+                    &lt;a href="javascript:;" class="nav-link nav-link1-9" data-category-id="C0010017" data-tab-index="02" data-current-page="9"&gt;&lt;strong class="inner"&gt;가공식품/&lt;br&gt;대용식&lt;/strong&gt;&lt;/a&gt;
+                    &lt;a href="javascript:;" class="nav-link nav-link1-10" data-category-id="C0010052" data-tab-index="02" data-current-page="10"&gt;&lt;strong class="inner"&gt;친환경식품&lt;/strong&gt;&lt;/a&gt;
+                    &lt;a href="javascript:;" class="nav-link nav-link1-11" data-category-id="C0010053" data-tab-index="02" data-current-page="11"&gt;&lt;strong class="inner"&gt;건강식품&lt;/strong&gt;&lt;/a&gt;
+                    &lt;a href="javascript:;" class="nav-link nav-link1-12" data-category-id="C0010040" data-tab-index="02" data-current-page="12"&gt;&lt;strong class="inner"&gt;조리식품&lt;/strong&gt;&lt;/a&gt;
+                &lt;/nav&gt;
+                &lt;div class="wrap-tab-cont js-tabcont"&gt;&lt;div id="bestFood-foodAll" class="tab-cont active"&gt;&lt;div class="wrap-prod-list"&gt;
+            &lt;div class="prod-list clear-after"&gt;
+                &lt;!-- wrapper tag가 유동적이라서 헷갈릴수 있어 일부러 들여쓰기 이렇게 함 --&gt;
+                                &lt;article class="product-article" data-panel="product"&gt;
+                                    &lt;!-- TODO : 해당 페이지 사용하는 전체 쿼리 찾아서 CURR_SELL_PRC &gt; 100 조건 걸려있는지 확인후에 제거 필요 --&gt;
+                                    &lt;!-- 베스트 순위 표시 --&gt;
+                                    &lt;!-- ** 추천상품 썸네일 --&gt;
+                                    &lt;div class="wrap-thumb"&gt;
+                                        &lt;a href="javascript:;" onclick="goProductDetail('C001001200040001', '0400669780006', 'N', '', '', '00001');return false; " class="thumb-link" data-category-id="C001001200040001" data-prod-cd="0400669780006"&gt;
+                                            &lt;img src="http://image.lottemart.com/lim/static_root/images/prodimg/04006/0400669780006_1_208.jpg" width="208" id="prodImg_0400669780006" alt="파프리카(개)" class="thumb" onerror="javascript:showNoImage(this)"&gt;
+                                                &lt;/a&gt;
+
+                                        &lt;!-- 할인상품 썸네일 할인스티커 --&gt;
+                                        &lt;span class="wrap-tag"&gt;
+        &lt;!-- 우선순위에 의한 1개만 노출 --&gt;
+        
+        &lt;/span&gt;	
+
+    &lt;span class="wrap-band "&gt;
+        &lt;i class="icon-band-delivery1"&gt;
+                icon-band-delivery1&lt;/i&gt;
+            &lt;/span&gt;	
+    &lt;span class="prod-link"&gt;
+        &lt;a href="javascript:;" data-button-name="btnAddWish" data-category-id="C001001200040001" data-product-code="0400669780006" title="위시리스트 담기" class="dibs "&gt;
+            &lt;span class="blind"&gt;위시리스트&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;a href="javascript:;" class="blank" title="새 창 열림" onclick="goProdZoom('C001001200040001','0400669780006', '001', 'N', 'N','00001'); event.stopPropagation();"&gt;
+            &lt;span class="blind"&gt;새창 보기&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- 20160925 중량미노출 수정 --&gt;
+&lt;div class="wrap-info"&gt;
+    &lt;p class="prod-name"&gt;
+        &lt;strong&gt;
+            &lt;a href="javascript:;" class="thumb-link" onclick="goProductDetail('C001001200040001', '0400669780006', 'N', '', '', '00001');return false;" data-category-id="C001001200040001" data-prod-cd="0400669780006"&gt;
+                파프리카(개)&lt;/a&gt;
+        &lt;/strong&gt;
+    &lt;/p&gt;
+
+    &lt;p class="price-max"&gt;판매가 &lt;span class="num-n"&gt;&lt;em&gt;1,180&lt;/em&gt;&lt;/span&gt;원
+                &lt;/p&gt;
+        &lt;div class="wrap-spinner"&gt;
+        &lt;div class="spinner-input" data-is-range="true"&gt;
+            &lt;label for="orderQty_0400669780006" class="blind"&gt;수량&lt;/label&gt;
+            &lt;input id="orderQty_0400669780006" name="orderQty_0400669780006" type="text" value="1" max="200" min="1" data-category-id="C001001200040001" data-prod-cd="0400669780006" style="ime-mode:disabled" maxlength="3" title="수량"&gt;
+        &lt;button type="button" class="sp-minus" title="수량 감소" data-option-yn="N"&gt;&lt;i class="ico-minus"&gt;감소&lt;/i&gt;&lt;/button&gt;&lt;button type="button" class="sp-plus" title="수량 증가" data-option-yn="N"&gt;&lt;i class="ico-plus"&gt;증가&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+
+        &lt;button id="basketBtn_0400669780006" title="장바구니 담기" type="button" class="btn-basket" data-prod-cd="0400669780006" data-category-id="C001001200040001" data-is-sold-out="false" data-max-qty="200" data-min-qty="1" data-method="basket" data-is-manufacturing-product="false" data-option-yn="N" data-prod-type-cd="01" data-prod-title="파프리카(개)"&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/article&gt;
+&lt;!-- 1depth에서 사용 --&gt;
+&lt;!-- wrapper tag가 유동적이라서 헷갈릴수 있어 일부러 들여쓰기 이렇게 함 --&gt;
+&lt;article class="product-article" data-panel="product"&gt;
+&lt;!-- TODO : 해당 페이지 사용하는 전체 쿼리 찾아서 CURR_SELL_PRC &gt; 100 조건 걸려있는지 확인후에 제거 필요 --&gt;
+&lt;!-- 베스트 순위 표시 --&gt;
+&lt;!-- ** 추천상품 썸네일 --&gt;
+&lt;div class="wrap-thumb"&gt;
+    &lt;a href="javascript:;" onclick="goProductDetail('C001001700130001', '8801056049935', 'N', '', '', '00001');return false; " class="thumb-link" data-category-id="C001001700130001" data-prod-cd="8801056049935"&gt;
+        &lt;img src="http://image.lottemart.com/lim/static_root/images/prodimg/88010/8801056049935_1_208.jpg" width="208" id="prodImg_8801056049935" alt="롯데 아이시스8.0(2L*6)" class="thumb" onerror="javascript:showNoImage(this)"&gt;
+            &lt;/a&gt;
+
+
+    &lt;span class="wrap-tag"&gt;
+        &lt;/span&gt;	
+
+    &lt;span class="wrap-band "&gt;
+        &lt;i class="icon-band-delivery1"&gt;
+                icon-band-delivery1&lt;/i&gt;
+            &lt;/span&gt;	
+    &lt;span class="prod-link"&gt;
+        &lt;a href="javascript:;" data-button-name="btnAddWish" data-category-id="C001001700130001" data-product-code="8801056049935" title="위시리스트 담기" class="dibs "&gt;
+            &lt;span class="blind"&gt;위시리스트&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;a href="javascript:;" class="blank" title="새 창 열림" onclick="goProdZoom('C001001700130001','8801056049935', '001', 'N', 'N','00001'); event.stopPropagation();"&gt;
+            &lt;span class="blind"&gt;새창 보기&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- 20160925 중량미노출 수정 --&gt;
+&lt;div class="wrap-info"&gt;
+    &lt;p class="prod-name"&gt;
+        &lt;strong&gt;
+            &lt;a href="javascript:;" class="thumb-link" onclick="goProductDetail('C001001700130001', '8801056049935', 'N', '', '', '00001');return false;" data-category-id="C001001700130001" data-prod-cd="8801056049935"&gt;
+                롯데 아이시스8.0(2L*6)&lt;/a&gt;
+        &lt;/strong&gt;
+    &lt;/p&gt;
+
+    &lt;p class="price-max"&gt;판매가 &lt;span class="num-n"&gt;&lt;em&gt;3,780&lt;/em&gt;&lt;/span&gt;원
+                &lt;/p&gt;
+        &lt;div class="wrap-spinner"&gt;
+        &lt;div class="spinner-input" data-is-range="true"&gt;
+            &lt;label for="orderQty_8801056049935" class="blind"&gt;수량&lt;/label&gt;
+            &lt;input id="orderQty_8801056049935" name="orderQty_8801056049935" type="text" value="1" max="2" min="1" data-category-id="C001001700130001" data-prod-cd="8801056049935" style="ime-mode:disabled" maxlength="3" title="수량"&gt;
+        &lt;button type="button" class="sp-minus" title="수량 감소" data-option-yn="N"&gt;&lt;i class="ico-minus"&gt;감소&lt;/i&gt;&lt;/button&gt;&lt;button type="button" class="sp-plus" title="수량 증가" data-option-yn="N"&gt;&lt;i class="ico-plus"&gt;증가&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+
+        &lt;button id="basketBtn_8801056049935" title="장바구니 담기" type="button" class="btn-basket" data-prod-cd="8801056049935" data-category-id="C001001700130001" data-is-sold-out="false" data-max-qty="2" data-min-qty="1" data-method="basket" data-is-manufacturing-product="false" data-option-yn="N" data-prod-type-cd="01" data-prod-title="롯데 아이시스8.0(2L*6)"&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/article&gt;
+&lt;article class="product-article" data-panel="product"&gt;
+&lt;div class="wrap-thumb"&gt;
+    &lt;a href="javascript:;" onclick="goProductDetail('C001001700140010', '8801062517916', 'N', '', '', '00001');return false; " class="thumb-link" data-category-id="C001001700140010" data-prod-cd="8801062517916"&gt;
+        &lt;img src="http://image.lottemart.com/lim/static_root/images/prodimg/88010/8801062517916_1_208.jpg" width="208" id="prodImg_8801062517916" alt="롯데 칙촉(180G)" class="thumb" onerror="javascript:showNoImage(this)"&gt;
+            &lt;/a&gt;
+
+    &lt;span class="wrap-tag"&gt;
+        
+        &lt;i class="icon-goods-type1"&gt;살수록더싸게&lt;/i&gt;
+                            &lt;/span&gt;	
+
+    &lt;span class="wrap-band "&gt;
+        &lt;i class="icon-band-delivery1"&gt;
+                icon-band-delivery1&lt;/i&gt;
+            &lt;/span&gt;	
+    &lt;span class="prod-link"&gt;
+        &lt;a href="javascript:;" data-button-name="btnAddWish" data-category-id="C001001700140010" data-product-code="8801062517916" title="위시리스트 담기" class="dibs "&gt;
+            &lt;span class="blind"&gt;위시리스트&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;a href="javascript:;" class="blank" title="새 창 열림" onclick="goProdZoom('C001001700140010','8801062517916', '001', 'N', 'N','00001'); event.stopPropagation();"&gt;
+            &lt;span class="blind"&gt;새창 보기&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- 20160925 중량미노출 수정 --&gt;
+&lt;div class="wrap-info"&gt;
+    &lt;p class="prod-name"&gt;
+        &lt;strong&gt;
+            &lt;a href="javascript:;" class="thumb-link" onclick="goProductDetail('C001001700140010', '8801062517916', 'N', '', '', '00001');return false;" data-category-id="C001001700140010" data-prod-cd="8801062517916"&gt;
+                롯데 칙촉(180G)&lt;/a&gt;
+        &lt;/strong&gt;
+    &lt;/p&gt;
+
+    &lt;p class="price-max"&gt;판매가 &lt;span class="num-n"&gt;&lt;em&gt;3,840&lt;/em&gt;&lt;/span&gt;원
+                &lt;/p&gt;
+        &lt;div class="wrap-spinner"&gt;
+        &lt;div class="spinner-input" data-is-range="true"&gt;
+            &lt;label for="orderQty_8801062517916" class="blind"&gt;수량&lt;/label&gt;
+            &lt;input id="orderQty_8801062517916" name="orderQty_8801062517916" type="text" value="1" max="100" min="1" data-category-id="C001001700140010" data-prod-cd="8801062517916" style="ime-mode:disabled" maxlength="3" title="수량"&gt;
+        &lt;button type="button" class="sp-minus" title="수량 감소" data-option-yn="N"&gt;&lt;i class="ico-minus"&gt;감소&lt;/i&gt;&lt;/button&gt;&lt;button type="button" class="sp-plus" title="수량 증가" data-option-yn="N"&gt;&lt;i class="ico-plus"&gt;증가&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+
+        &lt;button id="basketBtn_8801062517916" title="장바구니 담기" type="button" class="btn-basket" data-prod-cd="8801062517916" data-category-id="C001001700140010" data-is-sold-out="false" data-max-qty="100" data-min-qty="1" data-method="basket" data-is-manufacturing-product="false" data-option-yn="N" data-prod-type-cd="01" data-prod-title="롯데 칙촉(180G)"&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/article&gt;
+&lt;!-- 1depth에서 사용 --&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/section&gt;
+&lt;section class="best-cont clear-after best-cont2" id="bestLife"&gt;
+&lt;h3 class="blind"&gt;LIFE&lt;/h3&gt;
+&lt;nav class="best-tab js-tabnav" id="bestLife"&gt;
+&lt;a href="javascript:;" class="nav-link nav-link2-1" data-category-id="lifeAll" data-tab-index="03" data-current-page="13"&gt;&lt;strong class="inner"&gt;전체&lt;/strong&gt;&lt;/a&gt;
+&lt;a href="javascript:;" class="nav-link nav-link2-2" data-category-id="C0010021" data-tab-index="03" data-current-page="14"&gt;&lt;strong class="inner"&gt;유아/&lt;br&gt;출산용품&lt;/strong&gt;&lt;/a&gt;
+&lt;a href="javascript:;" class="nav-link nav-link2-3" data-category-id="C0010023" data-tab-index="03" data-current-page="15"&gt;&lt;strong class="inner"&gt;세제/휴지&lt;/strong&gt;&lt;/a&gt;
+&lt;a href="javascript:;" class="nav-link nav-link2-4" data-category-id="C0010024" data-tab-index="03" data-current-page="16"&gt;&lt;strong class="inner"&gt;헤어/바디&lt;/strong&gt;&lt;/a&gt;
+&lt;a href="javascript:;" class="nav-link nav-link2-5" data-category-id="C0010025" data-tab-index="03" data-current-page="17"&gt;&lt;strong class="inner"&gt;가구/수납/조명/보수&lt;/strong&gt;&lt;/a&gt;
+&lt;a href="javascript:;" class="nav-link nav-link2-6" data-category-id="C0010026" data-tab-index="03" data-current-page="18"&gt;&lt;strong class="inner"&gt;주방/&lt;br&gt;청소용품&lt;/strong&gt;&lt;/a&gt;
+&lt;a href="javascript:;" class="nav-link nav-link2-7" data-category-id="C0010027" data-tab-index="03" data-current-page="19"&gt;&lt;strong class="inner"&gt;문구/&lt;br&gt;사무용품&lt;/strong&gt;&lt;/a&gt;
+&lt;a href="javascript:;" class="nav-link nav-link2-8" data-category-id="C0010115" data-tab-index="03" data-current-page="20"&gt;&lt;strong class="inner"&gt;침구/원예/데코&lt;/strong&gt;&lt;/a&gt;
+&lt;a href="javascript:;" class="nav-link nav-link2-9" data-category-id="C0010028" data-tab-index="03" data-current-page="21"&gt;&lt;strong class="inner"&gt;패션의류/&lt;br&gt;언더웨어&lt;/strong&gt;&lt;/a&gt;
+&lt;a href="javascript:;" class="nav-link nav-link2-10" data-category-id="C0010029" data-tab-index="03" data-current-page="22"&gt;&lt;strong class="inner"&gt;신발/잡화&lt;/strong&gt;&lt;/a&gt;
+&lt;a href="javascript:;" class="nav-link nav-link2-11" data-category-id="C0010030" data-tab-index="03" data-current-page="23"&gt;&lt;strong class="inner"&gt;스포츠/레저&lt;/strong&gt;&lt;/a&gt;
+&lt;a href="javascript:;" class="nav-link nav-link2-12" data-category-id="C0010054" data-tab-index="03" data-current-page="24" value="C0010054"&gt;&lt;strong class="inner"&gt;친환경&lt;br&gt;생활용품&lt;/strong&gt;&lt;/a&gt;
+&lt;/nav&gt;
+&lt;div class="wrap-tab-cont js-tabcont"&gt;&lt;/div&gt;
+&lt;/section&gt;
+&lt;/div&gt;
+&lt;a href="/best/bestMain.do?SITELOC=AC023" class="list-more"&gt;베스트 더보기&lt;/a&gt;
+&lt;/article&gt;
+                                </code></pre>
+                            </div>
+                        </div>
+                        
+                        <div class="" id="item10">
+                            <h4>10. 조작가능</h4>
+                            <P>
+                                - 롯데마트 PC 웹에서 해당사항 없음.
+                            </P>
+                        </div>
+                        
+                        <div class="" id="item11">
+                            <h4>11. 응답시간 조절</h4>
+                            <P>
+                                - 롯데마트 PC 웹에서 해당사항 없음.
+                            </P>
+                        </div>
+
+                        <div class="" id="item12">
+                            <h4>12. 정지 기능 제공</h4>
+                            <p>
+                                - 자동으로 변경되는 콘텐츠는 움직임을 제어할 수 있어야 한다.
+                            </p>
+
+                            <div class="sample">
+                                <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                <p>
+                                    - 포커스 진입시 자동멈춤 처리되는 메인 비주얼 슬라이드
+                                </p>
+                                
+                                <img src="./img/stop.png" alt="포커스 진입시 자동멈춤 처리되는 메인 비주얼 슬라이드" style="width:100%;">
+                                <pre><code>
+//gnb마지막 요소에서 상단 모양 컨틀롤러로 촛점이동
+var fixGnbLastFocusable = function(){
+    var $gnb = $('#gnbScrollFixed'),
+        $gnbToggles = $gnb.find('.wrap-toggle'),
+        $gnbLastMenu = _wac.getFocusables($gnbToggles.last().find('.wrap-subnav')).last(),
+        $nextEl = $directionFocusables.first();
+
+    var tabHandler = function(e){
+        !_wac.isShiftTabEvent(e)
+            && _wac.isTabEvent(e)
+            && !_wac.isEmpty($nextEl)
+            && _wac.onNextAsync(e, $nextEl);
+            contSlider.stopAuto();
+    };
+
+    _wac.wireUpEventAsync($gnbLastMenu, 'keydown', tabHandler);
+    return $gnbLastMenu;
+};
+                                </code></pre>
+                            </div>
+
+                        </div>
+
+                        <div class="" id="item13">
+                            <h4>13. 깜빡임과 번쩍임 사용 제한</h4>
+                            <P>
+                                - 롯데마트 PC 웹에서 해당사항 없음.
+                            </P>
+                        </div>
+
+                        <div class="" id="item14">
+                            <h4>14. 반복영역 건너뛰기</h4>
+                            <p>
+                                - 반복적인 콘텐츠 영역의 시작 부분에 건너뛰기 링크 제공<br>
+                                - 페이지마다 반복되는 콘텐츠(메뉴 등)를 건너뛰어 핵심 콘텐츠로 바로 접근할 수 있도록 페이지 최상단에 제공한다.<br>
+                                - 해당 링크를 display:none으로 처리하지 않으며, 키보드로 접근이 가능해야 한다. <br>
+                                - 콘텐츠의 최상단(body 바로 아래) 제공해야 한다. <br>
+                                - 링크명은 목적지를 명확히 알 수 있도록 일관된 형식으로 제공해야 한다. <br>
+                                - 메뉴 건너뛰기(x), 본문 바로가기(O)<br>
+                            </p>
+
+                             <div class="sample">
+                                <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                <p>
+                                    - 롯데마트 상단의 본문 바로가기 버튼
+                                </p>
+                                
+                                <img src="./img/skipbtn.png" alt="건너뛰기 버튼 이미지">
+                                <pre><code>
+&lt;nav class="skip-menu"&gt;
+    &lt;a href="#contents"&gt;본문 바로가기&lt;/a&gt;
+    &lt;a href="#gnbScrollFixed"&gt;주메뉴 바로가기&lt;/a&gt;
+&lt;/nav&gt;
+                                </code></pre>
+                            </div>
+
+                        </div>
+
+                        <div class="offer-title" id="item15">
+                            <h4>14. 타이틀 및 제목 제공</h4>
+                            <p>
+                                - 페이지, 프레임, 콘텐츠 블록에는 적절한 제목을 제공해야 한다.<br>
+                                - 적절한 제목은 페이지, 프레임, 콘텐츠 블록을 유추하여, 사용자가 웹 콘텐츠를 운용하기 쉽게 도와준다.<br>
+
+                                <dl>
+                                    <dt>
+                                        <em class="circle-num">1</em>
+                                        웹 페이지 제목
+                                    </dt>
+                                    <dd>
+                                        문서 내용을 표현하는데 사용하여야 하며, 여러 페이지간 콘텐츠 파악 용도 사용된다. 서로 다른 내용의 페이지를 동일한 제목 제공 시 문서 내용을 파악하는데 어려움이 발생한다.
+                                    </dd>
+                                    <dt>
+                                        <em class="circle-num">2</em>
+                                        프레임 제목
+                                    </dt>
+                                    <dd>
+                                        사용자(시각 장애인, 인지장애인, 심각한 지체장애인)는 프레임에 초점 이동시 어떠한 프레임인지 쉽게 알 수 있도록 한다.
+                                    </dd>
+                                    <dt>
+                                        <em class="circle-num">3</em>
+                                        콘텐츠 블록 제목
+                                    </dt>
+                                    <dd>
+                                        &lt;h1&gt;, &lt;h2&gt; 등 제목요소를 사용할 경우, 제목과 본문을 구분할 수 있으며, 제목간 이동 기능을 가능하게 한다. 또한 목차 기능으로 활용하여 문맥을 파악하는데 도움을 준다. 이 외 다양하게 활용할 수 있다.
+                                    </dd>
+                                </dl>
+                            </p>
+                          
+                            <div class="sample">
+                                <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                <p>
+                                    - 롯데마트 각페이지에 맞는 올바른 페이지 타이틀 제목 제공
+                                </p>
+                                
+                                <img src="./img/title.png" alt="오늘 핫콕 페이지 타이틀"  style="width:100%;">
+                                <pre><code>
+&lt;script type="text/javascript"&gt;
+    document.title = "롯데마트몰 - ${NAVILIST[1].NAME} &gt; ${NAVILIST[2].NAME} &gt; ${NAVILIST[3].NAME}";
+    $.utils.setMetaTag({
+        'title' : '롯데마트몰 - ${NAVILIST[1].NAME} &gt; ${NAVILIST[2].NAME} &gt; ${NAVILIST[3].NAME}'
+    });
+&lt;/script&gt;
+                                </code></pre>
+                            </div>
+                        </div>
+
+                        <div class="" id="item16">
+                            <h4>16. 적절한 링크 텍스트</h4>
+
+                            <p>
+                                - 링크 텍스트는 용도나 목적을 이해할 수 있도록 제공해야 한다.<br>
+                                - 링크 텍스트를 "여기를 클릭하세요." 나 "여기" 와 같은 애매모호한 표현을 사용하면 시각장애인이나 인지장애인 뿐만 아니라 비장애인들도 링크를 클릭했을 때 어떤 반응이나 어떤 페이지로 이동될 지 예측하기 어렵다.
+                            </p>
+                            <div class="sample">
+                                <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                <p>
+                                    - 상품 리스트 페이지를 리스트형으로 볼 것인지, 썸네일형으로 볼 것인지 보는 방식을 선택하는 링크 대한 올바른 텍스트를 제공
+                                </p>
+                                
+                                <img src="./img/link-text02.png" alt="상품 리스트 페이지를 보는 방법 선택 링크 버튼"  style="width:100%;">
+                                <pre><code>
+&lt;div class="set-sort"&gt;
+    &lt;a id="aList" name="btnViewType" href="javascript:;" data-type="list" class="list-sort"&gt;&lt;span class="blind"&gt;리스트형 보기&lt;/span&gt;&lt;/a&gt;
+    &lt;a id="aImg" name="btnViewType" href="javascript:;" data-type="img" class="image-sort active" title="현재 선택"&gt;&lt;span class="blind"&gt;썸네일형 보기&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;
+                                </code></pre>
+                            </div>
+
+                            <div class="sample">
+                                <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                <p>
+                                    - 장바구니 링크 요소의 내용에 알맞는 올바른 링크의 기능에대해 설명하는 대체 텍스트를 제공
+                                </p>
+                                
+                                <img src="./img/link-text01.png" alt="장바구니 링크 텍스트"  >
+                                <pre><code>
+&lt;button type="button" class="btn-large-type1" title="장바구니 담기" data-prod-cd="D000003514313" data-category-id="C001013400080002" data-max-qty="100000" data-min-qty="1" data-method="basket" data-is-sold-out="false" data-option-yn="Y" data-prod-type-cd="05" data-is-manufacturing-product="false" data-prod-title="울트라히트 아동/주니어 9부세트 " id="basketBtn_D000003514313" tabindex="0"&gt;
+&lt;i class="ico-basket"&gt;장바구니&lt;/i&gt;
+&lt;/button&gt;
+                                </code></pre>
+                            </div>
+                        </div>
+
+                        <div class="" id="item17">
+                            <h4>17. 기본 언어 표시</h4>
+                            <p>
+                                - 기본 언어 명시는 화면 낭독 프로그램이 언어를 인식하여 자동으로 음성을 변환하거나, 해당 언어에 적합한 발음을 제공할 수 있도록 한다.<br>
+                                - 웹 페이지에 주로 사용하는 언어를 &lt;html&gt; 요소에 lang 속성을 지정하여 명시하도록 한다.
+                            </p>
+                        </div>
+
+                        <div class="" id="item18">
+                            <h4>18. 사용자 요구에 따른 실행</h4>
+                            <p>
+                                - 사용자가 의도하지 않은 기능(새 창, 초점 변화 등)은 실행되지 않아야 한다.<br>
+                                - 실행은 onclick, enter 로 가능하게 적용한다.<br>
+                                - 새창 및 팝업창의 경우 a 요소에 target="_blank" 로 지정한다.<br>
+                                - 웹 사이트 로딩시 자동으로 실행되는 콘텐츠(팝업창, 레이어 팝업, 배경음 포함) 을 사용하지 않는다.<br>
+                            </p>
+
+                            <div class="sample">
+                                <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                <p>
+                                    - L.POINT 카드번호 입력시 자동 초점 넘어가던 현상 제거
+                                </p>
+                                <img src="img/prevent-auto.png" alt="L.POINT 온라인 사용인증 서비스">
+
+                                <pre><code class="html">&lt;img src="http://image.lottemart.com/v3/images/layout/h1_logo_01.gif" alt="롯데마트 Mall 새로운 생활의 큐레이터"&gt;
+                                </code></pre>
+
+                            </div>
+                        </div>
+
+                        <div class="" id="item18">
+                            <h4>18. 사용자 요구에 따른 실행</h4>
+                            <p>
+                                - 콘텐츠는 논리적인 순서로 제공해야 한다.<br>
+                                - 콘텐츠 및 마크업이 논리적인 순서로 구성해야 한다.<br>
+                            </p>
+                        </div>
+
+                        <div class="" id="item19">
+                            <h4>19. 콘텐츠의 선형화 (콘텐츠의 선형 구조)</h4>
+                            <p>
+                                - 표는 이해하기 쉽게 구성해야 한다.<br><br>
+                                - 표의 제목을 &lt;caption&gt; 요소로 제공<br>
+                                - 표의 구조 또는 내용에 대한 요약을 summary 속성으로 제공<br>
+                                - 표의 헤더 셀(&lt;th&gt; 요소)과 , 데이터 셀(&lt;td&gt; 요소)의 관계를 제공<br>
+                                - 복잡한 표의 경우 id, header, 일반적인 표의 경우 scope 제공<br>
+                            </p>
+                        </div>
+
+                        <div class="" id="item20">
+                            <h4>20. 표의 구성</h4>
+                            <p>
+                                - 표의 구성
+                            </p>
+                        </div>
+
+                        <div class="" id="item21">
+                            <h4>21. 레이블 제공</h4>
+                            <p>
+                                - 입력 서식에는 대응하는 레이블을 제공해야 한다.<br>
+                                - 입력 서식(&lt;input&gt;, &lt;textarea&gt;, &lt;select&gt; 요소 등)에 대응하는 레이블(&lt;label&gt; 요소, title 속성)을 제공해야 한다.
+                            </p>
+                        </div>
+
+                        <div class="" id="item22">
+                            <h4>22. 오류정정</h4>
+                            <p>
+                                - 입력 오류를 정정할 방법을 제공해야 한다.<br>
+                                - 입력 서식을 잘못 작성한 경우, 해당 서식 필드로 초점 이동 제공<br>
+                                - 입력 값 또는 형식에 대한 예시 제공<br>
+                                - 필수 입력사항이나 일정한 양식에 따른 입력란에 대해 사용자가 입력하지 않거나 잘못 입력한 경우 사용자의 실수가 어떤 것인지 안내 제공<br>
+                            </p>
+                        </div>
+
+                        <div class="" id="item23">
+                            <h4>23. 마크업오류방지</h4>
+                            <p>
+                                - 마크업 언어의 요소는 열고 닫음, 중첩 관계 및 속성 선언에 오류가 없어야 한다.
+                            </p>
+                        </div>
+
+                        <div class="" id="item24">
+                            <h4>24. 웹 애플리케이션 접근성 준수</h4>
+                            <p>
+                                - 콘텐츠에 포함된 웹 애플리케이션은 접근성이 있어야 한다.
+                                - 웹 애플리케이션(JavaScript, 애플릿, ActiveX, Flash)이 자체적인 접근성을 준수해야 함
+                            </p>
+                        </div>
+
+                    </div>
+                    <!-- #wacExample end -->
+
+                    <!-- #wacTestSample end -->
+                    <div id="wacTestSample" class="article">
+                        <h3>PC 접근성 지표</h3>
+                        <p>
+                            - 웹 접근성 품질 체크를 위한 지표로 외부 접근성 조사 대응과 주요서비스 대응을 위한 지표입니다.
+                        </p>
+                    </div>
+                    <!-- #wacTestSample end -->
+
+                </div>
+                <!-- contents end -->
+
+             </div>
+            <!-- inner end -->
+        </div>
+        <!-- container end -->
+        
+        <!-- footer start -->
+        <footer class="footer">
+        </footer>
+        <!-- footer end -->
+   
+<script>
+     $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+    });
+
+
+
+    var $lnb = $('.pc.depth1-menu > li');
+
+    $lnb.on('click', function(){
+        $(this).toggleClass('active');
+    });
+    var $codeArea = $('pre code'),
+        $targetCodeArea;
+
+    $codeArea.before('<button class="code-open-btn">열기</button>');
+
+
+    var $codeOpenBtn = $('.code-open-btn');
+
+    $codeOpenBtn.on('click', function(){
+        $targetCodeArea = $(this).next('code')
+        if($targetCodeArea.hasClass('active')){
+            $targetCodeArea.removeClass('active');
+        }else{
+            $targetCodeArea.addClass('active');
+        }
+    });
+
+   
+</script>
+</body>
+</html>

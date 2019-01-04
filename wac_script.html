@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="./css/assets/reset.css">
+    <link rel="stylesheet" href="./css/assets/default.css">
+    <link rel="stylesheet" href="./css/assets/atom-one-dark.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/highlight.pack.js"></script>
+    <!-- <script>hljs.initHighlightingOnLoad();</script> -->
+
+    <style>
+        dl, dt, dd, li, a, p, h4, h5{color:#222; line-height: 2.0;}
+        .inner{width:1200px; margin:0 auto;}
+        .circle-num{display:inline-block; width:15px; height:15px; border-radius:7.5px; background:#293f54; color:#fff; text-align:center; margin: 0 10px; line-height:1;}
+
+        h4{padding-top:20px; padding-left:25px; background:url(./img/icon_h4.png) no-repeat left 19px;}
+        p{margin-left:15px;}
+
+        pre{position: relative;}
+        pre code{width:100%; height: 80px; overflow: scroll;}
+        pre code.active{height: 250px;}
+        .code-open-btn{width:30px; height: 20px; border: 1px solid #000; color:#000; background:#fff; font-size:12px; position: absolute; top:0; right:-15px; z-index:999;}
+
+
+
+        .gnb{width:100%; height:60px; background: #293f54; padding-top:20px; overflow: hidden;}
+            .gnb h1{float: left;}
+                .gnb h1 a{font-size: 25px; color: #fff;}
+            .gnb .device{float : left; margin-left:10px; padding-top:13px;}
+            .gnb .device li{display: inline;}
+            .gnb .device li a{display: block; float: left;  color: #fff; margin-left:10px;}
+
+
+            .gnb .menu{float: right;  padding:5px;}
+            .gnb .menu li {display: inline;}
+            .gnb .menu li a{display: block; float: left;  color: #fff; margin-left:20px;}
+
+
+        .container{width:100%; overflow: hidden;}
+            .container .lnb{width:250px; float: left;}
+            .container .lnb h2{font-size: 15px; padding-top:20px; color: #293f54; font-weight:bold;}
+            .container .lnb li a{font-size:13px;}
+            .container .lnb .depth1-menu>li{margin:15px 0;}
+            .container .lnb .depth2-menu{margin-left:15px;}
+
+
+            .container .contents{width:calc(100% - 250px); float: right; border-left:1px solid #e1e1e1; padding-left:20px;}
+            .container .contents .article{margin-bottom : 200px; padding-top:20px;}
+            .container .contents .article h3{font-size:25px;  color: #293f54;}
+            
+            .container .contents #wacIntro .contents-list{margin:15px;}
+
+            .container .contents #wacGuideList .guide-list{margin:15px;}
+            /* .container .contents #wacGuideList .guide-list li{line-height:1.2;} */
+
+            .container .contents #wacExample > div{margin-top: 20px;}
+            .container .contents #wacExample .sample{margin: 20px;}
+            .container .contents #wacExample .sample h5{margin-bottom:15px; padding-left: 15px;}
+
+            .offer-title dl{margin-left: 15px;}
+            .offer-title dd{padding-left: 35px;}
+
+
+    </style>
+    
+    <title>롯데마트 웹접근성 가이드</title>
+</head>
+<body>
+        <!-- gnb start -->
+        <header class="gnb">
+          <!-- inner start -->
+          <div class="inner">
+                <h1>
+                <a href="#">Accessibility Guide</a>
+                </h1>
+
+                <ul class="device">
+                    <li><a href="#">PC</a></li>
+                    <li><a href="#">MOBILE</a></li>
+                </ul>
+
+                <ul class="menu">
+                    <li><a href="#">SCRIPT</a></li>
+                    <li><a href="#">UI COMPONENTS</a></li>
+                </ul>
+            </div>
+            <!-- inner end -->
+        </header>
+        <!-- gnb end -->
+        
+        <!-- container start -->
+        <div class="container">
+            <!-- inner start -->
+            <div>
+             </div>
+            <!-- inner end -->
+        </div>
+        <!-- container end -->
+        
+        <!-- footer start -->
+        <footer class="footer">
+        </footer>
+        <!-- footer end -->
+   
+<script>
+     $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+    });
+
+
+
+    var $codeArea = $('pre code'),
+        $targetCodeArea;
+
+    $codeArea.before('<button class="code-open-btn">열기</button>');
+
+
+    var $codeOpenBtn = $('.code-open-btn');
+
+    $codeOpenBtn.on('click', function(){
+        $targetCodeArea = $(this).next('code')
+        if($targetCodeArea.hasClass('active')){
+            $targetCodeArea.removeClass('active');
+        }else{
+            $targetCodeArea.addClass('active');
+        }
+    });
+
+
+
+</script>
+</body>
+</html>
