@@ -103,17 +103,18 @@ button:focus{border:1px solid #293fff!important; border-radius: 5px;}
  *                    *
  **********************/
     
-    .container .lnb{width:250px; position: absolute; top:60px; left:50%; z-index: 50px; margin-left: -600px;}
+    .container .lnb{width:300px; height:100%; position: absolute; left:50%; z-index: 50px; margin-left: -600px; overflow-y: scroll;}
     .container .lnb.scroll-fixed{position: fixed; top:60px; left:50%; margin-left: -600px;}
     
     .container .lnb h2{font-size: 15px; padding-top:20px; color: #293f54; font-weight:bold;}
+    .container .lnb li{line-height: 1.5;}
     .container .lnb li a{font-size:13px;}
     .container .lnb .depth1-menu>li{margin:15px 0;}
     .container .lnb li.active .depth2-menu{margin-left:15px; display: block;}
     .container .lnb .depth2-menu{margin-left:15px; display: none;}
 
 
-    .container .contents{width:calc(100% - 250px); float: right; border-left:1px solid #e1e1e1; padding-left:20px;}
+    .container .contents{width:calc(100% - 280px); float: right; border-left:1px solid #e1e1e1; padding-left:20px;}
     .container .contents .article{margin-bottom : 200px; padding-top:20px;}
     .container .contents .article > div[id^="item"]{padding:20px; border:1px solid #e1e1e1;}
     .container .contents .article > div[id^="item"] > h4{color: #ff3b2d}

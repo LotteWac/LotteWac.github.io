@@ -50,11 +50,9 @@
             <div class="inner">
                 <!-- lnb start -->
                 <nav class="lnb">
-                    <h2>PC 접근성</h2>
                     <ul class="pc depth1-menu">
-                        <li><a href="./index.html">intro</a></li>
-                        <li><a href="#none">PC 접근성 검사항목</a>
-                            <ul class="depth2-menu">
+                        <li class="active"><a href="#none">PC 접근성 검사항목</a>
+                            <ul class="depth2-menu ">
                                 <li><a href="#item01">1. 이미지에 대한 적절한 대체텍스트 제공</a></li>
                                 <li><a href="#item02">2. 자막제공</a></li>
                                 <li><a href="#item03">3. 색에 무관한 콘텐츠 인식</a></li>
@@ -80,10 +78,7 @@
                                 <li><a href="#item23">23. 마크업오류방지</a></li>
                                 <li><a href="#item24">24. 웹 애플리케이션 접근성 준수</a></li>
                             </ul>
-                            
-                        
                         </li>
-                        <li><a href="#wacTestSample">PC 접근성 지표</a></li>
                     </ul>
                 </nav>
                 <!-- lnb end -->
@@ -853,7 +848,7 @@ var fixGnbLastFocusable = function(){
 
 
 
-    var $lnb = $('.pc.depth1-menu > li');
+    var $lnb = $('.pc.depth1-menu > li > a');
 
     $lnb.on('click', function(){
         $(this).toggleClass('active');
