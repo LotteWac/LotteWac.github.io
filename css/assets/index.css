@@ -29,7 +29,7 @@ button:focus{border:1px solid #293fff!important; border-radius: 5px;}
 
 .gnb{position:fixed; width:100%; height:60px; background: #293f54; padding-top:20px; overflow: hidden; z-index: 99;}
     .gnb h1{float: left; margin-top: -6px;}
-        .gnb h1 a{font-size: 25px; color: #fff;}
+        .gnb h1 a{font-size: 25px; color: #fff; font-family: 'Calibri';}
     .gnb .device{float : left; margin-left:10px; padding-top:6px;}
     .gnb .device li{display: inline;}
     .gnb .device li a{display: block; float: left;  color: #fff; margin-left:10px;}
@@ -80,9 +80,20 @@ button:focus{border:1px solid #293fff!important; border-radius: 5px;}
     #wacGuideList .guide-list li{font-size: 16px;}
     
     /* #wacIntro */
-    #wacIntro{width: 100%; padding:200px 0; text-align: center;}
+    #wacIntro{width: 100%; padding:200px 0;}
+    #wacIntro .inner{width: 770px;}
+    #wacIntro h3{text-align: center;}
+    #wacIntro p{ margin:0 auto; text-align: left;}
+    #wacIntro .contents-list{padding: 30px 0 0 30px;}
     .container .read-wac-guide .btn.btn-default.view-guide{display:block; width: 300px; margin: 0 auto; margin-top: 200px;}
 
+    /* #wacIntro > modal */
+    #wacIntro #WacTable .modal-dialog{width:900px;}
+    /* #wacIntro #WacTable .modal-dialog .modal-content{width: 100%; margin-top: 100px;} */
+    #wacIntro #WacTable .modal-dialog .modal-content table{width: 100%;}
+    #wacIntro #WacTable .modal-dialog .modal-content table th{background: #b4e7e7; border: 1px solid #fff; text-align: center; font-size: 17px;}
+    #wacIntro #WacTable .modal-dialog .modal-content table td{font-size: 9px; border: 1px solid #b4e7e7; padding-left:10px;}
+    #wacIntro #WacTable .modal-dialog .modal-footer{border:0; text-align:center;}
 
     .container .lnb{width:250px; float: left;}
     .container .lnb h2{font-size: 15px; padding-top:20px; color: #293f54; font-weight:bold;}
@@ -113,12 +124,6 @@ button:focus{border:1px solid #293fff!important; border-radius: 5px;}
     .container .contents #wacExample .check-list dd{padding:3px 10px; border:1px solid #e1e1e1;}
     .container .contents #wacExample .check-list dt{background: #e1e1e1;}
 
-    .container .read-wac-guide #wacIntro #WacTable .modal-dialog{width:900px;}
-        .container .read-wac-guide #wacIntro #WacTable .modal-dialog .modal-content{width: 100%; margin-top: 100px;}
-        .container .read-wac-guide #wacIntro #WacTable .modal-dialog .modal-content table{width: 100%;}
-        .container .read-wac-guide #wacIntro #WacTable .modal-dialog .modal-content table th{background: #b4e7e7; border: 1px solid #fff; text-align: center; font-size: 17px;}
-        .container .read-wac-guide #wacIntro #WacTable .modal-dialog .modal-content table td{font-size: 9px; border: 1px solid #b4e7e7; padding-left:10px;}
-        .container .read-wac-guide #wacIntro #WacTable .modal-dialog .modal-footer{border:0; text-align:center;}
     .offer-title dl{margin-left: 15px;}
     .offer-title dd{padding-left: 35px;}
     .glyphicon.glyphicon-star{color:#ff3b2d;}
