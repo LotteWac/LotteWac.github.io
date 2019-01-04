@@ -170,6 +170,8 @@
                                                 견고하게 만들어야 한다.</em><br>
                                                 는 것이 핵심입니다.<br>
                                                 때문에 롯데마트 PC 웹 사이트는 <br>
+                                                미래 기술발전을 고려하는 방식의<br>
+                                                기술 구현과 개발을 우선으로하고 있습니다.
                                             </p>
                                             <button type="button" class="btn btn-close" data-dismiss="modal">X</button>
                                     </div>
@@ -507,7 +509,16 @@
 
         //scroll up
         } else {
-            console.log('Up');
+            if(scrollHeight > 900 && scrollHeight < 1000){
+                preventDefaultAction(e)
+                goToArea("#whyWinfoAccessac");
+            } else if(scrollHeight > 1900 && scrollHeight < 2200){
+                preventDefaultAction(e)
+                goToArea("#whyWac");
+            } else if(scrollHeight > 2470){
+                preventDefaultAction(e)
+                goToArea("#wacGuideList");
+            }
         }
     });
 
