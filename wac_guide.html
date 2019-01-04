@@ -875,6 +875,14 @@ var fixGnbLastFocusable = function(){
         }
     });
 
+    //lnb 고정
+    var scrollHeight;
+    $(window).scroll(function(){
+        scrollHeight = $(window).scrollTop();
+        if(scrollHeight > 10){
+            $('.container .lnb').addClass('scroll-fixed');
+        }
+    });
    
 </script>
 </body>
