@@ -6,5 +6,4 @@ $(document).ready(function(){
     }, function(){
         $( this ).css('text-decoration','');
     });
-
 });

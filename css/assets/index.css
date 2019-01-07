@@ -1,4 +1,11 @@
 html {scroll-behavior: smooth;}
+::-webkit-scrollbar {
+    width: 0px; 
+    background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
 
 dl, dt, dd, li, a, p, h3, h4, h5{color:#222; line-height: 2.0;}
 h3, h4, h5{font-family: 'lottemart-dream-bold';}
@@ -18,7 +25,7 @@ pre code{width:100%; height: 80px; overflow: scroll;}
 pre code.active{height: 250px;}
 
 /*button*/
-button:focus{border:1px solid #293fff!important; border-radius: 5px;}
+button:focus{border:1px solid #293fff!important;}
 .code-open-btn{width:32px; height: 25px; border: 1px solid #000;  padding-bottom:3px; color:#000; background:#fff; font-size:12px; position: absolute; top:0; right:0; z-index:9;}
 .btn-lotte{color:#293f54; border:1px solid #293f54; font-weight:800; padding-bottom: 15px;}
 .btn-lotte:hover{background:#293f54; color:#fff;}
@@ -78,7 +85,7 @@ button:focus{border:1px solid #293fff!important; border-radius: 5px;}
     /* 1. #mVisual */
     .container .m-visual{width: 100%; height: 1000px; overflow: hidden; position: relative;}
     .container .m-visual > img{width: 100%; opacity:0.7; position: absolute; top : -200px;}
-    .container .m-visual h2{width:600px; color:#293f54; text-align: center; font-size: 100px; font-weight: 900; letter-spacing: 5px;position: absolute; top:45%; left: 50%; margin: -185px 0 0 -300px; font-family: 'Calibri';}
+    .container .m-visual h2{width:600px; color:#293f54; text-align: center; font-size: 100px; font-weight: 900; letter-spacing: 5px;position: absolute; top:45%; left: 50%; margin: -245px 0 0 -300px; font-family: 'Calibri';}
     .container .m-visual p {color:#293f54; font-weight: 900; position: absolute; top:50%; left: 50%;margin:100px 0 0 -302px; font-size:20px;}
  
     /* 2. #infoAccess  */
@@ -134,33 +141,40 @@ button:focus{border:1px solid #293fff!important; border-radius: 5px;}
  *   wac_guide.html   *
  *                    *
  **********************/
+    .wac-guide .btn-fixed-top{position: fixed; width: 30px; height:30px; bottom :50px; right:50%; margin:0 -660px 0 0;  z-index: 99; background: #293f54;  border-radius: 15px;}
+        .wac-guide .btn-fixed-top a{display: block; text-align: center;}
+        .wac-guide .btn-fixed-top i{font-size: 15px; color:#fff;}
+
+    .wac-guide .lnb{width:300px; height:100%; position: absolute; left:50%; z-index: 50px; margin-left: -600px; overflow-y: scroll; padding: 0 20px 100px 0;}
+    .wac-guide .lnb.scroll-fixed{position: fixed; top:60px; left:50%; margin-left: -600px;}
     
-    .container .lnb{width:300px; height:100%; position: absolute; left:50%; z-index: 50px; margin-left: -600px; overflow-y: scroll;}
-    .container .lnb.scroll-fixed{position: fixed; top:60px; left:50%; margin-left: -600px;}
-    
-    .container .lnb h2{font-size: 15px; padding-top:20px; color: #293f54; font-weight:bold;}
-    .container .lnb li{line-height: 1.5;}
-    .container .lnb li a{font-size:13px;}
-    .container .lnb .depth1-menu>li{margin:15px 0;}
-    .container .lnb li.active .depth2-menu{margin-left:15px; display: block;}
-    .container .lnb .depth2-menu{margin-left:15px; display: none;}
+    .wac-guide .container .lnb .depth1-menu{padding-top:20px; color: #293f54;  margin-bottom: 5px; vertical-align: middle;}
+    .wac-guide .container .lnb .depth1-menu > a{font-size: 18px; font-family:'lottemart-dream-bold';}
+    .wac-guide .container .lnb .depth1-menu i{top: 10px; float: right; margin-right: 14px; -ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); transform: rotate(90deg); transition: all ease 0.5s 0s;}
+    .wac-guide .container .lnb .depth1-menu i.open{ -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); transition: all ease 0.5s 0s;}
+
+  
+    .wac-guide .container .lnb .depth2-menu{margin-left:15px;}
+    .wac-guide .container .lnb .depth2-menu li{line-height: 1.5;}
+    .wac-guide .container .lnb .depth2-menu li a{font-size:12px;}
+    /* .wac-guide .container .lnb .depth1-menu.active + .depth2-menu{margin-left:15px; display: block;} */
 
 
-    .container .contents{width:calc(100% - 280px); float: right; border-left:1px solid #e1e1e1; padding-left:20px;}
-    .container .contents .article{margin-bottom : 200px; padding-top:20px;}
-    .container .contents .article > div[id^="item"]{padding:20px; border:1px solid #e1e1e1;}
-    .container .contents .article > div[id^="item"] > h4{color: #ff3b2d}
-    .container .contents .article h3{font-size:25px;  color: #293f54;}
-    
-    .container .contents #wacIntro .contents-list{margin:15px;}
+    .wac-guide .container .contents{width:calc(100% - 280px); float: right; border-left:1px solid #e1e1e1; padding-left:20px; z-index: 90;}
+    .wac-guide .container .contents .article{margin-bottom : 200px; padding-top:20px;}
+    .wac-guide .container .contents .article > div[id^="item"]{padding:20px; border:1px solid #e1e1e1;}
+    .wac-guide .container .contents .article > div[id^="item"] > h4{color: #ff3b2d}
+    .wac-guide .container .contents .article h3{font-size:25px;  color: #293f54;}
+   
+    .wac-guide .container .contents #wacIntro .contents-list{margin:15px;}
 
 
-    .container .contents #wacExample > div{margin-top: 20px;}
-    .container .contents #wacExample .sample,
-    .container .contents #wacExample .definition{margin: 20px;}
-    .container .contents #wacExample .sample h5,
-    .container .contents #wacExample .definition h5{margin-bottom:15px;}
-    .container .contents #wacExample .definition li ul{padding-left:15px;}
+    .wac-guide .container .contents #wacExample > div{margin-top: 20px;}
+    .wac-guide .container .contents #wacExample .sample,
+    .wac-guide .container .contents #wacExample .definition{margin: 20px;}
+    .wac-guide .container .contents #wacExample .sample h5,
+    .wac-guide .container .contents #wacExample .definition h5{margin-bottom:15px;}
+    .wac-guide .container .contents #wacExample .definition li ul{padding-left:15px;}
 
     .container .contents #wacExample .check-list{width:90%; margin: 0 auto;}
     .container .contents #wacExample .check-list dt,

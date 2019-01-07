@@ -17,7 +17,7 @@
     
     <title>롯데마트 웹접근성 가이드</title>
 </head>
-<body>
+<body class="wac-guide">
         <!-- gnb start -->
         <header class="gnb">
           <!-- inner start -->
@@ -50,35 +50,35 @@
             <div class="inner">
                 <!-- lnb start -->
                 <nav class="lnb">
-                    <ul class="pc depth1-menu">
-                        <li class="active"><a href="#none">PC 접근성 검사항목</a>
-                            <ul class="depth2-menu ">
-                                <li><a href="#item01">1. 이미지에 대한 적절한 대체텍스트 제공</a></li>
-                                <li><a href="#item02">2. 자막제공</a></li>
-                                <li><a href="#item03">3. 색에 무관한 콘텐츠 인식</a></li>
-                                <li><a href="#item04">4. 명확한 지시사항 제공</a></li>
-                                <li><a href="#item05">5. 텍스트 콘텐츠의 명도 대비</a></li>
-                                <li><a href="#item06">6. 자동 재생 금지</a></li>
-                                <li><a href="#item07">7. 콘텐츠 간의 구분</a></li>
-                                <li><a href="#item08">8. 키보드 사용 보장 (입력장치 접근성)</a></li>
-                                <li><a href="#item09">9. 초점이동</a></li>
-                                <li><a href="#item10">10. 조작가능</a></li>
-                                <li><a href="#item11">11. 응답시간 조절</a></li>
-                                <li><a href="#item12">12. 정지기능 제공 </a></li>
-                                <li><a href="#item13">13. 깜빡임과 번쩍임 사용 제한 </a></li>
-                                <li><a href="#item14">14. 반복영역 건너뛰기</a></li>
-                                <li><a href="#item15">15. 타이틀 및 제목 제공</a></li>
-                                <li><a href="#item16">16. 적절한 링크 텍스트</a></li>
-                                <li><a href="#item17">17. 기본 언어 표시</a></li>
-                                <li><a href="#item18">18. 사용자 요구에 따른 실행</a></li>
-                                <li><a href="#item19">19. 콘텐츠의 선형화 (콘텐츠의 선형 구조)</a></li>
-                                <li><a href="#item20">20. 표의 구성</a></li>
-                                <li><a href="#item21">21. 레이블 제공</a></li>
-                                <li><a href="#item22">22. 오류정정</a></li>
-                                <li><a href="#item23">23. 마크업오류방지</a></li>
-                                <li><a href="#item24">24. 웹 애플리케이션 접근성 준수</a></li>
-                            </ul>
-                        </li>
+                    <h2 class="depth1-menu active">
+                        <a href="#none">접근성 24개 검사지침</a>
+                        <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                    </h2>
+                    <ul class="depth2-menu">
+                        <li><a href="#item01">1. 이미지에 대한 적절한 대체텍스트 제공</a></li>
+                        <li><a href="#item02">2. 자막제공</a></li>
+                        <li><a href="#item03">3. 색에 무관한 콘텐츠 인식</a></li>
+                        <li><a href="#item04">4. 명확한 지시사항 제공</a></li>
+                        <li><a href="#item05">5. 텍스트 콘텐츠의 명도 대비</a></li>
+                        <li><a href="#item06">6. 자동 재생 금지</a></li>
+                        <li><a href="#item07">7. 콘텐츠 간의 구분</a></li>
+                        <li><a href="#item08">8. 키보드 사용 보장 (입력장치 접근성)</a></li>
+                        <li><a href="#item09">9. 초점이동</a></li>
+                        <li><a href="#item10">10. 조작가능</a></li>
+                        <li><a href="#item11">11. 응답시간 조절</a></li>
+                        <li><a href="#item12">12. 정지기능 제공 </a></li>
+                        <li><a href="#item13">13. 깜빡임과 번쩍임 사용 제한 </a></li>
+                        <li><a href="#item14">14. 반복영역 건너뛰기</a></li>
+                        <li><a href="#item15">15. 타이틀 및 제목 제공</a></li>
+                        <li><a href="#item16">16. 적절한 링크 텍스트</a></li>
+                        <li><a href="#item17">17. 기본 언어 표시</a></li>
+                        <li><a href="#item18">18. 사용자 요구에 따른 실행</a></li>
+                        <li><a href="#item19">19. 콘텐츠의 선형화 (콘텐츠의 선형 구조)</a></li>
+                        <li><a href="#item20">20. 표의 구성</a></li>
+                        <li><a href="#item21">21. 레이블 제공</a></li>
+                        <li><a href="#item22">22. 오류정정</a></li>
+                        <li><a href="#item23">23. 마크업오류방지</a></li>
+                        <li><a href="#item24">24. 웹 애플리케이션 접근성 준수</a></li>
                     </ul>
                 </nav>
                 <!-- lnb end -->
@@ -846,27 +846,19 @@ var fixGnbLastFocusable = function(){
         hljs.highlightBlock(block);
     });
 
-
-
-    var $lnb = $('.pc.depth1-menu > li > a');
+    var $lnb = $('.lnb .depth1-menu'),
+        $lnbIcon = $('.lnb .depth1-menu .lnb-icon');
 
     $lnb.on('click', function(){
-        $(this).toggleClass('active');
-    });
-    var $codeArea = $('pre code'),
-        $targetCodeArea;
+        if($lnb.hasClass('active')){
+            $(this).removeClass('active');
+            $(this).next('.depth2-menu').hide(300);
+            $lnbIcon.removeClass('open');
 
-    $codeArea.before('<button class="code-open-btn">열기</button>');
-
-
-    var $codeOpenBtn = $('.code-open-btn');
-
-    $codeOpenBtn.on('click', function(){
-        $targetCodeArea = $(this).next('code')
-        if($targetCodeArea.hasClass('active')){
-            $targetCodeArea.removeClass('active');
         }else{
-            $targetCodeArea.addClass('active');
+            $(this).addClass('active');
+            $(this).next('.depth2-menu').show(600);
+            $lnbIcon.addClass('open');
         }
     });
 
@@ -879,6 +871,26 @@ var fixGnbLastFocusable = function(){
         }
     });
    
+
+    var $codeArea = $('pre code'),
+        $targetCodeArea;
+
+    $codeArea.before('<button class="code-open-btn">열기</button>');
+
+
+    var $codeOpenBtn = $('.code-open-btn');
+
+    $codeOpenBtn.on('click', function(){
+        $targetCodeArea = $(this).next('code')
+        if($targetCodeArea.hasClass('active')){
+            $targetCodeArea.removeClass('active');
+            $(this).text('열기');
+        }else{
+            $targetCodeArea.addClass('active');
+            $(this).text('닫기');
+        }
+    });
+
 </script>
 </body>
 </html>

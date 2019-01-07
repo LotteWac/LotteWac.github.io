@@ -487,7 +487,7 @@
     });
 
     //스크롤 모션 구현 
-    var scrollTop, offset,
+    var distanceOfTop, offset,
         windowHeight = $(window).height();
 
     //해당 영역으로 이동하는 함수
@@ -496,43 +496,40 @@
         $('html, body').animate({scrollTop : offset.top}, 0);
     }
 
-    $("#inside").scroll( function() {
-        var elem = $("#inside"); 
-        if ( elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight()) { alert("End of Yellow"); } 
-    });
-
-
     $(window).on('DOMMouseScroll mousewheel', function (e) {
-        scrollHeight = $(window).scrollTop();
-        console.log(scrollHeight);
+        distanceOfTop = $(window).scrollTop();
         //scroll down
         if( e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0 ) {
-            if(scrollHeight <= 1000){
+            if(distanceOfTop <= 1000){
                 preventDefaultAction(e)
                 goToArea("#infoAccess");
-            } else if(scrollHeight > 1200 && scrollHeight <= 2000){
+            } else if(distanceOfTop > 1200 && distanceOfTop <= 2000){
                 preventDefaultAction(e)
                 goToArea("#whyWac");
-            } else if(scrollHeight > 3200 && scrollHeight <= 4000){
+            } else if(distanceOfTop > 2200 && distanceOfTop <= 3000){
                 preventDefaultAction(e)
                 goToArea("#wacGuideLine");
-            } else if(scrollHeight > 2470){
+            } else if(distanceOfTop > 3100){
                 preventDefaultAction(e)
                 goToArea("#wacIntro");
             }
 
         //scroll up
         } else {
-            if(scrollHeight > 900 && scrollHeight < 1000){
+            if(distanceOfTop >= 1000 && distanceOfTop < 2000){
                 preventDefaultAction(e)
-                goToArea("#whyWinfoAccessac");
-            } else if(scrollHeight > 1900 && scrollHeight < 2200){
+                goToArea("#mVisual");
+            } else if(distanceOfTop >= 2000 && distanceOfTop < 3000){
+                preventDefaultAction(e)
+                goToArea("#infoAccess");
+            } else if(distanceOfTop >= 3000 && distanceOfTop < 4000){
                 preventDefaultAction(e)
                 goToArea("#whyWac");
-            } else if(scrollHeight > 2470){
+            } else if(distanceOfTop >= 4000){
                 preventDefaultAction(e)
                 goToArea("#wacGuideLine");
             }
+
         }
     });
 
