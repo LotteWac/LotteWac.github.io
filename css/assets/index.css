@@ -24,8 +24,13 @@ button:focus{border:1px solid #293fff!important; border-radius: 5px;}
 .btn-lotte:hover{background:#293f54; color:#fff;}
 .btn-close{width:30px!important; height:30px!important; padding:5px; position: absolute; top:0; right:0; border-radius: 0; background:#fff;color: #222;}
 .btn-close:active{box-shadow:none; color: #000; font-weight: 900;}
-.btn-fixed-top{width: 50px; height:50px; border-radius:25px; padding:8px; background:#293f54; position: fixed; bottom:30px; right:30px; z-index: 9999;}
-.btn-fixed-top i{font-size: 30px; color:#fff;}
+
+
+/************************* 
+ *                       *
+ *   index.html > .gnb   *
+ *                       *
+ *************************/
 
 .gnb{position:fixed; width:100%; height:60px; background: #293f54; padding-top:20px; overflow: hidden; z-index: 99;}
     .gnb h1{float: left; margin-top: -6px;}
@@ -41,17 +46,44 @@ button:focus{border:1px solid #293fff!important; border-radius: 5px;}
     .gnb .menu li a{display: block; float: left;  color: #fff; margin-left:20px;}
 
 
-.container{width:100%; overflow: hidden; padding:0; padding-top:60px;}
-
-    .container .mvisual{width: 100%; height: 700px; overflow: hidden; position: relative;}
-    .container .mvisual > img{width: 100%; opacity:0.7; position: absolute; top : -200px;}
-    .container .mvisual h2{width:600px; color:#293f54; text-align: center; font-size: 100px; font-weight: 900; letter-spacing: 5px;position: absolute; top:45%; left: 50%; margin: -183px 0 0 -300px; font-family: 'Calibri';}
-    .container .mvisual p {color:#293f54; font-weight: 900; position: absolute; top:70%; left: 50%;margin-left: -302px; font-size:20px;}
-
-    .container .info-access{width: 100%; height: 500px; padding-top:100px;}
-    .container .info-access h3,
     
-    #wacIntro h3,#whyWac h3, #wacGuideList h3{font-size: 60px; margin-bottom:20px;}
+/************************************ 
+ *                                  *
+ *   index.html > .main-fixed-nav   *
+ *                                  *
+ ************************************/
+
+.main-fixed-nav{position: fixed; width: 30px; height:170px; top:50%; right:50%; margin:-100px -660px 0 0;  z-index: 99;background: #293f54;  border-radius: 15px;}
+    .main-fixed-nav .page-anchor{width:100%; height:100%;}
+        .main-fixed-nav .page-anchor li{display:inline}
+        .main-fixed-nav .page-anchor li a{display:block; width:10px; height: 10px; border-radius:10px; background:#fff; text-indent: -9999999px; margin: 20px 10px;}
+    .main-fixed-nav #goTopBtn {display: block; width: 30px; height:30px; border-radius:25px; background:#293f54; text-align: center;}
+        .main-fixed-nav #goTopBtn i{font-size: 15px; color:#fff;}
+    
+
+
+/******************************* 
+ *                             *
+ *   index.html > .container   *
+ *                             *
+ *   1. #mVisual               *
+ *   2. #infoAccess            *
+ *   3. #whyWac                *
+ *   4. #wacGuideLine          *
+ *   5. #wacIntro              *
+ *                             *
+ *******************************/
+
+.container{width:100%; overflow: hidden; padding:0; padding-top:60px;}
+    /* 1. #mVisual */
+    .container .m-visual{width: 100%; height: 1000px; overflow: hidden; position: relative;}
+    .container .m-visual > img{width: 100%; opacity:0.7; position: absolute; top : -200px;}
+    .container .m-visual h2{width:600px; color:#293f54; text-align: center; font-size: 100px; font-weight: 900; letter-spacing: 5px;position: absolute; top:45%; left: 50%; margin: -185px 0 0 -300px; font-family: 'Calibri';}
+    .container .m-visual p {color:#293f54; font-weight: 900; position: absolute; top:50%; left: 50%;margin:100px 0 0 -302px; font-size:20px;}
+ 
+    /* 2. #infoAccess  */
+    .container .info-access{width: 100%; height: 1000px; padding-top:100px;}
+    .container h3{font-size: 60px; margin-bottom:20px;}
     
     .container .access-list {overflow: hidden; text-align: center;}
     .container .access-list li {float:left; margin: 50px;}
@@ -67,20 +99,20 @@ button:focus{border:1px solid #293fff!important; border-radius: 5px;}
     .container .access-list li i{display:inline-block; color: #293f54; font-size: 135px; font-weight: 200; text-align: center; padding: 30px;}
 
 
-    /* #whyWac */
-    #whyWac{padding:150px;}
+    /* 3. #whyWac */
+    #whyWac{padding:150px; height: 1000px;}
     #whyWac dl{width:900px;}
     #whyWac dl:nth-child(2){padding-top: 20px;}
     #whyWac dl dt{padding-left:5px; font-size: 25px; color: #293f54; font-family: 'lottemart-dream-bold';}
     #whyWac dl dd{padding-left:35px; font-size: 16px;}
 
-    /* #wacGuideList */
-    #wacGuideList{width: 100%; height:600px; padding-top:100px; text-align: right;}
-    #wacGuideList p{font-size: 25px; color: #293f54; font-family: 'lottemart-dream-bold';}
-    #wacGuideList .guide-list li{font-size: 16px;}
+    /* 4. #wacGuideLine */
+    #wacGuideLine{width: 100%; height:1000px; padding-top:250px; text-align: right;}
+    #wacGuideLine p{font-size: 25px; color: #293f54; font-family: 'lottemart-dream-bold';}
+    #wacGuideLine .guide-list li{font-size: 16px;}
     
-    /* #wacIntro */
-    #wacIntro{width: 100%; padding:200px 0;}
+    /* 5. #wacIntro */
+    #wacIntro{width: 100%; height:1000px; padding:200px 0;}
     #wacIntro .inner{width: 770px;}
     #wacIntro h3{text-align: center;}
     #wacIntro p{ margin:0 auto; text-align: left;}

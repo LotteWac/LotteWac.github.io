@@ -40,15 +40,27 @@
             <!-- inner end -->
         </header>
         <!-- gnb end -->
-        <nav class="btn-fixed-top">
-            <a href="#top">
+        
+        <!-- main-fixed-nav start -->
+        <nav class="main-fixed-nav">
+            <ul class="page-anchor">
+                <li><a href="#mVisual">1. 메인비주얼 영역으로 이동</a></li>
+                <li><a href="#infoAccess">2. 정보접근성 설명 영역으로 이동</a></li>
+                <li><a href="#whyWac">3. 정보접근성의 필요성 영역으로 이동</a></li>
+                <li><a href="#wacGuideLine">4. LOTTE MART PC 접근성 가이드라인 영역으로 이동</a></li>
+                <li><a href="#wacIntro">5. LOTTE MART 정보 접근성 지침 영역으로 이동</a></li>
+            </ul>
+            <a href="#top" id="goTopBtn">
                 <i class="glyphicon glyphicon-eject"></i>
             </a>
         </nav>
+        <!-- main-fixed-nav end -->
+
         <!-- container start -->
         <div class="container index">
-            <!-- mvisual start -->
-            <div class="mvisual">
+           
+            <!-- 1. #mVisual start -->
+            <div class="m-visual" id="mVisual">
                 <img src="./img/main02.jpg" alt="메인비주얼 이미지">
 
                 <h2>LotteMart<br>Accessibility<br>Guide</h2>
@@ -56,9 +68,9 @@
                     -모두를 위한 웹을 설계합니다. 롯데마트 PC 웹 접근성 가이드라인.
                 </p>
             </div>
-            <!-- mvisual end -->
+            <!-- 1. #mVisual end -->
 
-            <!-- info-access start -->
+            <!-- 2. #infoAccess start -->
             <div class="info-access" id="infoAccess">
                 <div class="inner">
                     <h3>정보접근성이란?</h3>
@@ -70,120 +82,118 @@
                         롯데마트는 차별없는 서비스 제공을 위하여<br>
                         다음과같은 정보 접근성의 핵심원리 네 가지를 준수하고 있습니다.
                     <p>
+                    <!-- access-list start -->
+                    <ul class="access-list">
+                        <li class="access-li-notice">
+                            <i class="glyphicon glyphicon-eye-open"></i>
+                            <dl>
+                                <dt>
+                                    <button type="button" class="btn btn-lotte btn-lg" data-toggle="modal" data-target="#access-li01">인식의 용이성</button>
+                                </dt>
+                                <dd class="modal fade" id="access-li01" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <h4 class="modal-title">인식의 용이성</h4>
+                                            <p class="access-cont">
+                                            정보 접근성에서의 인식의 용이성이란,<br>
+                                            <em>제공되는 모든 콘텐츠에대해 <br>
+                                            사용자가 인식할 수 있어야 한다</em><br>
+                                            는 것이 핵심입니다.<br>
+                                            때문에 롯데마트 PC 웹 사이트에서 <br>
+                                            서비스하고 있는 모든 콘텐츠는 <br>
+                                            누구나 쉽게 인식할 수 있도록 <br>
+                                            설계되어있습니다.<br>
+                                            </p>
+                                            <button type="button" class="btn btn-close" data-dismiss="modal">X</button>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="access-li-nav">
+                            <i class="glyphicon glyphicon-play"></i>
+                            <dl>
+                                <dt>
+                                    <button type="button" class="btn btn-lotte btn-lg" data-toggle="modal" data-target="#access-li02">운용의 용이성</button>
+                                </dt>
+                                <dd class="modal fade" id="access-li02" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                                <h4 class="modal-title">운용의 용이성</h4>
+                                                <p class="access-cont">
+                                                    정보 접근성에서의 인식의 용이성이란,<br>
+                                                    <em>사용자 인터페이스 구성 요소는 <br>
+                                                    조작 가능하고 내비게이션할 수 있어야 한다.</em><br>
+                                                    는 것이 핵심입니다.<br>
+                                                    때문에 롯데마트 PC 웹 사이트에서 <br>
+                                                    웹 콘텐츠에 포함된 모든 요소들의 기능은 누구나<br>
+                                                    쉽게 사용할 수 있도록 설계되어있습니다.
+                                                </p>
+                                                <button type="button" class="btn btn-close" data-dismiss="modal">X</button>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="access-li-understand">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <dl>
+                                <dt> 
+                                    <button type="button" class="btn btn-lotte btn-lg" data-toggle="modal" data-target="#access-li03">이해의 용이성</button>
+                                </dt>
+                                <dd class="modal fade" id="access-li03" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                                <h4 class="modal-title">이해의 용이성</h4>
+                                                <p class="access-cont">
+                                                    정보 접근성에서의 인식의 용이성이란,<br>
+                                                    <em>콘텐츠는 장애유무에 관계없이 <br>
+                                                    이해할 수 있게 구성되어야 한다.<br></em>
+                                                    는 것이 핵심입니다.<br>
+                                                    때문에 롯데마트 PC 웹 사이트는 <br>
+                                                    사용자들이 가능한 한 쉽게 이해할 수 있도록<br> 콘텐츠나 제어 방식을 구성되어 있으며,<br>
+                                                    추가로 사용법에대한 블라인드 가이드를<br>
+                                                    태그로 제공하고 있습니다.
+                                                </p>
+                                                <button type="button" class="btn btn-close" data-dismiss="modal">X</button>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="access-li-stable">
+                            <i class="glyphicon glyphicon-grain"></i>
+                            <dl>
+                                <dt>
+                                    <button type="button" class="btn btn-lotte btn-lg" data-toggle="modal" data-target="#access-li04">견고성</button>
+                                </dt>
+                                <dd class="modal fade" id="access-li04" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                                <h4 class="modal-title">견고성</h4>
+                                                <p class="access-cont">
+                                                    정보 접근성에서의 인식의 용이성이란,<br>
+                                                    <em>웹 콘텐츠는 미래의 기술로도 접근할 수 있도록<br>
+                                                    견고하게 만들어야 한다.</em><br>
+                                                    는 것이 핵심입니다.<br>
+                                                    때문에 롯데마트 PC 웹 사이트는 <br>
+                                                    미래 기술발전을 고려하는 방식의<br>
+                                                    기술 구현과 개발을 우선으로하고 있습니다.
+                                                </p>
+                                                <button type="button" class="btn btn-close" data-dismiss="modal">X</button>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>         
+                    <!-- access-list end -->
                 </div>
             </div>
-            <!-- info-access end -->
+            <!-- 2. #infoAccess end -->
 
-            <!-- access-list start -->
-            <div class="inner">
-                <ul class="access-list">
-                    <li class="access-li-notice">
-                        <i class="glyphicon glyphicon-eye-open"></i>
-                        <dl>
-                            <dt>
-                                <button type="button" class="btn btn-lotte btn-lg" data-toggle="modal" data-target="#access-li01">인식의 용이성</button>
-                            </dt>
-                            <dd class="modal fade" id="access-li01" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <h4 class="modal-title">인식의 용이성</h4>
-                                        <p class="access-cont">
-                                        정보 접근성에서의 인식의 용이성이란,<br>
-                                        <em>제공되는 모든 콘텐츠에대해 <br>
-                                        사용자가 인식할 수 있어야 한다</em><br>
-                                        는 것이 핵심입니다.<br>
-                                        때문에 롯데마트 PC 웹 사이트에서 <br>
-                                        서비스하고 있는 모든 콘텐츠는 <br>
-                                        누구나 쉽게 인식할 수 있도록 <br>
-                                        설계되어있습니다.<br>
-                                        </p>
-                                        <button type="button" class="btn btn-close" data-dismiss="modal">X</button>
-                                    </div>
-                                </div>
-                            </dd>
-                        </dl>
-                    </li>
-                    <li class="access-li-nav">
-                        <i class="glyphicon glyphicon-play"></i>
-                        <dl>
-                            <dt>
-                                <button type="button" class="btn btn-lotte btn-lg" data-toggle="modal" data-target="#access-li02">운용의 용이성</button>
-                            </dt>
-                            <dd class="modal fade" id="access-li02" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                            <h4 class="modal-title">운용의 용이성</h4>
-                                            <p class="access-cont">
-                                                정보 접근성에서의 인식의 용이성이란,<br>
-                                                <em>사용자 인터페이스 구성 요소는 <br>
-                                                조작 가능하고 내비게이션할 수 있어야 한다.</em><br>
-                                                는 것이 핵심입니다.<br>
-                                                때문에 롯데마트 PC 웹 사이트에서 <br>
-                                                웹 콘텐츠에 포함된 모든 요소들의 기능은 누구나<br>
-                                                쉽게 사용할 수 있도록 설계되어있습니다.
-                                            </p>
-                                            <button type="button" class="btn btn-close" data-dismiss="modal">X</button>
-                                    </div>
-                                </div>
-                            </dd>
-                        </dl>
-                    </li>
-                    <li class="access-li-understand">
-                        <i class="glyphicon glyphicon-user"></i>
-                        <dl>
-                            <dt> 
-                                <button type="button" class="btn btn-lotte btn-lg" data-toggle="modal" data-target="#access-li03">이해의 용이성</button>
-                            </dt>
-                            <dd class="modal fade" id="access-li03" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                            <h4 class="modal-title">이해의 용이성</h4>
-                                            <p class="access-cont">
-                                                정보 접근성에서의 인식의 용이성이란,<br>
-                                                <em>콘텐츠는 장애유무에 관계없이 <br>
-                                                이해할 수 있게 구성되어야 한다.<br></em>
-                                                는 것이 핵심입니다.<br>
-                                                때문에 롯데마트 PC 웹 사이트는 <br>
-                                                사용자들이 가능한 한 쉽게 이해할 수 있도록<br> 콘텐츠나 제어 방식을 구성되어 있으며,<br>
-                                                추가로 사용법에대한 블라인드 가이드를<br>
-                                                태그로 제공하고 있습니다.
-                                            </p>
-                                            <button type="button" class="btn btn-close" data-dismiss="modal">X</button>
-                                    </div>
-                                </div>
-                            </dd>
-                        </dl>
-                    </li>
-                    <li class="access-li-stable">
-                        <i class="glyphicon glyphicon-grain"></i>
-                        <dl>
-                            <dt>
-                                <button type="button" class="btn btn-lotte btn-lg" data-toggle="modal" data-target="#access-li04">견고성</button>
-                            </dt>
-                            <dd class="modal fade" id="access-li04" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                            <h4 class="modal-title">견고성</h4>
-                                            <p class="access-cont">
-                                                정보 접근성에서의 인식의 용이성이란,<br>
-                                                <em>웹 콘텐츠는 미래의 기술로도 접근할 수 있도록<br>
-                                                견고하게 만들어야 한다.</em><br>
-                                                는 것이 핵심입니다.<br>
-                                                때문에 롯데마트 PC 웹 사이트는 <br>
-                                                미래 기술발전을 고려하는 방식의<br>
-                                                기술 구현과 개발을 우선으로하고 있습니다.
-                                            </p>
-                                            <button type="button" class="btn btn-close" data-dismiss="modal">X</button>
-                                    </div>
-                                </div>
-                            </dd>
-                        </dl>
-                    </li>
-                </ul>
-            </div>
-            <!-- access-list end -->
-
-            <div id="whyWac" class="article">
+            <!-- 3. #whyWac start -->
+            <div class="article" id="whyWac">
                 <h3>정보접근성의 필요성</h3>
                 <p>
                     <ul>
@@ -219,211 +229,206 @@
                     </ul>
                 </p>
             </div>
+            <!-- 3. #whyWac end -->
 
-            <!-- read-wac-guide start -->
-            <div class="read-wac-guide">
-                <!-- inner start -->
+        
+            <!-- 4. #wacGuideLine start -->
+            <div class="article" id="wacGuideLine"> 
                 <div class="inner">
-                  
-                    <!-- #wacGuideList start -->
-                    <div id="wacGuideList" class="article"> 
-                        <h3>LOTTE MART PC 접근성 가이드라인</h3>
-                        <p>
-                            - 모두를 위한 웹을 설계합니다. 롯데마트 PC 웹 접근성 가이드라인.
-                        </p>
+                    <h3>LOTTE MART PC 접근성 가이드라인</h3>
+                    <p>
+                        - 모두를 위한 웹을 설계합니다. 롯데마트 PC 웹 접근성 가이드라인.
+                    </p>
 
-                        <ol class="guide-list">
-                            <li>
-                                - 롯데마트 PC 웹의 경우, 누구나 이용이 가능한 차별없는 웹 서비스를 제공함으로써 오직 고객만을 생각하는 롯데마트의 모토를 실현하고자 합니다.
-                            </li>
-                            <li>
-                                - 롯데마트 PC에서 제공하는 모든 웹 서비스는 '롯데마트 PC 웹 접근성 가이드라인'을 준수해야 합니다. 회원가입, 로그인, 상품의 검색, 탐색, 장바구니 관리와 주문 결제에 이르기까지 롯데마트 PC 웹 기술을 통해 구현하는 모든 서비스가 이 가이드라인의 적용 대상입니다.
-                            </li>
-                            <li>
-                                - 이 가이드라인은 한국정보화진흥원 한국형 웹 콘텐츠 접근성 지침 WCAG 2.1이 근간이며 이를 준수하는 범위 내에서 제작되었습니다.
-                            </li>
-                            <li>
-                                - 이 가이드라인은 웹 기술(HTML, CSS, JavaScript)에 대한 사전 지식을 요구합니다.
-                            </li>
-                        </ol>            
-                    </div>
-                    <!-- #wacGuideList end -->
-                    
-                    <!-- #wacIntro start -->
-                    <div id="wacIntro" class="article">
-                        <div class="inner">
-                            <h3>LOTTE MART 정보 접근성 지침</h3>
-                            <p>
-                                - LOTTE MART 정보 접근성 지침을 알아보겠습니다.<br>
-                                - 정보 접근성 지침에 관련된 문서는 다음과 같이 2가지 항목으로 구성되어 있습니다.
-                            </p>
-                            <ol class="contents-list">
-                                <li>
-                                    <em class="circle-num">1</em>롯데마트 PC 접근성 지침과 적용상황
-                                    <button type="button" class="btn btn-xs btn-info" data-toggle="modal" data-target="#WacTable">접근성 검사항목 지침</button>
-                                    <a href="./wac_guide.html" class="btn btn-warning btn-xs">롯데마트 PC 접근성 지침별 예제 보기</a>
-                                    
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="WacTable" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            <h4 class="modal-title" id="myModalLabel">접급성 검사항목</h4>
-                                            </div>
-                                            <div class="modal-body">
-                                                <table>
-                                                    <tr>
-                                                        <th>원칙 (4개)</th>
-                                                        <th>지침 (13개)</th>
-                                                        <th>검사항목 (24개)</th>
-                                                    </tr>
-                                                    <!-- 인식의 용이성 -->
-                                                    <tr>
-                                                        <th rowspan="7">인식의 용이성<br>(Perceivable)</th>
-                                                        <td>대체 텍스트</td>
-                                                        <td>- (적절한 대체 텍스트 제공) 텍스트 아닌 콘텐츠는 그 의미나 용도를 인식할 수 있도록 대체 텍스트를 제공해야 한다.</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>멀티미디어 대체 수단</td>
-                                                        <td>- (자막 제공) 멀티미디어 콘텐츠에는 자막, 대본 또는 수화를 제공해야 한다.</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td rowspan="5">명료성</td>
-                                                        <td>- (색에 무관한 콘텐츠 인식) 콘텐츠는 색에 관계없이 인식될 수 있어야 한다.</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            - (명확한 지시 사항 제공) 지시 사항은 모양, 크기, 위치, 방향, 색, 소리 등에 관계없이 인식될 수 있어야 한다.
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            - (텍스트 콘텐츠의 명도 대비) 텍스트 콘텐츠와 배경 간의 명도 대비는 4.5 대 1 이상이어야 한다.
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            - (자동 재생 금지) 자동으로 소리가 재생되지 않아야 한다.
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            - (콘텐츠 간의 구분) 이웃한 콘텐츠는 구별될 수 있어야 한다.
-                                                        </td>
-                                                    </tr>
-
-                                                    <!-- 운용의 용이성 -->
-                                                    <tr>
-                                                        <th rowspan="9">운용의 용이성<br>(Operable)</th>
-                                                        <td rowspan="3">입력장치 접근</td>
-                                                        <td>- (키보드 사용 보장) 모든 기능은 키보드만으로도 사용할 수 있어야 한다.</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>- (초점 이동) 키보드에 의한 초점은 논리적으로 이동해야 하며 시각적으로 구별할 수 있어야 한다.</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>- (조작 가능) 사용자 입력 및 컨트롤은 조작 가능하도록 제공되어야 한다.</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td rowspan="2">충분한 시간 제공</td>
-                                                        <td>
-                                                            - (응답시간 조절) 시간제한이 있는 콘텐츠는 응답시간을 조절할 수 있어야 한다.
-
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            - (정지 기능 제공) 자동으로 변경되는 콘텐츠는 움직임을 제어할 수 있어야 한다.
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>광과민성 발작 예방</td>
-                                                        <td>
-                                                            - (깜빡임과 번쩍임 사용 제한) 초당 3~50 회 주기로 깜빡이거나 번쩍이는 콘텐츠를 제공하지 않아야 한다.
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td rowspan="3">쉬운 내비게이션</td>
-                                                        <td>- (반복 영역 건너뛰기) 콘텐츠의 반복되는 영역은 건너뛸 수 있어야 한다.</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>- (적절한 링크 텍스트) 링크 텍스트는 용도나 목적을 이해할 수 있도록 제공해야 한다.</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>- (제목 제공) 페이지, 프레임, 콘텐츠 블록에는 적절한 제목을 제공해야 한다.</td>
-                                                    </tr>
-                                                    
-                                                    <!-- 이해의 용이성 -->
-                                                    <tr>
-                                                        <th rowspan="6">이해의 용이성<br>(Understandable)</th>
-                                                        <td>가독성</td>
-                                                        <td>- (기본 언어 표시) 주로 사용하는 언어를 명시해야 한다.</td>
-                                                    </tr>
-                                                    
-                                                    <tr>
-                                                        <td>예측 가능성</td>
-                                                        <td>
-                                                            -(사용자 요구에 따른 실행) 사용자가 의도하지 않은 기 (새 창, 초점에 의한 맥락 변화 등)은 실행되지 않아야 한다.
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td rowspan="2">콘텐츠의 논리성</td>
-                                                        <td>
-                                                            - (콘텐츠의 선형 구조) 콘텐츠는 논리적인 순서로 제공해야 한다.
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td> 
-                                                            - (표의 구성) 표는 이해하기 쉽게 구성해야 한다.
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td rowspan="2">입력 도움</td>
-                                                        <td>
-                                                            - (레이블 제공) 사용자 입력에는 대응하는 레이블을 제공해야 한다.
-                                                        </td> 
-                                                    </tr>
-                                                    <tr>
-                                                        <td> 
-                                                            - (오류 정정) 입력 오류를 정정할 수 있는 방법을 제공해야 한다.
-                                                        </td>
-                                                    </tr>
-
-                                                    <!-- 견고성 -->
-                                                    <tr>
-                                                        <th rowspan="2">견고성<br>(Robust)</th>
-                                                        <td>문법 준수</td>
-                                                        <td>- (마크업 오류 방지) 마크업 언어의 요소는 열고 닫음, 중첩 관계 및 속성 선언에 오류가 없어야 한다.</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>웹 애플리케이션 접근성</td>
-                                                        <td>- (웹 애플리케이션 접근성 준수) 콘텐츠에 포함된 웹 애 플리케이션은 접근성이 있어야 한다.</td>
-                                                    </tr>
-
-
-
-                                                </table>
-                                            </div>
-                                            <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <em class="circle-num">2</em>롯데마트 모바일 접근성 지침과 적용상항
-                                </li>
-                            </ol>    
-                        </div>
-                    </div>
-                    <!-- #wacIntro end -->
-                   
+                    <ol class="guide-list">
+                        <li>
+                            - 롯데마트 PC 웹의 경우, 누구나 이용이 가능한 차별없는 웹 서비스를 제공함으로써 오직 고객만을 생각하는 롯데마트의 모토를 실현하고자 합니다.
+                        </li>
+                        <li>
+                            - 롯데마트 PC에서 제공하는 모든 웹 서비스는 '롯데마트 PC 웹 접근성 가이드라인'을 준수해야 합니다. 회원가입, 로그인, 상품의 검색, 탐색, 장바구니 관리와 주문 결제에 이르기까지 롯데마트 PC 웹 기술을 통해 구현하는 모든 서비스가 이 가이드라인의 적용 대상입니다.
+                        </li>
+                        <li>
+                            - 이 가이드라인은 한국정보화진흥원 한국형 웹 콘텐츠 접근성 지침 WCAG 2.1이 근간이며 이를 준수하는 범위 내에서 제작되었습니다.
+                        </li>
+                        <li>
+                            - 이 가이드라인은 웹 기술(HTML, CSS, JavaScript)에 대한 사전 지식을 요구합니다.
+                        </li>
+                    </ol>            
                 </div>
-                <!-- inner end -->
             </div>
-            <!-- read-wac-guide end -->
+            <!-- 4. #wacGuideLine end -->
+                
+            <!-- 5. #wacIntro start -->
+            <div id="wacIntro" class="article">
+                <div class="inner">
+                    <h3>LOTTE MART 정보 접근성 지침</h3>
+                    <p>
+                        - LOTTE MART 정보 접근성 지침을 알아보겠습니다.<br>
+                        - 정보 접근성 지침에 관련된 문서는 다음과 같이 2가지 항목으로 구성되어 있습니다.
+                    </p>
+                    <ol class="contents-list">
+                        <li>
+                            <em class="circle-num">1</em>롯데마트 PC 접근성 지침과 적용상황
+                            <button type="button" class="btn btn-xs btn-info" data-toggle="modal" data-target="#WacTable">접근성 검사항목 지침</button>
+                            <a href="./wac_guide.html" class="btn btn-warning btn-xs">롯데마트 PC 접근성 지침별 예제 보기</a>
+                            
+                            <!-- Modal -->
+                            <div class="modal fade" id="WacTable" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">접급성 검사항목</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table>
+                                            <tr>
+                                                <th>원칙 (4개)</th>
+                                                <th>지침 (13개)</th>
+                                                <th>검사항목 (24개)</th>
+                                            </tr>
+                                            <!-- 인식의 용이성 -->
+                                            <tr>
+                                                <th rowspan="7">인식의 용이성<br>(Perceivable)</th>
+                                                <td>대체 텍스트</td>
+                                                <td>- (적절한 대체 텍스트 제공) 텍스트 아닌 콘텐츠는 그 의미나 용도를 인식할 수 있도록 대체 텍스트를 제공해야 한다.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>멀티미디어 대체 수단</td>
+                                                <td>- (자막 제공) 멀티미디어 콘텐츠에는 자막, 대본 또는 수화를 제공해야 한다.</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="5">명료성</td>
+                                                <td>- (색에 무관한 콘텐츠 인식) 콘텐츠는 색에 관계없이 인식될 수 있어야 한다.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    - (명확한 지시 사항 제공) 지시 사항은 모양, 크기, 위치, 방향, 색, 소리 등에 관계없이 인식될 수 있어야 한다.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    - (텍스트 콘텐츠의 명도 대비) 텍스트 콘텐츠와 배경 간의 명도 대비는 4.5 대 1 이상이어야 한다.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    - (자동 재생 금지) 자동으로 소리가 재생되지 않아야 한다.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    - (콘텐츠 간의 구분) 이웃한 콘텐츠는 구별될 수 있어야 한다.
+                                                </td>
+                                            </tr>
+
+                                            <!-- 운용의 용이성 -->
+                                            <tr>
+                                                <th rowspan="9">운용의 용이성<br>(Operable)</th>
+                                                <td rowspan="3">입력장치 접근</td>
+                                                <td>- (키보드 사용 보장) 모든 기능은 키보드만으로도 사용할 수 있어야 한다.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>- (초점 이동) 키보드에 의한 초점은 논리적으로 이동해야 하며 시각적으로 구별할 수 있어야 한다.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>- (조작 가능) 사용자 입력 및 컨트롤은 조작 가능하도록 제공되어야 한다.</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="2">충분한 시간 제공</td>
+                                                <td>
+                                                    - (응답시간 조절) 시간제한이 있는 콘텐츠는 응답시간을 조절할 수 있어야 한다.
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    - (정지 기능 제공) 자동으로 변경되는 콘텐츠는 움직임을 제어할 수 있어야 한다.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>광과민성 발작 예방</td>
+                                                <td>
+                                                    - (깜빡임과 번쩍임 사용 제한) 초당 3~50 회 주기로 깜빡이거나 번쩍이는 콘텐츠를 제공하지 않아야 한다.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">쉬운 내비게이션</td>
+                                                <td>- (반복 영역 건너뛰기) 콘텐츠의 반복되는 영역은 건너뛸 수 있어야 한다.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>- (적절한 링크 텍스트) 링크 텍스트는 용도나 목적을 이해할 수 있도록 제공해야 한다.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>- (제목 제공) 페이지, 프레임, 콘텐츠 블록에는 적절한 제목을 제공해야 한다.</td>
+                                            </tr>
+                                            
+                                            <!-- 이해의 용이성 -->
+                                            <tr>
+                                                <th rowspan="6">이해의 용이성<br>(Understandable)</th>
+                                                <td>가독성</td>
+                                                <td>- (기본 언어 표시) 주로 사용하는 언어를 명시해야 한다.</td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td>예측 가능성</td>
+                                                <td>
+                                                    -(사용자 요구에 따른 실행) 사용자가 의도하지 않은 기 (새 창, 초점에 의한 맥락 변화 등)은 실행되지 않아야 한다.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="2">콘텐츠의 논리성</td>
+                                                <td>
+                                                    - (콘텐츠의 선형 구조) 콘텐츠는 논리적인 순서로 제공해야 한다.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td> 
+                                                    - (표의 구성) 표는 이해하기 쉽게 구성해야 한다.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="2">입력 도움</td>
+                                                <td>
+                                                    - (레이블 제공) 사용자 입력에는 대응하는 레이블을 제공해야 한다.
+                                                </td> 
+                                            </tr>
+                                            <tr>
+                                                <td> 
+                                                    - (오류 정정) 입력 오류를 정정할 수 있는 방법을 제공해야 한다.
+                                                </td>
+                                            </tr>
+
+                                            <!-- 견고성 -->
+                                            <tr>
+                                                <th rowspan="2">견고성<br>(Robust)</th>
+                                                <td>문법 준수</td>
+                                                <td>- (마크업 오류 방지) 마크업 언어의 요소는 열고 닫음, 중첩 관계 및 속성 선언에 오류가 없어야 한다.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>웹 애플리케이션 접근성</td>
+                                                <td>- (웹 애플리케이션 접근성 준수) 콘텐츠에 포함된 웹 애 플리케이션은 접근성이 있어야 한다.</td>
+                                            </tr>
+
+
+
+                                        </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <em class="circle-num">2</em>롯데마트 모바일 접근성 지침과 적용상항
+                        </li>
+                    </ol>    
+                </div>
+            </div>
+            <!-- 5. #wacIntro end -->
+              
         </div>
         <!-- container end -->
         
@@ -482,26 +487,35 @@
     });
 
     //스크롤 모션 구현 
-    var scrollTop, offset;
+    var scrollTop, offset,
+        windowHeight = $(window).height();
+
+    //해당 영역으로 이동하는 함수
     var goToArea = function(AreaId){
         offset = $(AreaId).offset();
         $('html, body').animate({scrollTop : offset.top}, 0);
     }
+
+    $("#inside").scroll( function() {
+        var elem = $("#inside"); 
+        if ( elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight()) { alert("End of Yellow"); } 
+    });
+
 
     $(window).on('DOMMouseScroll mousewheel', function (e) {
         scrollHeight = $(window).scrollTop();
         console.log(scrollHeight);
         //scroll down
         if( e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0 ) {
-            if(scrollHeight < 700){
+            if(scrollHeight <= 1000){
                 preventDefaultAction(e)
                 goToArea("#infoAccess");
-            } else if(scrollHeight > 900 && scrollHeight < 1000){
+            } else if(scrollHeight > 1200 && scrollHeight <= 2000){
                 preventDefaultAction(e)
                 goToArea("#whyWac");
-            } else if(scrollHeight > 1900 && scrollHeight < 2200){
+            } else if(scrollHeight > 3200 && scrollHeight <= 4000){
                 preventDefaultAction(e)
-                goToArea("#wacGuideList");
+                goToArea("#wacGuideLine");
             } else if(scrollHeight > 2470){
                 preventDefaultAction(e)
                 goToArea("#wacIntro");
@@ -517,7 +531,7 @@
                 goToArea("#whyWac");
             } else if(scrollHeight > 2470){
                 preventDefaultAction(e)
-                goToArea("#wacGuideList");
+                goToArea("#wacGuideLine");
             }
         }
     });
