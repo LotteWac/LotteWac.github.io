@@ -136,7 +136,7 @@
                                 </dl>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : alt 속성을 이용한 제공방법 (일반적인 방법)</h5>
                                     <p>
                                         - 롯데마트 로고 이미지의 대체텍스트 제공
                                     </p>
@@ -147,7 +147,7 @@
                                 </div>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : alt 속성을 이용한 제공방법 (일반적인 방법)</h5>
                                     <p>
                                         - 메인 슬라이드 이미지 적용 예시 : 이미지가 제공하는 모든 내용을 alt 속성에 제공하여 이미지의 정보를 이해할 수 있음
 
@@ -159,18 +159,119 @@
                                 </div>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : Image Map</h5>
                                     <p>
-                                        - 아이콘 이미지 대체 텍스트 제공 : 배경이미지 아이콘의 내용과 동일한 대체 텍스트 제공
+                                        - HOT PICK! 기획전 이미지 맵에 대하여 대체 텍스트 제공<br>
+                                        - 여러 개가 합쳐진 한 이미지에 대해 접근을 원활히 하기 위해서 대체 텍스트를 제공해야 한다.<br>
+                                        - 이미지 맵을 사용할 때는 큰 이미지 전체에 대한 대체 텍스트와 부분 영역에 대한 대체 텍스트를 반드시 넣어 주어야 한다.
+                                    </p>
+                                    <img src="./img/img-map.png" alt="이미지 맵 대체 텍스트 제공">
 
+                                    <pre><code class="html">&lt;img src="//simage.lottemart.com/lm2/images/contents/2019/01/C2060001_000000000765_1030_576.jpg" usemap="#hotpick_C2060001_000000000765" class="thumb" alt="FOOD" width="1030" height="576"&gt;
+&lt;map name="hotpick_C2060001_000000000765"&gt; 
+    &lt;area shape="rect" coords="1,1,515,575" href="http://www.lottemart.com/plan/planDetail.do?CategoryID=C2060001&amp;MkdpSeq=000000000765" alt="즉석 도정 블렌딩 米 나만의 쌀 레시피"&gt; 
+    &lt;area shape="rect" coords="515,1,1028,287" href="http://www.lottemart.com/plan/planDetail.do?CategoryID=C2060002&amp;MkdpSeq=000000000916" alt="이탈리아 고품격 파스타 디벨라 이탈리아 식탁으로 초대"&gt; 
+    &lt;area shape="rect" coords="515,287,772,575" href="http://www.lottemart.com/plan/planDetail.do?CategoryID=C2060002&amp;MkdpSeq=000000000913" alt="따뜻한 차와 커피 찬바람과 미세먼지의 밀당"&gt; 
+    &lt;area shape="rect" coords="772,287,1028,575" href="http://www.lottemart.com/plan/planDetail.do?CategoryID=C2060001&amp;MkdpSeq=000000000751" alt="간편 채소, 컷팅 과일 요리가 제일 쉬웠어요"&gt; 
+&lt;/map&gt;
+                                    </code></pre>
+                                </div>
+
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : IR 기법</h5>
+                                    <p>
+                                        - 일러스트 지도에 대하여 대체 텍스트 제공<br>
+                                        - 이미지에 내용이 많은 경우 alt 속성의 값은 이미지 제목 정도로 제공하고, 이미지의 바로 다음에 이미지 내용과 구조 정보를 담은 HTML을 숨겨서 제공한다<br>
+                                        - ※ 주의사항 : 숨김텍스트 제공 시 visibility:hidden / display:none 은 스크린리더기 마다 인식 여부가 다르므로 사용하지 않아야 함
+                                    </p>
+                                    <img src="./img/ir-text.png" alt="IR 기법의 대체 텍스트 제공">
+
+                                    <pre><code class="html">&lt;p&gt;&lt;img src="//simage.lottemart.com/lm2/images/contents/2018/03/C2060008_000000000022_980_layer.png" alt="주유소 찾아오는길"&gt;&lt;button class="layerFunc"&gt;닫기&lt;/button&gt;&lt;/p&gt;
+
+&lt;div class="blind"&gt;
+    &lt;dl&gt;
+        &lt;dt&gt;주유소 찾아오는길, 주소: 경기 용인시 기흥구 진산로 116, 전화번호 : 031-266-2500&lt;/dt&gt;
+        &lt;dd&gt;진입로 진입후 좌측노선은 주유및픽업 이용, 우측노선은 픽업및마트이용(주유불가) 노선이며 행복드림 주유소에서 픽업 하시면 됩니다.&lt;/dd&gt;
+    &lt;/dl&gt;
+&lt;/div&gt;
+                                    </code></pre>
+                                </div>
+
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 의미있는 배경 이미지</h5>
+                                    <p>
+                                        - css 스타일 시트등으로 이미지를 백그라운 이미지로 보여주는 경우 HTML은 이미지와 동일한 내용을 숨김 텍스트로 보여준다.<br>
+                                        ※ 주의사항 : 숨김텍스트 제공 시 visibility:hidden / display:none 은 스크린리더기 마다 인식 여부가 다르므로 사용하지 않아야 함
                                     </p>
                                     <img src="./img/alter-text02.png" alt="아이콘 이미지 대체 텍스트 제공">
 
                                     <pre><code class="html">&lt;i class="icon-goods-discount"&gt;&lt;em class="number"&gt;30&lt;/em&gt; &lt;span class="blind"&gt;% 할인&lt;/span&gt;&lt;/i&gt;
-    &lt;i class="icon-goods-type1"&gt;살수록 더싸게&lt;/i&gt;
-    &lt;i class="icon-band-delivery1"&gt;매장배송&lt;/i&gt;
+&lt;i class="icon-goods-type1"&gt;살수록 더싸게&lt;/i&gt;
+&lt;i class="icon-band-delivery1"&gt;매장배송&lt;/i&gt;
                                     </code></pre>
                                 </div>
+
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 버튼 이미지 숨김 텍스트 제공</h5>
+                                    <p>
+                                        - 배경 이미지 형식으로 불러오는 버튼에 대하여 blind 태그를 이용하여 대체 텍스트 제공.<br>
+                                        ※ 주의사항 : 숨김텍스트 제공 시 visibility:hidden / display:none 은 스크린리더기 마다 인식 여부가 다르므로 사용하지 않아야 함
+                                    </p>
+                                    <img src="./img/img-btn.png" alt="배경 이미지 형식으로 불러오는 버튼에 대하여 blind 태그를 이용하여 대체 텍스트 제공">
+
+                                    <pre><code class="html">&lt;a href="javascript:;" data-button-name="btnAddWish" data-category-id="C0010144" data-product-code="8809332398425" title="위시리스트 담기" class="dibs "&gt;
+&lt;span class="blind"&gt;위시리스트&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;button id="basketBtn_8809332398425" title="장바구니 담기" type="button" class="btn-basket" data-prod-cd="8809332398425" data-category-id="C0010144" data-is-sold-out="false" data-max-qty="999" data-min-qty="1" data-method="basket" data-is-manufacturing-product="false" data-option-yn="N" data-prod-type-cd="01" data-prod-title="정관장 홍삼진본(40ML*20포)"&gt;&lt;/button&gt;
+                                     
+                                    </code></pre>
+                                </div>
+
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 상품 이미지 대체 텍스트 제공</h5>
+                                    <p>
+                                        - 상품이미지의 대체 텍스트는 상품명과 동일하게 제공한다.<br>
+                                        - 관리자 페이지를 통해 등록하는 경우 관리자 페이지에 해당 상품의 alt값을 넣을 수 있도록 제공 되어야 한다.
+                                      
+                                    </p>
+                                    <img src="./img/prod-alter-text.png" alt="상품이미지의 대체 텍스트 제공">
+
+                                    <pre><code class="html">&lt;a href="javascript:;" onclick="goProductDetail('C001002600060004', 'D000003277491', 'N'); return false;" data-cid="C001002600060004" data-pid="D000003277491" data-title="3M 주방 수세미 모음(2/3/10입)&lt;br&gt;(일반형/원데이형)" tabindex="0"&gt;
+	&lt;img src="http://image.lottemart.com/lim/static_root/images/prodimg/D0000/D000003277491_1_375.jpg" onerror="this.src='http://image.lottemart.com/v3/images/layout/noimg_prod_500x500.jpg';" alt="3M 주방 수세미 모음(2/3/10입)&lt;br&gt;(일반형/원데이형)" class="thumb"&gt;
+&lt;/a&gt;
+                                    </code></pre>
+                                </div>
+
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : QR코드 이미지 대체 텍스트 제공</h5>
+                                    <p>
+                                        - QR코드 등과 같이 시각적인 정보만으로 확인이 가능한 콘텐츠는 이동 주소 정보 등을 대체 텍스트 또는 설명, 링크 등으로 제공해야 한다.
+                                    </p>
+                                    <img src="./img/qr-text.png" alt="QR코드 이미지 대체 텍스트 제공">
+
+                                    <pre><code class="html">&lt;img src="http://image.lottemart.com/v3/images/layout/img_cs_ltmmoguide_16.jpg" alt="롯데마트몰 모바일 앱 다운로드 바로가기 QR코드"&gt;
+
+&lt;img src="http://image.lottemart.com/v3/images/layout/img_cs_ltmmoguide_17.jpg" alt="m.lottemart.com 모바일 웹 이동 QR코드"&gt;
+                                    </code></pre>
+                                </div>
+
+                                <div class="sample">
+                                        <h5><i class="glyphicon glyphicon-star"></i> 예시 : 상품평 평점 이미지 정보 제공</h5>
+                                        <p>
+                                            - 하나의 이미지로 처리하고 대체 텍스트에 평점을 인지할 수 있도록 제공한다
+                                        </p>
+                                        <img src="./img/sat-point-text.png" alt="상품평 평점 별점 이미지에대한 정보 제공">
+    
+                                        <pre><code class="html">&lt;p class="customer"&gt;
+    &lt;strong class="tit"&gt;고객만족도&lt;/strong&gt;
+    &lt;em class="score" id="reviewScore"&gt;9.6&lt;/em&gt;
+    &lt;span class="ico-star-type1"&gt;
+        &lt;em style="width:96%;"&gt;9.6 / 10점 만점&lt;/em&gt;
+    &lt;/span&gt;
+&lt;/p&gt;
+                                       </code></pre>
+                                    </div>
                             </div>
                         </div>
                         
@@ -258,6 +359,22 @@
                                         - 페이지 네비게이션, 메뉴, 현재 위치 등의 정보를 명암, 패턴 등의 변화없이 색상만으로 제공 했는지 체크
                                     </dd>
                                 </dl>
+
+                                <div class="sample">
+                                        <h5><i class="glyphicon glyphicon-star"></i> 예시 : 색맹이나 색약자도 알아 볼 수 있는 이미지의 제공</h5>
+                                        <p>
+                                            - 고객센터의 상담현황 안내 부분의 색을 뚜렷한 색상 차이로 제공하여 색맹이나 색약자도 알아 볼 수 있음.<br>
+                                            
+                                            - 다른 모양이나 패턴 등의 차이가 없이 색상의 차이만으로 구별되는 요소는 색맹이나 색약자가 알아보기 어려움.<br>
+                                            - 콘텐츠에서 제공하는 모든 정보는 색을 배제하여도 특정한 색을 구별할 수 없는 사용자나 흑백 디스플레이 사용자, 흑백 인쇄물을 보는 사용자가 해당 콘텐츠를 인식할 수 있도록 제공.
+                                            
+                                        </p>
+                                        
+                                        <img src="./img/color-show.png" alt="전고객센터의 상담현황 안내 부분의 컬러와 흑백 이미지" style="width:100%">
+                                        <pre><code>
+                                            코드없서. 읎따.
+                                        </code></pre>
+                                </div>
                             </div>
                         </div>
 
@@ -320,7 +437,7 @@
                                     <p>
                                         - 롯데마트 메인 비주얼 슬라이드의 경우 초점 진입시 자동 정지됨
                                     </p>
-                                    <img src="./img/m-visual-stop.png" alt="롯데마트 메인 비주얼 슬라이드" style="width:100%;">
+                                    <img src="./img/m-visual-stop.png" alt="롯데마트 메인 비주얼 슬라이드">
 
                                     <pre><code class="html">
     var fixGnbLastFocusable = function(){
@@ -394,7 +511,7 @@
                                     <p>
                                         - 롯데마트 메인 화면의 BEST 메뉴내의 키보드 이용
                                     </p>
-                                    <img src="img/main-best.png" alt="롯데마트 메인 화면의 BEST 메뉴내의 키보드 이용" style="width:100%;">
+                                    <img src="img/main-best.png" alt="롯데마트 메인 화면의 BEST 메뉴내의 키보드 이용">
 
                                     <pre><code class="html">                                
     &lt;article class="main-best"&gt;
@@ -645,7 +762,7 @@
                                         - 포커스 진입시 자동멈춤 처리되는 메인 비주얼 슬라이드
                                     </p>
                                     
-                                    <img src="./img/stop.png" alt="포커스 진입시 자동멈춤 처리되는 메인 비주얼 슬라이드" style="width:100%;">
+                                    <img src="./img/stop.png" alt="포커스 진입시 자동멈춤 처리되는 메인 비주얼 슬라이드">
                                     <pre><code>
     //gnb마지막 요소에서 상단 모양 컨틀롤러로 촛점이동
     var fixGnbLastFocusable = function(){
@@ -758,7 +875,7 @@
                                         - 롯데마트 각페이지에 맞는 올바른 페이지 타이틀 제목 제공
                                     </p>
                                     
-                                    <img src="./img/title.png" alt="오늘 핫콕 페이지 타이틀"  style="width:100%;">
+                                    <img src="./img/title.png" alt="오늘 핫콕 페이지 타이틀" >
                                     <pre><code>
     &lt;script type="text/javascript"&gt;
         document.title = "롯데마트몰 - ${NAVILIST[1].NAME} &gt; ${NAVILIST[2].NAME} &gt; ${NAVILIST[3].NAME}";
@@ -789,7 +906,7 @@
                                         - 상품 리스트 페이지를 리스트형으로 볼 것인지, 썸네일형으로 볼 것인지 보는 방식을 선택하는 링크 대한 올바른 텍스트를 제공
                                     </p>
                                     
-                                    <img src="./img/link-text02.png" alt="상품 리스트 페이지를 보는 방법 선택 링크 버튼"  style="width:100%;">
+                                    <img src="./img/link-text02.png" alt="상품 리스트 페이지를 보는 방법 선택 링크 버튼" >
                                     <pre><code>
     &lt;div class="set-sort"&gt;
         &lt;a id="aList" name="btnViewType" href="javascript:;" data-type="list" class="list-sort"&gt;&lt;span class="blind"&gt;리스트형 보기&lt;/span&gt;&lt;/a&gt;
