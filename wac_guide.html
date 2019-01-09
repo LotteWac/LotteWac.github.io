@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/assets/reset.css">
-    <link rel="stylesheet" href="./css/assets/default.css">
-    <link rel="stylesheet" href="./css/assets/atom-one-dark.css">
-    
+    <link rel="stylesheet" href="./css/assets/code-default.css">
+    <link rel="stylesheet" href="./css/assets/code-atom-one-dark.css">
+    <link rel="stylesheet" href="./css/assets/wac.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script src="./js/highlight.pack.js"></script>
@@ -403,9 +404,30 @@
                                 - 특정한 감각(시각, 청각 등)에 의존하여 지시사항을 제공할 경우 해당 감각에 장애가 있다면 인식할 수 없으므로, 다른 감각을 통해서도 인식할 수 있도록 지시사항을 제공해야 한다.<br>
                                 - 지시사항 정보를 특정 감각(색, 크기, 모양, 방향 등)에만 의존하여 제공했는지 체크<br>
                                 </p>
+
+                                <div class="definition"> 
+                                    <h5>[적용기술]</h5>
+                                    <ul>
+                                        <li>
+                                            특정 감각(색, 크기, 모양, 방향 등)에만 의존하여 제공하지 않아야 함
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <dl class="check-list">
+                                    <dt>자동검사방법</dt>
+                                    <dd>
+                                        -
+                                    </dd>
+
+                                    <dt>수동검사방법</dt>
+                                    <dd>
+                                        - 지시 사항 정보를 특정 감각(색, 크기, 모양, 방향 등)에만 의존하여 제공했는지 체크
+                                    </dd>
+                                </dl>
                             
                                 <div class="sample">
-                                        <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                        <h5><i class="glyphicon glyphicon-star"></i> 예시 : 더보기 버튼의 명시</h5>
                                         <p>
                                             - 메인화면 전문관 영역의 더보기 버튼 링크의 기능에 대해 정확히 어떤 것을 더 보는 것인지에 대해 설명하는 대체 텍스트를 제공
                                         </p>
@@ -413,6 +435,15 @@
                                         <img src="./img/link-text03.png" alt="전문관 더보기 버튼에대해 타이틀 툴탭이 뜬 이미지" style="width:100%">
                                         <pre><code>&lt;button type="button" class="md-more" title="메인 전문관 영역의 숨겨진 영역을 열어주는 더보기 버튼"&gt;더보기&lt;/button&gt;
                                         </code></pre>
+                                </div>
+
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 이벤트 참여 버튼의 명시</h5>
+                                    <p>
+                                        - “위에 있는 버튼을 누르십시오” 등 화면 표시 위치나 “빨간색을 누르십시오” 등 색을 매개로 한 전달을 하지 않도록 함.
+                                    </p>
+                                    
+                                    <img src="./img/event-btn.png" alt="이벤트 버튼을 누르시오 라고 명시된 설명문">
                                 </div>
                             </div>
                         </div>
@@ -430,6 +461,35 @@
                                     - 문자 크기가 bold 19px 이상 또는 normal 24px 이상인 경우 3:1 이상의 명도 대비를 유지한다.<br>
                                     - 아이콘, 콘트롤 등 시각 정보가 3px 이상 두꺼운 경우 3:1 이상의 명도 대비를 유지한다.<br>
                                 </p>
+                               
+                                <div class="definition"> 
+                                    <h5>[적용기술]</h5>
+                                    <ul>
+                                        <li>
+                                            콘텐츠의 명도 대비 : 웹 페이지가 제공하는 텍스트 콘텐츠(텍스트 및 텍스트 이미지)와 배경 간의 명도 대비는 4.5 : 1 이상이어야 한다.
+                                        </li>
+                                        <li>
+                                            폰트 크기에 따른 명도 대비 : 텍스트 콘텐츠를 구성하고 있는 텍스트 폰트를 18pt 이상 또는 14pt 이상의 굵은 폰트를 사용하는 경우에는 명도 대비를 3 : 1 까지 낮출 수 있다.
+                                        </li>
+                                        <li>
+                                            화면 확대가 가능한 콘텐츠 : 화면 확대가 가능하도록 구현한 텍스트 콘텐츠(텍스트 및 텍스트 이미지)의 명도 대비는 3 : 1 까지 낮출 수 있다.
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <dl class="check-list">
+                                    <dt>자동검사방법</dt>
+                                    <dd>
+                                        -
+                                    </dd>
+
+                                    <dt>수동검사방법</dt>
+                                    <dd>
+                                        - 텍스트나 이미지 텍스트와 배경 간의 명도 대비를 4.5 : 1 이상으로 제공했는지 체크<br>
+                                        -명도 대비 확인 유틸리티 Colour Contrast Analyser 로 체크
+                                    </dd>
+                                </dl>
+
                             </div>
                         </div>
 
@@ -437,41 +497,41 @@
                             <h4 class="active">
                                 6. 자동 재생 금지
                                 <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
-                            </h4>
-
+                            </h4>   
+                            
                             <div class="item-cont">
                                 <p>
-                                    - 롯데마트 PC 웹에서 해당사항 없음.<br>
-                                    - 일부 슬라이드나 자동재생 요소들은 해당영역으로 초점이 진입되는 순간 자동 정지되도록 구현됨.
+                                    - 자동으로 소리가 재생되지 않아야 한다
                                 </p>
-                                <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
-                                    <p>
-                                        - 롯데마트 메인 비주얼 슬라이드의 경우 초점 진입시 자동 정지됨
-                                    </p>
-                                    <img src="./img/m-visual-stop.png" alt="롯데마트 메인 비주얼 슬라이드">
-
-                                    <pre><code class="html">
-    var fixGnbLastFocusable = function(){
-        var $gnb = $('#gnbScrollFixed'),
-            $gnbToggles = $gnb.find('.wrap-toggle'),
-            $gnbLastMenu = _wac.getFocusables($gnbToggles.last().find('.wrap-subnav')).last(),
-            $nextEl = $directionFocusables.first();
-
-        var tabHandler = function(e){
-            !_wac.isShiftTabEvent(e)
-                && _wac.isTabEvent(e)
-                && !_wac.isEmpty($nextEl)
-                && _wac.onNextAsync(e, $nextEl);
-                contSlider.stopAuto();
-        };
-
-        _wac.wireUpEventAsync($gnbLastMenu, 'keydown', tabHandler);
-        return $gnbLastMenu;
-    };
-                                    </code></pre>
+                                <div class="definition"> 
+                                    <h5>[적용기술]</h5>
+                                    <ul>
+                                        <li>
+                                            자동으로 재생되는 배경음 (동영상, 음성, 음악) 사용금지
+                                        </li>
+                                        <li>
+                                            배경음 사용시 사전 경고나 제어할 수 있는 수단 제공
+                                        </li>
+                                        </ul>
                                 </div>
+                                
+                                <dl class="check-list">
+                                    <dt>자동검사방법</dt>
+                                    <dd>
+                                        -
+                                    </dd>
+
+                                    <dt>수동검사방법</dt>
+                                    <dd>
+                                        - 3초 이상 자동으로 재생되는 배경음 사용 여부 체크<br>
+                                        - 3초 이상 자동으로 배경음을 제어할 수 있는 수단을 제공하고 있는지 체크<br>
+                                        - 3초 이상 자동으로 배경음을 제어할 수 있는 수단이 화면 낭독 프로그램 음량에 영향을 주는지 체크<br>
+                                        - 마우스 오버, 키보드 초점을 받아 3초이상 재생되는 배경음 사용 여부 체크
+                                        
+                                    </dd>
+                                </dl>
                             </div>
+
                         </div>
 
                         <div class="no-bg-music" id="item07">
@@ -741,6 +801,42 @@
                                 <P>
                                     - 롯데마트 PC 웹에서 해당사항 없음.
                                 </P>
+
+
+                                <!-- 
+                            <div class="item-cont">
+                                <p>
+                                    - 롯데마트 PC 웹에서 해당사항 없음.<br>
+                                    - 일부 슬라이드나 자동재생 요소들은 해당영역으로 초점이 진입되는 순간 자동 정지되도록 구현됨.
+                                </p>
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                    <p>
+                                        - 롯데마트 메인 비주얼 슬라이드의 경우 초점 진입시 자동 정지됨
+                                    </p>
+                                    <img src="./img/m-visual-stop.png" alt="롯데마트 메인 비주얼 슬라이드">
+
+                                    <pre><code class="html">
+    var fixGnbLastFocusable = function(){
+        var $gnb = $('#gnbScrollFixed'),
+            $gnbToggles = $gnb.find('.wrap-toggle'),
+            $gnbLastMenu = _wac.getFocusables($gnbToggles.last().find('.wrap-subnav')).last(),
+            $nextEl = $directionFocusables.first();
+
+        var tabHandler = function(e){
+            !_wac.isShiftTabEvent(e)
+                && _wac.isTabEvent(e)
+                && !_wac.isEmpty($nextEl)
+                && _wac.onNextAsync(e, $nextEl);
+                contSlider.stopAuto();
+        };
+
+        _wac.wireUpEventAsync($gnbLastMenu, 'keydown', tabHandler);
+        return $gnbLastMenu;
+    };
+                                    </code></pre>
+                                </div>
+                            </div> -->
                             </div>
                         </div>
                         
@@ -1154,7 +1250,7 @@
             $(this).addClass('on');
         }else{
             $guideLnb.animate({ left:'-500px'},function(){
-                $(this).css('display','none');
+                $(this).removeAttr('style');
             });
             $(this).removeClass('on');
         }

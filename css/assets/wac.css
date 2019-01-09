@@ -118,7 +118,7 @@ button:focus{border:1px solid #293fff!important;}
 
     /* 3. #whyWac */
     #whyWac{padding:150px; height: 1000px;}
-    #whyWac dl{width:900px;}
+    #whyWac dl{max-width:900px;}
     #whyWac dl:nth-child(2){padding-top: 20px;}
     #whyWac dl dt{padding-left:5px; font-size: 25px; color: #293f54; font-family: 'lottemart-dream-bold';}
     #whyWac dl dd{padding-left:35px; font-size: 16px;}
@@ -219,18 +219,76 @@ button:focus{border:1px solid #293fff!important;}
  
  @media (max-width:1350px){
     /* ******************
+     *    index.html    *
+     ********************/
+    .index .container .m-visual h2{font-size: 2.8rem; top:14rem;}
+    .index .container .m-visual p{top:15rem;}
+    .index .container .m-visual > img{height:100%;}
+
+
+    /* ******************
      *  wac-guide.html  *
      ********************/
     .wac-guide .btn-fixed-top{right:50px; margin:0;}
  }
 @media (max-width:1200px){
     .inner{padding: 0 20px;}
-
+    /* ******************
+     *    index.html    *
+     ********************/
+    .index .container .m-visual h2{font-size: 8vw; top:50vh;}
+    .index .container .m-visual p{width:80%; position:relative; top:52vh; left:0; margin: 0 auto; margin-top: 0; text-align: center;}
+    .index .container .m-visual > img{width:unset; margin-left:-25%;}
+    .index .container .access-list{width:860px; margin:0 auto;}
+    .index .container .access-list li{margin: 10px; margin-top: 45px;}
+    
+    /* ******************
+     *  wac-guide.html  *
+     ********************/
     .wac-guide #mobileNavBtn{display: block;}
     .wac-guide .gnb h1{margin-left: 40px;}
     .wac-guide .lnb.scroll-fixed,
     .wac-guide .lnb{left: -500px; margin: 0;z-index: 999;background: #fff;}
     .wac-guide .container .contents{width: 100%; padding:0; border: 0;}
+}
+@media (max-width:768px){
+    /* ******************
+     *    index.html    *
+     ********************/
+     .index .container .m-visual h2{font-size: 60px; margin-top:-220px;}
+     .index .container h3 {font-size: 3.9rem;}
 
-    
+     .index .container .info-access{height:1500px;}
+     .index .container .access-list {max-width: 590px; margin: 0 auto;}
+     .index .container .access-list li{margin: 50px;}
+
+     .index #whyWac {width:90%; margin:0 auto; padding:0;}
+}
+@media (max-width:425px){
+    /* ******************
+     *    index.html    *
+     ********************/
+    .index .container .info-access {height:2000px;}
+    .index .container .access-list {width: 195px; margin: 0 auto;}
+    .index .container .access-list li{margin: 30px 0 ;}
+   
+@media (max-width:375px){
+    /* ******************
+     *    index.html    *
+     ********************/
+    .index .container .m-visual h2{font-size: 55px}
+    .index .container .m-visual {height:750px;}
+    .index .container .m-visual > img {top: -100px;}
+    .index p { font-size: 1.8rem;}
+}
+
+}
+@media (max-width:320px){
+    /* ******************
+     *    index.html    *
+     ********************/
+     .index .container .m-visual h2{font-size: 45px; top:60vh;}
+     .index .container .m-visual p{font-size: 18px;}
+     .index .container .m-visual {height:750px;}
+
 }
