@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/assets/reset.css">
     <link rel="stylesheet" href="./css/assets/default.css">
-    <link rel="stylesheet" href="./css/assets/index.css">
     <link rel="stylesheet" href="./css/assets/atom-one-dark.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -20,8 +19,8 @@
 <body class="wac-guide">
         <!-- gnb start -->
         <header class="gnb">
-          <!-- inner start -->
-          <div class="inner">
+            <!-- inner start -->
+            <div class="inner">
                 <h1>
                 <a href="./index.html">Accessibility Guide</a>
                 </h1>
@@ -35,11 +34,13 @@
                     <li><a href="#">SCRIPT</a></li>
                     <li><a href="#">UI COMPONENTS</a></li>
                 </ul>
+
+                <a href="#none" class="glyphicon glyphicon-th-list" title="타블릿 & 모바일 기기 네비게이션 버튼" id="mobileNavBtn"></a>
             </div>
             <!-- inner end -->
         </header>
         <!-- gnb end -->
-        <nav class="btn-fixed-top">
+        <nav class="btn-fixed-top" id="goTopBtn">
             <a href="#top">
                 <i class="glyphicon glyphicon-eject"></i>
             </a>
@@ -1139,6 +1140,23 @@
             $(this).addClass('active');
             $(this).next('.item-cont').show(600);
             $(this).find('i').addClass('open');
+        }
+    });
+
+
+    //모바일 nav 처리
+     
+    var $mobileNavBtn = $('#mobileNavBtn'),
+        $guideLnb = $('.wac-guide .lnb');
+    $mobileNavBtn.on('click', function(){
+        if(!$(this).hasClass('on')){
+            $guideLnb.css('display','block').animate({ left:'0'});
+            $(this).addClass('on');
+        }else{
+            $guideLnb.animate({ left:'-500px'},function(){
+                $(this).css('display','none');
+            });
+            $(this).removeClass('on');
         }
     });
 

@@ -1,99 +1,236 @@
-/*
 
-Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
+/********************** 
+ *                    *
+ *   +BASIC CSS SET   *
+ *                    *
+ **********************/
 
-*/
-
-.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  background: #F0F0F0;
+html {scroll-behavior: smooth;}
+::-webkit-scrollbar {
+    width: 0px; 
+    background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
 }
 
-
-/* Base color: saturation 0; */
-
-.hljs,
-.hljs-subst {
-  color: #444;
-}
-
-.hljs-comment {
-  color: #888888;
-}
-
-.hljs-keyword,
-.hljs-attribute,
-.hljs-selector-tag,
-.hljs-meta-keyword,
-.hljs-doctag,
-.hljs-name {
-  font-weight: bold;
-}
+dl, dt, dd, li, a, p, h3, h4, h5{color:#222; line-height: 2.0;}
+h3, h4, h5{font-family: 'lottemart-dream-bold';}
+dl, dt, dd, li, a, p, button{font-family: 'lottemart-happy-Medium';}
 
 
-/* User color: hue: 0 */
+h4{font-weight:900; background:url(./img/icon_h4.png) no-repeat left 19px;}
+p{padding-left:5px;}
+.index p{font-size: 20px;}
 
-.hljs-type,
-.hljs-string,
-.hljs-number,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-quote,
-.hljs-template-tag,
-.hljs-deletion {
-  color: #880000;
-}
+/* pre-fix */
+.inner{width:100%; max-width:1200px; margin:0 auto; position: relative;}
+.circle-num{display:inline-block; width:15px; height:15px; border-radius:7.5px; background:#293f54; color:#fff; text-align:center; margin: 0 10px; line-height:1;}
 
-.hljs-title,
-.hljs-section {
-  color: #880000;
-  font-weight: bold;
-}
+pre{position: relative; padding-top: 24px;}
+pre code{width:100%; height: 80px; overflow: scroll;}
+pre code>span:nth-child(1){line-height: 0;}
+pre code.active{height: 250px;}
 
-.hljs-regexp,
-.hljs-symbol,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-link,
-.hljs-selector-attr,
-.hljs-selector-pseudo {
-  color: #BC6060;
-}
+/* button */
+button:focus{border:1px solid #293fff!important;}
+.code-open-btn{width:32px; height: 25px; border: 1px solid #000;  padding-bottom:3px; color:#000; background:#fff; font-size:12px; position: absolute; top:0; right:0; z-index:9;}
+.btn-lotte{color:#293f54; border:1px solid #293f54; font-weight:800; padding-bottom: 15px;}
+.btn-lotte:hover{background:#293f54; color:#fff;}
+.btn-close{width:30px!important; height:30px!important; padding:5px; position: absolute; top:0; right:0; border-radius: 0; background:#fff;color: #222;}
+.btn-close:active{box-shadow:none; color: #000; font-weight: 900;}
 
 
-/* Language color: hue: 90; */
+/************************* 
+ *                       *
+ *   index.html > .gnb   *
+ *                       *
+ *************************/
 
-.hljs-literal {
-  color: #78A960;
-}
-
-.hljs-built_in,
-.hljs-bullet,
-.hljs-code,
-.hljs-addition {
-  color: #397300;
-}
-
-
-/* Meta color: hue: 200 */
-
-.hljs-meta {
-  color: #1f7199;
-}
-
-.hljs-meta-string {
-  color: #4d99bf;
-}
+.gnb{position:fixed; width:100%; height:60px; background: #293f54; padding-top:20px; overflow: hidden; z-index: 99;}
+    .gnb h1{float: left; margin-top: -6px;}
+        .gnb h1 a{font-size: 25px; color: #fff; font-family: 'Calibri';}
+    .gnb .device{float : left; margin-left:10px; padding-top:6px;}
+    .gnb .device li{display: inline;}
+    .gnb .device li a{display: block; float: left;  color: #fff; margin-left:10px;}
+    .gnb .device li:nth-child(2) a{color:#999; cursor: not-allowed;}
 
 
-/* Misc effects */
+    .gnb .menu{float: right;  padding:5px;}
+    .gnb .menu li {display: inline;}
+    .gnb .menu li a{display: block; float: left;  color: #fff; margin-left:20px;}
 
-.hljs-emphasis {
-  font-style: italic;
-}
+    
 
-.hljs-strong {
-  font-weight: bold;
+
+    
+/************************************ 
+ *                                  *
+ *   index.html > .main-fixed-nav   *
+ *                                  *
+ ************************************/
+
+.main-fixed-nav{position: fixed; width: 30px; height:170px; top:50%; right:50%; margin:-100px -660px 0 0;  z-index: 99;background: #293f54;  border-radius: 15px;}
+    .main-fixed-nav .page-anchor{width:100%; height:100%;}
+        .main-fixed-nav .page-anchor li{display:inline}
+        .main-fixed-nav .page-anchor li a{display:block; width:10px; height: 10px; border-radius:10px; background:#fff; text-indent: -9999999px; margin: 20px 10px;}
+    .main-fixed-nav #goTopBtn {display: block; width: 30px; height:30px; border-radius:25px; background:#293f54; text-align: center;}
+        .main-fixed-nav #goTopBtn i{font-size: 15px; color:#fff;}
+    
+
+
+/******************************* 
+ *                             *
+ *   index.html > .container   *
+ *                             *
+ *   1. #mVisual               *
+ *   2. #infoAccess            *
+ *   3. #whyWac                *
+ *   4. #wacGuideLine          *
+ *   5. #wacIntro              *
+ *                             *
+ *******************************/
+
+.container{width:100%; overflow: hidden; padding:0; padding-top:60px;}
+    /* 1. #mVisual */
+    .container .m-visual{width: 100%; height: 1000px; overflow: hidden; position: relative;}
+    .container .m-visual > img{width: 100%; opacity:0.7; position: absolute; top : -200px;}
+    .container .m-visual h2{width:600px; color:#293f54; text-align: center; font-size: 100px; font-weight: 900; letter-spacing: 5px;position: absolute; top:45%; left: 50%; margin: -245px 0 0 -300px; font-family: 'Calibri';}
+    .container .m-visual p {color:#293f54; font-weight: 900; position: absolute; top:50%; left: 50%;margin:100px 0 0 -302px; font-size:20px;}
+ 
+    /* 2. #infoAccess  */
+    .container .info-access{width: 100%; height: 1000px; padding-top:100px;}
+    .container h3{font-size: 60px; margin-bottom:20px;}
+    
+    .container .access-list {overflow: hidden; text-align: center;}
+    .container .access-list li {float:left; margin: 50px;}
+    .container .access-list li dl dt,
+    .container .access-list li dl dd{text-align: center;margin-top: 25px;}
+        .container .access-list li dl dt{font-weight:900;}
+        .container .access-list li dl dd .modal-dialog{top:45%; left:50%; margin:-200px 0 0 -250px;}
+        .container .access-list li dl dd .modal-dialog .modal-content{width: 500px; height:400px; background: #fff; padding: 35px;}
+            .container .access-list li .modal-content h4{font-size:30px; font-weight:900; color:#293f54;}
+            .container .access-list li .modal-content .access-cont{padding-top: 20px;text-align: center; font-size: 17px;}
+            .container .access-list li:nth-child(3) .modal-content .access-cont{font-size: 15px;}
+            .container .access-list li .modal-content .access-cont em{color:#ff3b2d;}
+    .container .access-list li i{display:inline-block; color: #293f54; font-size: 135px; font-weight: 200; text-align: center; padding: 30px;}
+
+
+    /* 3. #whyWac */
+    #whyWac{padding:150px; height: 1000px;}
+    #whyWac dl{width:900px;}
+    #whyWac dl:nth-child(2){padding-top: 20px;}
+    #whyWac dl dt{padding-left:5px; font-size: 25px; color: #293f54; font-family: 'lottemart-dream-bold';}
+    #whyWac dl dd{padding-left:35px; font-size: 16px;}
+
+    /* 4. #wacGuideLine */
+    #wacGuideLine{width: 100%; height:1000px; padding-top:250px; text-align: right;}
+    #wacGuideLine p{font-size: 25px; color: #293f54; font-family: 'lottemart-dream-bold';}
+    #wacGuideLine .guide-list li{font-size: 16px;}
+    
+    /* 5. #wacIntro */
+    #wacIntro{width: 100%; height:1000px; padding:200px 0;}
+    #wacIntro .inner{width: 770px;}
+    #wacIntro h3{text-align: center;}
+    #wacIntro p{ margin:0 auto; text-align: left;}
+    #wacIntro .contents-list{padding: 30px 0 0 30px;}
+    .container .read-wac-guide .btn.btn-default.view-guide{display:block; width: 300px; margin: 0 auto; margin-top: 200px;}
+
+    /* #wacIntro > modal */
+    #wacIntro #WacTable .modal-dialog{width:900px;}
+    /* #wacIntro #WacTable .modal-dialog .modal-content{width: 100%; margin-top: 100px;} */
+    #wacIntro #WacTable .modal-dialog .modal-content table{width: 100%;}
+    #wacIntro #WacTable .modal-dialog .modal-content table th{background: #b4e7e7; border: 1px solid #fff; text-align: center; font-size: 17px;}
+    #wacIntro #WacTable .modal-dialog .modal-content table td{font-size: 9px; border: 1px solid #b4e7e7; padding-left:10px;}
+    #wacIntro #WacTable .modal-dialog .modal-footer{border:0; text-align:center;}
+
+
+
+/********************** 
+ *                    *
+ *   wac_guide.html   *
+ *                    *
+ **********************/
+.wac-guide #mobileNavBtn{position: absolute; top:0; left:20px; font-size: 20px; color: #fff; display: none;}
+
+.wac-guide .btn-fixed-top{position: fixed; width: 30px; height:30px; bottom :50px; right:50%; margin:0 -660px 0 0;  z-index: 99; background: #293f54;  border-radius: 15px;}
+    .wac-guide .btn-fixed-top a{display: block; text-align: center;}
+    .wac-guide .btn-fixed-top i{font-size: 15px; color:#fff;}
+
+.wac-guide .lnb{width:300px; height:100%; position: absolute; left:50%; z-index: 50px; margin-left: -600px; overflow-y: scroll; padding: 0 20px 100px 0;}
+.wac-guide .lnb.scroll-fixed{position: fixed; top:60px; left:50%; margin-left: -600px;}
+
+.wac-guide .container .lnb .depth1-menu{padding-top:20px; color: #293f54;  margin-bottom: 5px; vertical-align: middle; cursor: pointer;}
+.wac-guide .container .lnb .depth1-menu > a{font-size: 18px; font-family:'lottemart-dream-bold';}
+.wac-guide .container .lnb .depth1-menu i{top: 10px; float: right; margin-right: 14px; -ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); transform: rotate(90deg); transition: all ease 0.5s 0s;}
+.wac-guide .container .lnb .depth1-menu i.open{ -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); transition: all ease 0.5s 0s;}
+
+.wac-guide .container .lnb .depth2-menu{margin-left:15px;}
+.wac-guide .container .lnb .depth2-menu li{line-height: 1.5;}
+.wac-guide .container .lnb .depth2-menu li a{font-size:12px;}
+.wac-guide .container .lnb .depth2-menu li a:hover{text-decoration:underline; color: #369eff;}
+/* .wac-guide .container .lnb .depth1-menu.active + .depth2-menu{margin-left:15px; display: block;} */
+
+
+.wac-guide .container .contents{width:calc(100% - 280px); float: right; border-left:1px solid #e1e1e1; padding-left:20px; z-index: 90;}
+.wac-guide .container .contents .article{margin-bottom : 200px; padding-top:20px;}
+.wac-guide .container .contents .article h3{font-size:25px; color: #293f54;}
+
+/* .wac-guide .container .contents .article > div[id^="item"]{;} */
+.wac-guide .container .contents .article > div[id^="item"] > h4{color: #215c6e; width: 100%; height: 50px; padding: 11px 20px; border:1px solid #e1e1e1; border-top:2px solid #16657e; border-bottom:1px solid #e1e1e1; cursor: pointer; border-radius: 5px 5px 0 0}
+.wac-guide .container .contents .article > div[id^="item"] > h4 i{top: 7px; float: right; margin-right: 14px; -ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); transform: rotate(90deg); transition: all ease 0.5s 0s;}
+.wac-guide .container .contents .article > div[id^="item"] > h4 i.open{ -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); transition: all ease 0.5s 0s;}
+.wac-guide .container .contents .article > div[id^="item"] .item-cont{border:1px solid #e1e1e1; border-top:0; padding-bottom:20px;}
+.wac-guide .container .contents .article > div[id^="item"] .item-cont > p{padding:15px 0 0 30px;}
+
+
+.wac-guide .container .contents #wacIntro .contents-list{margin:15px;}
+
+
+.wac-guide .container .contents #wacExample > div{margin-top: 20px;}
+.wac-guide .container .contents #wacExample .sample,
+.wac-guide .container .contents #wacExample .definition{width:90%; margin: 0 auto; padding:20px 0;}
+/* .wac-guide .container .contents #wacExample .sample h5, */
+.wac-guide .container .contents #wacExample .definition h5{margin-bottom:15px;}
+.wac-guide .container .contents #wacExample .definition li ul{padding-left:15px;}
+
+.wac-guide .container .contents #wacExample .sample p{font-size: 15px;}
+.wac-guide .container .contents #wacExample .sample img{margin: 20px 0; max-width:100%;}
+
+
+.container .contents #wacExample .check-list{width:90%; margin: 0 auto; padding: 20px 0;}
+.container .contents #wacExample .check-list dt,
+.container .contents #wacExample .check-list dd{padding:3px 10px; border:1px solid #e1e1e1;}
+.container .contents #wacExample .check-list dt{background: #e1e1e1;}
+
+.offer-title dl{margin-left: 15px;}
+.offer-title dd{padding-left: 35px;}
+.wac-guide .glyphicon.glyphicon-star{color:#ff3b2d;}
+
+
+
+
+
+/********************** 
+ *                    *
+ *    +MEDIA QUERY    *
+ *                    *
+ **********************/
+ 
+ @media (max-width:1350px){
+    /* ******************
+     *  wac-guide.html  *
+     ********************/
+    .wac-guide .btn-fixed-top{right:50px; margin:0;}
+ }
+@media (max-width:1200px){
+    .inner{padding: 0 20px;}
+
+    .wac-guide #mobileNavBtn{display: block;}
+    .wac-guide .gnb h1{margin-left: 40px;}
+    .wac-guide .lnb.scroll-fixed,
+    .wac-guide .lnb{left: -500px; margin: 0;z-index: 999;background: #fff;}
+    .wac-guide .container .contents{width: 100%; padding:0; border: 0;}
+
+    
 }
