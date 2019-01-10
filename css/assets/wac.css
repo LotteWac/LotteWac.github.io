@@ -260,7 +260,7 @@ button:focus{border:1px solid #293fff!important;}
      .gnb h1{margin-top: 7px;}
      .wac-guide .gnb h1{margin-left: 0px;}
      .gnb h1 a.pc{display: none;}
-        .gnb h1 a.mobile{display: block; width:30px;}
+        .gnb h1 a.mobile{display: none; width:30px;}
         .gnb h1 a.mobile img{width:100%;}
     .gnb .device{float:right; padding-top:15px;}
         .gnb .device .pc-guide{font-size: 15px;}
@@ -277,6 +277,10 @@ button:focus{border:1px solid #293fff!important;}
      .index .container .access-list li{margin: 50px;}
 
      .index #whyWac {width:90%; margin:0 auto; padding:0;}
+    /* ******************
+     *  wac-guide.html  *
+     ********************/
+     .wac-guide #mobileNavBtn{top:20px;}
 }
 @media (max-width:425px){
     /* ******************

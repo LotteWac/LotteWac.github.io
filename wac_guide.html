@@ -36,6 +36,8 @@
                     <li><a href="./wac_script.html">SCRIPT</a></li>
                     <li><a href="#" class="compone">UI COMPONENTS</a></li>
                 </ul>
+
+                <a href="#none" class="glyphicon glyphicon-th-list" title="타블릿 & 모바일 기기 네비게이션 버튼" id="mobileNavBtn"></a>
             </div>
             <!-- inner end -->
         </header>
@@ -509,7 +511,7 @@
                                                 <img src="./img/except01.png" alt="명도대비 예외 이미지1">
                                             </li>
                                             <li>2. 로고 또는 상호와 같은 텍스트 이미지<br>
-                                                <img src="./img/logo.png" alt="명도대비 예외 이미지2">
+                                                <img src="./img/logo.jpg" alt="명도대비 예외 이미지2" style="width:300px;">
                                             </li>
                                             <li>
                                                 3. 마우스나 키보드를 활용하여 초점을 받았을 때 색이나 명도 대비가 변화하는 콘텐츠 (두 메뉴 중 한쪽만 명도대비를 맞추면 인정)<br>
@@ -962,6 +964,7 @@ outline: -webkit-focus-ring-color auto 5px;
 }
                                     </code></pre>
                                 </div>
+
                                 <div class="sample">
                                     <h5><i class="glyphicon glyphicon-star"></i> 예시 : 더보기 또는 전체보기 기능은 콘텐츠보다 후순위로 마크업</h5>
                                     <p>
@@ -1021,34 +1024,45 @@ outline: -webkit-focus-ring-color auto 5px;
                            
                             <div class="item-cont">
                                 <P>
+                                    - 사용자 입력 및 컨트롤은 조작 가능하도록 제공되어야 한다.
                                     - 일부 슬라이드나 자동재생 요소들은 해당영역으로 초점이 진입되는 순간 자동 정지되도록 구현됨.
                                 </p>
-                                <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
-                                    <p>
-                                        - 롯데마트 메인 비주얼 슬라이드의 경우 초점 진입시 자동 정지됨
-                                    </p>
-                                    <img src="./img/m-visual-stop.png" alt="롯데마트 메인 비주얼 슬라이드">
 
-                                    <pre><code class="html">var fixGnbLastFocusable = function(){
-        var $gnb = $('#gnbScrollFixed'),
-            $gnbToggles = $gnb.find('.wrap-toggle'),
-            $gnbLastMenu = _wac.getFocusables($gnbToggles.last().find('.wrap-subnav')).last(),
-            $nextEl = $directionFocusables.first();
-
-        var tabHandler = function(e){
-            !_wac.isShiftTabEvent(e)
-                && _wac.isTabEvent(e)
-                && !_wac.isEmpty($nextEl)
-                && _wac.onNextAsync(e, $nextEl);
-                contSlider.stopAuto();
-        };
-
-        _wac.wireUpEventAsync($gnbLastMenu, 'keydown', tabHandler);
-        return $gnbLastMenu;
-    };
-                                    </code></pre>
+                                <div class="definition"> 
+                                    <h5>[적용기술]</h5>
+                                    <ul>
+                                        <li>
+                                            웹 페이지에서 제공하는 모든 이웃한 컨트롤은 개별적으로 선택하고 사용할 수 있도록 충분한 크기로 제공해야 한다
+                                        </li>
+                                        <li>
+                                            컨트롤 크기 : 콘텐츠에 포함된 모든 컨트롤은 대각선 방향의 길이를 6.0mm 이상으로 제공하는 것이 바람직함
+                                        </li>
+                                        <li>
+                                            링크, 사용자 입력, 기타 컨트롤 등의 안쪽 여백 : 링크, 사용자 입력 및 기타 컨트롤은 테두리 안쪽으로 1픽셀 이상의 여백을 두고 이곳에서는 위치 지정 도구의 조작에 반응하지 않도록 구현하는 것이 바람직함
+                                        </li>
+                                    </ul>
                                 </div>
+
+                                <dl class="check-list">
+                                    <dt>자동검사방법</dt>
+                                    <dd>
+                                        -
+                                    </dd>
+
+                                    <dt>수동검사방법</dt>
+                                    <dd>
+                                        - 콘텐츠간의 간격 및 여백이 충분한지 체크
+                                    </dd>
+                                </dl>
+    
+                                <div class="sample">
+                                        <h5><i class="glyphicon glyphicon-star"></i> 예시 : HTML 태그 속성과 스타일을 이용한 크기와 여백 조절
+                                        </h5>
+                                        <p>
+                                            - 디스플레이 장치별 화면크기와 해상도에 따라 보여지는 콘텐츠의 크기가 매번 달라지게 된다. 디스플레이 장치와 무관한 콘텐츠 사용의 편의성을 고려하여 콘텐츠의 크기는 window 표준 해상도(96DPI)와 17인치 모니터를 기준으로 대각선 방향 길이로 6mm 이상이 되도록 HTML 태그와 스타일 속성의 width, height를 조절하고 콘텐츠의 선택시 이웃한 콘텐츠와 선택이 중첩되지 않도록 콘텐츠 안쪽 여백은 1픽셀 이상이 되도록 스타일 속성의 padding을 이용하여 조절하면 된다.
+                                        </p>
+                                        <img src="img/size-area.png" alt="롯데마트 슬라이드 영역 클릭 요소들의 사이즈가 강조되어있는 이미지">
+                                </div>                            
                             </div>
                         </div>
                         
@@ -1060,11 +1074,57 @@ outline: -webkit-focus-ring-color auto 5px;
                            
                             <div class="item-cont">
                                 <P>
-                                - 롯데마트 PC 웹에서 해당사항 없음.
+                                - 시간 제한이 있는 콘텐츠는 응답시간을 조절할 수 있어야 한다
                                 </P>
+                                <div class="definition"> 
+                                    <h5>[적용기술]</h5>
+                                    <ul>
+                                        <li>
+                                            시간 제한을 가진 콘텐츠는 사용자가 시간 제한을 제어할 수 있는 수단 제공.
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <dl class="check-list">
+                                    <dt>자동검사방법</dt>
+                                    <dd>
+                                        -
+                                    </dd>
+        
+                                    <dt>수동검사방법</dt>
+                                    <dd>
+                                        - 시간 제한이 있는 콘텐츠는 시간 제한을 제어할 수 있는지 체크
+                                    </dd>
+                                </dl>
+                                
+                                
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 응답시간이 제공되는 본인인증 요소</h5>
+                                    <p>
+                                        - 시각장애인, 상지 장애인의 웹 탐색 속도는 비장애인에 비해 느리므로 자동 변경되는 콘텐츠는 이들의 이용에 큰 방해가 됨.<br>
+                                        - 충분한 시간을 제공하거나 제어버튼을 제공해야 함.<br>
+                                        - 이벤트 소개 등 일정 주기로 교체되는 콘텐츠는 하나가 최소 3초 이상 노출되어야 함.
+                                        
+                                    </p>
+                                    
+                                    <img src="./img/verify.png" alt="응답시간이 제공되고 있는 본인인증 화면 이미지">
+                                    
+                                </div>
+
+                                <div class="sample">
+                                        <h5><i class="glyphicon glyphicon-star"></i> 예시 : 응답시간이 3초 이상인 배너 요소</h5>
+                                        <p>
+                                            - 이벤트 소개 등 일정 주기로 교체되는 콘텐츠는 하나가 최소 3초 이상 노출되어야 함.
+                                            
+                                        </p>
+                                        
+                                        <img src="./img/3second.png" alt="3초이상 멈춘채로 제공되고 있는 롯데마트 배너 이미지">
+                                        
+                                    </div>
+
                             </div>
                         </div>
-
+                        
                         <div class="" id="item12">
                             <h4 class="active">
                                 12. 정지 기능 제공
@@ -1114,8 +1174,33 @@ outline: -webkit-focus-ring-color auto 5px;
 
                             <div class="item-cont">
                                 <P>
-                                    - 롯데마트 PC 웹에서 해당사항 없음.
+                                    - 초당 3~50회 주기로 깜빡이거나 번쩍이는 콘텐츠를 제공하지 않아야 한다.
                                 </P>
+
+                                <div class="definition"> 
+                                    <h5>[적용기술]</h5>
+                                    <ul>
+                                        <li>
+                                            깜빡이거나 번쩍이는 콘텐츠를 제공해야만 할 경우, 초당 3~50회 주기는 피해서 제공해야 함.
+                                        </li>
+                                        <li>
+                                            깜빡이거나 번쩍이는 콘텐츠를 사전에 경고를 하고 이를 회피할 수 있는 수단을 제공해야 함.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <dl class="check-list">
+                                    <dt>자동검사방법</dt>
+                                    <dd>
+                                        -
+                                    </dd>
+
+                                    <dt>수동검사방법</dt>
+                                    <dd>
+                                        - 육안으로 확인 했을 때 깜빡이거나 번쩍이는 객체가 있는지 체크<br>
+                                        - 깜빡이거나 번쩍이는 콘텐츠가 있을 경우 깜빡임을 사전 경고 하거나, 중단할 수 있는 수단을 제공하는지 체크
+                                    </dd>
+                                </dl>
                             </div>
                         </div>
 
@@ -1126,19 +1211,54 @@ outline: -webkit-focus-ring-color auto 5px;
                             </h4>
 
                             <div class="item-cont">
+                                <p>- 콘텐츠의 반복되는 영역은 건너뛸 수 있어야 한다.</p>
                                 <p>
-                                    - 반복적인 콘텐츠 영역의 시작 부분에 건너뛰기 링크 제공<br>
-                                    - 페이지마다 반복되는 콘텐츠(메뉴 등)를 건너뛰어 핵심 콘텐츠로 바로 접근할 수 있도록 페이지 최상단에 제공한다.<br>
-                                    - 해당 링크를 display:none으로 처리하지 않으며, 키보드로 접근이 가능해야 한다. <br>
-                                    - 콘텐츠의 최상단(body 바로 아래) 제공해야 한다. <br>
-                                    - 링크명은 목적지를 명확히 알 수 있도록 일관된 형식으로 제공해야 한다. <br>
-                                    - 메뉴 건너뛰기(x), 본문 바로가기(O)<br>
-                                </p>
+                                   
+                                
+
+                                <div class="definition"> 
+                                    <h5>[적용기술]</h5>
+                                    <ul>
+                                        <li>
+                                            - 반복적인 콘텐츠 영역의 시작 부분에 건너뛰기 링크 제공
+                                        </li>
+                                        <li>
+                                            - 페이지마다 반복되는 콘텐츠(메뉴 등)를 건너뛰어 핵심 콘텐츠로 바로 접근할 수 있도록 페이지 최상단에 제공한다
+                                        </li>
+                                        <li> 
+                                            - 해당 링크를 display:none으로 처리하지 않으며, 키보드로 접근이 가능해야 한다.
+                                        </li>
+                                        <li>
+                                            - 콘텐츠의 최상단(body 바로 아래) 제공해야 한다. 
+                                        </li>
+                                        <li>
+                                            - 링크명은 목적지를 명확히 알 수 있도록 일관된 형식으로 제공해야 한다. 
+                                        </li>
+                                        <li>
+                                            - 메뉴 건너뛰기(x), 본문 바로가기(O)
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <dl class="check-list">
+                                    <dt>자동검사방법</dt>
+                                    <dd>
+                                        -
+                                    </dd>
+
+                                    <dt>수동검사방법</dt>
+                                    <dd>
+                                        - 본문 바로가기” “주메뉴 바로가기” 링크의 유무 체크<br>
+                                        - “본문 바로가기” “주메뉴 바로가기” 클릭했을 시 포커스가 제대로 이동되는지 체크<br>
+                                        - “본문 바로가기” “주메뉴 바로가기” 링크가 키보드 Tab에 의해서도 선택과 실행이 되는지 체크
+                                    </dd>
+                                </dl>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 롯데마트 상단의 본문 바로가기 버튼</h5>
                                     <p>
-                                        - 롯데마트 상단의 본문 바로가기 버튼
+                                        - 키보드만을 이용하는 지체 장애인의 탐색 편의를 위해 각 페이지 메뉴시작 부분에 해당 페이지의 핵심 콘텐츠로 바로 이동할 수 있는 링크를 제공<br>
+                                        - 가급적이면 항상 드러나도록 하는 것이 좋으며, 드러나기 곤란한 경우 포커스 시에만 드러나도록 함
                                     </p>
                                     
                                     <img src="./img/skipbtn.png" alt="건너뛰기 버튼 이미지">
@@ -1162,7 +1282,11 @@ outline: -webkit-focus-ring-color auto 5px;
                                 <p>
                                     - 페이지, 프레임, 콘텐츠 블록에는 적절한 제목을 제공해야 한다.<br>
                                     - 적절한 제목은 페이지, 프레임, 콘텐츠 블록을 유추하여, 사용자가 웹 콘텐츠를 운용하기 쉽게 도와준다.<br>
-
+     
+                                </p>
+                            
+                                <div class="definition"> 
+                                    <h5>[적용기술]</h5>
                                     <dl>
                                         <dt>
                                             <em class="circle-num">1</em>
@@ -1186,22 +1310,59 @@ outline: -webkit-focus-ring-color auto 5px;
                                             &lt;h1&gt;, &lt;h2&gt; 등 제목요소를 사용할 경우, 제목과 본문을 구분할 수 있으며, 제목간 이동 기능을 가능하게 한다. 또한 목차 기능으로 활용하여 문맥을 파악하는데 도움을 준다. 이 외 다양하게 활용할 수 있다.
                                         </dd>
                                     </dl>
-                                </p>
-                            
+                                </div>
+
+                                <dl class="check-list">
+                                    <dt>자동검사방법</dt>
+                                    <dd>
+                                        - &lt;head&gt; 내의 &lt;title&gt; 요소 유무 체크<br>
+                                        - &lt;iframe&gt; &lt;frame&gt; 요소의 title 속성 유무 체크
+                                    </dd>
+
+                                    <dt>수동검사방법</dt>
+                                    <dd>
+                                        - &lt;head&gt; 내의 &lt;title&gt; 요소 값 체크<br>
+                                        - &lt;iframe&gt; &lt;frame&gt; 요소의 title 속성 값 체크<br>
+                                        - &lt;h&gt; 요소 체크
+                                    </dd>
+                                </dl>
+
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 브라우저 탭에 표시되는 문서 타이틀 제공</h5>
                                     <p>
                                         - 롯데마트 각페이지에 맞는 올바른 페이지 타이틀 제목 제공
                                     </p>
                                     
                                     <img src="./img/title.png" alt="오늘 핫콕 페이지 타이틀" >
-                                    <pre><code>
-    &lt;script type="text/javascript"&gt;
-        document.title = "롯데마트몰 - ${NAVILIST[1].NAME} &gt; ${NAVILIST[2].NAME} &gt; ${NAVILIST[3].NAME}";
-        $.utils.setMetaTag({
-            'title' : '롯데마트몰 - ${NAVILIST[1].NAME} &gt; ${NAVILIST[2].NAME} &gt; ${NAVILIST[3].NAME}'
-        });
-    &lt;/script&gt;
+                                    <pre><code>&lt;script type="text/javascript"&gt;
+    document.title = "롯데마트몰 - ${NAVILIST[1].NAME} &gt; ${NAVILIST[2].NAME} &gt; ${NAVILIST[3].NAME}";
+    $.utils.setMetaTag({
+        'title' : '롯데마트몰 - ${NAVILIST[1].NAME} &gt; ${NAVILIST[2].NAME} &gt; ${NAVILIST[3].NAME}'
+    });
+&lt;/script&gt;
+                                    </code></pre>
+                                </div>
+
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 프레임 제목 제공</h5>
+                                    <p>
+                                        - frame, iframe, frameset 요소의 title 속성값을 올바르게 제공.<br>
+                                        - 상품상세 페이지의 iframe 영역은 bos 영역으로 다양한 상품정보가 입력되기 때문에 iframe의 제목은 탭메뉴와 동일한 상품정보로 제공함.
+                                    </p>
+                                    
+                                    <img src="./img/title02.png" alt="상품정보 타이틀" >
+                                    <pre><code>&lt;iframe id="iframeProdInfo" name="iframeProdInfo" src="http://www.lottemart.com/iframe/ProductDesc.do?CategoryID=C20200010006&amp;ProductCD=8809581180161" style="width: 100%;" title="상품정보" frameborder="0" scrolling="no" height="15820px"&gt;&lt;/iframe&gt;
+                                    </code></pre>
+                                </div>
+
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 콘텐츠 블록에 &lt;h1&gt;~&lt;h6&gt;을 사용하여 제목 제공</h5>
+                                    <p>
+                                        - &lt;h1&gt;, &lt;h2&gt; 요소 등을 부여하여 제목과 본문을 구분할 수 있도록 제공. 화면낭독기에서는 제목 간 이동이 가능하므로 더욱 운용이 용이해지게 됨.
+                                    </p>
+                                    
+                                    <img src="./img/title03.png" alt="고객만족센터의 h 태그 사용 용례" >
+                                    <pre><code>&lt;iframe id="iframeProdInfo" name="iframeProdInfo" src="http://www.lottemart.com/iframe/ProductDesc.do?CategoryID=C20200010006&amp;ProductCD=8809581180161" style="width: 100%;" title="상품정보" frameborder="0" scrolling="no" height="15820px"&gt;&lt;/iframe&gt;
                                     </code></pre>
                                 </div>
                             </div>
@@ -1258,9 +1419,33 @@ outline: -webkit-focus-ring-color auto 5px;
                            
                             <div class="item-cont">
                                 <p>
-                                    - 기본 언어 명시는 화면 낭독 프로그램이 언어를 인식하여 자동으로 음성을 변환하거나, 해당 언어에 적합한 발음을 제공할 수 있도록 한다.<br>
-                                    - 웹 페이지에 주로 사용하는 언어를 &lt;html&gt; 요소에 lang 속성을 지정하여 명시하도록 한다.
+                                    주로 사용하는 언어를 표시해야 한다.
                                 </p>
+                                <div class="definition"> 
+                                    <h5>[적용기술]</h5>
+                                    <ul>
+                                        <li>
+                                            - 기본 언어 명시는 화면 낭독 프로그램이 언어를 인식하여 자동으로 음성을 변환하거나, 해당 언어에 적합한 발음을 제공할 수 있도록 한다.
+                                        </li>
+                                        <li>
+                                            - 웹 페이지에 주로 사용하는 언어를 &lt;html&gt; 요소에 lang 속성을 지정하여 명시하도록 한다.
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <dl class="check-list">
+                                    <dt>자동검사방법</dt>
+                                    <dd>
+                                        &lt;html&gt; 요소 lang 속성 유무 체크
+                                    </dd>
+
+                                    <dt>수동검사방법</dt>
+                                    <dd>
+                                        - &lt;html&gt; 요소 lang 속성 값 체크<br>
+                                        - 빈 프레임/내용 없음 프레임의 페이지는 검사하지 않음
+                                    </dd>
+                                </dl>
+                                
                             </div>
                         </div>
 
@@ -1273,10 +1458,37 @@ outline: -webkit-focus-ring-color auto 5px;
                             <div class="item-cont">
                                 <p>
                                     - 사용자가 의도하지 않은 기능(새 창, 초점 변화 등)은 실행되지 않아야 한다.<br>
-                                    - 실행은 onclick, enter 로 가능하게 적용한다.<br>
-                                    - 새창 및 팝업창의 경우 a 요소에 target="_blank" 로 지정한다.<br>
-                                    - 웹 사이트 로딩시 자동으로 실행되는 콘텐츠(팝업창, 레이어 팝업, 배경음 포함) 을 사용하지 않는다.<br>
                                 </p>
+                                <div class="definition"> 
+                                    <h5>[적용기술]</h5>
+                                    <ul>
+                                        <li>
+                                            - 실행은 onclick, enter 로 가능하게 적용한다.
+                                        </li>
+                                        <li>
+                                            - 새창 및 팝업창의 경우 a 요소에 target="_blank" 로 지정한다.
+                                        </li>
+                                        <li>
+                                            - 웹 사이트 로딩시 자동으로 실행되는 콘텐츠(팝업창, 레이어 팝업, 배경음 포함) 을 사용하지 않는다.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <dl class="check-list">
+                                    <dt>자동검사방법</dt>
+                                    <dd>
+                                        - 새창열림 사전공지<br>
+                                        -- &lt;a&gt; 알려지지 않은 새창열기 유무 체크<br>
+                                        -- &lt;area&gt; 알려지지 않은 새창열기 유무 체크
+                                        
+                                    </dd>
+
+                                    <dt>수동검사방법</dt>
+                                    <dd>
+                                        - 새 창 및 팝업으로 동작하는 &lt;a&gt; 요소에 target=”_blank” 제공 여부 체크<br>
+                                        - 웹 사이트 로딩시 자동으로 실행되는 콘텐츠 (팝업창, 레이어 팝업, 배경음 포함) 제공 여부 체크
+                                    </dd>
+                                </dl>
 
                                 <div class="sample">
                                     <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
@@ -1300,12 +1512,32 @@ outline: -webkit-focus-ring-color auto 5px;
                            
                             <div class="item-cont">
                                 <p>
-                                    - 표는 이해하기 쉽게 구성해야 한다.<br><br>
-                                    - 표의 제목을 &lt;caption&gt; 요소로 제공<br>
-                                    - 표의 구조 또는 내용에 대한 요약을 summary 속성으로 제공<br>
-                                    - 표의 헤더 셀(&lt;th&gt; 요소)과 , 데이터 셀(&lt;td&gt; 요소)의 관계를 제공<br>
-                                    - 복잡한 표의 경우 id, header, 일반적인 표의 경우 scope 제공<br>
+                                    콘텐츠는 논리적인 순서로 제공해야 한다
                                 </p>
+                                
+                                <div class="definition"> 
+                                    <h5>[적용기술]</h5>
+                                    <ul>
+                                        <li>표는 이해하기 쉽게 구성해야 한다.</li>
+                                        <li>표의 제목을 &lt;caption&gt; 요소로 제공</li>
+                                        <li>표의 구조 또는 내용에 대한 요약을 summary 속성으로 제공</li>
+                                        <li>표의 헤더 셀(&lt;th&gt; 요소)과 , 데이터 셀(&lt;td&gt; 요소)의 관계를 제공</li>
+                                        <li>복잡한 표의 경우 id, header, 일반적인 표의 경우 scope 제공</li>
+                                    </ul>
+                                </div>
+
+                                <dl class="check-list">
+                                    <dt>자동검사방법</dt>
+                                    <dd>
+                                        &lt;img&gt;, &lt;input type=”image”&gt;, &lt;area&gt;, &lt;applet&gt; 요소의 alt 속성 유무 체크
+                                    </dd>
+
+                                    <dt>수동검사방법</dt>
+                                    <dd>
+                                        - 콘텐츠가 논리적인 구조를 가지고 있는지 체크<br>
+                                        - 키보드 초점이 논리적으로 이동되는지 체크
+                                    </dd>
+                                </dl>
                             </div>
                         </div>
 
@@ -1317,8 +1549,34 @@ outline: -webkit-focus-ring-color auto 5px;
 
                             <div class="item-cont">
                                 <p>
-                                    - 표의 구성
+                                    - 표는 이해하기 쉽게 구성해야 한다
                                 </p>
+
+                                <div class="definition"> 
+                                    <h5>[적용기술]</h5>
+                                    <ul>
+                                        <li>표의 제목을 &lt;caption&gt; 요소로 제공</li>
+                                        <li>표의 구조 또는 내용에 대한 요약을 summary 속성으로 제공 (html5 는 속성 지원 안함)</li>
+                                        <li>표의 헤더 셀 &lt;th&gt; 요소 와 데이터 셀&lt;td&gt; 요소의 관계를 제공</li>
+                                        <li>복잡한 표의 경우 id, header, 일반적인 표의 경우 scope 제공</li>
+                                    </ul>
+                                </div>
+
+                                <dl class="check-list">
+                                    <dt>자동검사방법</dt>
+                                    <dd>
+                                        -
+                                    </dd>
+
+                                    <dt>수동검사방법</dt>
+                                    <dd>
+                                        - summary 속성 및 &lt;caption&gt; 요소 유무 체크<br>
+                                        - summary 속성 값과 &lt;caption&gt; 요소 값의 중복 여부 체크<br>
+                                        - &lt;th&gt; 요소 유무 체크<br>
+                                        - scope 속성값이 적절한지 체크<br>
+                                        - 단, HTML5에서 summary 속성은 미적용
+                                    </dd>
+                                </dl>
                             </div>
                         </div>
 
@@ -1330,9 +1588,28 @@ outline: -webkit-focus-ring-color auto 5px;
 
                             <div class="item-cont">
                                 <p>
-                                    - 입력 서식에는 대응하는 레이블을 제공해야 한다.<br>
-                                    - 입력 서식(&lt;input&gt;, &lt;textarea&gt;, &lt;select&gt; 요소 등)에 대응하는 레이블(&lt;label&gt; 요소, title 속성)을 제공해야 한다.
+                                    - 입력 서식에는 대응하는 레이블을 제공해야 한다.
                                 </p>
+                                <div class="definition"> 
+                                    <h5>[적용기술]</h5>
+                                    <ul>
+                                        <li>입력 서식(&lt;input&gt;, &lt;textarea&gt;, &lt;select&gt; 요소 등)에 대응하는 레이블 (&lt;label&gt;요소 , title 속성)을 제공해야 한다</li>
+                                    </ul>
+                                </div>
+
+                                <dl class="check-list">
+                                    <dt>자동검사방법</dt>
+                                    <dd>
+                                        - &lt;input&gt;, &lt;textarea&gt;, &lt;select&gt; 요소 등에 &lt;label&gt;요소, title 속성 유무 체크
+                                    </dd>
+
+                                    <dt>수동검사방법</dt>
+                                    <dd>
+                                        - 입력 서식에 레이블이 올바르게 연결되어 있는지 체크<br>
+                                        - 레이블값이 해당 서식을 적절한 내용으로 표현했는지 체크<br>
+                                        - 입력 서식에 중복 레이블을 제공하지 않았는지 체크
+                                    </dd>
+                                </dl>
                             </div>
                         </div>
 
@@ -1343,11 +1620,36 @@ outline: -webkit-focus-ring-color auto 5px;
                             </h4>
                             <div class="item-cont">
                                 <p>
-                                    - 입력 오류를 정정할 방법을 제공해야 한다.<br>
-                                    - 입력 서식을 잘못 작성한 경우, 해당 서식 필드로 초점 이동 제공<br>
-                                    - 입력 값 또는 형식에 대한 예시 제공<br>
-                                    - 필수 입력사항이나 일정한 양식에 따른 입력란에 대해 사용자가 입력하지 않거나 잘못 입력한 경우 사용자의 실수가 어떤 것인지 안내 제공<br>
+                                    - 입력 오류를 정정할 방법을 제공해야 한다.
                                 </p>
+                                <div class="definition"> 
+                                    <h5>[적용기술]</h5>
+                                    <ul>
+                                        <li>
+                                            - 입력 서식을 잘못 작성한 경우, 해당 서식 필드로 초점 이동 제공
+                                        </li>
+                                        <li>
+                                            - 입력 값 또는 형식에 대한 예시 제공
+                                        </li>
+                                        <li>
+                                            - 필수 입력사항이나 일정한 양식에 따른 입력란에 대해 사용자가 입력하지 않거나 잘못 입력한 경우 사용자의 실수가 어떤 것인지 안내 제공
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <dl class="check-list">
+                                    <dt>자동검사방법</dt>
+                                    <dd>
+                                        -
+                                    </dd>
+
+                                    <dt>수동검사방법</dt>
+                                    <dd>
+                                        - 입력 서식을 잘못 작성한 경우, 해당 서식 필드로 초점의 이동 가능 여부 체크<br>
+                                        - 입력 서식을 잘못 작성한 경우, 정정할 수 있는 수단을 제공했는지 체크<br>
+                                        - 입력 정정방식 또는 내용이 올바르게 제공했는지 체크
+                                    </dd>
+                                </dl>
                             </div>
                         </div>
 
@@ -1361,6 +1663,41 @@ outline: -webkit-focus-ring-color auto 5px;
                                 <p>
                                     - 마크업 언어의 요소는 열고 닫음, 중첩 관계 및 속성 선언에 오류가 없어야 한다.
                                 </p>
+                                <div class="definition"> 
+                                    <h5>[적용기술]</h5>
+                                    <ul>
+                                        <li>
+                                            W3C 명세에 맞는 마크업 준수
+                                        </li>
+                                        <li>
+                                            area, div, img, input 등의 태그 종료 처리
+                                        </li>
+                                        <li>
+                                            하나의 요소에 속성 중복 처리 금지
+                                        </li>
+                                        <li>
+                                            특수 문자 변환 표기
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <dl class="check-list">
+                                    <dt>자동검사방법</dt>
+                                    <dd>
+                                        - id 중복 여부 체크<br>
+                                        - 속성 이름 중복 여부 체크<br>
+                                        - 태그 열고 닫음 누락 체크<br>
+                                        - 태그 중첩 여부 체크
+                                    </dd>
+
+                                    <dt>수동검사방법</dt>
+                                    <dd>
+                                        - 태그의 열고 닫음 체크<br>
+                                        - 태그의 중첩이 올바른지 체크<br>
+                                        - 한 요소에 중복된 속성 선언 여부 체크<br>
+                                        - 한 페이지에 중복된 id 속성값 선언 여부 체크
+                                    </dd>
+                                </dl>
                             </div>
                         </div>
 
@@ -1372,23 +1709,33 @@ outline: -webkit-focus-ring-color auto 5px;
                             <div class="item-cont">
                                 <p>
                                     - 콘텐츠에 포함된 웹 애플리케이션은 접근성이 있어야 한다.
-                                    - 웹 애플리케이션(JavaScript, 애플릿, ActiveX, Flash)이 자체적인 접근성을 준수해야 함
                                 </p>
+
+                                <div class="definition"> 
+                                    <h5>[적용기술]</h5>
+                                    <ul>
+                                        <li>- 웹 애플리케이션(JavaScript, 애플릿, ActiveX, Flash)이 자체적인 접근성을 준수해야 함</li>
+                                    </ul>
+                                </div>
+
+                                <dl class="check-list">
+                                    <dt>자동검사방법</dt>
+                                    <dd>
+                                        -
+                                    </dd>
+
+                                    <dt>수동검사방법</dt>
+                                    <dd>
+                                        - &lt;a&gt; 요소 href 속성값에 JavaScript 사용 여부 체크<br>
+                                        - &lt;form&gt; 요소 action 속성값 체크<br>
+                                        - &lt;form&gt; 요소에 &lt;button type=”submit”&gt;, &lt;input type=”submit”&gt;, &lt;input type=”image”&gt; 유무 체크
+                                    </dd>
+                                </dl>
                             </div>
                         </div>
 
                     </div>
                     <!-- #wacExample end -->
-
-                    <!-- #wacTestSample end -->
-                    <div id="wacTestSample" class="article">
-                        <h3>PC 접근성 지표</h3>
-                        <p>
-                            - 웹 접근성 품질 체크를 위한 지표로 외부 접근성 조사 대응과 주요서비스 대응을 위한 지표입니다.
-                        </p>
-                    </div>
-                    <!-- #wacTestSample end -->
-
                 </div>
                 <!-- contents end -->
 
