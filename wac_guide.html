@@ -20,23 +20,22 @@
 <body class="wac-guide">
         <!-- gnb start -->
         <header class="gnb">
-            <!-- inner start -->
-            <div class="inner">
+        <!-- inner start -->
+        <div class="inner">
                 <h1>
-                <a href="./index.html">Accessibility Guide</a>
+                    <a href="#" class="pc">Accessibility Guide</a>
+                    <a href="#" class="mobile"><img src="./img/logo.png" alt="lottemart 로고"></a>
                 </h1>
 
                 <ul class="device">
-                    <li><a href="#">PC</a></li>
-                    <li><a href="#">MOBILE</a></li>
+                    <li><a href="./wac_guide.html" class="pc-guide">PC 지침 보기</a></li>
+                    <li><a href="#" class="mobile-guide">MOBILE 지침 보기</a></li>
                 </ul>
 
                 <ul class="menu">
-                    <li><a href="#">SCRIPT</a></li>
-                    <li><a href="#">UI COMPONENTS</a></li>
+                    <li><a href="./wac_script.html">SCRIPT</a></li>
+                    <li><a href="#" class="compone">UI COMPONENTS</a></li>
                 </ul>
-
-                <a href="#none" class="glyphicon glyphicon-th-list" title="타블릿 & 모바일 기기 네비게이션 버튼" id="mobileNavBtn"></a>
             </div>
             <!-- inner end -->
         </header>
@@ -427,14 +426,14 @@
                                 </dl>
                             
                                 <div class="sample">
-                                        <h5><i class="glyphicon glyphicon-star"></i> 예시 : 더보기 버튼의 명시</h5>
-                                        <p>
-                                            - 메인화면 전문관 영역의 더보기 버튼 링크의 기능에 대해 정확히 어떤 것을 더 보는 것인지에 대해 설명하는 대체 텍스트를 제공
-                                        </p>
-                                        
-                                        <img src="./img/link-text03.png" alt="전문관 더보기 버튼에대해 타이틀 툴탭이 뜬 이미지" style="width:100%">
-                                        <pre><code>&lt;button type="button" class="md-more" title="메인 전문관 영역의 숨겨진 영역을 열어주는 더보기 버튼"&gt;더보기&lt;/button&gt;
-                                        </code></pre>
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 더보기 버튼의 명시</h5>
+                                    <p>
+                                        - 메인화면 전문관 영역의 더보기 버튼 링크의 기능에 대해 정확히 어떤 것을 더 보는 것인지에 대해 설명하는 대체 텍스트를 제공
+                                    </p>
+                                    
+                                    <img src="./img/link-text03.png" alt="전문관 더보기 버튼에대해 타이틀 툴탭이 뜬 이미지">
+                                    <pre><code>&lt;button type="button" class="md-more" title="메인 전문관 영역의 숨겨진 영역을 열어주는 더보기 버튼"&gt;더보기&lt;/button&gt;
+                                    </code></pre>
                                 </div>
 
                                 <div class="sample">
@@ -486,10 +485,45 @@
                                     <dt>수동검사방법</dt>
                                     <dd>
                                         - 텍스트나 이미지 텍스트와 배경 간의 명도 대비를 4.5 : 1 이상으로 제공했는지 체크<br>
-                                        -명도 대비 확인 유틸리티 Colour Contrast Analyser 로 체크
+                                        - 명도 대비 확인 유틸리티 Colour Contrast Analyser 로 체크
                                     </dd>
                                 </dl>
 
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 콘텐츠와 배경간의 충분한 명도 대비 제공</h5>
+                                    <p>
+                                        - 글자색과 배경색간의 명도 차이가 작으면 약시자가 보기 힘들어 짐<br>
+                                        - 일반적인 크기의 글자는 4.5:1 이상, 18pt 이상의 큰 글자(볼드체는 14pt 이상)는 3:1 이상 필요
+                                    </p>
+                                    
+                                    <img src="./img/contrast01.png" alt="명도대비 변환 전 이미지">
+                                    <img src="./img/contrast02.png" alt="명도대비툴로 변환한 흑백 이미지">
+                                </div>
+                                
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star" style="color:blueviolet;"></i> 명도 대비 예외 사항</h5>
+                                    <p>
+                                        <ul>
+                                            <li>
+                                                1. 단순히 장식 목적으로만 사용한 텍스트<br>
+                                                <img src="./img/except01.png" alt="명도대비 예외 이미지1">
+                                            </li>
+                                            <li>2. 로고 또는 상호와 같은 텍스트 이미지<br>
+                                                <img src="./img/logo.png" alt="명도대비 예외 이미지2">
+                                            </li>
+                                            <li>
+                                                3. 마우스나 키보드를 활용하여 초점을 받았을 때 색이나 명도 대비가 변화하는 콘텐츠 (두 메뉴 중 한쪽만 명도대비를 맞추면 인정)<br>
+                                                <img src="./img/except02.png" alt="명도대비 예외 이미지3">
+                                            </li>
+                                            <li>
+                                                4. 사용할 수 없음을 표시하기 위하여 명도 대비를 낮춘 회색의 컨트롤이나 입력 서식<br>
+                                                <img src="./img/except03.png" alt="명도대비 예외 이미지4">
+                                            </li>
+                                        </ul>
+                                    </p>
+                                    
+                                </div>
+                                
                             </div>
                         </div>
 
@@ -530,6 +564,16 @@
                                         
                                     </dd>
                                 </dl>
+
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 동영상 콘텐츠의 자동 재생 금지</h5>
+                                    <p>
+                                        - 마우스 클릭하거나 키보드로 접근 후 선택을 해야 동영상이 실행되도록 영상 콘텐츠를 구현하고 있어 배경음으로 인한 방해가 없도록 한다
+                                    </p>
+                                    
+                                    <img src="./img/video-play.png" alt="소시지 동영상이 정지된 이미지"  >
+                                </div>
+
                             </div>
 
                         </div>
@@ -542,8 +586,64 @@
 
                             <div class="item-cont">
                                 <p>
-                                    - 롯데마트 PC 웹에서 해당사항 없음.
+                                    - 이웃한 콘텐츠는 구별될 수 있어야 한다.
                                 </p>
+                            
+
+                                <div class="definition"> 
+                                    <h5>[적용기술]</h5>
+                                    <ul>
+                                        <li>
+                                            - 모든 이웃한 콘텐츠는 시각적으로 구분될 수 있도록 구현함.
+                                            - 테두리를 이용하여 구분함
+                                            - 콘텐츠 사이에 시각적인 구분선을 삽입하여 구분함
+                                            - 서로 다른 무늬를 이용하여 구분함
+                                            - 콘텐츠 배경색 간의 명도대비(채도)를 달리하여 구분함
+                                            줄 간격 및 글자 간격을 조절하여 구분함
+                                            - 기타 콘텐츠를 시각적으로 구분할 수 있는 방법을 제공함
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <dl class="check-list">
+                                    <dt>자동검사방법</dt>
+                                    <dd>
+                                        -
+                                    </dd>
+
+                                    <dt>수동검사방법</dt>
+                                    <dd>
+                                        - 콘텐츠 사이의 시각적인 구분이 가능한지 체크
+                                    </dd>
+                                </dl>
+                                
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 메뉴내 이웃한 콘텐츠 간을 테두리로 구분함</h5>
+                                    <p>
+                                        - HTML로 표현되는 콘텐츠 관련 태그들에 border 속성을 추가하여 테두리 선 굵기를 px(픽셀) 단위로 지정하거나, css 스타일시트를 이용하여 콘텐츠에 border 속성을 지정할 수 있다.
+                                    </p>
+                                    
+                                    <img src="./img/border-line.png" alt="실선으로 영역이 구분되어 있는 메뉴 이미지" style="width:100%">
+                                </div> 
+
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 이웃한 콘텐츠 간의 명도대비(채도)를 달리하여 구분하는 방법</h5>
+                                    <p>
+                                        -  흑백 스크린(구형 PDA 등) 또는 경조(硬調: 고대비) 모드사용자들도 콘텐츠의 내용이나 구조를 손쉽게 이해할 수 있다.<br>
+                                        - 웹 페이지에 보이는 핵심 텍스트 콘텐츠와 배경 간의 충분한 대비를 제공하여 저시력자, 색각 이상자, 고령자 등도 콘텐츠를 인식할 수 있도록 제공한다.
+                                    </p>
+                                    
+                                    <img src="./img/color-line.png" alt="명도대비 색상차이로 영역이 구분되어 있는 메뉴 이미지">
+                                </div> 
+
+                                <div class="sample">
+                                <h5><i class="glyphicon glyphicon-star"></i> 예시 : 기타 콘텐츠를 시각적으로 구분할 수 있는 방법</h5>
+                                <p>
+                                    - 텍스트는 CSS의 font-style 속성으로 텍스트 구성 요소를 강조하고 이미지는 CSS의 background-image를 사용하여 텍스트 뒤에 그림을 표시하여 시각적으로 구분한다.
+                                </p>
+                                
+                                <img src="./img/etc02.png" alt="명도대비 색상차이로 배경과 글씨의 내용이 확연하게 구분되어 있는 메뉴 이미지">
+                                </div> 
                             </div>
                         </div>
                         
@@ -557,6 +657,32 @@
                                     - 모든 기능은 키보드 만으로도 사용할 수 있어야 한다. <br>
                                     - 키보드에 의한 초점은 논리적으로 이동해야 하며, 시각적으로 구별할 수 있어야 한다.<br>
                                 </p>
+
+                                <div class="definition"> 
+                                    <h5>[적용기술]</h5>
+                                    <ul>
+                                        <li>
+                                            키보드와 마우스 이벤트 핸들러 제공 : 마우스로 접근 가능한 기능이라면, 키보드로 접근 가능해야 함
+                                        </li>
+                                        <li>
+                                            마우스 드래그와 드롭 기능에서 키보드 이용 보장 : 마우스 드래그 및 드롭 방법만으로 구현하지 않고 체크상자, 선택버튼기능등을 제공함으로써 키보드 사용이 보장될 수 있 도록 해야함
+                                        </li>
+                                            이미지에 이벤트를 제공한 경우, 키보드 포커스가 가능한 button, a 요소 등에 이벤트를 제공해야 함
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <dl class="check-list">
+                                    <dt>자동검사방법</dt>
+                                    <dd>
+                                        -
+                                    </dd>
+
+                                    <dt>수동검사방법</dt>
+                                    <dd>
+                                        - 보드로 Tab 과 Shift + Tab, 서비스내 단축키 그리고 엔터등으로 콘텐츠를 이용할 수 있는지 체크
+                                    </dd>
+                                </dl>
 
                                 <div class="sample">
                                     <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
@@ -578,6 +704,41 @@
                             </h4>
 
                             <div class="item-cont">
+                                <p>
+                                    - 키보드에 의한 초점은 논리적으로 이동해야 하며 시각적으로 구별할 수 있어야 한다
+                                </p>
+
+                                <div class="definition"> 
+                                    <h5>[적용기술]</h5>
+                                    <ul>
+                                        <li>
+                                            초점 이동 순서 유지 : 초점 이동 순서는 사용자가 예측하는 이동 순서와 일치하여야 함.
+                                        </li>
+                                        <li>
+                                            키보드 사용을 보장하기 위해서는 콘텐츠가 논리적으로 선형화 되돌고 Mark Up이 반드시 필요함.
+                                        </li>
+                                        <li>
+                                            초점의 시각화 :  사용자 입력 등이 위치 지정 도구(마우스)나 키보드 조작을 통해 초점을 받았을 때, 해당 컨트롤의 초점을 시각적으로 구별 할 수 있어야 함. 
+                                        </li>
+                                        <li>
+                                            인터렉션 개체들의 초점을 강제로 제거하지 않음.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <dl class="check-list">
+                                    <dt>자동검사방법</dt>
+                                    <dd>
+                                        -
+                                    </dd>
+
+                                    <dt>수동검사방법</dt>
+                                    <dd>
+                                        - 키보드 Tab으로 이동이 논리적인지 체크<br>
+                                        - 초점을 받은 요소 (링크, 컨트롤, 입력서식)가 시각적으로 구분이 되는지 체크
+                                    </dd>
+                                </dl>
+
                                 <div class="sample">
                                     <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
                                     <p>
@@ -788,6 +949,67 @@
     &lt;/article&gt;
                                     </code></pre>
                                 </div>
+                               
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 초점 또는 키보드의 위치를 나타내는 요소가 시각적으로 표현된 모습</h5>
+                                    <p>
+                                        - onfocus=“this.blur();를 사용한 경우, 키보드 접근이 불가하므로 this.blur()를 제공하지 않아야 함
+                                    </p>
+                                    
+                                    <img src="./img/focus.png" alt="초점이 파란색 테두리로 확연하게 나타난 이미지">
+                                    <pre><code>:focus {
+outline: -webkit-focus-ring-color auto 5px;
+}
+                                    </code></pre>
+                                </div>
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 더보기 또는 전체보기 기능은 콘텐츠보다 후순위로 마크업</h5>
+                                    <p>
+                                        - 시각적으로는 이벤트 더보기 버튼이 컨텐츠 영역 위에 있지만 컨텐츠 영역의 이벤트에 초점 이동을 한 후 이벤트를 더 보고싶을 때 더보기 버튼을 사용하므로 마크업은 마지막에 더보기를 넣어 논리적 순서에 맞게 마크업을 진행해야 한다
+                                    </p>
+                                    
+                                    <img src="./img/focus02.png" alt="초점이동이 순번이 적혀있는 이미지">
+                                    <pre><code>&lt;div class="wrap-maintype"&gt;
+   &lt;ul class="event-thumb-list clear-after"&gt;
+       &lt;li&gt;
+           &lt;a href="http://www.lottemart.com/event/detail.do?categoryId=C0072168&SITELOC=OH004" style="cursor:pointer;" class="link-event"&gt;
+               &lt;em class="tag-event-type tag-type2"&gt;이벤트&lt;/em&gt;
+               &lt;div class="wrap-thumb"&gt;&lt;img src="http://image.lottemart.com/lim/static_root/images/front/event/bn/pc/2018/20181126112402973_294_230.jpg" alt="12월 럭키룰렛 출석체크 이벤트" class="thumb" width="294" height="230"&gt;&lt;/div&gt;
+               &lt;strong class="tit"&gt;12월 럭키룰렛 출석체크 이벤트&lt;/strong&gt;
+               &lt;dl class="info"&gt;
+                   &lt;dt class="info-tit"&gt;기간 : &lt;/dt&gt;
+                   &lt;dd class="info-txt"&gt;2018.12.01 ~ 2018.12.31&lt;/dd&gt;
+               &lt;/dl&gt;
+           &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+         &lt;a href="http://www.lottemart.com/event/detail.do?categoryId=C0072158&SITELOC=OH004" style="cursor:pointer;" class="link-event"&gt;
+             &lt;em class="tag-event-type tag-type2"&gt;이벤트&lt;/em&gt;
+             &lt;div class="wrap-thumb"&gt;&lt;img src="http://image.lottemart.com/lim/static_root/images/front/event/bn/pc/2018/20181029034406121_294_230.jpg" alt="롯데마트몰 TV CF 댓글 이벤트 당첨자 안내" class="thumb" width="294" height="230"&gt;&lt;/div&gt;
+             &lt;strong class="tit"&gt;롯데마트몰 TV CF 댓글 이벤트 당첨자 안내&lt;/strong&gt;
+             &lt;dl class="info"&gt;
+                  &lt;dt class="info-tit"&gt;기간 : &lt;/dt&gt;
+                  &lt;dd class="info-txt"&gt;2018.10.29 ~ 2018.12.31&lt;/dd&gt;
+             &lt;/dl&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="http://www.lottemart.com/event/detail.do?categoryId=C0072141&SITELOC=OH004" style="cursor:pointer;" class="link-event"&gt;
+             &lt;em class="tag-event-type tag-type2"&gt;이벤트&lt;/em&gt;
+             &lt;div class="wrap-thumb"&gt;&lt;img src="http://image.lottemart.com/lim/static_root/images/front/event/bn/pc/2018/20180918104849860_294_230.jpg" alt="모바일 쇼핑 마스터 안내 " class="thumb" width="294" height="230"&gt;&lt;/div&gt;
+             &lt;strong class="tit"&gt;모바일 쇼핑 마스터 안내 &lt;/strong&gt;
+             &lt;dl class="info"&gt;
+                 &lt;dt class="info-tit"&gt;기간 : &lt;/dt&gt;
+                 &lt;dd class="info-txt"&gt;2018.09.19 ~ 2019.12.31&lt;/dd&gt;
+             &lt;/dl&gt;
+         &lt;/a&gt;
+      &lt;/li&gt;
+   &lt;/ul&gt;
+   &lt;a href="/event/aliveEvent.do?SITELOC=AC025" class="list-more"&gt;이벤트 더보기&lt;/a&gt;
+&lt;/div&gt;
+                                    </code></pre>
+                                </div>
+                            
                             </div>
                         </div>
                         
@@ -799,14 +1021,6 @@
                            
                             <div class="item-cont">
                                 <P>
-                                    - 롯데마트 PC 웹에서 해당사항 없음.
-                                </P>
-
-
-                                <!-- 
-                            <div class="item-cont">
-                                <p>
-                                    - 롯데마트 PC 웹에서 해당사항 없음.<br>
                                     - 일부 슬라이드나 자동재생 요소들은 해당영역으로 초점이 진입되는 순간 자동 정지되도록 구현됨.
                                 </p>
                                 <div class="sample">
@@ -816,8 +1030,7 @@
                                     </p>
                                     <img src="./img/m-visual-stop.png" alt="롯데마트 메인 비주얼 슬라이드">
 
-                                    <pre><code class="html">
-    var fixGnbLastFocusable = function(){
+                                    <pre><code class="html">var fixGnbLastFocusable = function(){
         var $gnb = $('#gnbScrollFixed'),
             $gnbToggles = $gnb.find('.wrap-toggle'),
             $gnbLastMenu = _wac.getFocusables($gnbToggles.last().find('.wrap-subnav')).last(),
@@ -836,7 +1049,6 @@
     };
                                     </code></pre>
                                 </div>
-                            </div> -->
                             </div>
                         </div>
                         
@@ -871,8 +1083,7 @@
                                     </p>
                                     
                                     <img src="./img/stop.png" alt="포커스 진입시 자동멈춤 처리되는 메인 비주얼 슬라이드">
-                                    <pre><code>
-    //gnb마지막 요소에서 상단 모양 컨틀롤러로 촛점이동
+                                    <pre><code>//gnb마지막 요소에서 상단 모양 컨틀롤러로 촛점이동
     var fixGnbLastFocusable = function(){
         var $gnb = $('#gnbScrollFixed'),
             $gnbToggles = $gnb.find('.wrap-toggle'),
