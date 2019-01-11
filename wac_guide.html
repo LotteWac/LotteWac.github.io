@@ -1440,7 +1440,17 @@ outline: -webkit-focus-ring-color auto 5px;
                                         - 빈 프레임/내용 없음 프레임의 페이지는 검사하지 않음
                                     </dd>
                                 </dl>
-                                
+
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 전체 페이지의 언어 표시</h5>
+                                    <p>
+                                        - 웹 페이지에서 주로 사용하는 언어는 페이지 상단에 html Tag에 lang 속성 이용<br>
+                                        - 기본 언어 명시는 화면 낭독 프로그램이 언어를 인식하여 자동으로 음성을 변환하거나, 해당 언어에 적합한 발음을 제공할 수 있도록 한다<br>
+                                        - Doctype에 따른 기본언어 선언 (&lt;head&gt; 앞에 나와야 함)
+                                    </p>
+                                    
+                                    <img src="./img/lang.png" alt="언어가 ko 한국어로 정의되어있는 롯데마트 인덱스 페이지의 이미지"  >
+                                </div>
                             </div>
                         </div>
 
@@ -1513,11 +1523,7 @@ outline: -webkit-focus-ring-color auto 5px;
                                 <div class="definition"> 
                                     <h5>[적용기술]</h5>
                                     <ul>
-                                        <li>표는 이해하기 쉽게 구성해야 한다.</li>
-                                        <li>표의 제목을 &lt;caption&gt; 요소로 제공</li>
-                                        <li>표의 구조 또는 내용에 대한 요약을 summary 속성으로 제공</li>
-                                        <li>표의 헤더 셀(&lt;th&gt; 요소)과 , 데이터 셀(&lt;td&gt; 요소)의 관계를 제공</li>
-                                        <li>복잡한 표의 경우 id, header, 일반적인 표의 경우 scope 제공</li>
+                                        <li>- 콘텐츠 및 마크업이 논리적인 순서로 구성해야 한다.</li>
                                     </ul>
                                 </div>
 
@@ -1533,7 +1539,118 @@ outline: -webkit-focus-ring-color auto 5px;
                                         - 키보드 초점이 논리적으로 이동되는지 체크
                                     </dd>
                                 </dl>
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 공지사항 탭의 논리적 순번을 따른 마크업</h5>
+                                    <p>
+                                        제목과 내용을 연결하여 제공해 내용을 직관적으로 이해할 수 있게 제공한다.
+                                    </p>
+                                    <img src="./img/logical.png" alt="공지사항 탭의 논리적 순번을 따른 마크업">
 
+                                    <pre><code class="html">&lt;div class="wrap-tab-cont"&gt;
+    &lt;div class="tab-cont active" id="tab01"&gt;
+        &lt;h3 class="blind"&gt;공지사항&lt;/h3&gt;
+        &lt;ul class="list-cs"&gt;
+            &lt;li&gt;&lt;a href="http://www.lottemart.com/happycenter/customerCenterNoticeDetail.do?boardSeq=000013504633&amp;SITELOC=AI003"&gt;롯데마트몰 경남 양산시 일부 권역 배송점포 변경 안내&lt;/a&gt;
+            &lt;span class="num-n"&gt;
+                &lt;span&gt;
+                    2018.12.28&lt;/span&gt;
+            &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;a href="http://www.lottemart.com/happycenter/customerCenterNoticeDetail.do?boardSeq=000013504547&amp;SITELOC=AI003"&gt;롯데마트몰 충남 서천군 일부 권역 매장 배송 오픈 안내&lt;/a&gt;
+            &lt;span class="num-n"&gt;
+                &lt;span&gt;
+                    2018.12.28&lt;/span&gt;
+            &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;a href="http://www.lottemart.com/happycenter/customerCenterNoticeDetail.do?boardSeq=000013492586&amp;SITELOC=AI003"&gt;개인정보처리방침 변경 안내드립니다.&lt;/a&gt;
+            &lt;span class="num-n"&gt;
+                &lt;span&gt;
+                    2018.12.20&lt;/span&gt;
+            &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;a href="http://www.lottemart.com/happycenter/customerCenterNoticeDetail.do?boardSeq=000013374440&amp;SITELOC=AI003"&gt;개인정보처리방침 변경안내드립니다.&lt;/a&gt;
+            &lt;span class="num-n"&gt;
+                &lt;span&gt;
+                    2018.10.02&lt;/span&gt;
+            &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;a href="http://www.lottemart.com/happycenter/notice.do?SITELOC=AI003" class="moreview"&gt;&lt;em&gt;공지사항 더보기&lt;/em&gt;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-cont" id="tab02"&gt;
+        &lt;h3 class="blind"&gt;당첨자발표&lt;/h3&gt;
+        &lt;ul class="list-cs"&gt;
+            &lt;li&gt;&lt;a href="http://www.lottemart.com/event/winPrizeDetail.do?boardSeq=000013527392"&gt;2018년 12월 배송평가 Reward 당첨자 발표&lt;/a&gt;
+            &lt;span class="num-n"&gt;
+                &lt;span&gt;
+                    2019.01.11&lt;/span&gt;
+            &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;a href="http://www.lottemart.com/event/winPrizeDetail.do?boardSeq=000013516635"&gt;풀무원 홈파티 2만원 이상 구매시 주방키트 증정 당첨자 공지&lt;/a&gt;
+            &lt;span class="num-n"&gt;
+                &lt;span&gt;
+                    2019.01.04&lt;/span&gt;
+            &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;a href="http://www.lottemart.com/event/winPrizeDetail.do?boardSeq=000013503518"&gt;CJ Brand Week 1주차 (스팸&amp;고메) event 2 : 투썸 아메리카노 교환권 이벤트 당첨자 공지&lt;/a&gt;
+            &lt;span class="num-n"&gt;
+                &lt;span&gt;
+                    2018.12.27&lt;/span&gt;
+            &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;a href="http://www.lottemart.com/event/winPrizeDetail.do?boardSeq=000013503491"&gt;CJ Brand Week 1주차 (스팸&amp;고메) event 1 : 뜌레쥬르 교환권 이벤트 당첨자 공지&lt;/a&gt;
+            &lt;span class="num-n"&gt;
+                &lt;span&gt;
+                    2018.12.27&lt;/span&gt;
+            &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;a href="http://www.lottemart.com/event/winPrize.do" class="moreview-win"&gt;&lt;em&gt;당첨자발표 더보기&lt;/em&gt;&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                                    </code></pre>
+                                </div>   
+
+                            </div>
+                        </div>
+
+                        <div class="" id="item20">
+                            <h4 class="active">
+                                20. 표의 구성
+                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                            </h4>
+
+                            <div class="item-cont">
+                                <p>
+                                    - 표는 이해하기 쉽게 구성해야 한다
+                                </p>
+
+                                <div class="definition"> 
+                                    <h5>[적용기술]</h5>
+                                    <ul>
+                                        <li>표의 제목을 &lt;caption&gt; 요소로 제공</li>
+                                        <li>표의 구조 또는 내용에 대한 요약을 summary 속성으로 제공 (html5 는 속성 지원 안함)</li>
+                                        <li>표의 헤더 셀 &lt;th&gt; 요소 와 데이터 셀&lt;td&gt; 요소의 관계를 제공</li>
+                                        <li>복잡한 표의 경우 id, header, 일반적인 표의 경우 scope 제공</li>
+                                    </ul>
+                                </div>
+
+                                <dl class="check-list">
+                                    <dt>자동검사방법</dt>
+                                    <dd>
+                                        -
+                                    </dd>
+
+                                    <dt>수동검사방법</dt>
+                                    <dd>
+                                        - summary 속성 및 &lt;caption&gt; 요소 유무 체크<br>
+                                        - summary 속성 값과 &lt;caption&gt; 요소 값의 중복 여부 체크<br>
+                                        - &lt;th&gt; 요소 유무 체크<br>
+                                        - scope 속성값이 적절한지 체크<br>
+                                        - 단, HTML5에서 summary 속성은 미적용
+                                    </dd>
+                                </dl>
+                                
                                 <div class="sample">
                                     <h5><i class="glyphicon glyphicon-star"></i> 예시 : 동영상 콘텐츠의 자동 재생 금지</h5>
                                     <p>
@@ -1704,46 +1821,6 @@ outline: -webkit-focus-ring-color auto 5px;
 &lt;/table&gt;
                                     </code></pre>
                                 </div>
-
-                            </div>
-                        </div>
-
-                        <div class="" id="item20">
-                            <h4 class="active">
-                                20. 표의 구성
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
-                            </h4>
-
-                            <div class="item-cont">
-                                <p>
-                                    - 표는 이해하기 쉽게 구성해야 한다
-                                </p>
-
-                                <div class="definition"> 
-                                    <h5>[적용기술]</h5>
-                                    <ul>
-                                        <li>표의 제목을 &lt;caption&gt; 요소로 제공</li>
-                                        <li>표의 구조 또는 내용에 대한 요약을 summary 속성으로 제공 (html5 는 속성 지원 안함)</li>
-                                        <li>표의 헤더 셀 &lt;th&gt; 요소 와 데이터 셀&lt;td&gt; 요소의 관계를 제공</li>
-                                        <li>복잡한 표의 경우 id, header, 일반적인 표의 경우 scope 제공</li>
-                                    </ul>
-                                </div>
-
-                                <dl class="check-list">
-                                    <dt>자동검사방법</dt>
-                                    <dd>
-                                        -
-                                    </dd>
-
-                                    <dt>수동검사방법</dt>
-                                    <dd>
-                                        - summary 속성 및 &lt;caption&gt; 요소 유무 체크<br>
-                                        - summary 속성 값과 &lt;caption&gt; 요소 값의 중복 여부 체크<br>
-                                        - &lt;th&gt; 요소 유무 체크<br>
-                                        - scope 속성값이 적절한지 체크<br>
-                                        - 단, HTML5에서 summary 속성은 미적용
-                                    </dd>
-                                </dl>
                             </div>
                         </div>
 
@@ -1777,6 +1854,21 @@ outline: -webkit-focus-ring-color auto 5px;
                                         - 입력 서식에 중복 레이블을 제공하지 않았는지 체크
                                     </dd>
                                 </dl>
+
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 고객센터 > FAQ 검색 인풋창의 레이블 제공</h5>
+                                    <p>
+                                        -사용자의 입력, 선택을 요구하는 입력서식에는 그에 대한 제목, 즉 레이블을 제공해야 한다.<br>
+                                        - &lt;label&gt;의 for 속성과 서식의 id 값을 일치 시킨다.<br>
+                                        - &lt;label&gt;을 사용할 수 없는 특수한 경우 해당 요소에 title 속성을 부여한다.
+
+                                    </p>
+                                    <img src="./img/label01.png" alt="FAQ 검색 인풋창 이미지">
+
+                                    <pre><code class="html">&lt;label for="searchKeyword" class="titfaq"&gt;FAQ 검색&lt;/label&gt;
+&lt;input type="text" class="w-type50" id="searchKeyword" name="searchKeyword" onfocus="clearKeyword();" onkeydown="javascript:if(event.keyCode==13){search();}" placeholder="검색을 통해 궁금하신 내용을 보다 빠르게 확인해보세요!"&gt;
+                                    </code></pre>
+                                </div>
                             </div>
                         </div>
 
@@ -1817,6 +1909,13 @@ outline: -webkit-focus-ring-color auto 5px;
                                         - 입력 정정방식 또는 내용이 올바르게 제공했는지 체크
                                     </dd>
                                 </dl>
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 엘포인트 사용인증 비밀번호 확인시 오류정정 기능 제공</h5>
+                                    <p>
+                                        - 오류 발생 시, 해당 오류 사항을 사용자에게 알리고 해당 서식항목으로 초점 이동시켜 쉽게 수정할 수 있도록 한다.
+                                    </p>
+                                    <img src="./img/again.png" alt="엘포인트 사용인증 비밀번호 확인" >
+                                </div>
                             </div>
                         </div>
 
@@ -1866,6 +1965,42 @@ outline: -webkit-focus-ring-color auto 5px;
                                     </dd>
                                 </dl>
                             </div>
+                            
+                            <div class="sample">
+                                <h5><i class="glyphicon glyphicon-star"></i> 예시 : 태그 오류 방지</h5>
+                                <p>
+                                    - 마크업 언어로 작성된 콘텐츠는 표준에서 특별히 정한 경우를 제외하고는 시작 태그와 끝나는 태그가 정의되어야 한다.<br>
+                                    - 열고 닫는 태그가 나타내는 요소는 포함관계가 어긋나지 않도록 해야 한다. (태그 중첩 관계)<br>
+                                    - 참고 : W3C 마크업 유효성 검사 도구<br> 
+                                    <a href="http://validator.w3.org/">[http://validator.w3.org/]</a>
+                                </p>
+                                <img src="./img/mark-up-error02.png" alt="W3C 마크업 유효성 검사 도구">
+                            </div>
+                            
+                            <div class="sample">
+                                <h5><i class="glyphicon glyphicon-star"></i> 예시 : 하나의 요소에 속성 중복 처리 금지</h5>
+                                <p>
+                                    - 한 페이지에서 아이디는 항상 유일해야 한다.<br>
+                                    - 하나의 요소에 속성이 중복 처리되는 오류가 없어야 한다.
+                                </p>
+                                <img src="./img/attr-error.png" alt="W3C 마크업 유효성 검사 도구">
+                            </div>
+
+                            <div class="sample">
+                                <h5><i class="glyphicon glyphicon-star"></i> 예시 : 특수문자 변환 표기</h5>
+                                <p>
+                                    - 텍스트 및 URL에서 사용한 특수문자(<,>,&)는 Entity코드로 변환하여 사용해야 한다.<br>
+                                    - Entity 코드로 표현된 특수문자는 대부분의 브라우저에서 문제없이 출력된다.<br>
+                                    - 대표적인 오류 유형<br>
+                                       &emsp;a. `꺽쇠기호 < ,> 등을 Entity로 처리하지 않는 경우 브라우저들은 이것을 HTML Tag의 시작이나 끝으로 인식할 수 있음  <br>
+                                       &emsp;b. 따옴표 “ “는 HTML 속성의 값이 시작되거나 끝난 것으로 인식할 수 있음<br>
+                                       &emsp;c. & 기호는 Entity 기호의 시작으로 오인할 수 있음<br>
+                                    - 이와 같은 이유로 Entity 코드로 사용하지 않는 경우 W3C Validator는 오류메시지로 출력한다.<br>
+                                    <a href="https://www.digitalmediaminute.com/reference/entity/index.php"> 참고 : XHTML Character Entity Reference 보기 </a>
+                                </p>
+                                <img src="./img/etc-table.png" alt="자주 사용되는 특수문자 태그 표">
+                            </div>
+    
                         </div>
 
                         <div class="" id="item24">
