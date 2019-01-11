@@ -47,7 +47,7 @@
                 <li><a href="#mVisual">1. 메인비주얼 영역으로 이동</a></li>
                 <li><a href="#infoAccess">2. 정보접근성 설명 영역으로 이동</a></li>
                 <li><a href="#whyWac">3. 정보접근성의 필요성 영역으로 이동</a></li>
-                <li><a href="#wacGuideLine">4. LOTTE MART PC 접근성 가이드라인 영역으로 이동</a></li>
+                <li><a href="#wacGuideLine">4.PC 접근성 가이드라인 LOTTE MART PC 접근성 가이드라인 영역으로 이동</a></li>
                 <li><a href="#wacIntro">5. LOTTE MART 정보 접근성 지침 영역으로 이동</a></li>
             </ul>
             <a href="#top" id="goTopBtn">
@@ -235,7 +235,7 @@
             <!-- 4. #wacGuideLine start -->
             <div class="article" id="wacGuideLine"> 
                 <div class="inner">
-                    <h3>LOTTE MART PC 접근성 가이드라인</h3>
+                    <h3><em class="mobile-block">LOTTE MART</em> PC 접근성 가이드라인</h3>
                     <p>
                         - 모두를 위한 웹을 설계합니다. 롯데마트 PC 웹 접근성 가이드라인.
                     </p>
@@ -261,7 +261,7 @@
             <!-- 5. #wacIntro start -->
             <div id="wacIntro" class="article">
                 <div class="inner">
-                    <h3>LOTTE MART 정보 접근성 지침</h3>
+                    <h3><em class="mobile-block">LOTTE MART</em> 정보 접근성 지침</h3>
                     <p>
                         - LOTTE MART 정보 접근성 지침을 알아보겠습니다.<br>
                         - 정보 접근성 지침에 관련된 문서는 다음과 같이 2가지 항목으로 구성되어 있습니다.
@@ -486,52 +486,58 @@
         }
     });
 
-    //스크롤 모션 구현 
-    var distanceOfTop, offset,
-        windowHeight = $(window).height();
+    var scrollMotion = function(){
+        //스크롤 모션 구현 
+        var distanceOfTop, offset,
+            windowHeight = $(window).height();
 
-    //해당 영역으로 이동하는 함수
-    var goToArea = function(AreaId){
-        offset = $(AreaId).offset();
-        $('html, body').animate({scrollTop : offset.top}, 0);
-    }
-
-    $(window).on('DOMMouseScroll mousewheel', function (e) {
-        distanceOfTop = $(window).scrollTop();
-        //scroll down
-        if( e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0 ) {
-            if(distanceOfTop <= 1000){
-                preventDefaultAction(e)
-                goToArea("#infoAccess");
-            } else if(distanceOfTop > 1200 && distanceOfTop <= 2000){
-                preventDefaultAction(e)
-                goToArea("#whyWac");
-            } else if(distanceOfTop > 2200 && distanceOfTop <= 3000){
-                preventDefaultAction(e)
-                goToArea("#wacGuideLine");
-            } else if(distanceOfTop > 3100){
-                preventDefaultAction(e)
-                goToArea("#wacIntro");
-            }
-
-        //scroll up
-        } else {
-            if(distanceOfTop >= 1000 && distanceOfTop < 2000){
-                preventDefaultAction(e)
-                goToArea("#mVisual");
-            } else if(distanceOfTop >= 2200 && distanceOfTop < 3000){
-                preventDefaultAction(e)
-                goToArea("#infoAccess");
-            } else if(distanceOfTop >= 3000 && distanceOfTop < 4000){
-                preventDefaultAction(e)
-                goToArea("#whyWac");
-            } else if(distanceOfTop >= 4000){
-                preventDefaultAction(e)
-                goToArea("#wacGuideLine");
-            }
-
+        //해당 영역으로 이동하는 함수
+        var goToArea = function(AreaId){
+            offset = $(AreaId).offset();
+            $('html, body').animate({scrollTop : offset.top}, 0);
         }
-    });
+
+        $(window).on('DOMMouseScroll mousewheel', function (e) {
+            distanceOfTop = $(window).scrollTop();
+            //scroll down
+            if( e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0 ) {
+                if(distanceOfTop <= 1000){
+                    preventDefaultAction(e)
+                    goToArea("#infoAccess");
+                } else if(distanceOfTop > 1200 && distanceOfTop <= 2000){
+                    preventDefaultAction(e)
+                    goToArea("#whyWac");
+                } else if(distanceOfTop > 2200 && distanceOfTop <= 3000){
+                    preventDefaultAction(e)
+                    goToArea("#wacGuideLine");
+                } else if(distanceOfTop > 3100){
+                    preventDefaultAction(e)
+                    goToArea("#wacIntro");
+                }
+
+            //scroll up
+            } else {
+                if(distanceOfTop >= 1000 && distanceOfTop < 2000){
+                    preventDefaultAction(e)
+                    goToArea("#mVisual");
+                } else if(distanceOfTop >= 2200 && distanceOfTop < 3000){
+                    preventDefaultAction(e)
+                    goToArea("#infoAccess");
+                } else if(distanceOfTop >= 3000 && distanceOfTop < 4000){
+                    preventDefaultAction(e)
+                    goToArea("#whyWac");
+                } else if(distanceOfTop >= 4000){
+                    preventDefaultAction(e)
+                    goToArea("#wacGuideLine");
+                }
+
+            }
+         });
+    };
+
+    if($(window).width() > 1200){
+        scrollMotion();
+    }
 
 </script>
 </body>

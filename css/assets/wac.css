@@ -26,6 +26,7 @@ p{padding-left:5px;}
 /* pre-fix */
 .inner{width:100%; max-width:1200px; margin:0 auto; position: relative;}
 .circle-num{display:inline-block; width:15px; height:15px; border-radius:7.5px; background:#293f54; color:#fff; text-align:center; margin: 0 10px; line-height:1;}
+.mobile-block{display: inline;}
 
 pre{position: relative; padding-top: 24px; margin: 20px 0;}
 pre code{width:100%; height: 80px; overflow: scroll;}
@@ -109,7 +110,7 @@ button:focus{border:1px solid #293fff!important;}
     .container .access-list li dl dd{text-align: center;margin-top: 25px;}
         .container .access-list li dl dt{font-weight:900;}
         .container .access-list li dl dd .modal-dialog{top:45%; left:50%; margin:-200px 0 0 -250px;}
-        .container .access-list li dl dd .modal-dialog .modal-content{width: 500px; height:400px; background: #fff; padding: 35px;}
+        .container .access-list li dl dd .modal-dialog .modal-content{width:100%; max-width: 500px; height:400px; background: #fff; padding: 35px;}
             .container .access-list li .modal-content h4{font-size:30px; font-weight:900; color:#293f54;}
             .container .access-list li .modal-content .access-cont{padding-top: 20px;text-align: center; font-size: 17px;}
             .container .access-list li:nth-child(3) .modal-content .access-cont{font-size: 15px;}
@@ -286,11 +287,32 @@ button:focus{border:1px solid #293fff!important;}
     /* ******************
      *    index.html    *
      ********************/
-    .inner{padding: 10px};
-    .index .container .info-access {height:2000px;}
-    .index .container .access-list {width: 195px; margin: 0 auto;}
-    .index .container .access-list li{margin: 30px 0 ;}
+     .index .inner{padding: 10px;}
+     .mobile-block{display: block;}
+     .index .container h3{font-size: 35px !important; text-align: center;}
+     
+     .container .m-visual{height:800px;}
+     .container .m-visual > img{top:0;}
+     
+     .index .container .info-access {height:unset;}
+     .index .container .info-access p{font-size:15px!important;}
+
+        .index .container .access-list {width: 155px; margin: 0 auto;}
+        .index .container .access-list li{width:100%; margin: 0 auto; margin-top:60px; }
+        .index .container .access-list li i{padding: 0;}
+        .btn-lotte{widows: 145px; height:40px; font-size: 15px;}
+            .container .access-list li dl dt{margin-top: 10px;}
+            .container .access-list li dl dd .modal-dialog{width:95%; top:0; left:0;margin: 0 auto;}
+
+    .index #whyWac{padding-top: 100px; height: unset;}
+        .index #whyWac dl dt{font-size: 18px;}
+        .index #whyWac dl dd{padding: 0;}
     
+    .index #wacGuideLine{padding-top: 100px; height: unset; text-align: left;}
+
+    .index #wacIntro .inner{width:95%;}
+
+
     .wac-guide .container .contents .article > div[id^="item"] > h4{padding:11px 10px; font-size: 15px;}
     .wac-guide .container .contents .article > div[id^="item"] > h4 i{margin-right: 0;}
    
@@ -300,8 +322,7 @@ button:focus{border:1px solid #293fff!important;}
      ********************/
     .index .container .m-visual h2{font-size: 55px}
     .index .container .m-visual {height:750px;}
-    .index .container .m-visual > img {top: -100px;}
-    .index p { font-size: 1.8rem;}
+   
 }
 
 }
