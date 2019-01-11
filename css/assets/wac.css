@@ -178,7 +178,7 @@ button:focus{border:1px solid #293fff!important;}
 .wac-guide .container .contents .article{margin-bottom : 200px; padding-top:20px;}
 .wac-guide .container .contents .article h3{font-size:25px; color: #293f54;}
 
-/* .wac-guide .container .contents .article > div[id^="item"]{;} */
+.wac-guide .container .contents .article > div[id^="item"]:target{padding-top: 70px;}
 .wac-guide .container .contents .article > div[id^="item"] > h4{color: #215c6e; width: 100%; height: 50px; padding: 11px 20px; border:1px solid #e1e1e1; border-top:2px solid #16657e; border-bottom:1px solid #e1e1e1; cursor: pointer; border-radius: 5px 5px 0 0}
 .wac-guide .container .contents .article > div[id^="item"] > h4 i{top: 7px; float: right; margin-right: 14px; -ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); transform: rotate(90deg); transition: all ease 0.5s 0s;}
 .wac-guide .container .contents .article > div[id^="item"] > h4 i.open{ -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); transition: all ease 0.5s 0s;}
@@ -321,7 +321,7 @@ button:focus{border:1px solid #293fff!important;}
 
     .wac-guide .container .contents .article > div[id^="item"] > h4{padding:11px 10px; font-size: 15px;}
     .wac-guide .container .contents .article > div[id^="item"] > h4 i{margin-right: 0;}
-   
+}
 @media (max-width:375px){
     body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, form, fieldset, p, button, header, nav, aside, footer, a, .header, .gnb, .login-box, .footer, .inner, .btn-box{font-size: 14px;}
     /* ******************
@@ -329,9 +329,6 @@ button:focus{border:1px solid #293fff!important;}
      ********************/
     .index .container .m-visual h2{font-size: 46px;}
     .index .container .m-visual {height:750px;}
-   
-}
-
 }
 @media (max-width:320px){
     /* ******************

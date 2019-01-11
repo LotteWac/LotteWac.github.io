@@ -298,15 +298,10 @@
                                         -  멀티미디어 콘텐츠를 장애인도 비장애인과 동등하게 인식할 수 있도록 제작해야 한다. 
                                         </li>
                                         <li>
-                                            - 가장 바람직한 방법은 닫힌 자막을 오디오와 동기화시켜 제공하는 것임
+                                            - 가장 바람직한 방법은 닫힌 자막을 오디오와 동기화시켜 제공하는 것이다.
                                         </li>
                                         <li>
-                                            - 대체 수단 제공 : 다음 중 한 가지 이상의 대체 수단을 제공해야 한다
-                                            <ul>
-                                                <li>자막제공</li>
-                                                <li>대본제공</li>
-                                                <li>수화제공</li>
-                                            </ul>
+                                            - 대체 수단 제공 : 자막제공 / 대본제공 / 수화제공 중 한 가지 이상의 대체 수단을 제공해야 한다
                                         </li>
                                     </ul>
                                 </div>
@@ -333,7 +328,7 @@
                           
                             <div class="item-cont">
                                 <p>
-                                    - 컨텐츠는 색에 관계없이 인식될 수 있어야 한다.
+                                    - 컨텐츠는 색에 관계없이 인식될 수 있어야 한다.<br>
                                     - 특정한 색을 구분할 수 없는 사용자나 흑백 디스플레이 사용자 등이 색을 배제하여도 컨텐츠를 인식할 수 있도록 제공해야 한다.
 
                                 </p>
@@ -342,10 +337,10 @@
                                     <h5>[적용기술]</h5>
                                     <ul>
                                         <li>
-                                            콘텐츠(그래프, 차트, 지도 등)는 색에 관계없이 인식될 수 있게 제공해야 함
+                                            콘텐츠(그래프, 차트, 지도 등)는 색에 관계없이 인식될 수 있게 제공해야 한다.
                                         </li>
                                         <li>
-                                            콘텐츠에서 제공하는 모든 정보는 색을 배제하여도 특정한 색을 구별할 수 없는 사용자나 흑백 디스플레이 사용자, 흑백 인쇄물을 보는 사용자가 해당 콘텐츠를 인식할 수 있도록 제공해야 함
+                                            콘텐츠에서 제공하는 모든 정보는 색을 배제하여도 특정한 색을 구별할 수 없는 사용자나 흑백 디스플레이 사용자, 흑백 인쇄물을 보는 사용자가 해당 콘텐츠를 인식할 수 있도록 제공해야 한다.
                                         </li>
                                     </ul>
                                 </div>
@@ -1538,6 +1533,178 @@ outline: -webkit-focus-ring-color auto 5px;
                                         - 키보드 초점이 논리적으로 이동되는지 체크
                                     </dd>
                                 </dl>
+
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 동영상 콘텐츠의 자동 재생 금지</h5>
+                                    <p>
+                                        - 마우스 클릭하거나 키보드로 접근 후 선택을 해야 동영상이 실행되도록 영상 콘텐츠를 구현하고 있어 배경음으로 인한 방해가 없도록 한다
+                                    </p>
+                                    
+                                    <img src="./img/table.png" alt="소시지 동영상이 정지된 이미지"  >
+
+                                    <pre><code class="html">&lt;table&gt;
+    &lt;caption&gt;이벤트 당첨자발표 테이블&lt;/caption&gt;
+    &lt;colgroup&gt;
+        &lt;col style="width:8.2%"&gt;
+        &lt;col style="width:auto"&gt;
+        &lt;col style="width:19%"&gt;
+        &lt;col style="width:13.5%"&gt;
+    &lt;/colgroup&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;번호&lt;/th&gt;
+            &lt;th scope="col"&gt;제목&lt;/th&gt;
+            &lt;th scope="col"&gt;이벤트기간&lt;/th&gt;
+            &lt;th scope="col"&gt;당첨자발표일&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;21&lt;/td&gt;
+            &lt;td class="title"&gt;&lt;a style="cursor:pointer;" onclick="goDetail('000013527392');" onkeypress="if(event.keyCode == 13){goDetail('000013527392'); return false;}" class="link"&gt;2018년 12월 배송평가 Reward 당첨자 발표&lt;/a&gt;
+                &lt;em class="ico-board-new"&gt;N&lt;span class="blind"&gt;new&lt;/span&gt;&lt;/em&gt;
+                &lt;/td&gt;
+            &lt;td&gt;2019.01.01~2019.12.31&lt;/td&gt;
+            &lt;td&gt;2019.01.11&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;tr&gt;
+            &lt;td&gt;20&lt;/td&gt;
+            &lt;td class="title"&gt;&lt;a style="cursor:pointer;" onclick="goDetail('000013516635');" onkeypress="if(event.keyCode == 13){goDetail('000013516635'); return false;}" class="link"&gt;풀무원 홈파티 2만원 이상 구매시 주방키트 증정 당첨자 공지&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;td&gt;2018.12.17~2018.12.26&lt;/td&gt;
+            &lt;td&gt;2019.01.04&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;tr&gt;
+            &lt;td&gt;19&lt;/td&gt;
+            &lt;td class="title"&gt;&lt;a style="cursor:pointer;" onclick="goDetail('000013503518');" onkeypress="if(event.keyCode == 13){goDetail('000013503518'); return false;}" class="link"&gt;CJ Brand Week 1주차 (스팸&amp;고메) event 2 : 투썸 아메리카노 교환권 이벤트 당첨자 공지&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;td&gt;2018.12.06~2018.12.12&lt;/td&gt;
+            &lt;td&gt;2018.12.28&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;tr&gt;
+            &lt;td&gt;18&lt;/td&gt;
+            &lt;td class="title"&gt;&lt;a style="cursor:pointer;" onclick="goDetail('000013503491');" onkeypress="if(event.keyCode == 13){goDetail('000013503491'); return false;}" class="link"&gt;CJ Brand Week 1주차 (스팸&amp;고메) event 1 : 뜌레쥬르 교환권 이벤트 당첨자 공지&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;td&gt;2018.12.06~2018.12.12&lt;/td&gt;
+            &lt;td&gt;2018.12.28&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;tr&gt;
+            &lt;td&gt;17&lt;/td&gt;
+            &lt;td class="title"&gt;&lt;a style="cursor:pointer;" onclick="goDetail('000013503483');" onkeypress="if(event.keyCode == 13){goDetail('000013503483'); return false;}" class="link"&gt;CJ Brand Week (12/6-1/3) 당첨자 발표 지연 (및 지연예정) 공지 안내드립니다.&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;td&gt;2018.12.06~2019.01.02&lt;/td&gt;
+            &lt;td&gt;2018.12.27&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;tr&gt;
+            &lt;td&gt;16&lt;/td&gt;
+            &lt;td class="title"&gt;&lt;a style="cursor:pointer;" onclick="goDetail('000013482959');" onkeypress="if(event.keyCode == 13){goDetail('000013482959'); return false;}" class="link"&gt;2018년 11월 배송평가 Reward 당첨자 발표&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;td&gt;2019.01.01~2019.12.31&lt;/td&gt;
+            &lt;td&gt;2018.12.14&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;tr&gt;
+            &lt;td&gt;15&lt;/td&gt;
+            &lt;td class="title"&gt;&lt;a style="cursor:pointer;" onclick="goDetail('000013481951');" onkeypress="if(event.keyCode == 13){goDetail('000013481951'); return false;}" class="link"&gt;11월 럭키룰렛 출석체크 이벤트 당첨자 공지&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;td&gt;2018.11.01~2018.11.30&lt;/td&gt;
+            &lt;td&gt;2018.12.17&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;tr&gt;
+            &lt;td&gt;14&lt;/td&gt;
+            &lt;td class="title"&gt;&lt;a style="cursor:pointer;" onclick="goDetail('000013478249');" onkeypress="if(event.keyCode == 13){goDetail('000013478249'); return false;}" class="link"&gt;청정원 2만원 이상 구매시 스타벅스 아메리카노 기프티콘 증정 당첨자 공지&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;td&gt;2018.11.15~2018.11.28&lt;/td&gt;
+            &lt;td&gt;2018.12.11&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;tr&gt;
+            &lt;td&gt;13&lt;/td&gt;
+            &lt;td class="title"&gt;&lt;a style="cursor:pointer;" onclick="goDetail('000013459642');" onkeypress="if(event.keyCode == 13){goDetail('000013459642'); return false;}" class="link"&gt;블랙페스타 이벤트 당첨자 발표&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;td&gt;2018.11.15~2018.11.20&lt;/td&gt;
+            &lt;td&gt;2018.11.28&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;tr&gt;
+            &lt;td&gt;12&lt;/td&gt;
+            &lt;td class="title"&gt;&lt;a style="cursor:pointer;" onclick="goDetail('000013440648');" onkeypress="if(event.keyCode == 13){goDetail('000013440648'); return false;}" class="link"&gt;10월 행운의 룰렛 출석체크 이벤트 당첨자 공지&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;td&gt;2018.10.01~2018.10.31&lt;/td&gt;
+            &lt;td&gt;2018.11.19&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;tr&gt;
+            &lt;td&gt;11&lt;/td&gt;
+            &lt;td class="title"&gt;&lt;a style="cursor:pointer;" onclick="goDetail('000013409586');" onkeypress="if(event.keyCode == 13){goDetail('000013409586'); return false;}" class="link"&gt;롯데마트몰 ON 이벤트 당첨자 발표&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;td&gt;2018.09.03~2018.10.04&lt;/td&gt;
+            &lt;td&gt;2018.10.25&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;tr&gt;
+            &lt;td&gt;10&lt;/td&gt;
+            &lt;td class="title"&gt;&lt;a style="cursor:pointer;" onclick="goDetail('000013396015');" onkeypress="if(event.keyCode == 13){goDetail('000013396015'); return false;}" class="link"&gt;9월 행운의 룰렛 출석체크 이벤트 당첨자 공지&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;td&gt;2018.09.01~2018.09.30&lt;/td&gt;
+            &lt;td&gt;2018.10.17&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;tr&gt;
+            &lt;td&gt;9&lt;/td&gt;
+            &lt;td class="title"&gt;&lt;a style="cursor:pointer;" onclick="goDetail('000013352732');" onkeypress="if(event.keyCode == 13){goDetail('000013352732'); return false;}" class="link"&gt;8월 행운의 룰렛 출석체크 이벤트 당첨자 공지&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;td&gt;2018.08.01~2018.08.31&lt;/td&gt;
+            &lt;td&gt;2018.09.17&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;tr&gt;
+            &lt;td&gt;8&lt;/td&gt;
+            &lt;td class="title"&gt;&lt;a style="cursor:pointer;" onclick="goDetail('000013334582');" onkeypress="if(event.keyCode == 13){goDetail('000013334582'); return false;}" class="link"&gt;ONLY FESTA 이벤트 당첨자 발표&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;td&gt;2018.08.02~2018.08.15&lt;/td&gt;
+            &lt;td&gt;2018.08.30&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;tr&gt;
+            &lt;td&gt;7&lt;/td&gt;
+            &lt;td class="title"&gt;&lt;a style="cursor:pointer;" onclick="goDetail('000013312970');" onkeypress="if(event.keyCode == 13){goDetail('000013312970'); return false;}" class="link"&gt;7월 전용센터 출석체크 이벤트 당첨자 공지&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;td&gt;2018.07.01~2018.07.31&lt;/td&gt;
+            &lt;td&gt;2018.08.17&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;tr&gt;
+            &lt;td&gt;6&lt;/td&gt;
+            &lt;td class="title"&gt;&lt;a style="cursor:pointer;" onclick="goDetail('000013254189');" onkeypress="if(event.keyCode == 13){goDetail('000013254189'); return false;}" class="link"&gt;부모님댁 장보기 효도 이벤트 당첨자 발표&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;td&gt;2018.05.17~2018.06.30&lt;/td&gt;
+            &lt;td&gt;2018.07.10&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;tr&gt;
+            &lt;td&gt;5&lt;/td&gt;
+            &lt;td class="title"&gt;&lt;a style="cursor:pointer;" onclick="goDetail('000013215386');" onkeypress="if(event.keyCode == 13){goDetail('000013215386'); return false;}" class="link"&gt;5월 전용센터 출석체크 이벤트 당첨자 공지&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;td&gt;2018.05.01~2018.05.31&lt;/td&gt;
+            &lt;td&gt;2018.06.15&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;tr&gt;
+            &lt;td&gt;4&lt;/td&gt;
+            &lt;td class="title"&gt;&lt;a style="cursor:pointer;" onclick="goDetail('000013158841');" onkeypress="if(event.keyCode == 13){goDetail('000013158841'); return false;}" class="link"&gt;스타일런 이벤트 당첨자 발표&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;td&gt;2018.06.04~2018.06.11&lt;/td&gt;
+            &lt;td&gt;2018.05.03&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;tr&gt;
+            &lt;td&gt;3&lt;/td&gt;
+            &lt;td class="title"&gt;&lt;a style="cursor:pointer;" onclick="goDetail('000013132384');" onkeypress="if(event.keyCode == 13){goDetail('000013132384'); return false;}" class="link"&gt;발렌타인데이/화이트데이 이벤트 당첨자 발표&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;td&gt;2018.12.06~2019.01.02&lt;/td&gt;
+            &lt;td&gt;2018.04.12&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;tr&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td class="title"&gt;&lt;a style="cursor:pointer;" onclick="goDetail('000013061990');" onkeypress="if(event.keyCode == 13){goDetail('000013061990'); return false;}" class="link"&gt;1월 새해맞이 출첵이벤트 당첨자 공지&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;td&gt;2018.01.01~2018.01.31&lt;/td&gt;
+            &lt;td&gt;2018.02.19&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+                                    </code></pre>
+                                </div>
+
                             </div>
                         </div>
 
