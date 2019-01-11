@@ -3,41 +3,41 @@
 @font-face {
   font-family: 'lottemart-dream-Bold';
   font-weight: 900;
-  src: url("../font/lottemart-dream-Bold.woff") format("woff");
-  src: url("../font/lottemart-dream-Bold.eot");
+  src: url("../font/lottemart-dream-Bold.woff") format("woff"),
+       url("../font/lottemart-dream-Bold.eot") format("eot");
 }
 @font-face {
   font-family: 'lottemart-dream-Medium';
   font-weight: 700;
-  src: url("../font/lottemart-dream-Medium.woff") format("woff");
-  src: url("../font/lottemart-dream-Medium.eot");
+  src: url("../font/lottemart-dream-Medium.woff") format("woff"),
+       url("../font/lottemart-dream-Medium.eot") format("eot");
 }
 
 @font-face {
   font-family: 'lottemart-dream-Light';
   font-weight: 300;
-  src: url("../font/lottemart-dream-Light.woff") format("woff");
-  src: url("../font/lottemart-dream-Light.eot");
+  src: url("../font/lottemart-dream-Light.woff") format("woff"),
+       url("../font/lottemart-dream-Light.eot") format("eot");
 }
 
 @font-face {
   font-family: 'lottemart-happy-Bold';
   font-weight: 900;
-  src: url("../font/lottemart-happy-Bold.woff") format("woff");
-  src: url("../font/lottemart-happy-Bold.eot");
+  src: url("../font/lottemart-happy-Bold.woff") format("woff"),
+       url("../font/lottemart-happy-Bold.eot") format("eot");
 }
 
 @font-face {
   font-family: 'lottemart-happy-Medium';
   font-weight: 700;
-  src: url("../font/lottemart-happy-Medium.woff") format("woff");
-  src: url("../font/lottemart-happy-Medium.eot");
+  src: url("../font/lottemart-happy-Medium.woff") format("woff"),
+       url("../font/lottemart-happy-Medium.eot") format("eot");
 }
 @font-face {
   font-family: 'lottemart-happy-Light';
   font-weight: 300;
-  src: url("../font/lottemart-happy-Light.woff") format("woff");
-  src: url("../font/lottemart-happy-Light.eot");
+  src: url("../font/lottemart-happy-Light.woff") format("woff"),
+       url("../font/lottemart-happy-Light.eot") format("eot");
 }
 
 
