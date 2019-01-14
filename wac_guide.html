@@ -32,10 +32,10 @@
                     <li><a href="#" class="mobile-guide">MOBILE 지침 보기</a></li>
                 </ul>
 
-                <ul class="menu">
+                <!-- <ul class="menu">
                     <li><a href="./wac_script.html">SCRIPT</a></li>
                     <li><a href="#" class="compone">UI COMPONENTS</a></li>
-                </ul>
+                </ul> -->
 
                 <a href="#none" class="glyphicon glyphicon-th-list" title="타블릿 & 모바일 기기 네비게이션 버튼" id="mobileNavBtn"></a>
             </div>
@@ -2055,31 +2055,48 @@ outline: -webkit-focus-ring-color auto 5px;
         hljs.highlightBlock(block);
     });
 
-    //lnb 메뉴 folding
-    var $lnb = $('.lnb .depth1-menu'),
-        $lnbIcon = $('.lnb .depth1-menu .lnb-icon');
 
-    $lnb.on('click', function(){
-        if($lnb.hasClass('active')){
-            $(this).removeClass('active');
-            $(this).next('.depth2-menu').hide(300);
-            $lnbIcon.removeClass('open');
+    var lnbHandler = function(){
+        //lnb 메뉴 folding
+        var $lnb1Depth = $('.lnb .depth1-menu'),
+            $lnb2Depth = $('.lnb .depth2-menu a'),
+            $lnb1DepthIcon = $('.lnb .depth1-menu .lnb-icon');
 
-        }else{
-            $(this).addClass('active');
-            $(this).next('.depth2-menu').show(600);
-            $lnbIcon.addClass('open');
+        var lnb1DepthClickHandler = function(){
+            if($lnb1Depth.hasClass('active')){
+                $(this).removeClass('active');
+                $(this).next('.depth2-menu').hide(300);
+                $lnb1DepthIcon.removeClass('open');
+
+            }else{
+                $(this).addClass('active');
+                $(this).next('.depth2-menu').show(600);
+                $lnb1DepthIcon.addClass('open');
+            } 
         }
-    });
-
-    //lnb 고정
-    var scrollHeight;
-    $(window).scroll(function(){
-        scrollHeight = $(window).scrollTop();
-        if(scrollHeight > 10){
-            $('.container .lnb').addClass('scroll-fixed');
+        var lnb2DepthClickHandler = function(){
+            var idStr = $(this).attr('href')
+            console.log(idStr);
+            $(idStr).find('.item-cont').removeAttr('style');
         }
-    });
+
+
+        $lnb1Depth.on({
+            click : lnb1DepthClickHandler
+        });
+        $lnb2Depth.on({
+            click : lnb2DepthClickHandler
+        });
+
+        //lnb 고정
+        var scrollHeight;
+        $(window).scroll(function(){
+            scrollHeight = $(window).scrollTop();
+            if(scrollHeight > 10){
+                $('.container .lnb').addClass('scroll-fixed');
+            }
+        });
+    }();
    
     //article h3 folding
     $articleH4 = $('.wac-guide .container .contents .article > div[id^="item"] > h4');

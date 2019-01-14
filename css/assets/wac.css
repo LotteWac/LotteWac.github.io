@@ -139,7 +139,7 @@ button:focus{border:1px solid #293fff!important;}
     .container .read-wac-guide .btn.btn-default.view-guide{display:block; width: 300px; margin: 0 auto; margin-top: 200px;}
 
     /* #wacIntro > modal */
-    #wacIntro #WacTable .modal-dialog{width:900px;}
+    #wacIntro #WacTable .modal-dialog{width:95%; max-width:900px;}
     /* #wacIntro #WacTable .modal-dialog .modal-content{width: 100%; margin-top: 100px;} */
     #wacIntro #WacTable .modal-dialog .modal-content table{width: 100%;}
     #wacIntro #WacTable .modal-dialog .modal-content table th{background: #b4e7e7; border: 1px solid #fff; text-align: center; font-size: 17px;}
@@ -318,7 +318,10 @@ button:focus{border:1px solid #293fff!important;}
     .index #wacIntro p{font-size: 15px;}
     .index #wacIntro .contents-list{padding:0}
     .index #wacIntro .contents-list li:nth-child(1) a{margin-left:30px;}
-
+    .index #wacIntro #WacTable .modal-dialog .modal-content table th{font-size: 14px;}
+    .index #wacIntro #WacTable .modal-dialog .modal-content table td{padding:5px;}
+        
+    
     .wac-guide .container .contents .article > div[id^="item"] > h4{padding:11px 10px; font-size: 15px;}
     .wac-guide .container .contents .article > div[id^="item"] > h4 i{margin-right: 0;}
 }
