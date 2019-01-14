@@ -1964,43 +1964,42 @@ outline: -webkit-focus-ring-color auto 5px;
                                         - 한 페이지에 중복된 id 속성값 선언 여부 체크
                                     </dd>
                                 </dl>
-                            </div>
                             
-                            <div class="sample">
-                                <h5><i class="glyphicon glyphicon-star"></i> 예시 : 태그 오류 방지</h5>
-                                <p>
-                                    - 마크업 언어로 작성된 콘텐츠는 표준에서 특별히 정한 경우를 제외하고는 시작 태그와 끝나는 태그가 정의되어야 한다.<br>
-                                    - 열고 닫는 태그가 나타내는 요소는 포함관계가 어긋나지 않도록 해야 한다. (태그 중첩 관계)<br>
-                                    - 참고 : W3C 마크업 유효성 검사 도구<br> 
-                                    <a href="http://validator.w3.org/">[http://validator.w3.org/]</a>
-                                </p>
-                                <img src="./img/mark-up-error02.png" alt="W3C 마크업 유효성 검사 도구">
-                            </div>
-                            
-                            <div class="sample">
-                                <h5><i class="glyphicon glyphicon-star"></i> 예시 : 하나의 요소에 속성 중복 처리 금지</h5>
-                                <p>
-                                    - 한 페이지에서 아이디는 항상 유일해야 한다.<br>
-                                    - 하나의 요소에 속성이 중복 처리되는 오류가 없어야 한다.
-                                </p>
-                                <img src="./img/attr-error.png" alt="W3C 마크업 유효성 검사 도구">
-                            </div>
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 태그 오류 방지</h5>
+                                    <p>
+                                        - 마크업 언어로 작성된 콘텐츠는 표준에서 특별히 정한 경우를 제외하고는 시작 태그와 끝나는 태그가 정의되어야 한다.<br>
+                                        - 열고 닫는 태그가 나타내는 요소는 포함관계가 어긋나지 않도록 해야 한다. (태그 중첩 관계)<br>
+                                        - 참고 : W3C 마크업 유효성 검사 도구<br> 
+                                        <a href="http://validator.w3.org/">[http://validator.w3.org/]</a>
+                                    </p>
+                                    <img src="./img/mark-up-error02.png" alt="W3C 마크업 유효성 검사 도구">
+                                </div>
+                                
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 하나의 요소에 속성 중복 처리 금지</h5>
+                                    <p>
+                                        - 한 페이지에서 아이디는 항상 유일해야 한다.<br>
+                                        - 하나의 요소에 속성이 중복 처리되는 오류가 없어야 한다.
+                                    </p>
+                                    <img src="./img/attr-error.png" alt="W3C 마크업 유효성 검사 도구">
+                                </div>
 
-                            <div class="sample">
-                                <h5><i class="glyphicon glyphicon-star"></i> 예시 : 특수문자 변환 표기</h5>
-                                <p>
-                                    - 텍스트 및 URL에서 사용한 특수문자(<,>,&)는 Entity코드로 변환하여 사용해야 한다.<br>
-                                    - Entity 코드로 표현된 특수문자는 대부분의 브라우저에서 문제없이 출력된다.<br>
-                                    - 대표적인 오류 유형<br>
-                                       &emsp;a. `꺽쇠기호 < ,> 등을 Entity로 처리하지 않는 경우 브라우저들은 이것을 HTML Tag의 시작이나 끝으로 인식할 수 있음  <br>
-                                       &emsp;b. 따옴표 “ “는 HTML 속성의 값이 시작되거나 끝난 것으로 인식할 수 있음<br>
-                                       &emsp;c. & 기호는 Entity 기호의 시작으로 오인할 수 있음<br>
-                                    - 이와 같은 이유로 Entity 코드로 사용하지 않는 경우 W3C Validator는 오류메시지로 출력한다.<br>
-                                    <a href="https://www.digitalmediaminute.com/reference/entity/index.php"> 참고 : XHTML Character Entity Reference 보기 </a>
-                                </p>
-                                <img src="./img/etc-table.png" alt="자주 사용되는 특수문자 태그 표">
+                                <div class="sample">
+                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 특수문자 변환 표기</h5>
+                                    <p>
+                                        - 텍스트 및 URL에서 사용한 특수문자(<,>,&)는 Entity코드로 변환하여 사용해야 한다.<br>
+                                        - Entity 코드로 표현된 특수문자는 대부분의 브라우저에서 문제없이 출력된다.<br>
+                                        - 대표적인 오류 유형<br>
+                                        &emsp;a. `꺽쇠기호 < ,> 등을 Entity로 처리하지 않는 경우 브라우저들은 이것을 HTML Tag의 시작이나 끝으로 인식할 수 있음  <br>
+                                        &emsp;b. 따옴표 “ “는 HTML 속성의 값이 시작되거나 끝난 것으로 인식할 수 있음<br>
+                                        &emsp;c. & 기호는 Entity 기호의 시작으로 오인할 수 있음<br>
+                                        - 이와 같은 이유로 Entity 코드로 사용하지 않는 경우 W3C Validator는 오류메시지로 출력한다.<br>
+                                        <a href="https://www.digitalmediaminute.com/reference/entity/index.php"> 참고 : XHTML Character Entity Reference 보기 </a>
+                                    </p>
+                                    <img src="./img/etc-table.png" alt="자주 사용되는 특수문자 태그 표">
+                                </div>
                             </div>
-    
                         </div>
 
                         <div class="" id="item24">
