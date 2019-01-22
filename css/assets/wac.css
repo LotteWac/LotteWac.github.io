@@ -76,6 +76,7 @@ button:focus{border:1px solid #293fff!important;}
     .main-fixed-nav .page-anchor{width:100%; height:100%;}
         .main-fixed-nav .page-anchor li{display:inline}
         .main-fixed-nav .page-anchor li a{display:block; width:10px; height: 10px; border-radius:10px; background:#fff; text-indent: -9999999px; margin: 20px 10px;}
+        .main-fixed-nav .page-anchor li a.active{background: #ff9d38;}
     .main-fixed-nav #goTopBtn {display: block; width: 30px; height:30px; border-radius:25px; background:#293f54; text-align: center;}
         .main-fixed-nav #goTopBtn i{font-size: 15px; color:#fff;}
     

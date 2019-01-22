@@ -29,7 +29,7 @@
 
                 <ul class="device">
                     <li><a href="./wac_guide.html" class="pc-guide">PC 지침 보기</a></li>
-                    <li><a href="#" class="mobile-guide">MOBILE 지침 보기</a></li>
+                    <li><a href="./mobile_guide.html" class="mobile-guide">MOBILE 지침 보기</a></li>
                 </ul>
 
                 <!-- <ul class="menu">
@@ -44,7 +44,7 @@
         <!-- main-fixed-nav start -->
         <nav class="main-fixed-nav">
             <ul class="page-anchor">
-                <li><a href="#mVisual">1. 메인비주얼 영역으로 이동</a></li>
+                <li><a href="#mVisual" class="active">1. 메인비주얼 영역으로 이동</a></li>
                 <li><a href="#infoAccess">2. 정보접근성 설명 영역으로 이동</a></li>
                 <li><a href="#whyWac">3. 정보접근성의 필요성 영역으로 이동</a></li>
                 <li><a href="#wacGuideLine">4.PC 접근성 가이드라인 LOTTE MART PC 접근성 가이드라인 영역으로 이동</a></li>
@@ -488,13 +488,19 @@
 
     var scrollMotion = function(){
         //스크롤 모션 구현 
-        var distanceOfTop, offset,
-            windowHeight = $(window).height();
+        var distanceOfTop, offset, $targetPager,
+            windowHeight = $(window).height(),
+            $fixNavPagerAnchor = $('.page-anchor a');
 
-        //해당 영역으로 이동하는 함수
         var goToArea = function(AreaId){
+            //해당 영역으로 이동하는 함수
             offset = $(AreaId).offset();
             $('html, body').animate({scrollTop : offset.top}, 0);
+
+            //우측 고정페이지 네비게이션 페이저 색변화    
+            $fixNavPagerAnchor.removeClass('active');
+            $targetPager = $fixNavPagerAnchor.filter('[href="'+AreaId+'"]');
+            $targetPager.addClass('active')
         }
 
         $(window).on('DOMMouseScroll mousewheel', function (e) {
