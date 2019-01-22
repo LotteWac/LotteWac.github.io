@@ -500,9 +500,14 @@
             //우측 고정페이지 네비게이션 페이저 색변화    
             $fixNavPagerAnchor.removeClass('active');
             $targetPager = $fixNavPagerAnchor.filter('[href="'+AreaId+'"]');
-            $targetPager.addClass('active')
+            $targetPager.addClass('active');
         }
 
+        $fixNavPagerAnchor.on('click', function(e){
+            $fixNavPagerAnchor.removeClass('active');
+            $(this).addClass('active')
+        });
+        
         $(window).on('DOMMouseScroll mousewheel', function (e) {
             distanceOfTop = $(window).scrollTop();
             //scroll down
