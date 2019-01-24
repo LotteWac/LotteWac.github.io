@@ -30,6 +30,7 @@
                 <ul class="device">
                     <li><a href="./wac_guide.html" class="pc-guide">PC 지침 보기</a></li>
                     <li><a href="./mobile_guide.html" class="mobile-guide">MOBILE 지침 보기</a></li>
+                    <li><a href="./wac_script.html" class="mobile-guide">초점 이동에 관련한 블라인드 가이드</a></li>
                 </ul>
 
                 <!-- <ul class="menu">
@@ -488,11 +489,8 @@
             windowHeight = $(window).height(),
             $fixNav = $('.page-anchor > li'),
             $fixNavPagerAnchor = $fixNav.find('a');
-            console.log($fixNavPagerAnchor)
 
         var goToArea = function(AreaId){
-            console.log('goToArea')
-
             //해당 영역으로 이동하는 함수
             offset = $(AreaId).offset();
             $('html, body').stop().animate({scrollTop : offset.top}, 1000);
@@ -552,7 +550,6 @@
             $fixNavPagerAnchor.each(function(){
                 $(this).on('click', function(){
                     tartgetAreaId =  $(this).attr('href');
-                    console.log(tartgetAreaId)
                     goToArea(tartgetAreaId);
                 });
             });
