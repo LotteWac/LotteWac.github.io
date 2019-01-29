@@ -2414,7 +2414,7 @@
 		var lottemartWacTabHandler = function(e, $tabWrap, $prevEl, $nextEl, isSlideCont){
 			//console.log($tabWrap)
 			/*[탭메뉴 객체 내 전역변수 선언]*/
-			var $this, $activeTabNav, $activeTabCont, $tabContProd,// 활성 요소 판별 변수 선언
+			var $this, $activeTabNav, $activeTabCont, $tabContProd, contAreaId,// 활성 요소 판별 변수 선언
 					$tabWrap = $tabWrap, // 0. 탭 그룹
 					$tabNav = _wac.getFocusables($tabWrap.find('.wac-tabnav')), // 1.탭 내비게이션
 					$tabContWrap = $tabWrap.find('.wac-tabcont'), // 2-1.탭 컨텐츠 포괄영역
@@ -2510,7 +2510,11 @@
 			}
 			// 3.현재선택된 탭에 title="현재선택" 속성 추가 핸들러
 			var attrTitleController = function(){
-	 		 	$this = $(this);
+				$this = $(this);
+				contAreaId = $this.attr("href");
+				$('.wac-tabcont .active').removeClass('active');
+				$(contAreaId).addClass('active');
+
 	 			$this.siblings().removeAttr("title").removeClass('active');
 	 			$this.attr({
                       title : "현재선택",

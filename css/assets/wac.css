@@ -19,7 +19,7 @@ h3, h4, h5{font-family: 'lottemart-dream-bold', 'MalgunGothic', 'sans-serif',san
 dl, dt, dd, li, a, p, button{font-family: 'lottemart-happy-Medium', 'MalgunGothic', 'sans-serif',sans-serif;}
 
 
-h4{font-weight:900; background:url(./img/icon_h4.png) no-repeat left 19px;}
+h4{font-weight:900;}
 p{padding-left:5px;}
 .index p{font-size: 20px;}
 
@@ -221,8 +221,11 @@ button:focus{border:1px solid #293fff!important;}
  **********************/
 
 /* common */
+.active{display: block !important;}
 .ui-focus .container{padding-top:60px;}
 .ui-focus .example-section{width: 100%;}
+.ui-focus .example-section h4{font-size: 25px!important;}
+.price-strike-type1 {font-size: 22px;}
 
 /* .m-visual */
 .ui-focus .m-visual img{position: relative; top:0;}
@@ -231,7 +234,21 @@ button:focus{border:1px solid #293fff!important;}
 
 /* .prodlist-type */
 .prodlist-type{width:100%;}
-.prodlist-type .wac-tabnav a{display:block; width:200px; float: left; height: 60px; font-size: 18px; text-align: center;}
+.prodlist-type .wac-tabnav{height:60px;}
+.prodlist-type .wac-tabnav a{display:block; width:200px; float: left; height: 60px; font-size: 18px; text-align: center; border: 1px solid #e1e1e1;padding-top: 8px;}
+.prodlist-type .wac-tabcont{width: 100%; height: 500px;border: 1px solid #e1e1e1;}
+.prodlist-type .wac-tabcont section{width:100%; height: 100%;display: none;}
+
+    .product-article{width: 800px; height: 100%; margin: 0 auto; margin-top: 50px;}
+    .product-article .wrap-thumb{width: 375px; height: 375px; float: left;}
+    .product-article .wrap-info{position: relative; float: left; width: 425px;
+        height: 375px; padding: 40px; padding-bottom: 0;background: #efe9e1;}
+    
+    .product-article .wrap-info .prod-name a{position: relative; height: 64px;font-size: 26px; line-height: 1.3; display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+    .price-max button {position: relative; z-index: 0; display: inline-block; width: 15px;height: 15px;margin-left: 5px; border: 1px solid #bbb; border-radius: 2px; background-color: #fff; text-indent: -999999px;}
+
+    .sales-area .btn-large-type1 {width:220px; height: 60px; color: #fff; background: #fd5b45; border: none; float: right;}
+
 
 /* .complex-type */
 .complex-type .best-nav {width: 255px; height: 60px; clear:both;}
