@@ -89,8 +89,7 @@ input {-webkit-appearance: none;}
 
 a{color:#000000;text-decoration:none}
 a:hover{text-decoration:none}
-a:visited, a:focus, a:active, a:hover{ outline:0 none !important; }
-button *{position:relative}
+button {position:relative}
 button img{left:-3px;*left:auto}
 button:visited, button:focus, button:active, button:hover{ outline:0 none !important; }
 html:first-child select{height:20px;padding-right:6px}

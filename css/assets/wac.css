@@ -15,7 +15,7 @@
 }
 
 dl, dt, dd, li, a, p, h3, h4, h5{color:#222; line-height: 2.0;}
-h3, h4, h5{font-family: 'lottemart-dream-bold', 'MalgunGothic', 'sans-serif',sans-serif;}
+h3, h4, h5{font-family: 'lottemart-dream-bold', 'MalgunGothic', 'sans-serif',sans-serif;box-sizing: border-box;}
 dl, dt, dd, li, a, p, button{font-family: 'lottemart-happy-Medium', 'MalgunGothic', 'sans-serif',sans-serif;}
 
 
@@ -25,6 +25,7 @@ p{padding-left:5px;}
 
 /* pre-fix */
 .inner{width:100%; max-width:1200px; min-width:320px; margin:0 auto; position: relative;}
+.blind{display: none;}
 .circle-num{display:inline-block; width:15px; height:15px; border-radius:7.5px; background:#293f54; color:#fff; text-align:center; margin: 0 10px; line-height:1;}
 .mobile-block{display: inline;}
 
@@ -48,14 +49,14 @@ button:focus{border:1px solid #293fff!important;}
  *                       *
  *************************/
 
-.gnb{position:fixed; width:100%; height:60px; background: #293f54; padding-top:20px; overflow: hidden; z-index: 99;}
+.gnb{position:fixed; width:100%; height:60px; background: #293f54; padding-top:10px; overflow: hidden; z-index: 99;}
     .gnb h1{float: left; margin-top: -6px;}
         .gnb h1 a.pc{display: block; font-size: 25px; color: #fff; font-family: 'Calibri';}
         .gnb h1 a.mobile{display: none;}
     .gnb .device{float : left; margin-left:10px; padding-top:6px;}
     .gnb .device li{display: inline;}
     .gnb .device li a{display: block; float: left;  color: #fff; margin-left:10px;}
-    .gnb .device li:nth-child(2) a{color:#999; cursor: not-allowed;}
+    .gnb .device li a img{width:30px;}
 
 
     .gnb .menu{display:block; float: right;  padding:5px;}
@@ -154,7 +155,7 @@ button:focus{border:1px solid #293fff!important;}
  *   wac_guide.html   *
  *                    *
  **********************/
-.wac-guide #mobileNavBtn{position: absolute; top:0; left:20px; font-size: 20px; color: #fff; display: none;}
+.wac-guide #mobileNavBtn{position: absolute; top:8px; left:20px; font-size: 20px; color: #fff; display: none;}
 
 .wac-guide .btn-fixed-top{position: fixed; width: 30px; height:30px; bottom :50px; right:50%; margin:0 -660px 0 0;  z-index: 99; background: #293f54;  border-radius: 15px;}
     .wac-guide .btn-fixed-top a{display: block; text-align: center;}
@@ -213,6 +214,40 @@ button:focus{border:1px solid #293fff!important;}
 
 
 
+/********************** 
+ *                    *
+ *   wac_focus.html  *
+ *                    *
+ **********************/
+
+/* common */
+.ui-focus .container{padding-top:60px;}
+.ui-focus .example-section{width: 100%;}
+
+/* .m-visual */
+.ui-focus .m-visual img{position: relative; top:0;}
+.ui-focus .m-visual h2{position: absolute; font-size: 50px;}
+
+
+/* .prodlist-type */
+.prodlist-type{width:100%;}
+.prodlist-type .wac-tabnav a{display:block; width:200px; float: left; height: 60px; font-size: 18px; text-align: center;}
+
+/* .complex-type */
+.complex-type .best-nav {width: 255px; height: 60px; clear:both;}
+.complex-type .best-nav> a{display : block; width:50%; height:100%; float:left; border: 1px solid #e1e1e1; border-bottom-color: #23221e; color: black; font-size: 25px; text-align: center; line-height: 2.3; background: #e1e1e1;}
+.complex-type .best-nav> a.active{border: 1px solid #23221e;border-bottom: none; color: #fff;}
+.complex-type .best-nav> a:nth-child(1).active{background: #79bd28;}
+.complex-type .best-nav> a:nth-child(2).active{background: #faa038;}
+
+.complex-type .best-conts section{display: none; overflow:hidden; height: 423px;}
+.complex-type .best-conts section.active{display: block; width:255px; height: 362px; border: 1px solid #23221e;border-top: none;}
+.complex-type .best-conts section .best-tab {float: left; width: 255px; height: 362px; border-bottom: 1px solid #23221e;}
+.complex-type .nav-link{float: left; width: 85px; height: 90px; border: 1px solid #e2e2e2; border-top:none; text-align: center; vertical-align: middle;}
+
+
+
+
 
 /********************** 
  *                    *
@@ -254,7 +289,7 @@ button:focus{border:1px solid #293fff!important;}
     .wac-guide #mobileNavBtn{display: block;}
     .wac-guide .gnb h1{margin-left: 40px;}
     .wac-guide .lnb.scroll-fixed,
-    .wac-guide .lnb{left: -500px; margin: 0;z-index: 999;background: #fff;}
+    .wac-guide .lnb{left: -500px; margin: 0;z-index: 999;background: #fff; padding-left: 20px; border-right:1px solid #e1e1e1; box-shadow: 0px 0px 10px #888888;}
     .wac-guide .container .contents{width: 100%; padding:0; border: 0;}
 }
 @media (max-width:768px){

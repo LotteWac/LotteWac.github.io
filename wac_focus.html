@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="./css/assets/reset.css">
+    <link rel="stylesheet" href="./css/assets/wac.css">
+    <link rel="stylesheet" href="./css/assets/atom-one-dark.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/jquery.utils.js"></script>
+    <script src="./js/wac.js"></script>
+    <script src="./js/highlight.pack.js"></script>
+    <!-- <script>hljs.initHighlightingOnLoad();</script> -->
+    
+    <title>롯데마트 웹접근성 가이드</title>
+</head>
+<body class="ui-script">
+        <!-- gnb start -->
+        <header class="gnb">
+            <!-- inner start -->
+            <div class="inner">
+                  <h1>
+                      <a href="./index.html" class="pc">Accessibility Guide</a>
+                      <a href="./index.html" class="mobile"><img src="./img/logo.png" alt="lottemart 로고"></a>
+                  </h1>
+  
+                 
+                <ul class="device">
+                    <li>
+                        <a href="./wac_guide.html" class="pc-guide">
+                            <img src="./img/pc-icon.png" alt="피씨 모양 아이콘">
+                            <span class="blind">PC 지침 보기</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./mobile_guide.html" class="mobile-guide">
+                            <img src="./img/mobile-icon.png" alt="모바일 모양 아이콘">
+                            <span class="blind">MOBILE 지침 보기</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./wac_focus.html" class="mobile-guide">
+                            <img src="./img/keyboard-icon.png" alt="코드 모양 아이콘">
+                            <span class="blind">초점 이동에 관련 링크 아이콘</span>
+                         </a>
+                    </li>
+                </ul>
+
+  
+                  <!-- <ul class="menu">
+                      <li><a href="./wac_focus.html">SCRIPT</a></li>
+                      <li><a href="#none" class="compone">UI COMPONENTS</a></li>
+                  </ul> -->
+              </div>
+              <!-- inner end -->
+        </header>
+        <!-- gnb end -->
+        
+        <!-- container start -->
+        <div class="container">
+            <!-- mvisual start -->
+            <div class="m-visual">
+                <img src="./img/keyboard-img.jpg" alt="f1 Help 라고 쓰여있는 키보드 자판이미지" />
+                <h2>롯데마트 <br> 키보드 초점 이동 가이드</h2>
+            </div>
+            <!-- mvisual end -->
+            
+            <!-- ui-tab start -->
+            <div class="ui-tab example-section">
+                <div class="inner">
+                    <h3>탭형 UI</h3>
+
+                    <h4>상품리스트 탭 초점이동</h4>
+                    <!-- prodlist-type-type start -->
+                    <div class="prodlist-type">
+                        <nav class="wac-tabnav">
+                            <a href="#none">추천</a>
+                            <a href="#none">푸드</a>
+                            <a href="#none">주방/생활</a>
+                            <a href="#none">유아/취미/펫</a>
+                            <a href="#none">패션/뷰티</a>
+                            <a href="#none">리빙/가전</a>
+                        </nav>
+                        <div class="wac-tabcont">
+                            <section class="active"> 추천 </section>
+                            <section class="active"> 푸드 </section>
+                            <section class="active"> 주방/생활 </section>
+                            <section class="active"> 유아/취미/펫 </section>
+                            <section class="active"> 패션/뷰티 </section>
+                            <section class="active"> 리빙/가전 </section>
+                        </div>
+                    </div>
+                    <!-- prodlist-type-type end -->
+
+                    <h4>이중 구조의 탭이동</h4>
+                    <!-- complex-type start -->
+                    <div class="complex-type">
+                        <nav class="wac-tabnav best-nav">
+                            <a href="#bestFood" class="active">FOOD</a>
+                            <a href="#bestLife">LIFE</a>
+                        </nav>
+                        <div class="wac-tabcont best-conts">
+                            <section class="active" id="bestFood">
+                            <nav class="best-tab js-tabnav" id="bestFood">
+                                <a href="#none" class="nav-link nav-link1-1" data-category-id="foodAll" data-tab-index="02" data-current-page="1"><strong class="inner">전체</strong></a>
+                                <a href="#none" class="nav-link nav-link1-2 active" data-category-id="C0010011" data-tab-index="02" data-current-page="2"><strong class="inner">쌀/잡곡</strong></a>
+                                <a href="#none" class="nav-link nav-link1-3" data-category-id="C0010012" data-tab-index="02" data-current-page="3"><strong class="inner">채소</strong></a>
+                                <a href="#none" class="nav-link nav-link1-4" data-category-id="C0010013" data-tab-index="02" data-current-page="4"><strong class="inner">과일</strong></a>
+                                <a href="#none" class="nav-link nav-link1-5" data-category-id="C0010014" data-tab-index="02" data-current-page="5"><strong class="inner">정육/계란</strong></a>
+                                <a href="#none" class="nav-link nav-link1-6" data-category-id="C0010015" data-tab-index="02" data-current-page="6"><strong class="inner">생선/<br>건해산물</strong></a>
+                                <a href="#none" class="nav-link nav-link1-7" data-category-id="C0010046" data-tab-index="02" data-current-page="7"><strong class="inner">견과/선식</strong></a>
+                                <a href="#none" class="nav-link nav-link1-8" data-category-id="C0010016" data-tab-index="02" data-current-page="8"><strong class="inner">냉장/냉동/<br>간편식</strong></a>
+                                <a href="#none" class="nav-link nav-link1-9" data-category-id="C0010017" data-tab-index="02" data-current-page="9"><strong class="inner">가공식품/<br>대용식</strong></a>
+                                <a href="#none" class="nav-link nav-link1-10" data-category-id="C0010052" data-tab-index="02" data-current-page="10"><strong class="inner">친환경식품</strong></a>
+                                <a href="#none" class="nav-link nav-link1-11" data-category-id="C0010053" data-tab-index="02" data-current-page="11"><strong class="inner">건강식품</strong></a>
+                                <a href="#none" class="nav-link nav-link1-12" data-category-id="C0010040" data-tab-index="02" data-current-page="12"><strong class="inner">조리식품</strong></a>
+                            </nav>
+                            </section>
+                            <section id="bestLife">
+                            <nav class="best-tab js-tabnav" id="bestLife">
+                                <a href="javascript:;" class="nav-link nav-link2-1 active" data-category-id="lifeAll" data-tab-index="03" data-current-page="13"><strong class="inner">전체</strong></a>
+                                <a href="javascript:;" class="nav-link nav-link2-2" data-category-id="C0010021" data-tab-index="03" data-current-page="14"><strong class="inner">유아/<br>출산용품</strong></a>
+                                <a href="javascript:;" class="nav-link nav-link2-3" data-category-id="C0010023" data-tab-index="03" data-current-page="15"><strong class="inner">세제/휴지</strong></a>
+                                <a href="javascript:;" class="nav-link nav-link2-4" data-category-id="C0010024" data-tab-index="03" data-current-page="16"><strong class="inner">헤어/바디</strong></a>
+                                <a href="javascript:;" class="nav-link nav-link2-5" data-category-id="C0010025" data-tab-index="03" data-current-page="17"><strong class="inner">가구/수납/조명/보수</strong></a>
+                                <a href="javascript:;" class="nav-link nav-link2-6" data-category-id="C0010026" data-tab-index="03" data-current-page="18"><strong class="inner">주방/<br>청소용품</strong></a>
+                                <a href="javascript:;" class="nav-link nav-link2-7" data-category-id="C0010027" data-tab-index="03" data-current-page="19"><strong class="inner">문구/<br>사무용품</strong></a>
+                                <a href="javascript:;" class="nav-link nav-link2-8" data-category-id="C0010115" data-tab-index="03" data-current-page="20"><strong class="inner">침구/원예/데코</strong></a>
+                                <a href="javascript:;" class="nav-link nav-link2-9" data-category-id="C0010028" data-tab-index="03" data-current-page="21"><strong class="inner">패션의류/<br>언더웨어</strong></a>
+                                <a href="javascript:;" class="nav-link nav-link2-10" data-category-id="C0010029" data-tab-index="03" data-current-page="22"><strong class="inner">신발/잡화</strong></a>
+                                <a href="javascript:;" class="nav-link nav-link2-11" data-category-id="C0010030" data-tab-index="03" data-current-page="23"><strong class="inner">스포츠/레저</strong></a>
+                                <a href="javascript:;" class="nav-link nav-link2-12" data-category-id="C0010054" data-tab-index="03" data-current-page="24" value="C0010054"><strong class="inner">친환경<br>생활용품</strong></a>
+                            </nav>
+                            </section>
+                        </div>
+                    </div>
+                    <!-- complex-type end -->
+
+                  
+
+                </div>
+            </div>
+            <!-- ui-tab end -->
+
+        </div>
+        <!-- container end -->
+        
+        <!-- footer start -->
+        <footer class="footer">
+        </footer>
+        <!-- footer end -->
+   
+<script>
+    _wac.lottemartWacTabHandler(event, $('.complex-type'), undefined , undefined );
+
+
+     $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+    });
+
+
+
+    var $codeArea = $('pre code'),
+        $targetCodeArea;
+
+    $codeArea.before('<button class="code-open-btn">열기</button>');
+
+
+    var $codeOpenBtn = $('.code-open-btn');
+
+    $codeOpenBtn.on('click', function(){
+        $targetCodeArea = $(this).next('code')
+        if($targetCodeArea.hasClass('active')){
+            $targetCodeArea.removeClass('active');
+        }else{
+            $targetCodeArea.addClass('active');
+        }
+    });
+
+
+
+</script>
+</body>
+</html>
