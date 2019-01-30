@@ -224,6 +224,7 @@ button:focus{border:1px solid #293fff!important;}
 .active{display: block !important;}
 .ui-focus .container{padding-top:60px;}
 .ui-focus .example-section{width: 100%;}
+.ui-focus .example-section .inner{overflow: unset;}
 .ui-focus .example-section h4{font-size: 25px!important;}
 .price-strike-type1 {font-size: 22px;}
 
@@ -235,8 +236,14 @@ button:focus{border:1px solid #293fff!important;}
 /* .prodlist-type */
 .prodlist-type{width:100%;}
 .prodlist-type .wac-tabnav{height:60px;}
-.prodlist-type .wac-tabnav a{display:block; width:200px; float: left; height: 60px; font-size: 18px; text-align: center; border: 1px solid #e1e1e1;padding-top: 8px;}
+.prodlist-type .wac-tabnav a{display:block; width:200px; float: left; height: 60px; font-size: 18px; text-align: center; border: 1px solid #e1e1e1;padding-top: 8px;position: relative;}
+.prodlist-type .wac-tabnav a:focus::before{content:'TAB→'; display: block; position: absolute; z-index: 9; background: #fff; width: 30px; height: 20px; border:1px solid #1faeda; color: #1faeda;font-size: 10px;padding:2px; right: -15px; top: 15px; text-align: center;line-height: 1.8;}
+.prodlist-type .wac-tabnav a:focus::after{content:'ENTER↓'; display: block; position: absolute; z-index: 9; background: #fff; width: 40px; height: 20px; border:1px solid #fe4838; color: #fe4838; font-size: 10px;padding:2px; left: 50%; bottom: -15px; margin-left: -20px;text-align: center;line-height: 1.8;}
+
+
 .prodlist-type .wac-tabcont{width: 100%; height: 500px;border: 1px solid #e1e1e1;}
+.prodlist-type .wac-tabcont a{position: relative;}
+.prodlist-type .wac-tabcont a:focus::before{content:'TAB→'; display: block; position: absolute; z-index: 9; background: #fff; width: 30px; height: 20px; border:1px solid #1faeda; color: #1faeda;font-size: 10px;padding:2px; right: -15px; top: 15px; text-align: center;line-height: 1.8;}
 .prodlist-type .wac-tabcont section{width:100%; height: 100%;display: none;}
 
     .product-article{width: 800px; height: 100%; margin: 0 auto; margin-top: 50px;}
@@ -245,23 +252,29 @@ button:focus{border:1px solid #293fff!important;}
         height: 375px; padding: 40px; padding-bottom: 0;background: #efe9e1;}
     
     .product-article .wrap-info .prod-name a{position: relative; height: 64px;font-size: 26px; line-height: 1.3; display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
-    .price-max button {position: relative; z-index: 0; display: inline-block; width: 15px;height: 15px;margin-left: 5px; border: 1px solid #bbb; border-radius: 2px; background-color: #fff; text-indent: -999999px;}
+    .product-article .wrap-info .prod-name a:focus::before{content:'TAB↓';top:0; right:0;}
+
+    .price-max button {position: relative; z-index: 0; display: inline-block; width: 15px;height: 15px;margin-left: 5px; border: 1px solid #bbb; border-radius: 2px; background-color: #fff;text-indent:-99999px;}
+    .price-max button:focus::before{content:'TAB↓'; display: block; position: absolute; z-index: 9; background: #fff; width: 30px; height: 20px; border:1px solid #1faeda; color: #1faeda;font-size: 10px;padding:2px; margin-right: -55px; top: -10px; text-align: center;line-height: 1.8; top:0; right:0; text-indent:0;}
 
     .sales-area .btn-large-type1 {width:220px; height: 60px; color: #fff; background: #fd5b45; border: none; float: right;}
-
+    .sales-area .btn-large-type1:focus::before{content:'TAB↑'; display: block; position: absolute; z-index: 9; background: #fff; width: 30px; height: 20px; border:1px solid #1faeda; color: #1faeda;font-size: 10px;padding:2px; margin-right: -55px; top: -10px; text-align: center;line-height: 1.8; top:0; right:0; text-indent:0;}
 
 /* .complex-type */
 .complex-type .best-nav {width: 255px; height: 60px; clear:both;}
-.complex-type .best-nav> a{display : block; width:50%; height:100%; float:left; border: 1px solid #e1e1e1; border-bottom-color: #23221e; color: black; font-size: 25px; text-align: center; line-height: 2.3; background: #e1e1e1;}
+.complex-type .best-nav> a{position:relative; display : block; width:50%; height:100%; float:left; border: 1px solid #e1e1e1; border-bottom-color: #23221e; color: black; font-size: 25px; text-align: center; line-height: 2.3; background: #e1e1e1;}
 .complex-type .best-nav> a.active{border: 1px solid #23221e;border-bottom: none; color: #fff;}
 .complex-type .best-nav> a:nth-child(1).active{background: #79bd28;}
 .complex-type .best-nav> a:nth-child(2).active{background: #faa038;}
+.complex-type .wac-tabnav a:focus::before{content:'TAB→'; display: block; position: absolute; z-index: 9; background: #fff; width: 30px; height: 20px; border:1px solid #1faeda; color: #1faeda;font-size: 10px; padding:2px; line-height: 1.8; right: -15px; top: 15px; text-align: center;}
+.complex-type .wac-tabnav a:focus::after{content:'ENTER↓'; display: block; position: absolute; z-index: 9; background: #fff; width: 40px; height: 20px; border:1px solid #fe4838; color: #fe4838; font-size: 10px;padding:2px; left: 50%; bottom: -15px; margin-left: -20px;text-align: center;line-height: 1.8;}
+
 
 .complex-type .best-conts section{display: none; overflow:hidden; height: 423px;}
 .complex-type .best-conts section.active{display: block; width:255px; height: 362px; border: 1px solid #23221e;border-top: none;}
 .complex-type .best-conts section .best-tab {float: left; width: 255px; height: 362px; border-bottom: 1px solid #23221e;}
-.complex-type .nav-link{float: left; width: 85px; height: 90px; border: 1px solid #e2e2e2; border-top:none; text-align: center; vertical-align: middle;}
-
+.complex-type .nav-link{position:relative; float: left; width: 85px; height: 90px; border: 1px solid #e2e2e2; border-top:none; text-align: center; vertical-align: middle;}
+.complex-type .nav-link:focus::before{content:'TAB→'; display: block; position: absolute; z-index: 9; background: #fff; width: 30px; height: 20px; border:1px solid #1faeda; color: #1faeda;font-size: 10px; padding:2px; right: 0; bottom: 0; text-align: center;line-height: 1.8;}
 
 
 
