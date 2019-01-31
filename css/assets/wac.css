@@ -334,7 +334,7 @@ button:focus{border:1px solid #293fff!important;}
         .gnb h1 a.mobile img{width:100%;}
     .gnb .device{float:right; padding-top:15px;}
         .gnb .device .pc-guide{font-size: 15px;}
-        .gnb .device .mobile-guide{display: none;}
+        /* .gnb .device .mobile-guide{display: none;} */
     .gnb .menu{display:none;}
     /* ******************
      *    index.html    *
