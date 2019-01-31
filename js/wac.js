@@ -2509,10 +2509,11 @@
 				}
 			}
 			// 3.현재선택된 탭에 title="현재선택" 속성 추가 핸들러
-			var attrTitleController = function(){
+			var attrTitleController = function(e){
+				_wac.preventDefaultAction(e);
 				$this = $(this);
 				contAreaId = $this.attr("href");
-				$('.wac-tabcont .active').removeClass('active');
+				$tabContWrap.children('.active').removeClass('active');
 				$(contAreaId).addClass('active');
 
 	 			$this.siblings().removeAttr("title").removeClass('active');

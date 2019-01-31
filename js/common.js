@@ -6,6 +6,8 @@ $(document).ready(function(){
     }, function(){
         $( this ).css('text-decoration','');
     });
+
+    $('[data-toggle="tooltip"]').tooltip();
 });
 
 
