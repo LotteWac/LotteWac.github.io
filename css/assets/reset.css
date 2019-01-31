@@ -27,12 +27,12 @@
        url("../font/lottemart-happy-Bold.eot") format("eot");
 }
 
-@font-face {
+/* @font-face {
   font-family: 'lottemart-happy-Medium';
   font-weight: 700;
   src: url("../font/lottemart-happy-Medium.woff") format("woff"),
        url("../font/lottemart-happy-Medium.eot") format("eot");
-}
+} */
 @font-face {
   font-family: 'lottemart-happy-Light';
   font-weight: 300;
