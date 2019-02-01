@@ -166,7 +166,7 @@ button:focus{border:1px solid #293fff!important;}
 .wac-guide .lnb.scroll-fixed{position: fixed; top:60px; left:50%; margin-left: -600px;}
 
 .wac-guide .container .lnb .depth1-menu{padding-top:20px; color: #293f54;  margin-bottom: 5px; vertical-align: middle; cursor: pointer;}
-.wac-guide .container .lnb .depth1-menu > a{font-size: 18px; font-family:'lottemart-dream-bold';}
+.wac-guide .container .lnb .depth1-menu > a{font-size: 18px;}
 .wac-guide .container .lnb .depth1-menu i{top: 10px; float: right; margin-right: 14px; -ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); transform: rotate(90deg); transition: all ease 0.5s 0s;}
 .wac-guide .container .lnb .depth1-menu i.open{ -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); transition: all ease 0.5s 0s;}
 
@@ -231,10 +231,38 @@ button:focus{border:1px solid #293fff!important;}
 
 /* .m-visual */
 .ui-focus .m-visual img{position: relative; top:0;}
-.ui-focus .m-visual h2{position: absolute; font-size: 50px;}
+    .ui-focus .m-visual h2{position: absolute; font-size: 65px;}
+   
+    .ui-focus .m-visual ul{width:80%; max-width: 600px; position: absolute; font-size: 65px; top:50%; left:50%; margin-left: -300px;}
+    .ui-focus .m-visual ul li{width:33.33%;  height: 100px; border: 1px solid #293f54; border-right:0;float: left; text-align: center; padding-top:30px;}
+    .ui-focus .m-visual ul li:nth-child(3){border-right: 1px solid #293f54;}
+    .ui-focus .m-visual ul li a{font-size: 18px;}
+
+    .ui-focus .m-visual li.deco-key{position: absolute; width:100%;  top:0; left: 0;}
+        .ui-focus .m-visual li.deco-key span{position: absolute; top:-15px; left:-30px;}
+        .ui-focus .m-visual li.deco-key span:nth-child(2){position: absolute; bottom:-10px; left:30px;}
+        .ui-focus .m-visual li.deco-key span:nth-child(3){position: absolute; top:15px; left:65px;}
+        .ui-focus .m-visual li.deco-key span:nth-child(4){position: absolute; top:25px; 
+        right:15px;}
+        .ui-focus .m-visual li.deco-key span:nth-child(5){position: absolute; top:5px; left:5px;}
+        .ui-focus .m-visual li.deco-key span:nth-child(6){position: absolute; top:-30px;
+        right: -30px;}
+
+/* .ui-menu > .gnb-menu */
+.gnb-menu > a{display:block; width: 205px; height:45px; background: url(../../img/sprite_pnb.png) no-repeat 0 0; background-position: 50% 0;}
+.gnb-menu > a.active{background: url(../../img/sprite_pnb_active.png) no-repeat 0 0; background-position: 50% 0;}
+.gnb-menu > a em {visibility: hidden;}
+
+.gnb-menu #pn-allcategory-link{max-width: 816px; height: 499px; clear:both; border: 2px solid #000;}
+.gnb-menu #pn-allcategory-link .category-tab {float: left; width: 203px; height: 498px;}
+    .wrap-category.wrap-category-temp .category-tab1 .category-group { width: 203px;}
+    .wrap-category-temp .category-list .depth-2{width: 203px; left: 203px; top:0; display: none;}
+    .wrap-category-temp .category-list .active+.depth-2{display: block;}
+    
 
 
-/* .prodlist-type */
+
+/* .ui-tab > .prodlist-type */
 .prodlist-type{width:100%;}
 .prodlist-type .wac-tabnav{height:60px;}
 .prodlist-type .wac-tabnav a{display:block; width:200px; float: left; height: 60px; font-size: 18px; text-align: center; border: 1px solid #e1e1e1;padding-top: 8px;position: relative;}
@@ -244,6 +272,7 @@ button:focus{border:1px solid #293fff!important;}
 
 .prodlist-type .wac-tabcont{width: 100%; height: 500px;border: 1px solid #e1e1e1;}
 .prodlist-type .wac-tabcont a{position: relative;}
+.prodlist-type .wac-tabcont a img{width: 100%;}
 .prodlist-type .wac-tabcont a:focus::before{content:'TAB→'; display: block; position: absolute; z-index: 9; background: #fff; width: 30px; height: 20px; border:1px solid #1faeda; color: #1faeda;font-size: 10px;padding:2px; right: -15px; top: 15px; text-align: center;line-height: 1.8;}
 .prodlist-type .wac-tabcont section{width:100%; height: 100%;display: none;}
 
