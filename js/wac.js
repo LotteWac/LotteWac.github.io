@@ -2453,6 +2453,8 @@
 						}
 					}
 				}else if(_wac.isEnterEvent(e) && !_wac.isWacEntered($this)){
+					_wac.preventDefaultAction(e);
+					$this.trigger('click');
 					_wac.markWacEnteredAsync($this);
 				}else if(_wac.isShiftTabEvent(e) && $this.is($tabNav.first()) && !_wac.isEmpty($prevEl)){
 					_wac.onNextAsync(e, $prevEl.last());
@@ -2510,10 +2512,11 @@
 			}
 			// 3.현재선택된 탭에 title="현재선택" 속성 추가 핸들러
 			var attrTitleController = function(e){
+				console.log(1)
 				$this = $(this);
-				contAreaId = $this.attr("href");
+				contAreaId = $this.attr("data-role");
 				$tabContWrap.children('.active').removeClass('active');
-				$(contAreaId).addClass('active');
+				$("#"+contAreaId).addClass('active');
 
 	 			$this.siblings().removeAttr("title").removeClass('active');
 	 			$this.attr({
@@ -2531,7 +2534,7 @@
 			$tabNav.on({
 				click : attrTitleController,
 				keydown : tabNavKeyboardHandler,
-				focusout : tabNavFocusoutHandler
+				focusout : tabNavFocusoutHandler,
 			});
 			// 2.탭 컨텐츠 포괄 영역
 			$tabContWrap.on({
