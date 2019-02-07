@@ -2453,7 +2453,7 @@
 						}
 					}
 				}else if(_wac.isEnterEvent(e) && !_wac.isWacEntered($this)){
-                    _wac.markWacEnteredAsync($this);
+					_wac.markWacEnteredAsync($this);
 				}else if(_wac.isShiftTabEvent(e) && $this.is($tabNav.first()) && !_wac.isEmpty($prevEl)){
 					_wac.onNextAsync(e, $prevEl.last());
 				}
@@ -2510,7 +2510,6 @@
 			}
 			// 3.현재선택된 탭에 title="현재선택" 속성 추가 핸들러
 			var attrTitleController = function(e){
-				_wac.preventDefaultAction(e);
 				$this = $(this);
 				contAreaId = $this.attr("href");
 				$tabContWrap.children('.active').removeClass('active');
