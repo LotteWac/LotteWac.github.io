@@ -324,8 +324,8 @@ button:focus{border:1px solid #293fff!important;}
 .keyboard-helper{position:absolute; width:100%; height:100%; top: 0; left: 0;}
     .keyboard-helper span{background: #fff; height:15px; z-index: 80; padding:3px; font-size: 13px; position: absolute; line-height: 1.4;}
     .keyboard-helper span.tab{right:-17px; top: 10px; border: 1px solid #1faeda; color: #1faeda;}
-    .keyboard-helper span.shift-tab{left:-45px; top: 10px; border:1px solid #fe4838; color:#fe4838;}
-    .keyboard-helper span.enter{top:-7.5px; left:50%; margin-left:-10px; color:#edbe25; border: 1px solid #edbe25;}
+    .keyboard-helper span.shift-tab{left:-45px; top: 10px; border:1px solid #edbe25; color:#edbe25;}
+    .keyboard-helper span.enter{top:-5px; left:50%; margin-left:-25px; color:#fe4838; border: 1px solid #fe4838;}
 
 
 
