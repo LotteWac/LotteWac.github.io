@@ -27,7 +27,7 @@
         <!-- inner start -->
         <div class="inner">
             <h1>
-                <a href="#" class="pc">Accessibility Guide</a>
+                <a href="./index.html" class="pc">Accessibility Guide</a>
                 <a href="#" class="mobile"><img src="./img/logo.png" alt="lottemart 로고"></a>
             </h1>
 
@@ -4714,12 +4714,15 @@
 
         //gnb active
         var $gnbEventHandler = function(){
-          
-            $('.gnb-menu li').hover(function () {
-                $(this).addClass('active');
-            }, function () {
-                $(this).removeClass('active');
-            });
+                var $gnbTrigger = $('.gnb-menu > a'),
+                    $gnbWrap = $('#pn-allcategory-link');
+                    $gnbList = $('#pn-allcategory-link').find('li');
+               
+                $gnbList.hover(function () {
+                    $(this).addClass('active');
+                }, function () {
+                    $(this).removeClass('active');
+                });
         }();
 
 
