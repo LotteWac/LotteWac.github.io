@@ -4723,6 +4723,24 @@
                 }, function () {
                     $(this).removeClass('active');
                 });
+                var gnbWrapKeydownHandler = function(e){
+                    $nowFocus = $(this)
+                    if(_wac.isTabEvent(e)){
+
+                    }else if(_wac.isShiftTabEvent(e)){
+
+                    }else if(_wac.isLeftArrowEvent(e)){
+
+                    }else if(_wac.isRightArrowEvent(e)){
+
+                    }
+                }
+
+                $gnbWrap.on({
+                    keydown : gnbWrapKeydownHandler
+                },'a')
+
+
         }();
 
 
