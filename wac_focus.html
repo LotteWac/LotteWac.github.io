@@ -4561,12 +4561,17 @@
             <div class="ui-slide">
                 <div class="inner">
                     <h3>슬라이드형 UI</h3>
+                    <h4>메인 비주얼 슬라이드</h4>
                 </div>
-
-                <!-- m-visual-type start -->
+            <!-- m-visual-type start -->
                 <div class="m-visual-type">
                     <!-- wrap-cont start -->
                     <div class="wrap-cont">
+                        <article>
+                            <a href="#none">
+                                <img src="./img/mslide16.jpg" alt="메인비주얼 이미지">
+                            </a>
+                        </article>
                         <article>
                             <a href="#none">
                                 <img src="./img/mslide01.jpg" alt="메인비주얼 이미지">
@@ -4642,16 +4647,13 @@
                                 <img src="./img/mslide15.jpg" alt="메인비주얼 이미지">
                             </a>
                         </article>
-                        <article>
-                            <a href="#none">
-                                <img src="./img/mslide16.jpg" alt="메인비주얼 이미지">
-                            </a>
-                        </article>
+                        
                     </div>
                     <!-- wrap-cont end -->
 
                     <!-- wrap-nav start -->
                     <div class="wrap-nav">
+                        <a href="#none" class="menu" data-slide-index="0">신학기 Festival</a>
                         <a href="#none" class="menu" data-slide-index="1">명절 끝 가벼워질 시간</a>
                         <a href="#none" class="menu" data-slide-index="2">2019년 장 담그기 좋은 날</a>
                         <a href="#none" class="menu" data-slide-index="3">TWG  style </a>
@@ -4667,34 +4669,13 @@
                         <a href="#none" class="menu" data-slide-index="13">아마존 베스트셀러</a>
                         <a href="#none" class="menu" data-slide-index="14">2019 원예대전</a>
                         <a href="#none" class="menu" data-slide-index="15">우리아이 깨끗한 양치습관</a>
-                        <a href="#none" class="menu" data-slide-index="16">신학기 Festival</a>
                     </div>
                     <!-- wrap-nav end -->
                 </div>
-
                 <!-- m-visual-type end -->
             </div>
             <!-- ui-slide end -->
-            <script>
-                var $mVisual = $('.m-visual-type .wrap-cont'),
-                    $mVisualNav = $('.m-visual-type .wrap-nav'),
-                    mContSlideSetting = {
-                        pagerCustom : $mVisualNav,
-                        mode:'fade',
-                        controls:false,
-                        auto:true
-                    },
-                    mNavSlideSetting = {
-                        maxSlides: 5,
-                        slideWidth: 193,
-                        pager: false,
-                        onSliderLoad: function(){
-                           $mVisual.bxSlider(mContSlideSetting)
-                        }
-                    };
-
-                $mVisualNav.bxSlider(mNavSlideSetting);
-            </script>
+          
 
         </div>
         <!-- container end -->
@@ -4706,45 +4687,158 @@
 
         <script>
         $(document).ready(function(){
-            _wac.lottemartWacTabHandler(event, $('.prodlist-type'), undefined, $('.complex-type'));
-            _wac.lottemartWacTabHandler(event, $('.complex-type'), undefined, $('.ui-slide .m-visual-type .bx-controls'));
-
-
-            $('pre code').each(function (i, block) {
-                hljs.highlightBlock(block);
-            });
-
-
-
-            var $codeArea = $('pre code'),
-                $targetCodeArea;
-
-            $codeArea.before('<button class="code-open-btn">열기</button>');
-
-
-            var $codeOpenBtn = $('.code-open-btn');
-
-            $codeOpenBtn.on('click', function () {
-                $targetCodeArea = $(this).next('code')
-                if ($targetCodeArea.hasClass('active')) {
-                    $targetCodeArea.removeClass('active');
-                } else {
-                    $targetCodeArea.addClass('active');
-                }
-            });
-
-            //gnb active
-            var $gnbEventHandler = function(){
-                var gnbMouseH
-                $('.gnb-menu li').hover(function () {
-                    $(this).addClass('active');
-                }, function () {
-                    $(this).removeClass('active');
+            var common = function(){
+                var $codeArea = $('pre code'),
+                    $targetCodeArea,
+                    $codeOpenBtn = $('.code-open-btn');
+                    
+                $codeArea.before('<button class="code-open-btn">열기</button>');
+                $codeArea.each(function (i, block) {
+                    hljs.highlightBlock(block);
+                });
+    
+                $codeOpenBtn.on('click', function () {
+                    $targetCodeArea = $(this).next('code')
+                    if ($targetCodeArea.hasClass('active')) {
+                        $targetCodeArea.removeClass('active');
+                    } else {
+                        $targetCodeArea.addClass('active');
+                    }
                 });
             }();
 
+        var tabUI = function(){
+            _wac.lottemartWacTabHandler(event, $('.prodlist-type'), undefined, $('.complex-type'));
+            _wac.lottemartWacTabHandler(event, $('.complex-type'), undefined, $('.ui-slide .m-visual-type .wrap-nav'));
+        }();
+
+        //gnb active
+        var $gnbEventHandler = function(){
+          
+            $('.gnb-menu li').hover(function () {
+                $(this).addClass('active');
+            }, function () {
+                $(this).removeClass('active');
+            });
+        }();
+
 
         });
+
+        var slideUI = function(){
+            var $mVisual = $('.m-visual-type .wrap-cont'),
+                $mVisualNav = $('.m-visual-type .wrap-nav'),
+                $focusablesNav = _wac.getFocusables($mVisualNav),
+                $nowActiveNav, $nowFocus, eventFlag
+                mContSlideSetting = {
+                    pager:true,
+                    pagerCustom:$mVisualNav,
+                    mode:'fade',
+                    controls:false,
+                    auto:false,
+                    stopAutoOnClick : true,
+                    autoHover:true,
+                    pause:5000,
+                    speed:300,
+                    responsive:true,
+                    keyboadEnabled:true,
+                    touchEnabled : false,
+                    onSliderLoad: function(currentIndex){
+                        $mVisualNav.bxSlider(mNavSlideSetting);
+                        index = currentIndex;
+                        $nowActiveNav = $focusablesNav.filter('[aria-hidden="false"]').first();
+                        $nowActiveNav.addClass('now-active');                
+                        $mVisual.after('<div class="pager-num"><em class="num">6</em>/<em class="num2">20</em></div>');
+
+                        var mVisualNavItemKeydownHandler = function(e){
+                                $nowFocus = $(document.activeElement); // 1.전역변수 : 현재 촛점이 걸린 객체 할당
+                            var dataSlideIdx = (parseInt($nowFocus.attr('data-slide-index')) + 1)%5, // 2.지역변수 : 촛점 걸린 객체가 5번째 배너인지 판별
+                                $lastBnrOfmVisualNav = $focusablesNav.last(); // 3.지역변수 : 마지막 배너에서 슬라이드영역을 빠져나가도록 이벤트 바인딩
+
+                                    //탭키
+                                    if( _wac.isTabEvent(e)){
+                                        //현 포커스 객체가 마지막 배너일 경우
+                                        //=> 다음 영역인 today 로 이동
+                                        if($nowFocus.is($lastBnrOfmVisualNav)){
+                                            _wac.preventDefaultAction(e);
+                                            _wac.onNextAsync(e, $specialTheme);
+                                        }
+                                        //현 포커스 객체가 5배수 인덱스 값을 가진 배너일경우
+                                        // 슬라이드 콜백함수에서 모션후의 촛점 유무를 판별가능하도록 eventFlag 제어
+                                        // => click으로 인해 발생된 모션이라면 촛점 발생 되지 않음
+                                        // => keydown으로 인해 발생된 모션이라면 애니메이션 후 촛점 렌더링
+                                        else if(dataSlideIdx == 0){
+                                            eventFlag = 'keyboard-next';
+                                            _wac.preventDefaultAction(e);
+                                            $mVisualNav.goToNextSlide();
+                                        }
+
+                                    //역탭키
+                                    }else if(dataSlideIdx == 1 && _wac.isShiftTabEvent(e)){
+                                        eventFlag = 'keyboard-prev'
+                                        _wac.preventDefaultAction(e);
+                                        $mVisualNav.goToPrevSlide();
+
+                                    //오른쪽 방향키
+                                    }else if(_wac.isRightArrowEvent(e)){
+                                        eventFlag = 'keyboard-next';
+                                        _wac.preventDefaultAction(e);
+                                        $mVisualNav.goToNextSlide();
+
+                                    //왼쪽 방향키
+                                    }else if(_wac.isLeftArrowEvent(e)){
+                                        eventFlag = 'keyboard-prev'
+                                        isArrowEvent = true;
+                                        _wac.preventDefaultAction(e);
+                                        $mVisualNav.goToPrevSlide();
+                                    }
+                        }
+
+                        var mVisualNavItemFocusInHandler = function(e){
+                            $this = $(this);
+                            $this.append('<div class="keyboard-helper"><span class="tab">TAB→</span><span class="shift-tab">←SHIFT+TAB</span><span class="enter">ENTER</span></div>')
+                        }
+                        var mVisualNavItemFocusOutHandler = function(e){
+                            $this = $(this);
+                            $this.find('.keyboard-helper').remove();
+                        }
+                        $mVisualNav.on({
+                            keydown : mVisualNavItemKeydownHandler,
+                            focusin : mVisualNavItemFocusInHandler,
+                            focusout : mVisualNavItemFocusOutHandler
+                        }, 'a');
+                    },
+                    onSlideBefore : function($slideElement, oldIndex, newIndex){
+                        $focusablesNav.filter('.now-active').removeClass('now-active');
+                        $focusablesNav.eq(newIndex).addClass('now-active');
+                    },
+                },
+                mNavSlideSetting = {
+                    maxSlides: 5,
+                    slideWidth: 193,
+                    pager: false,
+                    auto:false,
+                    infiniteLoop : true,
+                    
+                    onSlideAfter: function ($slideElement, newIndex) {
+                        $nowActiveNav = $focusablesNav.filter('[aria-hidden="false"]');
+                        if (eventFlag == 'keyboard-next') {
+                            $nowActiveNav.first().focus();
+                            eventFlag = 'none';
+                        } else if (eventFlag == 'keyboard-prev') {
+                            if (isArrowEvent == true) {
+                                $nowActiveNav.first().focus();
+                                isArrowEvent = false;
+                            } else {
+                                $nowActiveNav.last().focus();
+                                eventFlag = 'none';
+                            }
+                        }
+                    },
+                };
+                
+                $mVisual.bxSlider(mContSlideSetting);
+            }();
     </script>
 </body>
 
