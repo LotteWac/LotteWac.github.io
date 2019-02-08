@@ -515,6 +515,13 @@ button:focus{border:1px solid #293fff!important;}
     .index .container .m-visual {height:750px;}
 }
 @media (max-width:320px){
+
+    /* ******************
+     *    common.html    *
+     ********************/
+    .gnb .device{padding-top:5px;}
+
+
     /* ******************
      *    index.html    *
      ********************/
