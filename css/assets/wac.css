@@ -100,7 +100,7 @@ button:focus{border:1px solid #293fff!important;}
     /* 1. #mVisual */
     .container .m-visual{width: 100%; height: 1000px; overflow: hidden; position: relative;}
     .container .m-visual > img{width: 100%; opacity:0.7; position: absolute; top : -200px;}
-    .container .m-visual h2{width:600px; color:#293f54; text-align: center; font-size: 100px; font-weight: 900; letter-spacing: 5px;position: absolute; top:45%; left: 50%; margin: -245px 0 0 -300px; font-family: 'Calibri', Calibri,'lottemart-dream-bold', 'lottemart-happy-Medium','MalgunGothic', 'sans-serif', sans-serif;}
+    .container .m-visual h2{width:80%; max-width:600px; color:#293f54; text-align: center; font-size: 100px; font-weight: 900; letter-spacing: 5px;position: relative; margin: 0 auto; font-family: 'Calibri', Calibri,'lottemart-dream-bold', 'lottemart-happy-Medium','MalgunGothic', 'sans-serif', sans-serif;}
     .container .m-visual p {color:#293f54; font-weight: 900; position: absolute; top:50%; left: 50%;margin:100px 0 0 -302px; font-size:20px;}
  
     /* 2. #infoAccess  */
@@ -234,12 +234,12 @@ button:focus{border:1px solid #293fff!important;}
 .ui-menu h5:before{content: '- ';}
 
 /* .m-visual */
-.ui-focus .m-visual img{position: relative; top:0;}
-    .ui-focus .m-visual h2{position: absolute; font-size: 65px;}
+.ui-focus .m-visual{background:url(../../img/keyboard-img.jpg) no-repeat 0 0; position: relative; top:0; width:100%;}
+    .ui-focus .m-visual h2{width: 80%; max-width: 600px; position: relative; margin:0 auto; font-size: 65px;top:20vh;}
    
-    .ui-focus .m-visual ul{width:80%; max-width: 600px; position: absolute; font-size: 65px; top:50%; left:50%; margin:-100px 0 0 -300px;}
+    .ui-focus .m-visual ul{width:80%; max-width: 600px; position: relative; font-size: 65px; margin:0 auto; top:23vh;}
     .ui-focus .m-visual ul li{width:33.33%;  height: 100px; float: left; text-align: center;}
-    /* .ui-focus .m-visual ul li:nth-child(3){border-right: 1px solid #293f54;} */
+    .ui-focus .m-visual ul li img{width:100%;}
     .ui-focus .m-visual ul li a{font-size: 18px;}
    
     .ui-focus .m-visual li.deco-key{position: absolute; width:100%;  top:0; left: 0;}
@@ -264,7 +264,7 @@ button:focus{border:1px solid #293fff!important;}
     .category-tab4 > div:nth-child(2){height:40%;}
     .category-tab .category-title{height: 50px; padding-top: 15px; text-align: center;}
     .wrap-category.wrap-category-temp .category-group { width: 100%;}
-    .wrap-category.wrap-category-temp .category-group a{display:block; width: 100%; height: 28px; padding:0 15px; font-size: 14px; letter-spacing:-0.65px; overflow: hidden;}
+    .wrap-category.wrap-category-temp .category-group a{display:block; width: 100%; height: 28px; padding:0 15px; font-size: 14px; letter-spacing:-0.65px; position: relative;}
     .wrap-category.wrap-category-temp .category-group>li{position:relative;}
     .wrap-category.wrap-category-temp .category-group li a:focus,
     .wrap-category.wrap-category-temp .category-group li.active>a{background: #000; color:#fff;text-decoration: none;}
@@ -274,8 +274,11 @@ button:focus{border:1px solid #293fff!important;}
     .wrap-category-temp .category-list li.active>.depth-2,
     .wrap-category-temp .category-list .depth-2 li.active>.depth-3 {display: block;}
     
-
-
+    .gnb-menu .keyboard-helper span{background: #fff; height:22px; z-index: 80; padding:3px; font-size: 13px; position: absolute; line-height: 1.4;}
+        .gnb-menu .keyboard-helper span.tab{right:0; bottom:-12px; top:unset;}
+        .gnb-menu .keyboard-helper span.shift-tab{left:unset; right:0; top:-5px;}
+        .gnb-menu .keyboard-helper span.enter{left:unset; right:-63px;}
+        .gnb-menu .keyboard-helper span.left-arrow{left:-5px; top:-5px; border:1px solid #26e987; color:#26e987;}
 
 /* .ui-tab > .prodlist-type */
 .prodlist-type{width:100%;}
@@ -328,7 +331,7 @@ button:focus{border:1px solid #293fff!important;}
 
 .ui-slide .m-visual-type .pager-num{position: absolute; bottom:80px; right:50%; margin-right:-500px; background: #fff; z-index: 80;padding: 3px 10px; border-radius: 3px;}
 .keyboard-helper{position:absolute; width:100%; height:100%; top: 0; left: 0;}
-    .keyboard-helper span{background: #fff; height:15px; z-index: 80; padding:3px; font-size: 13px; position: absolute; line-height: 1.4;}
+    .keyboard-helper span{background: #fff; height:22px; z-index: 80; padding:3px; font-size: 13px; position: absolute; line-height: 1.4;}
     .keyboard-helper span.tab{right:-17px; top: 10px; border: 1px solid #1faeda; color: #1faeda;}
     .keyboard-helper span.shift-tab{left:-45px; top: 10px; border:1px solid #edbe25; color:#edbe25;}
     .keyboard-helper span.enter{top:-5px; left:50%; margin-left:-25px; color:#fe4838; border: 1px solid #fe4838;}
@@ -408,8 +411,8 @@ button:focus{border:1px solid #293fff!important;}
     /* ******************
      *    index.html    *
      ********************/
-    .index .container .m-visual h2{font-size: 8vw; top:50vh;}
-    .index .container .m-visual p{width:80%; position:relative; top:52vh; left:0; margin: 0 auto; margin-top: 0; text-align: center;}
+    .index .container .m-visual h2{font-size: 8vw; top:20vh;}
+    .index .container .m-visual p{width:80%; position:relative; top:23vh; left:0; margin: 0 auto; margin-top: 0; text-align: center;}
     .index .container .m-visual > img{width:unset; margin-left:-25%;}
     .index .container .access-list{width:860px; margin:0 auto;}
     .index .container .access-list li{margin: 10px; margin-top: 45px;}
@@ -452,7 +455,7 @@ button:focus{border:1px solid #293fff!important;}
     /* ******************
      *    index.html    *
      ********************/
-     .index .container .m-visual h2{font-size: 60px; margin-top:-220px;}
+     .index .container .m-visual h2{font-size: 60px;}
      .index .container h3 {font-size: 3.9rem;}
 
      .index .container .info-access{height:1500px;}
@@ -468,8 +471,11 @@ button:focus{border:1px solid #293fff!important;}
      /* ******************
      *  wac-focus.html  *
      ********************/
-     .prodlist-type .wac-tabnav a{font-size: 16px; padding-top:12px;}
+     .ui-focus .m-visual{background:url(../../img/keyboard-img-768.jpg) no-repeat 0 0;}
+     .ui-focus .m-visual h2{max-width: 320px; margin:0 auto; font-size: 35px;}
+     .ui-focus .m-visual ul li a{font-size: 14px;}
 
+     .prodlist-type .wac-tabnav a{font-size: 16px; padding-top:12px;}
 
 
 }
@@ -512,6 +518,13 @@ button:focus{border:1px solid #293fff!important;}
     
     .wac-guide .container .contents .article > div[id^="item"] > h4{padding:11px 10px; font-size: 15px;}
     .wac-guide .container .contents .article > div[id^="item"] > h4 i{margin-right: 0;}
+
+
+    /* ******************
+     *  wac-focus.html  *
+     ********************/
+    .ui-focus .m-visual{background:url(../../img/keyboard-img-425.jpg) no-repeat 0 0;}
+
 }
 @media (max-width:375px){
     body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, form, fieldset, p, button, header, nav, aside, footer, a, .header, .gnb, .login-box, .footer, .inner, .btn-box{font-size: 14px;}
@@ -520,12 +533,18 @@ button:focus{border:1px solid #293fff!important;}
      ********************/
     .index .container .m-visual h2{font-size: 46px;}
     .index .container .m-visual {height:750px;}
+
+     /* ******************
+     *  wac-focus.html  *
+     ********************/
+     .ui-focus .m-visual{background:url(../../img/keyboard-img-375.jpg) no-repeat 0 0;}
+
 }
 @media (max-width:320px){
     /* ******************
      *    index.html    *
      ********************/
-     .index .container .m-visual h2{font-size: 45px; top:60vh;}
+     .index .container .m-visual h2{text-align: center; width: 100%;font-size: 45px;}
      .index .container .m-visual p{font-size: 18px;}
      .index .container .m-visual {height:750px;}
 
@@ -533,4 +552,6 @@ button:focus{border:1px solid #293fff!important;}
      *  wac-guide.html  *
      ********************/
      .wac-guide .container > .inner{padding:0 10px;}
+
+     
 }
