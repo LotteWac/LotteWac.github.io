@@ -16,7 +16,7 @@
 
 dl, dt, dd, li, a, p, h3, h4, h5{color:#222; line-height: 2.0;}
 h3, h4, h5{font-family: 'lottemart-dream-bold', 'MalgunGothic', 'sans-serif',sans-serif;box-sizing: border-box;}
-dl, dt, dd, li, a, p, button, .tooltip-inner{font-family: 'lottemart-happy-Medium', 'MalgunGothic', 'sans-serif',sans-serif;}
+dl, dt, dd, li, a, p, button, .tooltip-inner{font-family: 'lottemart-happy-Medium', 'MalgunGothic', 'sans-serif', sans-serif, 'AppleGothic', AppleGothic;}
 
 
 h4{font-weight:900;}
