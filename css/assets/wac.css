@@ -496,10 +496,11 @@ button:focus{border:1px solid #293fff!important;}
 
     .index #whyWac{padding-top: 100px; height: unset;}
         .index #whyWac dl dt{font-size: 18px;}
-        .index #whyWac dl dd{padding: 0; font-size: 14px;}
+        .index #whyWac dl dd{width:90%; margin:0 auto; padding: 0; font-size: 14px;}
     
     .index #wacGuideLine{padding-top: 100px; height: unset; text-align: left;}
         .index #wacGuideLine p{font-size: 18px;}
+        .index #wacGuideLine .guide-list{width:90%; margin:0 auto;}
         .index #wacGuideLine .guide-list li {font-size: 14px;}
     .index #wacIntro {padding-top: 100px; height: unset;}
     .index #wacIntro p{font-size: 15px;}
