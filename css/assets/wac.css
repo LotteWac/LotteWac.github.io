@@ -16,7 +16,7 @@
 
 dl, dt, dd, li, a, p, h3, h4, h5{color:#222; line-height: 2.0;}
 h3, h4, h5{font-family: 'lottemart-dream-bold', 'MalgunGothic', 'sans-serif',sans-serif;box-sizing: border-box;}
-dl, dt, dd, li, a, p, button{font-family: 'lottemart-happy-Medium', 'MalgunGothic', 'sans-serif',sans-serif;}
+dl, dt, dd, li, a, p, button, .tooltip-inner{font-family: 'lottemart-happy-Medium', 'MalgunGothic', 'sans-serif',sans-serif;}
 
 
 h4{font-weight:900;}
@@ -257,7 +257,7 @@ button:focus{border:1px solid #293fff!important;}
 .gnb-menu > a.active{background: url(../../img/sprite_pnb_active.png) no-repeat 0 0; background-position: 50% 0;}
 .gnb-menu > a em {visibility: hidden;}
  
-.gnb-menu #pn-allcategory-link{max-width: 816px; height: 550px; clear:both; border: 2px solid #000;}
+.gnb-menu #pn-allcategory-link{width:100%; max-width: 816px; height: 550px; clear:both; border: 2px solid #000;}
 .gnb-menu #pn-allcategory-link .category-list{height:100%;}
     .gnb-menu #pn-allcategory-link .category-tab {float: left; width: 25%; height: 100%;}
     .category-tab4 > div:nth-child(1){height:60%;}
