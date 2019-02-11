@@ -8,15 +8,16 @@
 
 
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> -->
-    <link rel="stylesheet" href="./css/assets/atom-one-dark.css">
     <link rel="stylesheet" href="./css/assets/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/assets/wac.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script src="./js/jquery.utils.js"></script>
-    <script src="./js/wac.js"></script>
-    <script src="./js/highlight.pack.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="./js/wac.js"></script>
+    <script src="./js/common.js"></script>
 
     <title>롯데마트 웹접근성 가이드</title>
 </head>
@@ -97,67 +98,65 @@
             <div class="inner">
                 <h3>메뉴형 UI</h3>
 
-                <h4>GNB 전체 카테고리 메뉴</h4>
+                <div class="gnb-guide">
+                    <h4 class="title-h4">GNB 전체 카테고리 메뉴: 활성화된 전체 메뉴 내에서 키보드로 메뉴를 탐색하는 방법</h4>
 
+                    <h5>전체 메뉴의 구조및 대 메뉴간 이동법</h5>
+                    <ul>
+                        <li>
+                            활성화된 전체 메뉴의 구조는 크게 두 그룹으로 이루어져있습니다.
+                            좌측에는 3단계로 접히는 상품 카테고리 메뉴가,
+                            우측에는 리스트 슬라이드 방식으로 제공되는 전문관 배너 목록 슬라이드가 존재합니다.
+                        </li>
+                        <li>
+                            상품 카테고리 메뉴는 HEALTH, FOOD, LIVING, BEAUTY, STYLE 네 개의 대 분류로 이루어져 있습니다.
+                            각 대 분류 영역 내에서 좌우 방향키로 대 메뉴간 이동이 가능합니다.
+                            BEUTY 와 STYLE 의 경우 위 아래로 배치되어있으며, 상하 방향키를 사용하여 초점이동이 가능합니다.
+                            STYLE 메뉴에서 우측 방향키를 누르면 전문관 배너 슬라이드 영역으로의 접근이 가능하며,
+                            전문관 배너 슬라이드 영역에서 좌측 방향키를 누르면 다시 STYLE 영역으로의 접근이 가능합니다.
+                        </li>
+                        <li>
+                            대 메뉴에 선택된 상태에서 탭을 누르면, 해당 메뉴의 요소에 진입하여 탐색 시작이 가능합니다.
+                        </li>
+                        <li>
+                            전체 메뉴를 벗어나 이전 메뉴를 연속해서 탐색하시려면 ESC 키를 누르십시오.
+                        </li>
+                    </ul>
+
+                    <h5>상품 카테고리 메뉴에서 키보드로 메뉴를 탐색하는 방법</h5>
+                    <p>
+                        상품 카테고리 메뉴는 총 세 개의 계층으로 이루어져 있습니다.
+                        대 분류내의 메뉴 목록은 위에서 아래로 나열되어 있으며,
+                        1차 메뉴 하위의 2차 메뉴와 3차 메뉴는 선택된 상위메뉴의 오른쪽으로 배치됩니다.
+                    </p>
+                    <ol>
+                        <li>선택된 메뉴의 하위 메뉴로 접근을 원하시면 오른쪽 키를 누르십시오. 오른 쪽 키 메뉴로의 탐색은 총 2번까지 가능합니다.</li>
+                        <li>
+                        </li>
+                        <li>현재 선택된 메뉴에서 벗어나, 다시 상위 메뉴로의 탐색을 원하시면 왼쪽 화살표 키를 눌러주십시오.</li>
+                        <li>다음 메뉴로의 이동은 TAB 키나 아랫쪽 화살표 키를 누르십시오.</li>
+                        <li>이전 메뉴로의 이동은 SHIFT + TAB 키나 위쪽 화살표 키를 누르십시오.</li>
+                    </ol>
+
+                    <h5>전문관 배너 슬라이드에서 키보드로 메뉴를 탐색하는 방법</h5>
+                    <p>
+                        전문관 배너 슬라이드의 경우 좌우로 이동되는 총 5개의 슬라이드가 존재합니다.
+                        하나의 슬라이드 내에는 총 5개의 전문관 배너가 위에서 아래로 나열되어 있습니다.
+                    </p>
+                    <ol>
+                        <li>전문관 배너 슬라이드 영역에서 접근이 가능한 첫 요소는 슬라이드 컨트롤러입니다.</li>
+                        <li>다음 버튼이 선택된 상태에서 ENTER 키를 누르면 다음 슬라이드로 이동이 됩니다.</li>
+                        <li>이전 버튼이 선택된 상태에서 ENTER 키를 누르면 이전 슬라이드로 이동이 됩니다.</li>
+                        <li>슬라이드 컨트롤을 이용하여 탐색을 하시다가 TAB 키를 누르면, 슬라이드내의 배너가 선택되며 리스트의 탐색을 시작 할 수 있습니다.</li>
+                        <li>배너간의 탐색 중 좌측 방향키와 우측 방향키를 이용하여 이전 슬라이드와 다음 슬라이드로의 즉시 이동이 가능합니다.</li>
+                        <li>정보를 얻고자 하는 배너 위에서 ENTER 키를 누르면 각 전문관으로의 페이지 이동이 가능합니다.</li>
+                    </ol>
+                </div>
                 <div class="gnb-menu">
                     <a href="#none" class="item pn-allcategory js-action-allcategory">
                         <em>전체 카테고리</em>
                     </a>
                     <div id="pn-allcategory-link" class="wrap-category wrap-category-temp js-target-category sprint">
-                        <div class="blind">
-                            <h3>활성화된 전체 메뉴 내에서 키보드로 메뉴를 탐색하는 방법</h3>
-
-                            <h4>전체 메뉴의 구조및 대 메뉴간 이동법</h4>
-                            <ul>
-                                <li>
-                                    활성화된 전체 메뉴의 구조는 크게 두 그룹으로 이루어져있습니다.
-                                    좌측에는 3단계로 접히는 상품 카테고리 메뉴가,
-                                    우측에는 리스트 슬라이드 방식으로 제공되는 전문관 배너 목록 슬라이드가 존재합니다.
-                                </li>
-                                <li>
-                                    상품 카테고리 메뉴는 HEALTH, FOOD, LIVING, BEAUTY, STYLE 네 개의 대 분류로 이루어져 있습니다.
-                                    각 대 분류 영역 내에서 좌우 방향키로 대 메뉴간 이동이 가능합니다.
-                                    BEUTY 와 STYLE 의 경우 위 아래로 배치되어있으며, 상하 방향키를 사용하여 초점이동이 가능합니다.
-                                    STYLE 메뉴에서 우측 방향키를 누르면 전문관 배너 슬라이드 영역으로의 접근이 가능하며,
-                                    전문관 배너 슬라이드 영역에서 좌측 방향키를 누르면 다시 STYLE 영역으로의 접근이 가능합니다.
-                                </li>
-                                <li>
-                                    대 메뉴에 선택된 상태에서 탭을 누르면, 해당 메뉴의 요소에 진입하여 탐색 시작이 가능합니다.
-                                </li>
-                                <li>
-                                    전체 메뉴를 벗어나 이전 메뉴를 연속해서 탐색하시려면 ESC 키를 누르십시오.
-                                </li>
-                            </ul>
-
-                            <h4>상품 카테고리 메뉴에서 키보드로 메뉴를 탐색하는 방법</h4>
-                            <p>
-                                상품 카테고리 메뉴는 총 세 개의 계층으로 이루어져 있습니다.
-                                대 분류내의 메뉴 목록은 위에서 아래로 나열되어 있으며,
-                                1차 메뉴 하위의 2차 메뉴와 3차 메뉴는 선택된 상위메뉴의 오른쪽으로 배치됩니다.
-                            </p>
-                            <ol>
-                                <li>선택된 메뉴의 하위 메뉴로 접근을 원하시면 오른쪽 키를 누르십시오. 오른 쪽 키 메뉴로의 탐색은 총 2번까지 가능합니다.</li>
-                                <li>
-                                </li>
-                                <li>현재 선택된 메뉴에서 벗어나, 다시 상위 메뉴로의 탐색을 원하시면 왼쪽 화살표 키를 눌러주십시오.</li>
-                                <li>다음 메뉴로의 이동은 TAB 키나 아랫쪽 화살표 키를 누르십시오.</li>
-                                <li>이전 메뉴로의 이동은 SHIFT + TAB 키나 위쪽 화살표 키를 누르십시오.</li>
-                            </ol>
-
-                            <h4>전문관 배너 슬라이드에서 키보드로 메뉴를 탐색하는 방법</h4>
-                            <p>
-                                전문관 배너 슬라이드의 경우 좌우로 이동되는 총 5개의 슬라이드가 존재합니다.
-                                하나의 슬라이드 내에는 총 5개의 전문관 배너가 위에서 아래로 나열되어 있습니다.
-                            </p>
-                            <ol>
-                                <li>전문관 배너 슬라이드 영역에서 접근이 가능한 첫 요소는 슬라이드 컨트롤러입니다.</li>
-                                <li>다음 버튼이 선택된 상태에서 ENTER 키를 누르면 다음 슬라이드로 이동이 됩니다.</li>
-                                <li>이전 버튼이 선택된 상태에서 ENTER 키를 누르면 이전 슬라이드로 이동이 됩니다.</li>
-                                <li>슬라이드 컨트롤을 이용하여 탐색을 하시다가 TAB 키를 누르면, 슬라이드내의 배너가 선택되며 리스트의 탐색을 시작 할 수 있습니다.</li>
-                                <li>배너간의 탐색 중 좌측 방향키와 우측 방향키를 이용하여 이전 슬라이드와 다음 슬라이드로의 즉시 이동이 가능합니다.</li>
-                                <li>정보를 얻고자 하는 배너 위에서 ENTER 키를 누르면 각 전문관으로의 페이지 이동이 가능합니다.</li>
-                            </ol>
-                        </div>
 
                         <div id="categoryList" class="category-list">
                             <div class="category-tab category-tab1" tabindex="0">
@@ -184,60 +183,60 @@
                                         </ul>
                                     </li>
                                     <li class="">
-                                        <a href="/category/categoryList.do?CategoryID=C0010145">비타민 · 미네랄</a>
+                                        <a href="#none">비타민 · 미네랄</a>
                                         <ul class="depth-2">
                                             <li>
-                                                <a href="/category/categoryList.do?CategoryID=C00101450001">종합비타민</a>
+                                                <a href="#none">종합비타민</a>
                                                 <ul class="depth-3">
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001014500010001">일반
+                                                    <li><a href="#none">일반
                                                             멀티비타민</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001014500010002">남성용
+                                                    <li><a href="#none">남성용
                                                             멀티비타민</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001014500010003">여성용
+                                                    <li><a href="#none">여성용
                                                             멀티비타민</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001014500010004">50세
+                                                    <li><a href="#none">50세
                                                             이상용</a></li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="/category/categoryList.do?CategoryID=C00101450002">단일비타민/미네랄</a>
+                                                <a href="#none">단일비타민/미네랄</a>
                                                 <ul class="depth-3">
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001014500020001">비타민A</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001014500020002">비타민B</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001014500020003">비타민C</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001014500020004">비타민D</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001014500020005">비타민E</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001014500020007">철분</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001014500020012">아연</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001014500020016">아미노산</a></li>
+                                                    <li><a href="#none">비타민A</a></li>
+                                                    <li><a href="#none">비타민B</a></li>
+                                                    <li><a href="#none">비타민C</a></li>
+                                                    <li><a href="#none">비타민D</a></li>
+                                                    <li><a href="#none">비타민E</a></li>
+                                                    <li><a href="#none">철분</a></li>
+                                                    <li><a href="#none">아연</a></li>
+                                                    <li><a href="#none">아미노산</a></li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="/category/categoryList.do?CategoryID=C00101450003">유아 비타민</a>
+                                                <a href="#none">유아 비타민</a>
                                                 <ul class="depth-3">
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001014500030001">유산균</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001014500030002">칼슘</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001014500030003">어린이
+                                                    <li><a href="#none">유산균</a></li>
+                                                    <li><a href="#none">칼슘</a></li>
+                                                    <li><a href="#none">어린이
                                                             종합 비타민</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001014500030004">초유</a></li>
+                                                    <li><a href="#none">초유</a></li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="/category/categoryList.do?CategoryID=C00101450004">임산부 영양</a>
+                                                <a href="#none">임산부 영양</a>
                                                 <ul class="depth-3">
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001014500040001">비타민B</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001014500040002">철/엽산</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001014500040003">칼슘·마그네슘·비타민D</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001014500040004">유산균</a></li>
+                                                    <li><a href="#none">비타민B</a></li>
+                                                    <li><a href="#none">철/엽산</a></li>
+                                                    <li><a href="#none">칼슘·마그네슘·비타민D</a></li>
+                                                    <li><a href="#none">유산균</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="/category/categoryList.do?CategoryID=C0010146">장 건강</a>
+                                        <a href="#none">장 건강</a>
                                         <ul class="depth-2">
                                             <li>
-                                                <a href="/category/categoryList.do?CategoryID=C00101460001">유익균 증식</a>
+                                                <a href="#none">유익균 증식</a>
                                                 <ul class="depth-3">
                                                     <li><a href="/category/categoryList.do?CategoryID=C001014600010001">프로바이오틱스</a></li>
                                                     <li><a href="/category/categoryList.do?CategoryID=C001014600010002">피부
@@ -497,7 +496,7 @@
                                     </li>
 
                                     <li>
-                                        <a href="/category/categoryList.do?CategoryID=C0010132">유기농/친환경 전문관 Hav'eat</a>
+                                        <a href="/category/categoryList.do?CategoryID=C0010132">유기농/친환경 전문관</a>
                                         <ul class="depth-2">
                                             <li>
                                                 <a href="/category/categoryList.do?CategoryID=C00101320001">건강한 신선식품</a>
@@ -2947,32 +2946,32 @@
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="/category/categoryList.do?CategoryID=C00100590013">주방가전</a>
+                                                <a href="#none">주방가전</a>
                                                 <ul class="depth-3">
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001005900130001">IH/압력밥솥</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001005900130002">일반
+                                                    <li><a href="#none">IH/압력밥솥</a></li>
+                                                    <li><a href="#none">일반
                                                             전기밥솥</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001005900130003">전자레인지</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001005900130004">전기레인지</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001005900130005">가스레인지</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001005900130006">전기오븐</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001005900130007">전기팬
+                                                    <li><a href="#none">전자레인지</a></li>
+                                                    <li><a href="#none">전기레인지</a></li>
+                                                    <li><a href="#none">가스레인지</a></li>
+                                                    <li><a href="#none">전기오븐</a></li>
+                                                    <li><a href="#none">전기팬
                                                             · 그릴</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001005900130008">커피메이커
+                                                    <li><a href="#none">커피메이커
                                                             · 원두 · 캡슐머신</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001005900130009">전기주전자
+                                                    <li><a href="#none">전기주전자
                                                             · 전기포트</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001005900130010">믹서기
+                                                    <li><a href="#none">믹서기
                                                             · 핸드블렌더</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001005900130011">쥬서기
+                                                    <li><a href="#none">쥬서기
                                                             · 원액기 · 녹즙기</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001005900130012">토스터
+                                                    <li><a href="#none">토스터
                                                             · 빙수기 · 간식메이커</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001005900130013">튀김기
+                                                    <li><a href="#none">튀김기
                                                             · 에어프라이어</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001005900130014">전기쿠커
+                                                    <li><a href="#none">전기쿠커
                                                             · 발효기 · 식품건조기</a></li>
-                                                    <li><a href="/category/categoryList.do?CategoryID=C001005900130015">식기세척기
+                                                    <li><a href="#none">식기세척기
                                                             · 음식물처리기</a></li>
                                                 </ul>
                                             </li>
@@ -4687,25 +4686,7 @@
 
         <script>
         $(document).ready(function(){
-            var common = function(){
-                var $codeArea = $('pre code'),
-                    $targetCodeArea,
-                    $codeOpenBtn = $('.code-open-btn');
-                    
-                $codeArea.before('<button class="code-open-btn">열기</button>');
-                $codeArea.each(function (i, block) {
-                    hljs.highlightBlock(block);
-                });
-    
-                $codeOpenBtn.on('click', function () {
-                    $targetCodeArea = $(this).next('code')
-                    if ($targetCodeArea.hasClass('active')) {
-                        $targetCodeArea.removeClass('active');
-                    } else {
-                        $targetCodeArea.addClass('active');
-                    }
-                });
-            }();
+        var $nowFocus;
 
         var tabUI = function(){
             _wac.lottemartWacTabHandler(event, $('.prodlist-type'), undefined, $('.complex-type'));
@@ -4715,30 +4696,96 @@
         //gnb active
         var $gnbEventHandler = function(){
                 var $gnbTrigger = $('.gnb-menu > a'),
-                    $gnbWrap = $('#pn-allcategory-link');
+                    $gnbWrap = $('#pn-allcategory-link'),
+                    $categoryTab = $('.category-tab'),
+                    $categoryTabOfwacUp = $('.wac-up'),
+                    $categoryTabOfwacDown = $('.wac-down'),
                     $gnbList = $('#pn-allcategory-link').find('li');
-               
+                    $gnbListOfFirst = $('.category-group>li:first-child, .depth-2 > li:first-child, .depth-3>li:first-child');
+                    $gnbListOfLast = $('.category-group>li:last-child, .depth-2 > li:last-child, .depth-3>li:last-child');
+
                 $gnbList.hover(function () {
                     $(this).addClass('active');
                 }, function () {
                     $(this).removeClass('active');
                 });
+               
                 var gnbWrapKeydownHandler = function(e){
-                    $nowFocus = $(this)
-                    if(_wac.isTabEvent(e)){
-
-                    }else if(_wac.isShiftTabEvent(e)){
-
-                    }else if(_wac.isLeftArrowEvent(e)){
-
+                    $nowFocus = $(document.activeElement);    
+                   if(_wac.isLeftArrowEvent(e)){
+                       if($nowFocus.is($categoryTab[1])){
+                            _wac.preventDefaultAction(e)
+                            $categoryTab[0].focus();
+                        }else if($nowFocus.is($categoryTab[2])){
+                            _wac.preventDefaultAction(e)
+                            $categoryTab[1].focus();
+                        }else if($nowFocus.is($categoryTabOfwacUp) || $nowFocus.is($categoryTabOfwacDown)){
+                            _wac.preventDefaultAction(e)
+                            $categoryTab[2].focus();
+                        }
                     }else if(_wac.isRightArrowEvent(e)){
-
+                        if($nowFocus.is($categoryTab[0])){
+                            _wac.preventDefaultAction(e)
+                            $categoryTab[1].focus();
+                        }else if($nowFocus.is($categoryTab[1])){
+                            _wac.preventDefaultAction(e)
+                            $categoryTab[2].focus();
+                        }else if($nowFocus.is($categoryTab[2])){
+                            _wac.preventDefaultAction(e)
+                            $categoryTabOfwacUp.focus();
+                        }
+                    }else if(_wac.isDownArrowEvent(e)){
+                        if($nowFocus.is($categoryTabOfwacUp)){
+                            _wac.preventDefaultAction(e)
+                            $categoryTabOfwacDown.focus();
+                        }
+                    }else if(_wac.isUpArrowEvent(e)){
+                        if($nowFocus.is($categoryTabOfwacDown)){
+                            _wac.preventDefaultAction(e)
+                            $categoryTabOfwacUp.focus();
+                        }
                     }
                 }
+                var gnbLiKeydownHandler = function(e){
+                    $nowFocus = $(this);
 
-                $gnbWrap.on({
+                    if(_wac.isTabEvent(e)){
+                        if($nowFocus.is($gnbListOfLast)){
+                            _wac.gnbMenuMotionHandler(e, 'closeDepth');
+                        }
+                    }else if(_wac.isEnterEvent(e)){
+                        _wac.gnbMenuMotionHandler(e,'openDepth');
+                    }else if(_wac.isShiftTabEvent(e)){
+                        _wac.gnbMenuMotionHandler(e, 'beforeFocus');
+                        if($nowFocus.is($gnbListOfFirst)){
+                            _wac.gnbMenuMotionHandler(e, 'closeDepth');
+                        }
+                    }else if(_wac.isLeftArrowEvent(e)){
+                        _wac.preventDefaultAction(e);
+                        _wac.gnbMenuMotionHandler(e,'closeDepth');
+                    }else if(_wac.isRightArrowEvent(e)){
+                        _wac.preventDefaultAction(e);
+                        _wac.gnbMenuMotionHandler(e,'openDepth');
+                    }else if(_wac.isUpArrowEvent(e)){
+                        _wac.preventDefaultAction(e);
+                        _wac.gnbMenuMotionHandler(e,'beforeFocus');
+                        if($nowFocus.is($gnbListOfFirst)){
+                            _wac.gnbMenuMotionHandler(e, 'closeDepth');
+                        }
+                    }else if(_wac.isDownArrowEvent(e)){
+                        _wac.preventDefaultAction(e);
+                        _wac.gnbMenuMotionHandler(e,'nextFocus');
+                        if($nowFocus.is($gnbListOfLast)){
+                            _wac.gnbMenuMotionHandler(e, 'closeDepth');
+                        }
+                    }
+                }
+                $categoryTab.on({
                     keydown : gnbWrapKeydownHandler
-                },'a')
+                })
+                $gnbWrap.on({
+                    keydown : gnbLiKeydownHandler
+                },'li')
 
 
         }();
