@@ -121,7 +121,9 @@ nput[type="text"]:focus,textarea:focus,input[type="file"]:focus,button:focus,inp
 .right{float: right;}
 .align-center{text-align: center;}
 
-.skyblue{color: skyblue}
+.skyblue{color: #0174DF;}
+.orange{color: #FF8000;}
+
 
 /*mobile reset*/
 @media only screen and (max-width: 400px) {
