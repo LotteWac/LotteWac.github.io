@@ -40,6 +40,7 @@
        url("../font/lottemart-happy-Light.eot") format("eot");
 }
 
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
 html,body{width:100%;}
 html{overflow-y:scroll; overflow-x: hidden;}
@@ -100,11 +101,11 @@ table{border-collapse:collapse;border-spacing:0}
 
 input::-ms-clear{display:none}
 input::-ms-input-placeholder { color: #A6A6A6; }
-input::-webkit-input-placeholder { color: #A6A6A6; } 
+input::-webkit-input-placeholder { color: #A6A6A6; }
 input::-moz-placeholder { color: #A6A6A6; }
 input::-moz-placeholder { color: #A6A6A6; }
 textarea::-ms-input-placeholder { color: #A6A6A6; }
-textarea::-webkit-input-placeholder { color: #A6A6A6; } 
+textarea::-webkit-input-placeholder { color: #A6A6A6; }
 textarea::-moz-placeholder { color: #A6A6A6; }
 textarea::-moz-placeholder { color: #A6A6A6; }
 nput[type="text"]:focus,textarea:focus,input[type="file"]:focus,button:focus,input:focus{outline: none;}
@@ -119,6 +120,8 @@ nput[type="text"]:focus,textarea:focus,input[type="file"]:focus,button:focus,inp
 .left{float: left;}
 .right{float: right;}
 .align-center{text-align: center;}
+
+.skyblue{color: skyblue}
 
 /*mobile reset*/
 @media only screen and (max-width: 400px) {

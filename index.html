@@ -8,18 +8,18 @@
     <link rel="stylesheet" href="./css/assets/reset.css">
     <link rel="stylesheet" href="./css/assets/wac.css">
 
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script src="./js/highlight.pack.js"></script>
     <script src="./js/common.js"></script>
 
-    
+
     <title>롯데마트 웹접근성 가이드</title>
 </head>
-<body class="index"> 
+<body class="index">
         <!-- gnb start -->
-        <header class="gnb"> 
+        <header class="gnb">
             <!-- inner start -->
             <div class="inner">
                 <h1>
@@ -29,7 +29,7 @@
 
                 <ul class="device">
                     <li>
-                        <a href="./wac_guide.html" class="pc-guide" data-toggle="tooltip" data-placement="bottom" title="PC 지침 보기">
+                        <a href="./pc_guide.html" class="pc-guide" data-toggle="tooltip" data-placement="bottom" title="PC 지침 보기">
                             <img src="./img/pc-icon.png" alt="피씨 모양 아이콘">
                             <span class="blind">PC 지침 보기</span>
                         </a>
@@ -56,7 +56,7 @@
             <!-- inner end -->
         </header>
         <!-- gnb end -->
-        
+
         <!-- main-fixed-nav start -->
         <nav class="main-fixed-nav">
             <ul class="page-anchor">
@@ -74,7 +74,7 @@
 
         <!-- container start -->
         <div class="container index">
-           
+
             <!-- 1. #mVisual start -->
             <div class="m-visual" id="mVisual">
                 <img src="./img/main02.jpg" alt="메인비주얼 이미지">
@@ -93,8 +93,9 @@
                     <p>
                         정보 접근성은 모든 사용자가 특정 환경, 혹은 신체적 장애에 상관없이<br>
                         모든 정보에 동등하게 접근하고 이용할 수 있도록 보장해 주는 것을 의미합니다.<br>
-                        <em>장애인</em>뿐만 아니라 <em>고령자, 비장애인</em>도 <br>
-                        접근성의 대상이 될 수 있습니다.<br>
+                        <em class="skyblue">장애인</em>뿐만 아니라 <em class="orange">고령자, 비장애인</em>도 접근성의 대상이 될 수 있습니다.<br>
+                        정보 접근성을 준수한 프로그램은 단순히 장애가 있는 사람들을 지원 할 뿐 아니라,
+                        일반 사용자들의 편의와 서비스 수준까지도 크게 향상시켜 줍니다.
                         롯데마트는 차별없는 서비스 제공을 위하여<br>
                         다음과같은 정보 접근성의 핵심원리 네 가지를 준수하고 있습니다.
                     <p>
@@ -154,7 +155,7 @@
                         <li class="access-li-understand">
                             <i class="glyphicon glyphicon-user"></i>
                             <dl>
-                                <dt> 
+                                <dt>
                                     <button type="button" class="btn btn-lotte btn-lg" data-toggle="modal" data-target="#access-li03">이해의 용이성</button>
                                 </dt>
                                 <dd class="modal fade" id="access-li03" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -202,7 +203,7 @@
                                 </dd>
                             </dl>
                         </li>
-                    </ul>         
+                    </ul>
                     <!-- access-list end -->
                 </div>
             </div>
@@ -247,9 +248,9 @@
             </div>
             <!-- 3. #whyWac end -->
 
-        
+
             <!-- 4. #wacGuideLine start -->
-            <div class="article" id="wacGuideLine"> 
+            <div class="article" id="wacGuideLine">
                 <div class="inner">
                     <h3><em class="mobile-block">LOTTE MART</em> PC 접근성 가이드라인</h3>
                     <p>
@@ -269,11 +270,11 @@
                         <li>
                             - 이 가이드라인은 웹 기술(HTML, CSS, JavaScript)에 대한 사전 지식을 요구합니다.
                         </li>
-                    </ol>            
+                    </ol>
                 </div>
             </div>
             <!-- 4. #wacGuideLine end -->
-                
+
             <!-- 5. #wacIntro start -->
             <div id="wacIntro" class="article">
                 <div class="inner">
@@ -286,8 +287,8 @@
                         <li>
                             <em class="circle-num">1</em>롯데마트 PC 접근성 지침과 적용상황
                             <a href="#WacTable" type="button" class="btn btn-xs btn-info" data-toggle="modal" data-target="#WacTable">접근성 검사항목 지침</a>
-                            <a href="./wac_guide.html" class="btn btn-warning btn-xs">롯데마트 PC 접근성 지침별 예제 보기</a>
-                            
+                            <a href="./pc_guide.html" class="btn btn-warning btn-xs">롯데마트 PC 접근성 지침별 예제 보기</a>
+
                             <!-- Modal -->
                             <div class="modal fade" id="WacTable" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
@@ -378,14 +379,14 @@
                                             <tr>
                                                 <td>- (제목 제공) 페이지, 프레임, 콘텐츠 블록에는 적절한 제목을 제공해야 한다.</td>
                                             </tr>
-                                            
+
                                             <!-- 이해의 용이성 -->
                                             <tr>
                                                 <th rowspan="6">이해의 용이성<br>(Understandable)</th>
                                                 <td>가독성</td>
                                                 <td>- (기본 언어 표시) 주로 사용하는 언어를 명시해야 한다.</td>
                                             </tr>
-                                            
+
                                             <tr>
                                                 <td>예측 가능성</td>
                                                 <td>
@@ -399,7 +400,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td> 
+                                                <td>
                                                     - (표의 구성) 표는 이해하기 쉽게 구성해야 한다.
                                                 </td>
                                             </tr>
@@ -407,10 +408,10 @@
                                                 <td rowspan="2">입력 도움</td>
                                                 <td>
                                                     - (레이블 제공) 사용자 입력에는 대응하는 레이블을 제공해야 한다.
-                                                </td> 
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td> 
+                                                <td>
                                                     - (오류 정정) 입력 오류를 정정할 수 있는 방법을 제공해야 한다.
                                                 </td>
                                             </tr>
@@ -440,19 +441,19 @@
                         <li>
                             <em class="circle-num">2</em>롯데마트 모바일 접근성 지침과 적용상항
                         </li>
-                    </ol>    
+                    </ol>
                 </div>
             </div>
             <!-- 5. #wacIntro end -->
-              
+
         </div>
         <!-- container end -->
-        
+
         <!-- footer start -->
         <footer class="footer">
         </footer>
         <!-- footer end -->
-   
+
 <script>
     var preventDefaultAction = function(e) {
 		e = e || window.event;
@@ -499,7 +500,7 @@
     }();
 
     var scrollMotion = function(){
-        //스크롤 모션 구현 
+        //스크롤 모션 구현
         var distanceOfTop, offset, $targetPager, tartgetAreaId,
             windowHeight = $(window).height(),
             $fixNav = $('.page-anchor > li'),
@@ -510,7 +511,7 @@
             offset = $(AreaId).offset();
             $('html, body').stop().animate({scrollTop : offset.top}, 1000);
 
-            //우측 고정페이지 네비게이션 페이저 색변화    
+            //우측 고정페이지 네비게이션 페이저 색변화
             $fixNavPagerAnchor.removeClass('active');
             $targetPager = $fixNavPagerAnchor.filter('[href="'+AreaId+'"]');
             $targetPager.addClass('active');

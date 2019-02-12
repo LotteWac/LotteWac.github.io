@@ -14,7 +14,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script src="./js/highlight.pack.js"></script>
 
-    
+
     <title>롯데마트 웹접근성 가이드</title>
 </head>
 <body class="wac-guide">
@@ -29,7 +29,7 @@
 
               <ul class="device">
                   <li>
-                      <a href="./wac_guide.html" class="pc-guide">
+                      <a href="./pc_guide.html" class="pc-guide">
                           <img src="./img/pc-icon.png" alt="피씨 모양 아이콘">
                           <span class="blind">PC 지침 보기</span>
                       </a>
@@ -66,7 +66,7 @@
             <!-- inner start -->
             <div class="inner">
                 <!-- contents start -->
-                <div class="contents">
+                <div class="">
                     <!-- #wacExample start -->
                    <h3 class="align-center">준비중입니다!</h3>
                     <!-- #wacExample end -->
@@ -77,12 +77,12 @@
             <!-- inner end -->
         </div>
         <!-- container end -->
-        
+
         <!-- footer start -->
         <footer class="footer">
         </footer>
         <!-- footer end -->
-   
+
 <script>
      $('pre code').each(function(i, block) {
         hljs.highlightBlock(block);
@@ -105,7 +105,7 @@
                 $(this).addClass('active');
                 $(this).next('.depth2-menu').show(600);
                 $lnb1DepthIcon.addClass('open');
-            } 
+            }
         }
         var lnb2DepthClickHandler = function(){
             var idStr = $(this).attr('href')
@@ -130,11 +130,11 @@
             }
         });
     }();
-   
+
     //article h3 folding
     $articleH4 = $('.wac-guide .container .contents .article > div[id^="item"] > h4');
     $h4Icon = $('.wac-guide .container .contents .article > div[id^="item"] > h4 i');
-    
+
     $articleH4.on('click', function(){
         if($(this).hasClass('active')){
             $(this).removeClass('active');
@@ -150,7 +150,7 @@
 
 
     //모바일 nav 처리
-     
+
     var $mobileNavBtn = $('#mobileNavBtn'),
         $guideLnb = $('.wac-guide .lnb');
     $mobileNavBtn.on('click', function(){
