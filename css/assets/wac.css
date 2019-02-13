@@ -224,6 +224,7 @@ button:focus{border:1px solid #293fff!important;}
 /* common */
 .active{display: block !important;}
 .ui-focus .container{padding-top:60px;}
+.ui-focus .examples{display: block; width: 100%; border: 1px solid #e1e1e1; border-radius: 5px; padding: 10px; margin: 10px 0;}
 .ui-focus .example-section{width: 100%;}
 .ui-focus .example-section .inner{overflow: unset;}
 .ui-focus h4{font-size: 25px!important;}
