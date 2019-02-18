@@ -2424,7 +2424,6 @@
 					isSlideCont = !isEmpty(isSlideCont)
 											? isSlideCont
 											:undefined; // 3.탭컨텐츠가 슬라이드형인지 여부 (전문관 탭 + 슬라이드 혼재형 ui)
-
 			/*[키보드 핸들러 선언부]*/
 			// 1.탭 내비게이션 키보드 핸들러
 			var tabNavKeyboardHandler = function(e){
@@ -2859,6 +2858,14 @@
 			})
 		};
 		
+		var addState = function(target, className){
+			$(target).addClass(className);
+		}
+
+		var removeState = function(target, className){
+			$(target).removeClass(className);
+		}
+
 		// 181025 [웹접근성 : 원은재]
 		/* 앞뒤 두 요소에 대하여 tab 과 shift+tab 키 이벤트 자동 바인딩
 		*	@$prevEL : object
@@ -2931,7 +2938,9 @@
 		lottemartWacRemainSortingFocusHandler : lottemartWacRemainSortingFocusHandler,
 
 		lottemartWacDropdown : lottemartWacDropdown,
-		lottemartWacBxSldier : lottemartWacBxSldier
+		lottemartWacBxSldier : lottemartWacBxSldier,
 
+		addState : addState,
+		removeState : removeState
 	};
 }));
