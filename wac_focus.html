@@ -5643,7 +5643,7 @@
 
                 var gnbTriggerFocusInHandler = function(e){
                     _wac.preventDefaultAction(e)
-                    $(this).append('<div class="keyboard-helper"><span class="tab" style="top:unset; bottom:0; right:-53px;">TAB / → </span><span class="shift-tab">SHIFT+TAB / ↑</span><span class="enter" style="top:105%; right:50%;margin:0 -35px 0 0;">ENTER ●</span></div>');
+                    $(this).append('<div class="keyboard-helper"><span class="tab" style="top:unset; bottom:0; right:-53px;">TAB / → </span><span class="shift-tab">SHIFT+TAB / ↑</span><span class="enter" style="top:105%; right:50%;margin:0 -35px 0 0;">ENTER ●</span><span class="esc" style="top:0; left:0;">ESC X</span></div>');
                 }
                 var gnbTriggerMouseInHandler = function(e){
                   $(this).addClass('active');
@@ -5758,24 +5758,26 @@
                     onSliderLoad: function(currentIndex){
                         $mVisualNav.bxSlider(mNavSlideSetting);
                         index = currentIndex;
-                        //$nowActiveNav.addClass('now-active');
-                        $mVisual.after('<div class="pager-num"><em class="num">1</em>/<em class="num2">20</em></div>');
+                        $mVisual.after('<div class="pager-num"><em class="num">1</em>/<em class="num2">15</em></div>');
 
                         var mVisualNavItemKeydownHandler = function(e){
                                 $nowFocus = $(document.activeElement); // 1.전역변수 : 현재 촛점이 걸린 객체 할당
+                                console.log($(this));
                             var dataSlideIdx = (parseInt($nowFocus.attr('data-slide-index')) + 1)%5; // 2.지역변수 : 촛점 걸린 객체가 5번째 배너인지 판별
                                     //탭키
                                     if( _wac.isTabEvent(e)){
                                         if(_wac.isWacEntered($nowFocus)){
-                                            $nowActiveCont = _wac.getFocusables($('.wrap-cont').filter('[aria-hidden="false"]')).first();
-                                            $nowActiveCont.focus();
-                                            console.log($nowActiveCont)
+                                            _wac.preventDefaultAction(e)
+                                            $nowActiveCont = $mVisual.find('article[aria-hidden="false"]');
+                                            $firstOfActiveCont = _wac.getFocusables($nowActiveCont);
+                                            console.log($firstOfActiveCont)
+                                            $firstOfActiveCont.focus();
                                         }
                                         //현 포커스 객체가 마지막 배너일 경우
                                         //=> 다음 영역인 today 로 이동
                                         else if($nowFocus.is($lastBnrOfmVisualNav)){
                                             _wac.preventDefaultAction(e);
-                                            $('.hotcock-type .bx-controls-direction a').focus();
+                                            _wac.getFocusables($('.hotcock-type .bx-controls-direction')).first().focus();
                                             return false;
                                         }
                                         //현 포커스 객체가 5배수 인덱스 값을 가진 배너일경우
@@ -5790,7 +5792,6 @@
                                     }else if(_wac.isShiftTabEvent(e)){
                                         $nowFocus = $(this)
                                         if($nowFocus.is($firstBnrOfmVisualNav)){
-                                            console.log($('.m-visual-type .bx-next'));
                                             _wac.preventDefaultAction(e);
                                             $('.m-visual-type .bx-next').focus();
                                         }
@@ -5814,7 +5815,6 @@
                                         $mVisualNav.goToPrevSlide();
                                     }else if(_wac.isEnterEvent(e)){
                                         _wac.markWacEnteredAsync($(this));
-                                       
                                     }
                         }
 
@@ -5823,21 +5823,37 @@
                             $this.append('<div class="keyboard-helper"><span class="tab">TAB→</span><span class="shift-tab">←SHIFT+TAB</span><span class="enter" style="top:0;">ENTER↑</span></div>')
                             _wac.removeWacEnteredAsync($this);
                         }
-                        setTimeout(function(e){
-                            $mVisualNav.on({
-                                keydown : mVisualNavItemKeydownHandler,
-                                focusin : mVisualNavItemFocusInHandler,
-                                focusout : removeKeyboardHelperHandler
-                            }, 'a');
-                        }, 500)
+                       
+                        var mVisualContItemKeydownHandler = function(e){
+                            if(_wac.isTabEvent(e)){
+                                _wac.preventDefaultAction(e)
+                                $focusablesNav.filter('.now-active').focus();
+                            }
+                        }
+
+                        var mVisualContItemFocusInHandler = function(e){
+                            $(this).append('<div class="keyboard-helper"><span class="enter" style="top:85%">TAB / ↓</span></div>');
+                        }
+
+                        $mVisualNav.on({
+                            keydown : mVisualNavItemKeydownHandler,
+                            focusin : mVisualNavItemFocusInHandler,
+                            focusout : removeKeyboardHelperHandler
+                        }, 'a');
+               
+                        $focusablesCont.on({
+                            keydown : mVisualContItemKeydownHandler,
+                            focusin : mVisualContItemFocusInHandler,
+                            focusout : removeKeyboardHelperHandler
+                        })
+
                     },
                     onSlideBefore : function($slideElement, oldIndex, newIndex){
                         $focusablesNav.filter('.now-active').removeClass('now-active');
                         $focusablesNav.eq(newIndex).addClass('now-active');
                     },
                     onSlideAfter : function($slideElement, oldIndex, newIndex){
-                        console.log(newIndex)
-                        $('.pager-num .num').text(newIndex);
+                        $('.pager-num .num').text(newIndex + 1);
                     }
                 },
                 mNavSlideSetting = {
@@ -5847,9 +5863,9 @@
                     auto:false,
                     infiniteLoop : true,
                     onSliderLoad : function(){
-                        $
-                        $bxPrev = $mVisual.find('.bx-controls-direction .bx-prev');
-                        $bxNext = $mVisual.find('.bx-controls-direction .bx-next');
+                        $this = $(this).closest('.bx-wrapper');
+                        $bxPrev = $this.find('.bx-controls-direction .bx-prev');
+                        $bxNext = $this.find('.bx-controls-direction .bx-next');
                         $liOfNav = _wac.getFocusables($(this)).not('.bx-clone');
                         $bxPrev.on({
                             keydown : function bxPrevKeydwonHandler(e){
@@ -5907,7 +5923,8 @@
             var $hotCockSldieEventHandler = function(){
                 var $hotSlide = $('.hotcock-type'),
                     $hotSlideCont = $hotSlide.find('.cont ul'),
-                    $hotSlideNav = $hotSlide.find('.nav ul');
+                    $hotSlideNav = $hotSlide.find('.nav ul'),
+                    $FocusablesHotNav = _wac.getFocusables($hotSlideNav);
 
 
                 var hContSlideSetting = {
@@ -5925,6 +5942,8 @@
                     touchEnabled:false,
                     onSliderLoad : function(){
                         $hotSlideNav.bxSlider(hNavSlideSetting);
+
+                       
                     }
                 }
                 var hNavSlideSetting = {
@@ -5935,6 +5954,80 @@
                     auto:false,
                     infiniteLoop : true,
                     onSliderLoad : function(){
+                        $thisSldeWrap = $(this).closest('.hotcock-type');
+                        $hotPager = $thisSldeWrap.find('.nav .bx-pager a');
+
+                        //핫콕 슬라이드 네비 페이저 이벤트
+                        $hotSlideNav.on({
+                            click : function NavClickHandler(e){
+                                $hotSlideNav.find('li').filter('.active').removeClass('active');
+                                $(this).addClass('active');
+                            },
+                            keydown : function NavKeydownHandler(e){
+                                $nowFocus = $(document.activeElement);
+                                if(_wac.isEnterEvent(e)){
+                                    _wac.markWacEnteredAsync($nowFocus);
+                                }else if(_wac.isTabEvent(e)){
+                                    if(_wac.isWacEntered($nowFocus)){
+                                        $nowActiveCont = $('.hotcock-type .cont .bx-viewport li[aria-hidden="false"]');
+
+                                        _wac.getFocusables($nowActiveCont).first().focus();
+
+                                    }
+                                }
+                            },
+                            focusout :  function NavFocusOutHandler(e){
+                                _wac.removeWacEnteredAsync($(this));
+                            }
+                        },'li');
+
+                        $hotPager.on({
+                            keydown : function PagerKeydownHandler(e){
+                                $nowFocus = $(document.activeElement);
+                                if(_wac.isEnterEvent(e)){
+                                    _wac.markWacEnteredAsync($nowFocus);
+                                }else if(_wac.isTabEvent(e)){
+                                    if(_wac.isWacEntered($nowFocus)){
+                                        _wac.preventDefaultAction(e)
+                                        $nowActiveCont = $('.hotcock-type .nav .bx-viewport li[aria-hidden="false"]');
+                                        $nowActiveCont.first().find('a').focus();
+
+                                    }
+                                }
+                            },
+                            focusin : function PagerFocusIndHandler(e){
+                                $(this).css('position','relative');
+                                $(this).append('<div class="keyboard-helper"><span class="tab" style="top:calc(100% + 26px); right: unset; left:-13px;">TAB→</span><span class="shift-tab" style="left: unset; top:calc(100% + 49px); left:-32px;">←SHIFT+TAB</span><span class="enter" style="top:calc(100% + 3px);">ENTER●</span></div>');
+                            },
+                            focusout : function PagerFocusOutHandler(e){
+                                $this = $(this);
+                                _wac.removeWacEnteredAsync($(this));
+                                $this.find('.keyboard-helper').remove();
+                            }
+                            
+                        });
+
+                        $('.hotcock-type .bx-controls-direction a').on({
+                            keydown : function hotControlsKeydownHandler(e){
+                                $nowFocus = $(this);
+                                if(_wac.isTabEvent(e) && $nowFocus.hasClass('bx-next')){
+                                    _wac.preventDefaultAction(e);
+                                    $('.hotcock-type .bx-pager-link.active').focus();
+                                }
+                            },
+                            focusin : function hotControlsFocusInHandler(e){
+                               $(this).append('<div class="keyboard-helper"><span class="tab" style="right: -40px;">TAB→</span><span class="shift-tab" style="left: -20px; top: -22px;">←SHIFT+TAB</span><span class="enter" style="top: 100%;">ENTER●</span></div>');
+                            },
+                            focusout : removeKeyboardHelperHandler
+
+                        });
+
+                        $('.hotcock-type .nav .bx-viewport a').on({
+                            focusin : function hotControlsFocusInHandler(e){
+                               $(this).append('<div class="keyboard-helper"><span class="tab" style="top:13px; right:5px;">TAB→</span><span class="shift-tab" style="left: 5px; top:13px">←SHIFT+TAB</span><span class="enter" style="top: calc(100% - 27px);">ENTER●</span></div>');
+                            },
+                            focusout : removeKeyboardHelperHandler
+                        });
 
                     }
                 }
