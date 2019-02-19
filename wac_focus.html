@@ -5738,8 +5738,8 @@
                 var $lnbCsMenu = $('.lnb-cs-menu '),
                     $depth1Menu = $lnbCsMenu.find('.menu-depth1'),
                     $itemOfdepth1Menu = $depth1Menu.find('a').not('.menu-depth1.menu-all a'),
-                    $itemHasChild = $('.depth2-have'),
-                    $allMenu = $('.menu-depth1.menu-all a');
+                    $itemHasChild = $('.depth2-have a'),
+                    $allMenu = $('.menu-depth1.menu-all>a');
                 
                 var depth1MenuMouseInHandler = function(e){
                     _wac.addState($(this), 'active')
@@ -5753,7 +5753,12 @@
                         _wac.addState($(this), 'active');
                     }
                 }
-               
+                var depth1MenuFocusOutHandler = function(e){
+                    $this = $(document.activeElement);
+                    if(!$this.is($allMenu) && !$this.is($itemHasChild)){
+                        $this.trigger('mouseleave');
+                    }
+                }
                 var depth1MenuFocusInHandler = function(e){
                     addKeyboardHelperHandler($(this),'shifttab tab');
                 }
@@ -5766,7 +5771,8 @@
                 $depth1Menu.on({
                     mouseenter : depth1MenuMouseInHandler,
                     mouseleave : depth1MenuMouseOutHandler,
-                    keydown : depth1MenuKeydownHandler
+                    keydown : depth1MenuKeydownHandler,
+                    focusout : depth1MenuFocusOutHandler
                 });
 
                 $itemOfdepth1Menu.on({
