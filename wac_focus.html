@@ -74,20 +74,14 @@
                     <img src="./img/menu-icon.png" alt="메뉴형 아이콘"><br>
                     <a href="#ui-menu">메뉴형</a></li>
                 <li>
-                    <img src="./img/tab-icon.png" alt="탭형 아이콘"><br>
+                    <img src="./img/tab-icon.svg" alt="탭형 아이콘"><br>
                     <a href="#ui-tab">탭형</a>
                 </li>
                 <li>
                     <img src="./img/slide-icon.png" alt="슬라이드형 아이콘"><br>
                     <a href="#ui-slide">슬라이드형</a>
                 </li>
-                <!-- <li class="deco-key">
-                        <span><img src="./img/key-down.png" alt="아랫쪽 방향 화살표 키"></span>
-                        <span><img src="./img/key-up.png" alt="위쪽 방향 화살표 키"></span>
-                        <span><img src="./img/key-left.png" alt="왼쪽 방향 화살표 키"></span>
-                        <span><img src="./img/key-right.png" alt="오른쪽 방향 화살표 키"></span>
-                        <span><img src="./img/key-k.png" alt="K 모양키"></span>
-                    </li> -->
+               
             </ul>
         </div>
         <!-- mvisual end -->
@@ -5738,9 +5732,11 @@
                 var $lnbCsMenu = $('.lnb-cs-menu '),
                     $depth1Menu = $lnbCsMenu.find('.menu-depth1'),
                     $itemOfdepth1Menu = $depth1Menu.find('a').not('.menu-depth1.menu-all a'),
-                    $itemHasChild = $('.depth2-have a'),
+                    $itemHasChild = $('.depth2-have > a'),
+                    $lastItemOfChild = $('.depth2-have li.menu-depth2:last-child, menu-depth2-all:last-child'),
                     $allMenu = $('.menu-depth1.menu-all>a');
                 
+                    console.log($lastItemOfChild)
                 var depth1MenuMouseInHandler = function(e){
                     _wac.addState($(this), 'active')
                 }
@@ -5749,8 +5745,13 @@
                     _wac.removeState($(this), 'active')
                 }
                 var depth1MenuKeydownHandler = function(e){
+                    $this = $(this);
                     if(_wac.isEnterEvent(e)){
-                        _wac.addState($(this), 'active');
+                        if($this.hasClass('menu-all') || $this.hasClass('depth2-have')){
+                            $this.addClass('active');
+                        }
+                    }else if(_wac.isEscEvent(e)){
+                        $this.removeClass('active');
                     }
                 }
                 var depth1MenuFocusOutHandler = function(e){
@@ -5766,7 +5767,12 @@
                     addKeyboardHelperHandler($(this),'enter esc tab');
                 }
                 var hasChildMenuFocusInHandler = function(e){
-                    addKeyboardHelperHandler($(this),'enter');
+                    addKeyboardHelperHandler($(this),'enter esc');
+                }
+                var lastItemKeyDownHandler = function(e){
+                    if(_wac.isTabEvent(e)){
+                        $(this).closest('.menu-depth1').removeClass('active');
+                    }
                 }
                 $depth1Menu.on({
                     mouseenter : depth1MenuMouseInHandler,
@@ -5788,6 +5794,9 @@
                 $itemHasChild.on({
                     focusin : hasChildMenuFocusInHandler,
                     focusout : removeKeyboardHelperHandler
+                })
+                $lastItemOfChild .on({
+                    keydown : lastItemKeyDownHandler
                 })
             }()
 

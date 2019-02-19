@@ -259,6 +259,7 @@ button:focus{border:1px solid #293fff!important;}
     .ui-focus .m-visual ul{width:80%; max-width: 600px; position: relative; font-size: 65px; margin:0 auto; top:23vh;}
     .ui-focus .m-visual ul li{width:33.33%;  height: 100px; float: left; text-align: center;}
     .ui-focus .m-visual ul li img{width:100%; max-width:138px;}
+    .ui-focus .m-visual ul li:nth-child(2) img{width:100%; max-width:100px; margin:12px 0;}
     .ui-focus .m-visual ul li a{font-size: 18px;}
 
     .ui-focus .m-visual li.deco-key{position: absolute; width:100%;  top:0; left: 0;}
@@ -338,10 +339,12 @@ button:focus{border:1px solid #293fff!important;}
     .lnb-cs-menu .menu-all .link-tit {display: block; margin-bottom: 37px; padding-bottom: 11px; font-weight: 700; font-size: 16px; border-bottom: 1px solid #24221f;}
 
     .menu-depth1.menu-all a .enter{top:unset;  bottom:0; }
-    .menu-depth1 a .tab{top:0;  bottom:unset; right:0; left:left;}
+    .menu-depth1 a .tab{top:0;  bottom:unset; right:0; left:unset;}
     .menu-depth1 a .shift-tab{top:0; left:0;}
     .depth2-have .enter{top:unset!important; bottom:-10px;}
-
+    .depth2-have .esc{top:-24px!important; bottom:unset;}
+    .menu-depth2 a .tab{top:100%; bottom:unset; right:0;}
+    .menu-depth2 a .shift-tab{top:unset; bottom:100%; left:unset; right:0;}
 
 
 
