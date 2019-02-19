@@ -5559,7 +5559,9 @@
                     $categoryTabOfwacDown = $('.wac-down'),
                     $gnbList = $('#pn-allcategory-link').find('li');
                     $gnbListOfFirst = $('.category-group>li:first-child, .depth-2 > li:first-child, .depth-3>li:first-child');
-                    $gnbListOfLast = $('.category-group>li:last-child, .depth-2 > li:last-child, .depth-3>li:last-child');
+                    $gnbListOfLast = $('.category-group>li:last-child, .depth-2 > li:last-child, .depth-3>li:last-child'),
+                    $endOfgnbList = $('.wac-down .category-group>li:last-child');
+                   
 
                 
                 $gnbList.hover(function () {
@@ -5617,9 +5619,11 @@
                 }
                 var gnbLiKeydownHandler = function(e){
                     $nowFocus = $(this);
-
+                   
                     if(_wac.isTabEvent(e)){
-                        if($nowFocus.is($gnbListOfLast)){
+                        if($nowFocus.is($endOfgnbList)){
+                            _wac.removeState($gnbTrigger,'active');
+                        }else if($nowFocus.is($gnbListOfLast)){
                             _wac.gnbMenuMotionHandler(e, 'closeDepth');
                         }
                     }else if(_wac.isEnterEvent(e)){
@@ -5736,7 +5740,6 @@
                     $lastItemOfChild = $('.depth2-have li.menu-depth2:last-child, menu-depth2-all:last-child'),
                     $allMenu = $('.menu-depth1.menu-all>a');
                 
-                    console.log($lastItemOfChild)
                 var depth1MenuMouseInHandler = function(e){
                     _wac.addState($(this), 'active')
                 }

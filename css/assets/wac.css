@@ -285,10 +285,10 @@ button:focus{border:1px solid #293fff!important;}
 .gnb-menu #pn-allcategory-link .category-list{height:100%;}
     .gnb-menu #pn-allcategory-link .category-tab {float: left; width: 25%; height: 100%; position: relative;}
     .gnb-menu .wac-up, .gnb-menu .wac-down{position: relative;}
-    .category-tab:not(:last-child):focus:before{content:'TAB / →'; display: block; position: absolute; z-index: 9; background: #fff; width: 55px; height: 20px; border:1px solid #1faeda; color: #1faeda; font-size: 13px; text-align: center; line-height: 1.4; padding:2px; right:-15px; top: 15px; }
+    .category-tab:not(:last-child):focus:before{content:'TAB / →'; display: block; position: absolute; z-index: 9; background: #fff; width: 55px; height: 20px; border:1px solid #1faeda; color: #1faeda; font-size: 13px; text-align: center; line-height: 1.4; padding:2px; right:2px; top: 15px; }
 
-    .category-tab:not(:last-child):focus::after{content:'← / SHIFT+TAB'; display: block; position: absolute; z-index: 9; background: #fff; width: 105px; height: 20px; border:1px solid #fe4838; color: #fe4838; font-size: 14px;padding:2px; top:15px; left: 2px; text-align: center;line-height: 1.4;}
-    .category-tab>div[class*="wac"] .shift-tab{border:1px solid #fe4838; color: #fe4838;}
+    .category-tab:not(:last-child):focus::after{content:'← / SHIFT+TAB'; display: block; position: absolute; z-index: 9; background: #fff; width: 105px; height: 20px; border:1px solid #edbe25; color: #edbe25; font-size: 14px;padding:2px; top:15px; left: 2px; text-align: center;line-height: 1.4;}
+    .category-tab>div[class*="wac"] .shift-tab{border:1px solid #edbe25; color: #edbe25;}
     .wac-up .keyboard-helper .shift-tab{right:unset!important; top: unset!important; bottom:-10px!important; left:-5px!important;}
 
     .category-tab4 > div:nth-child(1){height:60%;}
