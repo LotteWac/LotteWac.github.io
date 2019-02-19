@@ -5519,17 +5519,33 @@
     <!-- container end -->
 
         <script>
-        $(document).ready(function(){
-            var $nowFocus,
-                keyboardHelper = '<div class="keyboard-helper"></div>',
-                addTab = '<span class="tab">TAB</span>',
-                addShiftTab = '<span class="shift-tab">SHIFT+TAB</span>',
-                addEnter = '<span class="enter">ENTER</span>',
-                addLeft = '<span class="right">←</span>',
-                addRight = '<span class="left">→</span>',
-                addUp = '<span class="enter">↑</span>',
-                addDown = '<span class="enter">↓</span>';
 
+
+
+
+        $(document).ready(function(){
+            var $nowFocus;
+
+            var addKeyboardHelperHandler = function($target, child){
+                var  keyboardHelper = '<div class="keyboard-helper"></div>',
+                     tab = '<span class="tab">TAB</span>',
+                     shifttab = '<span class="shift-tab">SHIFT+TAB</span>',
+                     enter = '<span class="enter">ENTER●</span>',
+                     esc = '<span class="esc">ESC</span>',
+                     left = '<span class="right">←</span>',
+                     right = '<span class="left">→</span>',
+                     up = '<span class="up">↑</span>',
+                     down = '<span class="down">↓</span>',
+                     childClassName = child.split(' ');
+                
+                $target.css('position','relative');
+                $target.append(keyboardHelper);
+
+                for(var i=0; i<childClassName.length; i++){
+                    $target.find('.keyboard-helper').append(eval(childClassName[i]));
+                }
+            }
+            
             var removeKeyboardHelperHandler = function(e){
                 $this = $(this);
                 $this.find('.keyboard-helper').remove();
@@ -5642,7 +5658,7 @@
                
                 var gnbWrapFocusInHandler = function(e){
                     $(this).css('position', 'relative');
-                    $(this).append('<div class="keyboard-helper"><span class="esc" style="top:0; left:0;">ESC X</span></div>');
+                    $(this).append('<div class="keyboard-helper"><span class="esc" style="top:-24px; left:0;">ESC X</span></div>');
                 }
                 var gnbTriggerFocusInHandler = function(e){
                     _wac.preventDefaultAction(e)
@@ -5661,11 +5677,10 @@
                     $(this).removeClass('active');
                   }
                 };
-
-                var Depth1LiFocusInHandler = function(e){
+                var depth1LiFocusInHandler = function(e){
                     $(this).append('<div class="keyboard-helper"><span class="tab">TAB / ↓</span><span class="shift-tab">SHIFT+TAB / ↑</span><span class="enter" style="left:unset; right:-50px;">ENTER●</span><span class="right-arrow" style="top:18px; right:-19px;">→</span></div>');
                 }
-                var Depth2LiFocusInHandler = function(e){
+                var depth2LiFocusInHandler = function(e){
                     $(this).append('<div class="keyboard-helper"><span class="tab">TAB / ↓</span><span class="shift-tab">SHIFT+TAB / ↑</span><span class="enter" style="left:unset; right:-50px;">ENTER●</span><span class="right-arrow" style="top:17px; right:-20px;">→</span><span class="left-arrow">←</span></div>');
                 }
              
@@ -5703,12 +5718,12 @@
                 });
 
                 $('.category-group > li > a').on({
-                    focusin : Depth1LiFocusInHandler,
+                    focusin : depth1LiFocusInHandler,
                     focusout: removeKeyboardHelperHandler
                 });
 
                 $('.depth-2 > li a').on({
-                    focusin : Depth2LiFocusInHandler,
+                    focusin : depth2LiFocusInHandler,
                     focusout: removeKeyboardHelperHandler
 
                 })
@@ -5721,11 +5736,13 @@
 
             var $lnbEventHandler = function(){
                 var $lnbCsMenu = $('.lnb-cs-menu '),
-                    $depth1Menu = $lnbCsMenu.find('.menu-depth1');
+                    $depth1Menu = $lnbCsMenu.find('.menu-depth1'),
+                    $itemOfdepth1Menu = $depth1Menu.find('a').not('.menu-depth1.menu-all a'),
+                    $itemHasChild = $('.depth2-have'),
+                    $allMenu = $('.menu-depth1.menu-all a');
                 
                 var depth1MenuMouseInHandler = function(e){
                     _wac.addState($(this), 'active')
-                    
                 }
 
                 var depth1MenuMouseOutHandler = function(e){
@@ -5736,16 +5753,34 @@
                         _wac.addState($(this), 'active');
                     }
                 }
+               
                 var depth1MenuFocusInHandler = function(e){
-                    $(this).css('position','relative');
-                    $(this).append('')
+                    addKeyboardHelperHandler($(this),'shifttab tab');
                 }
-
+                var allMenuFocusInHandler = function(e){
+                    addKeyboardHelperHandler($(this),'enter esc tab');
+                }
+                var hasChildMenuFocusInHandler = function(e){
+                    addKeyboardHelperHandler($(this),'enter');
+                }
                 $depth1Menu.on({
                     mouseenter : depth1MenuMouseInHandler,
                     mouseleave : depth1MenuMouseOutHandler,
-                    keydown : depth1MenuKeydownHandler,
+                    keydown : depth1MenuKeydownHandler
+                });
+
+                $itemOfdepth1Menu.on({
                     focusin : depth1MenuFocusInHandler,
+                    focusout : removeKeyboardHelperHandler
+                })
+
+                $allMenu.on({
+                    focusin : allMenuFocusInHandler,
+                    focusout : removeKeyboardHelperHandler
+                });
+                
+                $itemHasChild.on({
+                    focusin : hasChildMenuFocusInHandler,
                     focusout : removeKeyboardHelperHandler
                 })
             }()

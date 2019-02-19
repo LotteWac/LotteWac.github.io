@@ -36,9 +36,11 @@ strong {font-weight: 700; color: #111;}
     .keyboard-helper span.tab{right:-17px; top: 10px; border: 1px solid #1faeda; color: #1faeda;}
     .keyboard-helper span.shift-tab{left:-45px; top: 10px; border:1px solid #edbe25; color:#edbe25;}
     .keyboard-helper span.enter{top:-5px; left:50%; margin-left:-25px; color:#fe4838; border: 1px solid #fe4838;}
-    .keyboard-helper span.esc{color:#9d13af; border: 1px solid #9d13af;}
+    .keyboard-helper span.esc{left:0; top:0;color:#9d13af; border: 1px solid #9d13af;}
     .keyboard-helper span.right-arrow{color:#042aff; border: 1px solid #042aff;}
     .keyboard-helper span.left-arrow{color:#0aff8d; border: 1px solid #0aff8d;}
+    .keyboard-helper span.up-arrow{color:#8d8d8d; border: 1px solid #8d8d8d;}
+    .keyboard-helper span.down-arrow{color:#ff8da6; border: 1px solid #ff8da6;}
 
 
 
@@ -312,27 +314,10 @@ button:focus{border:1px solid #293fff!important;}
 .lnb-cs-menu{width:1030px; }
     .lnb-cs-menu .list-depth1{width:100%;  height:120px; margin: 0;}
     .lnb-cs-menu .list-depth1 .menu-depth1:nth-child(n+7){border-bottom:2px solid #24221f;}
-    .lnb-cs-menu .list-depth1 .menu-depth1.menu-all {
-            z-index: 999;
-            width: 180px;
-            height: 120px;
-            margin-left: 0;
-            color: #fff;
-            border-color: #24221f;
-            background-color: #24221f;
-            position: relative;
-        }
+    .lnb-cs-menu .list-depth1 .menu-depth1.menu-all {z-index: 999; width: 180px; height: 120px; margin-left: 0; color: #fff; border-color: #24221f; background-color: #24221f; position: relative;}
     .lnb-cs-menu .list-depth1 .menu-all>.link {height: 87px; padding-top: 30px; color: #fff; font-size: 18px;}
     .lnb-cs-menu .list-depth1 .menu-all.active>.link {color:#000;}
-    .lnb-cs-menu .list-depth1 .menu-all>.link:before {
-            content: '';
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            margin: 0 19px 0 5px;
-            background: url(../../img/sprite_ico.png) no-repeat -531px top;
-            vertical-align: middle;
-        }
+    .lnb-cs-menu .list-depth1 .menu-all>.link:before {content: ''; display: inline-block; width: 30px; height: 30px;  margin: 0 19px 0 5px; background: url(../../img/sprite_ico.png) no-repeat -531px top; vertical-align: middle;}
     
     .lnb-cs-menu .list-depth1 .menu-all>.link {display:block; height: 90px; padding-top: 30px; line-height: 60px; text-indent: 25px;}
     .lnb-cs-menu .list-depth1 .menu-depth1 {float: left; position: relative; width: 170px; height: 60px;  border: 1px solid #bbb; font-weight: 700; font-size: 16px; color: #666; background-color: #e2e2e2;}
@@ -344,36 +329,18 @@ button:focus{border:1px solid #293fff!important;}
     .lnb-cs-menu .menu-all .depth2 {width: 1030px!important;padding-top: 26px;}
     .menu-depth2-all {width: 180px; margin: 0 0 0 25px; float: left;}
 
-    .lnb-cs-menu .menu-depth1 .depth2 {
-            position: absolute;
-            top: 100%;
-            width: 170px;
-            left: -2px;
-            border: 2px solid #24221f;
-            border-top:0;
-            background-color: #fff;
-            z-index: 99;
-            box-sizing: border-box;
-        }
+    .lnb-cs-menu .menu-depth1 .depth2 {position: absolute;top: 100%; width: 170px;left: -2px; border: 2px solid #24221f;border-top:0; background-color: #fff;z-index: 99;box-sizing: border-box;}
     .lnb-cs-menu .list-depth2 {margin: 18px 0 7px;}
-    .lnb-cs-menu .menu-depth2 {
-       
-        margin-bottom: 14px;
-    }
-    .lnb-cs-menu .menu-depth2>.link {
-        display: inline-block;
-        padding: 0 0 0 23px;
-        letter-spacing: 0;
-        vertical-align: top;
-    }
-    .lnb-cs-menu .menu-all .link-tit {
-        display: block;
-        margin-bottom: 37px;
-        padding-bottom: 11px;
-        font-weight: 700;
-        font-size: 16px;
-        border-bottom: 1px solid #24221f;
-    }
+    .lnb-cs-menu .menu-depth2 {margin-bottom: 14px;}
+    .lnb-cs-menu .menu-all .link-tit {display: block; margin-bottom: 37px; padding-bottom: 11px; font-weight: 700; font-size: 16px; border-bottom: 1px solid #24221f;}
+
+    .menu-depth1.menu-all a .enter{top:unset;  bottom:0; }
+    .menu-depth1 a .tab{top:0;  bottom:unset; right:0; left:left;}
+    .menu-depth1 a .shift-tab{top:0; left:0;}
+    .depth2-have .enter{top:unset!important; bottom:-10px;}
+
+
+
 
 /* .ui-tab > .prodlist-type */
 .prodlist-type{width:100%;}
