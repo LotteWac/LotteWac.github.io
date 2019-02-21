@@ -291,7 +291,7 @@ button:focus{border:1px solid #293fff!important;}
  **********************/
 .wac-guide #mobileNavBtn{position: absolute; top:8px; left:20px; font-size: 20px; color: #fff; display: none;}
 
-.wac-guide .btn-fixed-top{position: fixed; width: 30px; height:30px; bottom :50px; right:50%; margin:0 -660px 0 0;  z-index: 99; background: #293f54;  border-radius: 15px;}
+.wac-guide .btn-fixed-top{position: fixed; width: 30px; height:30px; bottom :50px; right:50%; margin:0 -660px 0 0;  z-index: 99; background: #293f54;  border-radius: 15px; padding:0;}
     .wac-guide .btn-fixed-top a{display: block; text-align: center;}
     .wac-guide .btn-fixed-top i{font-size: 15px; color:#fff;}
 
