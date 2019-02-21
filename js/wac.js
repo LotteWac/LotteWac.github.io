@@ -2442,7 +2442,7 @@
 						// 		$tabContProd.first().addClass('hover');
 						// 	}
 							_wac.onNextAsync(e, $activeTabCont[0]);
-							console.log( $activeTabCont[0])
+							console.log( $activeTabCont)
 							//return false;
 						//}
 					//1-2. 기본적 탭키 이벤트일경우
@@ -2512,10 +2512,10 @@
 			}
 			// 3.현재선택된 탭에 title="현재선택" 속성 추가 핸들러
 			var attrTitleController = function(e){
-				console.log(1)
+			
 				$this = $(this);
 				contAreaId = $this.attr("data-role");
-				$tabContWrap.children('.active').removeClass('active');
+				$tabContWrap.find('.active').removeClass('active');
 				$("#"+contAreaId).addClass('active');
 
 	 			$this.siblings().removeAttr("title").removeClass('active');
