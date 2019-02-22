@@ -353,15 +353,23 @@ button:focus{border:1px solid #293fff!important;}
  *************************/
  .wac-guide.mobile .container{width: 100%; padding-top: 60px;}
  .wac-guide.mobile .container h2{font-size: 30px; text-align: center;}
- .wac-guide.mobile .container h3{font-size: 25px; text-align: left;}
-
- .wac-guide.mobile .main-cont{width: 100%; padding-top: 60px;}
+ .wac-guide.mobile .container h3{font-size: 60px; color: #3c7ea9; text-align: left; line-height: 1;}
+ 
+ .wac-guide.mobile #wac-app,
+ .wac-guide.mobile #wac-device,
+ .wac-guide.mobile .main-cont{width: 100%; padding: 60px 0;}
     .wac-guide.mobile .main-cont ul{width: 70%; height: 600px; margin: 0 auto; margin-top:70px; position: relative;}
     .wac-guide.mobile .main-cont ul li{display: inline;}
-    .wac-guide.mobile .main-cont ul li a{display: block; width: 300px; height: 300px; border-radius: 50%; background: khaki; position: absolute; text-align: center; padding: 50px;}
-    .wac-guide.mobile .main-cont ul li:nth-child(1) a{top: 0;left: 50%; margin-left:-150px;}
-    .wac-guide.mobile .main-cont ul li:nth-child(2) a{bottom: 0;left: 10%;}
-    .wac-guide.mobile .main-cont ul li:nth-child(3) a{bottom: 0; right: 10%;}
+    .wac-guide.mobile .main-cont ul li a{display: block; width: 300px; height: 300px; border-radius: 50%; position: absolute; text-align: center; padding-top: 170px; font-weight: 900;}
+    .wac-guide.mobile .main-cont ul li:nth-child(1) a{background:url(../../img/smartphone.png) no-repeat 50% 15% #cbe6be; top: 0;left: 50%; margin-left:-150px;}
+    .wac-guide.mobile .main-cont ul li:nth-child(2) a{background:url(../../img/mobile-app.png) no-repeat 50% 15% #fff38c; bottom: 0;left: 10%;}
+    .wac-guide.mobile .main-cont ul li:nth-child(3) a{background:url(../../img/listen.png) no-repeat 50% 15% #97ec92; bottom: 0; right: 10%;}
+
+.wac-guide.mobile #wac-device img{max-width: 700px;}
+.wac-guide.mobile #wac-device h4{font-size:30px; margin: 20px 0;}
+
+
+
 
 
 /**********************
