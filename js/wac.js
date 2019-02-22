@@ -2434,17 +2434,17 @@
 					if(_wac.isWacEntered($this)){
 						_wac.preventDefaultAction(e);
 						 $activeTabCont =_wac.getFocusables($tabContWrap.find('.active')).not($('.disabled'));
-						// $tabContProd = $tabContWrap.find('.active article.product-article'); //탭 컨텐츠 내 상품리스트가 존재할 경우, 상품 article
-						// console.log($tabContProd);
-						// if(!_wac.isEmpty($activeTabCont)){
-						// 	//_wac.preventDefaultAction(e);
-						// 	if(!_wac.isEmpty($tabContProd)){
-						// 		$tabContProd.first().addClass('hover');
-						// 	}
+						$tabContProd = $tabContWrap.find('.active article.product-article'); //탭 컨텐츠 내 상품리스트가 존재할 경우, 상품 article
+						console.log($tabContProd);
+						if(!_wac.isEmpty($activeTabCont)){
+							//_wac.preventDefaultAction(e);
+							if(!_wac.isEmpty($tabContProd)){
+								$tabContProd.first().addClass('hover');
+							}
 							_wac.onNextAsync(e, $activeTabCont[0]);
-							console.log( $activeTabCont)
+							//console.log( $activeTabCont)
 							//return false;
-						//}
+						}
 					//1-2. 기본적 탭키 이벤트일경우
 					}else if(!(_wac.isWacEntered($this))){ 
 						if($this.is($tabNav.last()) && !_wac.isEmpty($nextEl)){
