@@ -363,6 +363,7 @@ button:focus{border:1px solid #293fff!important;}
  *   mobile_guide.html   *
  *                       *
  *************************/
+ .wac-guide.mobile .inner{overflow: visible;}
  .wac-guide.mobile .container{width: 100%; padding-top: 60px;}
  .wac-guide.mobile .container h2{font-size: 30px; text-align: center;}
  .wac-guide.mobile .container h3{font-size: 60px; color: #3c7ea9; text-align: left; line-height: 1;}
@@ -381,17 +382,24 @@ button:focus{border:1px solid #293fff!important;}
 .wac-guide.mobile #wac-device li{margin: 20px 0;}
 .wac-guide.mobile #wac-device img{width: 100%; max-width: 860px;}
 .wac-guide.mobile #wac-device .android img:nth-child(1){width: 100%; max-width: 610px;}
-.wac-guide.mobile #wac-app h4,
+.wac-guide.mobile h4,
 .wac-guide.mobile #wac-device h4{font-size:30px; margin: 20px 0;}
 .wac-guide.mobile #wac-device em{font-size:25px; margin: 20px 0;}
+
 .wac-guide.mobile #wac-app .item{margin-top: 20px;}
 .wac-guide.mobile #wac-app .summary{padding: 0;}
 .wac-guide.mobile #wac-app .summary::before{display: inline-block;content: '+ '; }
 
+.wac-guide.mobile #wac-assistive .item h4{margin-bottom: 0;}
+.wac-guide.mobile #wac-assistive .item p{margin-bottom:10px }
+.wac-guide.mobile #wac-assistive .item p:before{display: inline; content: '+ '; }
 
+.wac-guide.mobile #wac-assistive .item li{display:inline;}
+.wac-guide.mobile #wac-assistive .item li a{display:inline-block; background: #589ecc; padding: 2px 10px; margin-right: 15px; color: #fff;}
+.wac-guide.mobile #wac-assistive .item li .tooltip-arrow{border-bottom-color:#589ecc!important;}
+.wac-guide.mobile #wac-assistive .item li .tooltip-inner{background: #fff!important; color: #589ecc; border: 2px solid #589ecc; font-size: 13px; letter-spacing: -0.5px;line-height: 1.8; padding: 15px 10px;}
 
-
-
+ 
 /**********************
  *                    *
  *   wac_focus.html  *

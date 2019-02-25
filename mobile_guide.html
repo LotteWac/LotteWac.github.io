@@ -13,6 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script src="./js/highlight.pack.js"></script>
+    <script src="./js/common.js"></script>
 
 
     <title>롯데마트 웹접근성 가이드</title>
@@ -66,19 +67,19 @@
                     <h2>모바일 접근성(Mobile Accessibility)</h2>
                     <ul>
                         <li>
+                            <a href="#wac-app">
+                                Mobile Web/Apps<br>
+                                모바일 앱에서 사용하는<br>
+                                콘텐츠의 접근성
+                            </a>
+                        </li>
+                        <li>
                             <a href="#wac-device">
                                 Mobile Device<br>
                                 모바일 기기 자체의 접근성
                             </a>
                         </li>
-                            <li>
-                            <a href="#wac-app">
-                                Mobile Web/Apps<br>
-                                모바일에서 사용하는<br>
-                                콘텐츠의 접근성
-                            </a>
-                        </li>
-                            <li>
+                        <li>
                             <a href="#wac-assistive">
                                 Mobile Assistive Technologies<br>
                                 장애인의 이용 편의를<br>
@@ -89,59 +90,6 @@
                 </div>
                 <!-- inner end -->
             </div>
-
-            <!-- #wac-device start -->
-            <div id="wac-device">
-                <div class="inner">
-                    <h3>
-                        <em class="title-small">Mobile Device</em>
-                    모바일 기기 자체의 접근성</h3>
-                    
-                    <h4>- IOS : Voice Over</h4> 
-                    <ul class="iphone">
-                        <li>
-                            + Apple사 에서 제조한 아이폰의 경우에는 IOS 에 자체 내장된
-                            Voice Over 기능이 시각장애인들의 편의를 위하여
-                            화면을 낭독해줍니다.
-                        </li>
-                        <li>
-                            <em>사용방법</em> <br>
-                            + 설정 > 일반 > 손쉬운 사용<br>
-                            <img src="./img/voice-over.png" alt="아이폰 설정 화면">
-                        </li>
-                        <li>
-                            + Apple사의 공식홈페이지에서 운영중인 접근성 페이지를
-                            방문해보시면 해당 기술에 대한 자세한 내용을 확인하실 수 있습니다.
-                        </li>
-                        <li>
-                            <a href="https://www.apple.com/kr/accessibility/iphone/vision/" type="button" class="btn btn-success">손쉬운 사용 보러가기</a>
-                        </li>
-                    </ul>
-                    <h4>- ANDROID : Talk Back</h4>
-                    <ul class="android">
-                        <li>
-                            + Google사 에서 제조한 안드로이드 OS를 사용하는 
-                            스마트 디바이스의 경우에는<br> 안드로이드 OS에 자체 내장된
-                            Talk Back 기능이<br> 시각장애인들의 편의를 위하여
-                            화면을 낭독해줍니다.
-                        </li>
-                        <li>
-                            <em>사용방법</em><br>
-                            + 설정 > 접근성 > 글자 읽어주기<br>
-                            <!-- <img src="./img/and-voice.png" alt="안드로이드 tts 설정 화면" class="android"> -->
-                            <img src="./img/and-voice2.png" alt="안드로이드 tts 설정 화면">
-                        </li>
-                        <li>
-                            + Google에서 운영중인 접근성 페이지를 방문해보시면<br> 
-                            해당 기술에 대한 자세한 내용을 확인하실 수 있습니다.
-                        </li>
-                        <li>
-                            <a href="https://support.google.com/accessibility/android/answer/6283677?hl=ko" type="button" class="btn btn-success">구글 접근성 가이드 보러가기</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- #wac-device end -->
 
             <!-- #wac-app start -->
             <div id="wac-app">
@@ -567,6 +515,59 @@
             </div>
             <!-- #wac-app end -->
 
+            <!-- #wac-device start -->
+            <div id="wac-device">
+                <div class="inner">
+                    <h3>
+                        <em class="title-small">Mobile Device</em>
+                    모바일 기기 자체의 접근성</h3>
+                    
+                    <h4>- IOS : Voice Over</h4> 
+                    <ul class="iphone">
+                        <li>
+                            + Apple사 에서 제조한 아이폰의 경우에는 IOS 에 자체 내장된
+                            Voice Over 기능이 시각장애인들의 편의를 위하여
+                            화면을 낭독해줍니다.
+                        </li>
+                        <li>
+                            <em>사용방법</em> <br>
+                            + 설정 > 일반 > 손쉬운 사용<br>
+                            <img src="./img/voice-over.png" alt="아이폰 설정 화면">
+                        </li>
+                        <li>
+                            + Apple사의 공식홈페이지에서 운영중인 접근성 페이지를
+                            방문해보시면 해당 기술에 대한 자세한 내용을 확인하실 수 있습니다.
+                        </li>
+                        <li>
+                            <a href="https://www.apple.com/kr/accessibility/iphone/vision/" type="button" class="btn btn-success">손쉬운 사용 보러가기</a>
+                        </li>
+                    </ul>
+                    <h4>- ANDROID : Talk Back</h4>
+                    <ul class="android">
+                        <li>
+                            + Google사 에서 제조한 안드로이드 OS를 사용하는 
+                            스마트 디바이스의 경우에는<br> 안드로이드 OS에 자체 내장된
+                            Talk Back 기능이<br> 시각장애인들의 편의를 위하여
+                            화면을 낭독해줍니다.
+                        </li>
+                        <li>
+                            <em>사용방법</em><br>
+                            + 설정 > 접근성 > 글자 읽어주기<br>
+                            <!-- <img src="./img/and-voice.png" alt="안드로이드 tts 설정 화면" class="android"> -->
+                            <img src="./img/and-voice2.png" alt="안드로이드 tts 설정 화면">
+                        </li>
+                        <li>
+                            + Google에서 운영중인 접근성 페이지를 방문해보시면<br> 
+                            해당 기술에 대한 자세한 내용을 확인하실 수 있습니다.
+                        </li>
+                        <li>
+                            <a href="https://support.google.com/accessibility/android/answer/6283677?hl=ko" type="button" class="btn btn-success">구글 접근성 가이드 보러가기</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- #wac-device end -->
+
             <!-- #wac-assistive start -->
             <div id="wac-assistive"> 
                 <div class="inner">
@@ -575,16 +576,99 @@
                     장애인의 이용 편의를
                     위한 보조기기</h3>
 
+                    <div class="item">
+                        <h4>스크린 리더</h4>
+                        <p>
+                            컴퓨터나 모바일을 사용할 때 화면에 표시되는 입출력 정보를 음성으로 알려주는 프로그램입니다.
+                        </p>
+                        <ul>
+                            <li>
+                                <a href="http://www.xvtech.com/xvtech/">
+                                    센스리더
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://support.google.com/accessibility/android/answer/6283677?hl=ko">
+                                    TalkBack 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.apple.com/kr/accessibility/iphone/vision/">
+                                    VoiceOver
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.blindsquare.com/">
+                                    블라인드스퀘어(BlindSquare)
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h4>명도 대비</h4>
+                        <P>
+                            전경색과 배경색의 명도 차이를 비교할 수 있게 도와주는 확장 프로그램과 화면을 고대비로 전환할 수 있는 프로그램입니다.
+                        </P>    
+                        <ul>
+                            <li>
+                                <a href="https://www.techworld.com/download/system-desktop-tools/colour-contrast-analyser-250-3331407/" data-toggle="tooltip" data-placement="bottom" title="대표적인 명도대비 프로그램으로, 적용할 이미지의 내용을 반전하여 확인이 가능합니다.">
+                                    Colour Contrast Analyser
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://contrast-ratio.com/" data-toggle="tooltip" data-placement="bottom" title="디자이너를 위한 명도 대비 포토샵 확장 프로그램으로, 설치시 포토샵 작업을 하며 명도 대비의 적합도 확인이 가능합니다.">
+                                    Contrast Ratio
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph?hl=ko" data-toggle="tooltip" data-placement="bottom" title="구글 크롬 확장도구 중 하나로, 웹사이트의 내용을 반전하여 확인이 가능합니다.">
+                                    고대비
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h4>접근성 자동 진단</h4>
+                        <P>
+                            접근성을 개선이 필요한 부분을 자동으로 검출해주는 프로그램입니다.
+                        </P>
+                        <ul>
+                            <li>
+                                <a href="">
+                                PC(WAVE)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                모바일(Android)
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h4>VR 서비스</h4>
+                        <P>
+                            VR기기를 이용하여 저시력 장애인들의 시각적 보조 기능을 제공해주는 프로그램입니다.
+                        </P>
+                        <ul>
+                            <li>
+                                <a href="https://www.samsung.com/sec/magazine/vol6/">
+                                    릴루미노
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
-                    <ul>
-                        <li>
-                            블라인드스퀘어(BlindSquare)
-                            <img src="" alt="">
-                        </li>
-                        <li>
-                            버벌리(Verbally)
-                        </li>
-                    </ul>
+                    <div class="item">
+                        <h4>원격생활안전서비스</h4>
+                        <ul>
+                            <li>
+                                <a href="https://opengov.seoul.go.kr/mediahub/9325828">
+                                    엔젤아이즈
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <!-- #wac-assistive end -->
