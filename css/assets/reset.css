@@ -45,7 +45,7 @@
 html,body{width:100%;}
 html{overflow-y:scroll; overflow-x: hidden;}
 html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,button,header,nav,aside,footer,option,a,.header,.gnb, .login-box, .footer, .inner,.btn-box,input{margin:0; padding:0; font-size: 15px; box-sizing: border-box; font-family: 'lottemart-dream-Medium','lottemart-dream-Medium','Calibri', 'MalgunGothic', 'sans-serif';-webkit-font-size-adjust:none;}
-body,h1,h2,h3,h4,input,button{color:#A6A6A6;-webkit-font-size-adjust: 100%;}
+body,h1,h2,h3,h4,input,button{color:#000;-webkit-font-size-adjust: 100%;}
 body{background-color:#fff;*word-break:break-all;-ms-word-break:break-all; font-family:'lottemart-dream-Medium','Calibri', 'MalgunGothic', 'sans-serif';text-align:left; }
 
 img,fieldset,iframe{border:0 none}

@@ -16,7 +16,7 @@
 
 dl, dt, dd, li, a, p, h3, h4, h5{color:#222; line-height: 2.0;}
 h3, h4, h5{font-family: 'lottemart-dream-bold', 'MalgunGothic', 'sans-serif',sans-serif;box-sizing: border-box;}
-dl, dt, dd, li, a, p, button, .tooltip-inner{font-family: 'lottemart-happy-Medium', 'Nanum Gothic', 'MalgunGothic', 'sans-serif', sans-serif, 'AppleGothic', AppleGothic;}
+div, dl, dt, dd, li, a, p, button, .tooltip-inner{font-family: 'lottemart-happy-Medium', 'Nanum Gothic', 'MalgunGothic', 'sans-serif', sans-serif, 'AppleGothic', AppleGothic;}
 input, button{ border-width:1px!important;}
 
 h4{font-weight:900;}
@@ -311,14 +311,18 @@ button:focus{border:1px solid #293fff!important;}
 
 
 .wac-guide .container .contents{width:calc(100% - 280px); float: right; border-left:1px solid #e1e1e1; padding-left:20px; z-index: 90;}
+
 .wac-guide .container .contents .article{margin-bottom : 200px; padding-top:20px;}
 .wac-guide .container .contents .article h3{font-size:25px; color: #293f54;}
 
 .wac-guide .container .contents .article > div[id^="item"]:target{padding-top: 70px;}
+.wac-guide.mobile #wac-app h5,
 .wac-guide .container .contents .article > div[id^="item"] > h4{color: #215c6e; width: 100%; height: 50px; padding: 11px 20px; border:1px solid #e1e1e1; border-top:2px solid #16657e; border-bottom:1px solid #e1e1e1; cursor: pointer; border-radius: 5px 5px 0 0}
 .wac-guide .container .contents .article > div[id^="item"] > h4 i{top: 7px; float: right; margin-right: 14px; -ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); transform: rotate(90deg); transition: all ease 0.5s 0s;}
 .wac-guide .container .contents .article > div[id^="item"] > h4 i.open{ -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); transition: all ease 0.5s 0s;}
+.wac-guide.mobile #wac-app .item-cont,
 .wac-guide .container .contents .article > div[id^="item"] .item-cont{border:1px solid #e1e1e1; border-top:0; padding-bottom:20px;}
+.wac-guide.mobile #wac-app p,
 .wac-guide .container .contents .article > div[id^="item"] .item-cont > p{padding:15px 0 0 30px;}
 
 
@@ -326,6 +330,8 @@ button:focus{border:1px solid #293fff!important;}
 
 
 .wac-guide .container .contents #wacExample > div{margin-top: 20px;}
+.wac-guide.mobile #wac-app .sample,
+.wac-guide.mobile #wac-app .definition,
 .wac-guide .container .contents #wacExample .sample,
 .wac-guide .container .contents #wacExample .definition{width:90%; margin: 0 auto; padding:20px 0;}
 /* .wac-guide .container .contents #wacExample .sample h5, */
@@ -336,6 +342,7 @@ button:focus{border:1px solid #293fff!important;}
 .wac-guide .container .contents #wacExample .sample img{margin: 20px 0; max-width:100%;}
 
 
+.wac-guide.mobile #wac-app .offer,
 .container .contents #wacExample .check-list{width:90%; margin: 0 auto; padding: 20px 0;}
 .container .contents #wacExample .check-list dt,
 .container .contents #wacExample .check-list dd{padding:3px 10px; border:1px solid #e1e1e1;}
@@ -358,6 +365,7 @@ button:focus{border:1px solid #293fff!important;}
  .wac-guide.mobile #wac-app,
  .wac-guide.mobile #wac-device,
  .wac-guide.mobile .main-cont{width: 100%; padding: 60px 0;}
+    
     .wac-guide.mobile .main-cont ul{width: 70%; height: 600px; margin: 0 auto; margin-top:70px; position: relative;}
     .wac-guide.mobile .main-cont ul li{display: inline;}
     .wac-guide.mobile .main-cont ul li a{display: block; width: 300px; height: 300px; border-radius: 50%; position: absolute; text-align: center; padding-top: 170px; font-weight: 900;}
@@ -365,8 +373,12 @@ button:focus{border:1px solid #293fff!important;}
     .wac-guide.mobile .main-cont ul li:nth-child(2) a{background:url(../../img/mobile-app.png) no-repeat 50% 15% #fff38c; bottom: 0;left: 10%;}
     .wac-guide.mobile .main-cont ul li:nth-child(3) a{background:url(../../img/listen.png) no-repeat 50% 15% #97ec92; bottom: 0; right: 10%;}
 
-.wac-guide.mobile #wac-device img{max-width: 700px;}
+.wac-guide.mobile #wac-device li{margin: 20px 0;}
+.wac-guide.mobile #wac-device .iphone img{width: 100%; max-width: 860px;}
+.wac-guide.mobile #wac-device .android img{width: 100%; max-width: 610px;}
 .wac-guide.mobile #wac-device h4{font-size:30px; margin: 20px 0;}
+.wac-guide.mobile #wac-device em{font-size:25px; margin: 20px 0;}
+.wac-guide.mobile #wac-app .item{margin-top: 20px;}
 
 
 
