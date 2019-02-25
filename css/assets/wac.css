@@ -16,8 +16,8 @@
 
 dl, dt, dd, li, a, p, h3, h4, h5{color:#222; line-height: 2.0;}
 h3, h4, h5{font-family: 'lottemart-dream-bold', 'MalgunGothic', 'sans-serif',sans-serif;box-sizing: border-box;}
-div, dl, dt, dd, li, a, p, button, .tooltip-inner{font-family: 'lottemart-happy-Medium', 'Nanum Gothic', 'MalgunGothic', 'sans-serif', sans-serif, 'AppleGothic', AppleGothic;}
-input, button{ border-width:1px!important;}
+div, dl, dt, dd, li, a, p, button, .tooltip-inner{font-family: 'lottemart-happy-Medium', 'Nanum Gothic', 'MalgunGothic', 'sans-serif', sans-serif, 'AppleGothic', AppleGothic;line-height: 2.0;}
+input, button{ border-width:1px!important; }
 
 h4{font-weight:900;}
 p{padding-left:5px;}
@@ -28,6 +28,7 @@ p{padding-left:5px;}
 .blind{display: none;}
 .circle-num{display:inline-block; width:15px; height:15px; border-radius:7.5px; background:#293f54; color:#fff; text-align:center; margin: 0 10px; line-height:1;}
 .mobile-block{display: inline;}
+.title-small{font-size: 20px; display :block; letter-spacing: 5px; margin:8px !important;}
 strong {font-weight: 700; color: #111;}
 .ui-datepicker-trigger, [class|=btn] {
     display: inline-block;
@@ -317,8 +318,12 @@ button:focus{border:1px solid #293fff!important;}
 
 .wac-guide .container .contents .article > div[id^="item"]:target{padding-top: 70px;}
 .wac-guide.mobile #wac-app h5,
-.wac-guide .container .contents .article > div[id^="item"] > h4{color: #215c6e; width: 100%; height: 50px; padding: 11px 20px; border:1px solid #e1e1e1; border-top:2px solid #16657e; border-bottom:1px solid #e1e1e1; cursor: pointer; border-radius: 5px 5px 0 0}
-.wac-guide .container .contents .article > div[id^="item"] > h4 i{top: 7px; float: right; margin-right: 14px; -ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); transform: rotate(90deg); transition: all ease 0.5s 0s;}
+.wac-guide .container .contents .article > div[id^="item"] > h4{color: #215c6e; width: 100%; height: 50px; padding: 11px 20px; border:1px solid #e1e1e1; border-top:2px solid #16657e; border-bottom:1px solid #e1e1e1; cursor: pointer; border-radius: 5px 5px 0 0; position: relative;}
+
+
+.wac-guide.mobile .item > h5 i,
+.wac-guide .container .contents .article > div[id^="item"] > h4 i{top: 7px; float: right; margin-right: 14px; -ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); transform: rotate(90deg); transition: all ease 0.5s 0s; position: absolute; top:50%; right: 0; margin-top:-7px;}
+.wac-guide.mobile .item > h5 i.open,
 .wac-guide .container .contents .article > div[id^="item"] > h4 i.open{ -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); transition: all ease 0.5s 0s;}
 .wac-guide.mobile #wac-app .item-cont,
 .wac-guide .container .contents .article > div[id^="item"] .item-cont{border:1px solid #e1e1e1; border-top:0; padding-bottom:20px;}
@@ -374,11 +379,14 @@ button:focus{border:1px solid #293fff!important;}
     .wac-guide.mobile .main-cont ul li:nth-child(3) a{background:url(../../img/listen.png) no-repeat 50% 15% #97ec92; bottom: 0; right: 10%;}
 
 .wac-guide.mobile #wac-device li{margin: 20px 0;}
-.wac-guide.mobile #wac-device .iphone img{width: 100%; max-width: 860px;}
-.wac-guide.mobile #wac-device .android img{width: 100%; max-width: 610px;}
+.wac-guide.mobile #wac-device img{width: 100%; max-width: 860px;}
+.wac-guide.mobile #wac-device .android img:nth-child(1){width: 100%; max-width: 610px;}
+.wac-guide.mobile #wac-app h4,
 .wac-guide.mobile #wac-device h4{font-size:30px; margin: 20px 0;}
 .wac-guide.mobile #wac-device em{font-size:25px; margin: 20px 0;}
 .wac-guide.mobile #wac-app .item{margin-top: 20px;}
+.wac-guide.mobile #wac-app .summary{padding: 0;}
+.wac-guide.mobile #wac-app .summary::before{display: inline-block;content: '+ '; }
 
 
 
@@ -921,11 +929,20 @@ button:focus{border:1px solid #293fff!important;}
     .index .container .m-visual > img{height:100%;}
 
 
+    /* *********************
+     *  mobile-guide.html  *
+     ***********************/
+    .wac-guide .btn-fixed-top{right:50px; margin:0;}
+ 
+
     /* ******************
      *  wac-guide.html  *
      ********************/
-    .wac-guide .btn-fixed-top{right:50px; margin:0;}
- }
+     .wac-guide.mobile .main-cont ul li:nth-child(2) a{left: 0%;}
+     .wac-guide.mobile .main-cont ul li:nth-child(3) a{right: 0%;}
+
+
+}
 @media (max-width:1200px){
     .inner{padding: 0 20px;}
     /* ******************
@@ -958,6 +975,14 @@ button:focus{border:1px solid #293fff!important;}
 
 
 }
+@media (max-width:1000px){
+ 
+    /* *********************
+     *  mobile-guide.html  *
+     ***********************/   
+     .wac-guide.mobile #wac-app h5{height: unset;padding: 11px 35px 11px 10px;}
+    .wac-guide.mobile .main-cont ul li a{width:265px; height:265px; padding-top:150px;}
+}
 @media (max-width:768px){
     /* ******************
      *      common      *
@@ -987,6 +1012,16 @@ button:focus{border:1px solid #293fff!important;}
      *  wac-guide.html  *
      ********************/
      .wac-guide #mobileNavBtn{top:5px; font-size: 26px;}
+
+
+    /* *********************
+     *  mobile-guide.html  *
+     ***********************/   
+     .wac-guide.mobile .main-cont ul {height: unset;}
+     .wac-guide.mobile .main-cont ul li a{position: relative; top:unset; left: 50%!important; right: unset; bottom:unset;margin: 20px 0 0 -132.5px;}
+
+     .wac-guide.mobile .container h3 {font-size: 40px; text-align: center;}
+     .wac-guide.mobile #wac-app h4, .wac-guide.mobile #wac-device h4{font-size: 26px; text-align: center;}
 
      /* ******************
      *  wac-focus.html  *
