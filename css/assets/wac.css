@@ -396,7 +396,7 @@ button:focus{border:1px solid #293fff!important;}
 .wac-guide.mobile #wac-assistive .item p:before{display: inline; content: '+ '; }
 
 .wac-guide.mobile #wac-assistive .item li{display:inline;}
-.wac-guide.mobile #wac-assistive .item li a{display:inline-block; background: #589ecc; padding: 2px 10px; margin-right: 15px; color: #fff; font-size: 13px;}
+.wac-guide.mobile #wac-assistive .item li a{display:inline-block; background: #589ecc; padding: 2px 10px;  margin-bottom: 10px; margin-right: 15px; color: #fff; font-size: 13px;}
 .wac-guide.mobile #wac-assistive .item li .tooltip.bottom .tooltip-arrow{border-bottom-color:#589ecc!important;}
 .wac-guide.mobile #wac-assistive .item li .tooltip.top .tooltip-arrow{border-top-color:#589ecc!important;}
 .wac-guide.mobile #wac-assistive .item li .tooltip.right .tooltip-arrow{border-right-color:#589ecc!important;}
@@ -1031,8 +1031,10 @@ button:focus{border:1px solid #293fff!important;}
      .wac-guide.mobile .main-cont ul {height: unset;}
      .wac-guide.mobile .main-cont ul li a{position: relative; top:unset; left: 50%!important; right: unset; bottom:unset;margin: 20px 0 0 -132.5px;}
 
-     .wac-guide.mobile .container h3 {font-size: 40px; text-align: center;}
+     .wac-guide.mobile .container h3 {font-size: 40px; text-align: center; line-height: 1.5}
+     .wac-guide.mobile .container h3 em{line-height: 1;}
      .wac-guide.mobile #wac-app h4, .wac-guide.mobile #wac-device h4{font-size: 26px; text-align: center;}
+     .wac-guide.mobile #wac-device li:last-child{text-align: center;}
 
      /* ******************
      *  wac-focus.html  *
