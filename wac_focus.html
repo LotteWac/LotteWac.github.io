@@ -10391,8 +10391,10 @@
                           $this = $(this);
                         if(_wac.isTabEvent(e)){
                           if(_wac.isWacEntered($this)){
+                              _wac.preventDefaultAction(e)
                             $nowActiveCont = $complexCont2Depth.filter('.active');
-                            _wac.getFocusables($nowActiveCont).first().focus();
+                            _wac.getFocusables($nowActiveCont)[0].focus();
+                           
                           }else if($this.is($lastOfNav2Depth)){
                             _wac.preventDefaultAction(e);
                             $complexNav1Depth.filter('.active').focus();
@@ -10430,12 +10432,12 @@
                     $complexCont2Depth.on({
                         keydown : complexCont2DepthKeydownHandler
                     });
-                    // $complexCont2Depth.on({
-                    //   focusin : function(e){
-                    //     addKeyboardHelperHandler($(this), 'tab shifttab');
-                    //   },
-                    //   focusout : removeKeyboardHelperHandler
-                    // })
+                    $complexCont2Depth.find('a').on({
+                      focusin : function(e){
+                        addKeyboardHelperHandler($(this), 'tab shifttab');
+                      },
+                      focusout : removeKeyboardHelperHandler
+                    })
 
                 }()
 
