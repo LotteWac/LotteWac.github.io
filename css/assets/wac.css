@@ -984,7 +984,7 @@ button:focus{border:1px solid #293fff!important;}
     .wac-guide #mobileNavBtn{display: block;}
     .wac-guide .gnb h1{margin-left: 40px;}
     .wac-guide .lnb.scroll-fixed,
-    .wac-guide .lnb{left: -500px; margin: 0;z-index: 999;background: #fff; padding-left: 20px; border-right:1px solid #e1e1e1; box-shadow: 0px 0px 10px #888888;}
+    .wac-guide .lnb{display:none; left: -500px; margin: 0;z-index: 999;background: #fff; padding-left: 20px; border-right:1px solid #e1e1e1; box-shadow: 0px 0px 10px #888888;}
     .wac-guide .container .contents{width: 100%; padding:0; border: 0;}
 
 
@@ -1095,7 +1095,7 @@ button:focus{border:1px solid #293fff!important;}
 
 
     .wac-guide .container .contents .article > div[id^="item"] > h4{padding:11px 10px; font-size: 15px;}
-    .wac-guide .container .contents .article > div[id^="item"] > h4 i{margin-right: 0;}
+   
 
 
     /* ******************

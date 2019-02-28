@@ -13,6 +13,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script src="./js/highlight.pack.js"></script>
+    <script src="./js/jquery.utils.js"></script>
+    <script src="./js/wac.js"></script>
     <script src="./js/common.js"></script>
 
 
@@ -28,7 +30,7 @@
                     <a href="#none" id="mobileNavBtn">
                         <i class="glyphicon glyphicon-list"></i>
                     </a>
-                    <!-- <a href="#" class="mobile"><img src="./img/logo.png" alt="lottemart 로고"></a> -->
+                  
                 </h1>
 
                 <ul class="device">
@@ -2134,19 +2136,75 @@ outline: -webkit-focus-ring-color auto 5px;
     //모바일 nav 처리
 
     var $mobileNavBtn = $('#mobileNavBtn'),
-        $guideLnb = $('.wac-guide .lnb');
-    $mobileNavBtn.on('click', function(){
-        if(!$(this).hasClass('on')){
-            $guideLnb.css('display','block').animate({ left:'0'});
-            $(this).addClass('on');
-        }else{
-            $guideLnb.animate({ left:'-500px'},function(){
+        $guideLnb = $('.wac-guide .lnb'),
+        $lastOfGuideLnb = _wac.getFocusables($guideLnb).last();
+       
+        
+    var removeWacEnterd = function(e){ 
+        _wac.removeWacEnteredAsync($(this));
+    }
+    var lnbOpen = function(){
+        $guideLnb.css('display','block').animate({ left:'0'});
+        $mobileNavBtn.addClass('on');
+    }
+    var lnbClose = function(){
+        $guideLnb.animate({ left:'-500px'},function(){
                 $(this).removeAttr('style');
             });
-            $(this).removeClass('on');
+        $mobileNavBtn.removeClass('on');
+    }
+
+    var mobileNavBtnClickHandler = function(){
+        if(!$(this).hasClass('on')){
+            lnbOpen();
+        }else{
+            lnbClose();
         }
+    };
+    var mobileNavBtnKeydownHandler = function(e){
+        $this = $(document.activeElement);
+        if(_wac.isEnterEvent(e) && !_wac.isWacEntered($this)){
+            _wac.markWacEnteredAsync($this);
+        }else if(_wac.isTabEvent(e)){
+            if(_wac.isWacEntered($this)){
+                _wac.preventDefaultAction(e);
+                $target = _wac.getFocusables($guideLnb).first();
+                $target.focus();
+            }
+        }
+    }
+    $mobileNavBtn.on({
+        click : mobileNavBtnClickHandler,
+        keydown : mobileNavBtnKeydownHandler,
+        focusout : removeWacEnterd
     });
 
+    var guideLnbKeydownHandler = function(e){
+        $this = $(this);
+        if(_wac.isEnterEvent(e) && !_wac.isWacEntered($this)){
+                setTimeout(function(){
+                    $this.focus();
+                    _wac.markWacEnteredAsync($this);
+                },1000);
+        }else if(_wac.isTabEvent(e)){
+            if(_wac.isWacEntered($this)){
+            targetId = $this.attr('href');
+            $tartget = $(targetId);
+            console.log($tartget);
+            _wac.getFocusables($tartget).first().focus();
+            lnbClose();
+            }else if($this.is($lastOfGuideLnb)){
+                lnbClose();
+            
+            }
+        }
+    }
+
+    $guideLnb.on({
+        //click : guideLnbClickHandler,
+        keydown : guideLnbKeydownHandler,
+        focusout : removeWacEnterd
+    }, 'a');
 
     var $codeArea = $('pre code'),
         $targetCodeArea;
@@ -2155,6 +2213,7 @@ outline: -webkit-focus-ring-color auto 5px;
 
 
     var $codeOpenBtn = $('.code-open-btn');
+        
 
     $codeOpenBtn.on('click', function(){
         $targetCodeArea = $(this).next('code')
