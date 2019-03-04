@@ -2162,17 +2162,20 @@ outline: -webkit-focus-ring-color auto 5px;
         }
     };
     var mobileNavBtnKeydownHandler = function(e){
-        $this = $(document.activeElement);
-        if(_wac.isEnterEvent(e) && !_wac.isWacEntered($this)){
-            _wac.markWacEnteredAsync($this);
-        }else if(_wac.isTabEvent(e)){
-            if(_wac.isWacEntered($this)){
-                _wac.preventDefaultAction(e);
-                $target = _wac.getFocusables($guideLnb).first();
-                $target.focus();
+        if(window.innerWidth <=1200){
+            $this = $(document.activeElement);
+            if(_wac.isEnterEvent(e) && !_wac.isWacEntered($this)){
+                _wac.markWacEnteredAsync($this);
+            }else if(_wac.isTabEvent(e)){
+                if(_wac.isWacEntered($this)){
+                    _wac.preventDefaultAction(e);
+                    $target = _wac.getFocusables($guideLnb).first();
+                    $target.focus();
+                }
             }
         }
     }
+    
     $mobileNavBtn.on({
         click : mobileNavBtnClickHandler,
         keydown : mobileNavBtnKeydownHandler,
@@ -2180,31 +2183,34 @@ outline: -webkit-focus-ring-color auto 5px;
     });
 
     var guideLnbKeydownHandler = function(e){
-        $this = $(this);
-        if(_wac.isEnterEvent(e) && !_wac.isWacEntered($this)){
-                setTimeout(function(){
-                    $this.focus();
-                    _wac.markWacEnteredAsync($this);
-                },1000);
-        }else if(_wac.isTabEvent(e)){
-            if(_wac.isWacEntered($this)){
+        if(window.innerWidth <=1200){
+            $this = $(this);
             targetId = $this.attr('href');
-            $tartget = $(targetId);
-            console.log($tartget);
-            _wac.getFocusables($tartget).first().focus();
-            lnbClose();
-            }else if($this.is($lastOfGuideLnb)){
+            $target = $(targetId);
+           
+            if(_wac.isEnterEvent(e) && !_wac.isWacEntered($this)){
                 lnbClose();
-            
+            }else if(_wac.isTabEvent(e) && $this.is($lastOfGuideLnb)){
+                lnbClose();
             }
         }
     }
 
     $guideLnb.on({
-        //click : guideLnbClickHandler,
         keydown : guideLnbKeydownHandler,
         focusout : removeWacEnterd
     }, 'a');
+
+    var mobileNavBtnControllKey = function(e){
+        if(_wac.isEscEvent(e)){
+            $mobileNavBtn.trigger('click');
+            $target = _wac.getFocusables($guideLnb).first();
+            $target.focus();
+        }
+    }
+    $(window).on({
+        keydown : mobileNavBtnControllKey
+    })
 
     var $codeArea = $('pre code'),
         $targetCodeArea;
