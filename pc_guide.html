@@ -12,6 +12,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="./js/jquery.mobile.js"></script>
     <script src="./js/highlight.pack.js"></script>
     <script src="./js/jquery.utils.js"></script>
     <script src="./js/wac.js"></script>
@@ -2200,7 +2201,12 @@ outline: -webkit-focus-ring-color auto 5px;
         keydown : guideLnbKeydownHandler,
         focusout : removeWacEnterd
     }, 'a');
-
+    var mobileNavBtnSwipeLeft = function(e){
+        alert('left')
+    }
+    var mobileNavBtnSwipeRight = function(e){
+        alert('right')
+    }
     var mobileNavBtnControllKey = function(e){
         if(_wac.isEscEvent(e)){
             $mobileNavBtn.trigger('click');
@@ -2209,7 +2215,9 @@ outline: -webkit-focus-ring-color auto 5px;
         }
     }
     $(window).on({
-        keydown : mobileNavBtnControllKey
+        keydown : mobileNavBtnControllKey,
+        swipeleft : mobileNavBtnSwipeLeft,
+        swiperight : mobileNavBtnSwipeRight
     })
 
     var $codeArea = $('pre code'),
