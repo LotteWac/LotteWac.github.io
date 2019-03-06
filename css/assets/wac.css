@@ -1112,6 +1112,12 @@ button:focus{border:1px solid #293fff!important;}
     .index .container .m-visual h2{font-size: 46px;}
     .index .container .m-visual {height:750px;}
 
+    /* *********************
+     *    pc_guide.html    *
+     ***********************/
+    .wac-guide .container .lnb .depth1-menu{padding-top:5px;}
+
+    
      /* ******************
      *  wac-focus.html  *
      ********************/
