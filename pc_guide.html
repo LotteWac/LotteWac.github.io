@@ -10,13 +10,15 @@
     <link rel="stylesheet" href="./css/assets/code-atom-one-dark.css">
     <link rel="stylesheet" href="./css/assets/wac.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script src="./js/jquery.mobile.js"></script>
     <script src="./js/highlight.pack.js"></script>
     <script src="./js/jquery.utils.js"></script>
     <script src="./js/wac.js"></script>
     <script src="./js/common.js"></script>
+    <script> $(document).ready(function() { $.mobile.ajaxLinksEnabled = false; }); </script>
+
 
 
     <title>롯데마트 웹접근성 가이드</title>
@@ -2203,10 +2205,14 @@ outline: -webkit-focus-ring-color auto 5px;
         focusout : removeWacEnterd
     }, 'a');
     var mobileNavBtnSwipeLeft = function(e){
-        alert('left')
+        if(window.innerWidth <=1200){
+            lnbClose();
+        }
     }
     var mobileNavBtnSwipeRight = function(e){
-        alert('right')
+        if(window.innerWidth <=1200){
+            lnbOpen();
+        }
     }
     var mobileNavBtnControllKey = function(e){
         if(_wac.isEscEvent(e)){
