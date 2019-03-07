@@ -1089,7 +1089,7 @@ button:focus{border:1px solid #293fff!important;}
     .index #wacIntro {padding-top: 100px; height: unset;}
     .index #wacIntro p{font-size: 15px;}
     .index #wacIntro .contents-list{padding:0}
-    .index #wacIntro .contents-list li:nth-child(1) a{margin-left:30px;}
+    .index #wacIntro .contents-list li a{margin-left:30px;}
     .index #wacIntro .modal-dialog .modal-content table th{font-size: 14px;}
     .index #wacIntro .modal-dialog .modal-content table td{padding:5px;}
 
