@@ -20,14 +20,15 @@ $(document).ready(function(){
     }
     var focusinHandler = function(){
         $nowActiveEL = $(document.activeElement);
-        $nowActiveEL.css({
-            'outline-offset' : '-5px;',
-            'outline' : '1px solid red'
-        });
+        // $nowActiveEL.css({
+        //     'outline-offset' : '-5px;',
+        //     'outline' : '1px solid red'
+        // });
+        $nowActiveEL.attr('style', 'outline:1px solid red; outline-offset:-1px;')
         log ();
     }
     var focusoutHandler = function(){
-        $(this).css('outline', 'none');
+        $(this).css('outline', 'none').css('outline-offset', '0');
     }
 
     $(document).on({focusin : focusinHandler});
