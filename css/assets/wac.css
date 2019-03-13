@@ -348,6 +348,7 @@ button:focus{border:1px solid #293fff!important;}
 
 
 .wac-guide.mobile #wac-app .offer,
+.container .contents #wacExample .expect,
 .container .contents #wacExample .check-list{width:90%; margin: 0 auto; padding: 20px 0;}
 .container .contents #wacExample .check-list dt,
 .container .contents #wacExample .check-list dd{padding:3px 10px; border:1px solid #e1e1e1;}
