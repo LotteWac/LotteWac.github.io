@@ -25,7 +25,7 @@ p{padding-left:5px;}
 
 /* pre-fix */
 .inner{width:100%; max-width:1200px; min-width:320px; margin:0 auto; position: relative;}
-.blind{display: none;}
+.blind{visibility: hidden; display: inline-block; width:0; height: 0;}
 .circle-num{display:inline-block; width:15px; height:15px; border-radius:7.5px; background:#293f54; color:#fff; text-align:center; margin: 0 10px; line-height:1;}
 .mobile-block{display: inline;}
 .title-small{font-size: 20px; display :block; letter-spacing: 5px; margin:8px !important;}
