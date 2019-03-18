@@ -4,29 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
     <title>Document</title>
     <style>
+        html, body{width: 100%; height: 100%; position: relative;}
         .display-none{display:none;}
+        h1{text-align: center; padding-top: 50px;}
+
+        .area{width: 80%; margin: 0 auto; padding: 50px 0;}
+        .wall{display:block; position:absolute; width: 100%; height: 100%; z-index: 100; background:rgba(128, 128, 128,0.8);}
+        .simple-custom .cutom-modal-cont{display:none; position:absolute; width: 50%; height: 50%; z-index: 200; background: #fff; transform: translatex(30%) translatey(-80%); }
     </style>
 </head>
 <body>
-   
-    <h1>WAI - ARIA TEST</h1>
-    
-    <h2>보이지 않는 부분의 초점 제어</h2>
-        <div class="display-none">
-            이영역은 디스플레이 논 영역입니다.
-            <a href="#" title="타이틀을 읽어줄까?1" alt="알트는 어떨까?">이영역은 디스플레이 논 링크 입니다.</a>
-        </div>
+    <!-- wrapper start  -->
+   <div class="wrapper">
+        <h1>WAI - ARIA TEST</h1>
         
-        <div>
-            이영역은 디스플레이 블럭의 영역입니다.
-            <a href="#" title="타이틀을 읽어줄까?2">정상적인 링크 입니다.</a>
+        <div class="area">
+            <h2>보이지 않는 부분의 초점 제어</h2>
+            <div class="display-none">
+                이영역은 디스플레이 논 영역입니다.
+                <a href="#" title="타이틀을 읽어줄까?1" alt="알트는 어떨까?">이영역은 디스플레이 논 링크 입니다.</a>
+            </div>
+            
+            <div>
+                이영역은 디스플레이 블럭의 영역입니다.
+                <a href="#" title="타이틀을 읽어줄까?2">정상적인 링크 입니다.</a>
 
+            </div>
         </div>
+        <div class="area">
+            <h2>MODAL 초점 제어</h2>
+            
+            <!-- bootstrap-modal start -->
+            <div class="bootstrap-modal">
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">부트스트랩 ver</button>
 
+                <!-- Modal -->
+                <div id="myModal" class="modal fade" role="dialog">
+                    <!-- modal-dialog start -->
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Modal Header</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <ul>
+                                    <li><a href="#">첫 번째 내용이 있습니다!</a></li> 
+                                    <li><a href="#">두 번째 내용이 있습니다!</a></li> 
+                                    <li><a href="#">세 번째 내용이 있습니다!</a></li> 
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- modal-dialog end -->
+                </div>
+                <!-- Modal end-->
+            </div>
+            <!-- bootstrap-modal end -->
+
+            <!-- simple-custom start -->
+            <div class="simple-custom">
+                <button type="button" class="cutom-modal-btn">간단한 자체 ver</button>
+                <div class="cutom-modal-cont">
+                    <button type="button" class="close">&times;</button>
+                    <ul>
+                        <li><a href="#">첫 번째 내용이 있습니다!</a></li> 
+                        <li><a href="#">두 번째 내용이 있습니다!</a></li> 
+                        <li><a href="#">세 번째 내용이 있습니다!</a></li> 
+                    </ul>
+                </div>
+                <script>
+                    $(document).ready(function(){
+                    var $simpleCustom = $('.simple-custom'),
+                        $trgBtn = $simpleCustom.find('.cutom-modal-btn'),
+                        $ClsBtn = $simpleCustom.find('.close'),
+                        $cont = $simpleCustom.find('.cutom-modal-cont');
+                       
+                        $trgBtn.on('click', function(){
+                            $cont.css('display', 'block');
+                            $('.wrapper').prepend('<div class="wall"><div>')
+                        });
+                        $('.wall, .simple-custom .close').on('click', function(){
+                            $cont.css('display', 'none');
+                            $('.wall').remove();
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+    <!-- wrapper end -->
 </body>
 </html>
