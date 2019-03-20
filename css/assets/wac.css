@@ -326,13 +326,13 @@ button:focus{border:1px solid #293fff!important;}
 .wac-guide .container .contents .article h3{font-size:25px; color: #293f54;}
 
 .wac-guide .container .contents .article > div[id^="item"]:target{padding-top: 70px;}
-.wac-guide.mobile #wac-app h5,
-.wac-guide .container .contents .article > div[id^="item"] > h4{color: #215c6e; width: 100%; height: 50px; padding: 11px 20px; border:1px solid #e1e1e1; border-top:2px solid #16657e; border-bottom:1px solid #e1e1e1; cursor: pointer; border-radius: 5px 5px 0 0; position: relative;}
+.wac-guide.mobile #wac-app h4,
+.wac-guide .container .contents .article > div[id^="item"] > h4{color: #215c6e; width: 100%; height: 50px; padding: 11px 20px; border:1px solid #e1e1e1; border-top:2px solid #16657e; border-bottom:1px solid #e1e1e1; cursor: pointer; border-radius: 5px 5px 0 0; position: relative; font-size: 15px; margin: 0;}
 
 
-.wac-guide.mobile .item > h5 i,
+.wac-guide.mobile .item > h4 i,
 .wac-guide .container .contents .article > div[id^="item"] > h4 i{top: 7px; float: right; margin-right: 14px; -ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); transform: rotate(90deg); transition: all ease 0.5s 0s; position: absolute; top:50%; right: 0; margin-top:-7px;}
-.wac-guide.mobile .item > h5 i.open,
+.wac-guide.mobile .item > h4 i.open,
 .wac-guide .container .contents .article > div[id^="item"] > h4 i.open{ -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); transition: all ease 0.5s 0s;}
 .wac-guide.mobile #wac-app .item-cont,
 .wac-guide .container .contents .article > div[id^="item"] .item-cont{border:1px solid #e1e1e1; border-top:0; padding-bottom:20px;}
@@ -355,12 +355,17 @@ button:focus{border:1px solid #293fff!important;}
 .wac-guide .container .contents #wacExample .sample p{font-size: 15px;}
 .wac-guide .container .contents #wacExample .sample img{margin: 20px 0; max-width:100%;}
 
-
+.check-list,
+.wac-guide.mobile #wac-app .check-way,
+.wac-guide.mobile #wac-app .error-type,
+.wac-guide.mobile #wac-app .recom-type,
 .wac-guide.mobile #wac-app .offer,
 .container .contents #wacExample .expect,
 .container .contents #wacExample .check-list{width:90%; margin: 0 auto; padding: 20px 0;}
+.check-list dt, .check-list dd,
 .container .contents #wacExample .check-list dt,
 .container .contents #wacExample .check-list dd{padding:3px 10px; border:1px solid #e1e1e1;}
+.check-list dt,
 .container .contents #wacExample .check-list dt{background: #e1e1e1;}
 
 .offer-title dl{margin-left: 15px;}
