@@ -338,6 +338,7 @@ button:focus{border:1px solid #293fff!important;}
 .wac-guide .container .contents .article > div[id^="item"] .item-cont{border:1px solid #e1e1e1; border-top:0; padding-bottom:20px;}
 .wac-guide.mobile #wac-app p,
 .wac-guide .container .contents .article > div[id^="item"] .item-cont > p{padding:15px 0 0 30px;}
+.wac-guide.mobile .container #wac-app .item .sample p{padding:0; margin-bottom: 20px;}
 
 
 .wac-guide .container .contents #wacIntro .contents-list{margin:15px;}
@@ -425,7 +426,8 @@ button:focus{border:1px solid #293fff!important;}
 .wac-guide.mobile #wac-assistive .item li .tooltip.right .tooltip-arrow{border-right-color:#589ecc!important;}
 .wac-guide.mobile #wac-assistive .item li .tooltip-inner{background: #fff!important; color: #194e70; border: 2px solid #589ecc; font-size: 13px; letter-spacing: -0.5px;line-height: 1.8; padding: 15px 10px;}
 
- 
+
+
 /**********************
  *                    *
  *   wac_focus.html  *
