@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/assets/reset.css">
-    <link rel="stylesheet" href="./css/assets/wac.css">
+    <link rel="stylesheet" href="./css/assets/wac_ver1.css">
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -23,32 +23,30 @@
             <!-- inner start -->
             <div class="inner">
                 <h1>
-                    <a href="#" class="pc">Accessibility Guide</a>
+                    <a href="#" class="pc">
+                      <img src="./img/main-logo.png" alt="lottemart 로고">
+                      PC웹 접근성 가이드
+                    </a>
                     <a href="#" class="mobile"><img src="./img/logo.png" alt="lottemart 로고"></a>
                 </h1>
 
                 <ul class="device">
                     <li>
-                        <a href="./pc_guide.html" class="pc-guide" data-toggle="tooltip" data-placement="bottom" title="PC 지침 보기">
-                            <img src="./img/pc-icon.png" alt="PC 지침 보기">
-                        </a>
+                        <a href="./pc_guide.html" class="pc-guide" data-toggle="tooltip" data-placement="bottom" title="PC 지침 보기">PC 지침 보기</a>
                     </li>
                     <li>
-                        <a href="./mobile_guide.html" class="mobile-guide" data-toggle="tooltip" data-placement="bottom" title="MOBILE 지침 보기">
-                            <img src="./img/mobile-icon.png" alt="MOBILE 지침 보기">
-                        </a>
+                        <a href="./mobile_guide.html" class="mobile-guide" data-toggle="tooltip" data-placement="bottom" title="MOBILE 지침 보기">Mobile 지침 보기</a>
                     </li>
                     <li>
-                        <a href="./wac_focus.html" class="focus-guide" data-toggle="tooltip" data-placement="bottom" title="초점 이동에 관련">
-                            <img src="./img/keyboard-icon.png" alt="초점 이동에 관련 링크 아이콘">
-                         </a>
+                        <a href="./wac_focus.html" class="focus-guide" data-toggle="tooltip" data-placement="bottom" title="초점 이동에 관련">초점 이동에 관련</a>
                     </li>
                 </ul>
 
-                <!-- <ul class="menu">
-                    <li><a href="./wac_focus.html">SCRIPT</a></li>
-                    <li><a href="#" class="compone">UI COMPONENTS</a></li>
-                </ul> -->
+
+                <select class="guide-version" name="">
+                  <option value>Guide 버전1</option>
+                  <option value>Guide 버전2</option>
+                </select>
             </div>
             <!-- inner end -->
         </header>
@@ -74,12 +72,15 @@
 
             <!-- 1. #mVisual start -->
             <div class="m-visual" id="mVisual">
-                <img src="./img/main02.jpg" alt="메인비주얼 이미지">
+                <img src="./img/m-visual.png" alt="메인비주얼 이미지">
 
-                <h2>LotteMart<br>Accessibility<br>Guide</h2>
-                <p>
-                    -모두를 위한 웹을 설계합니다. 롯데마트 PC 웹 접근성 가이드라인.
-                </p>
+                <div class="inner">
+                  <h2>LotteMart<br>Accessibility<br>Guide</h2>
+                  <p>
+                      <span>모두를 위한 웹을 설계합니다.</span>
+                      <strong>롯데마트 PC 웹 접근성 가이드라인</strong>
+                  </p>
+                </div>
             </div>
             <!-- 1. #mVisual end -->
 
@@ -88,35 +89,28 @@
                 <div class="inner">
                     <h3>정보접근성이란?</h3>
                     <p>
-                        정보 접근성은 모든 사용자가 특정 환경, 혹은 신체적 장애에 상관없이<br>
-                        모든 정보에 동등하게 접근하고 이용할 수 있도록 보장해 주는 것을 의미합니다.<br>
-                        <em class="skyblue">장애인</em>뿐만 아니라 <em class="orange">고령자, 비장애인</em>도 접근성의 대상이 될 수 있습니다.<br>
-                        정보 접근성을 준수한 프로그램은 단순히 장애가 있는 사람들을 지원하는 데에 그치는 것이 아니라,<br>
+                        정보 접근성은 모든 사용자가 특정 환경, 혹은 신체적 장애에 상관없이
+                        모든 정보에 동등하게 접근하고 이용할 수 있도록 보장해 주는 것을 의미합니다. <em class="lotte-red font-bold{">장애인</em>뿐만 아니라 <em class="lotte-red font-bold{">고령자, 비장애인</em>도 접근성의 대상이 될 수 있습니다.
+                        정보 접근성을 준수한 프로그램은 단순히 장애가 있는 사람들을 지원하는 데에 그치는 것이 아니라,
                         일반 사용자들의 편의와 서비스 수준까지도 크게 향상시켜 줍니다.<br>
-                        롯데마트는 차별없는 서비스 제공을 위하여<br>
-                        다음과같은 정보 접근성의 핵심원리 네 가지를 준수하고 있습니다.
+                        <em class="font-bold">롯데마트는 차별없는 서비스 제공을 위하여
+                        다음과같은 정보 접근성의 핵심원리 네 가지를 준수하고 있습니다.</em>
                     <p>
                     <!-- access-list start -->
                     <ul class="access-list">
                         <li class="access-li-notice">
-                            <i class="glyphicon glyphicon-eye-open"></i>
+                            <img src="./img/main-icon01.png" alt="인식의 용이성 아이콘">
                             <dl>
                                 <dt>
-                                    <button type="button" class="btn btn-lotte btn-lg" data-toggle="modal" data-target="#access-li01">인식의 용이성</button>
+                                    <button type="button" class="btn btn-lotte btn-lg" data-toggle="modal" data-target="#access-li01">인식의 용이성 &nbsp; +</button>
                                 </dt>
                                 <dd class="modal fade" id="access-li01" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <h4 class="modal-title">인식의 용이성</h4>
                                             <p class="access-cont">
-                                            정보 접근성에서의 인식의 용이성이란,<br>
-                                            <em>제공되는 모든 콘텐츠에대해 <br>
-                                            사용자가 인식할 수 있어야 한다</em><br>
-                                            는 것이 핵심입니다.<br>
-                                            때문에 롯데마트 PC 웹 사이트에서 <br>
-                                            서비스하고 있는 모든 콘텐츠는 <br>
-                                            누구나 쉽게 인식할 수 있도록 <br>
-                                            설계되어있습니다.<br>
+                                            정보 접근성에서의 인식의 용이성이란, <em>제공되는 모든 콘텐츠에대해 사용자가 인식할 수 있어야 한다</em> 는 것이 핵심입니다.<br>
+                                            때문에 롯데마트 PC 웹 사이트에서 서비스하고 있는 모든 콘텐츠는 누구나 쉽게 인식할 수 있도록 설계되어있습니다.<br>
                                             </p>
                                             <button type="button" class="btn btn-close" data-dismiss="modal">X</button>
                                         </div>
@@ -125,23 +119,18 @@
                             </dl>
                         </li>
                         <li class="access-li-nav">
-                            <i class="glyphicon glyphicon-play"></i>
+                              <img src="./img/main-icon02.png" alt="운용의 용이성 아이콘">
                             <dl>
                                 <dt>
-                                    <button type="button" class="btn btn-lotte btn-lg" data-toggle="modal" data-target="#access-li02">운용의 용이성</button>
+                                    <button type="button" class="btn btn-lotte btn-lg" data-toggle="modal" data-target="#access-li02">운용의 용이성 &nbsp; +</button>
                                 </dt>
                                 <dd class="modal fade" id="access-li02" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                                 <h4 class="modal-title">운용의 용이성</h4>
                                                 <p class="access-cont">
-                                                    정보 접근성에서의 인식의 용이성이란,<br>
-                                                    <em>사용자 인터페이스 구성 요소는 <br>
-                                                    조작 가능하고 내비게이션할 수 있어야 한다.</em><br>
-                                                    는 것이 핵심입니다.<br>
-                                                    때문에 롯데마트 PC 웹 사이트에서 <br>
-                                                    웹 콘텐츠에 포함된 모든 요소들의 기능은 누구나<br>
-                                                    쉽게 사용할 수 있도록 설계되어있습니다.
+                                                    정보 접근성에서의 인식의 용이성이란, <em>사용자 인터페이스 구성 요소는 조작 가능하고 내비게이션할 수 있어야 한다.</em> 는 것이 핵심입니다.<br>
+                                                    때문에 롯데마트 PC 웹 사이트에서 웹 콘텐츠에 포함된 모든 요소들의 기능은 누구나 쉽게 사용할 수 있도록 설계되어있습니다.
                                                 </p>
                                                 <button type="button" class="btn btn-close" data-dismiss="modal">X</button>
                                         </div>
@@ -150,24 +139,19 @@
                             </dl>
                         </li>
                         <li class="access-li-understand">
-                            <i class="glyphicon glyphicon-user"></i>
+                            <img src="./img/main-icon03.png" alt="이해의 용이성 아이콘">
                             <dl>
                                 <dt>
-                                    <button type="button" class="btn btn-lotte btn-lg" data-toggle="modal" data-target="#access-li03">이해의 용이성</button>
+                                    <button type="button" class="btn btn-lotte btn-lg" data-toggle="modal" data-target="#access-li03">이해의 용이성 &nbsp; +</button>
                                 </dt>
                                 <dd class="modal fade" id="access-li03" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                                 <h4 class="modal-title">이해의 용이성</h4>
                                                 <p class="access-cont">
-                                                    정보 접근성에서의 인식의 용이성이란,<br>
-                                                    <em>콘텐츠는 장애유무에 관계없이 <br>
-                                                    이해할 수 있게 구성되어야 한다.<br></em>
+                                                    정보 접근성에서의 인식의 용이성이란, <em>콘텐츠는 장애유무에 관계없이 이해할 수 있게 구성되어야 한다.</em>
                                                     는 것이 핵심입니다.<br>
-                                                    때문에 롯데마트 PC 웹 사이트는 <br>
-                                                    사용자들이 가능한 한 쉽게 이해할 수 있도록<br> 콘텐츠나 제어 방식을 구성되어 있으며,<br>
-                                                    추가로 사용법에대한 블라인드 가이드를<br>
-                                                    태그로 제공하고 있습니다.
+                                                    때문에 롯데마트 PC 웹 사이트는 사용자들이 가능한 한 쉽게 이해할 수 있도록 콘텐츠나 제어 방식을 구성되어 있으며, 추가로 사용법에대한 블라인드 가이드를 태그로 제공하고 있습니다.
                                                 </p>
                                                 <button type="button" class="btn btn-close" data-dismiss="modal">X</button>
                                         </div>
@@ -176,23 +160,18 @@
                             </dl>
                         </li>
                         <li class="access-li-stable">
-                            <i class="glyphicon glyphicon-grain"></i>
+                            <img src="./img/main-icon04.png" alt="견고성 아이콘">
                             <dl>
                                 <dt>
-                                    <button type="button" class="btn btn-lotte btn-lg" data-toggle="modal" data-target="#access-li04">견고성</button>
+                                    <button type="button" class="btn btn-lotte btn-lg" data-toggle="modal" data-target="#access-li04">견고성 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+ </button>
                                 </dt>
                                 <dd class="modal fade" id="access-li04" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                                 <h4 class="modal-title">견고성</h4>
                                                 <p class="access-cont">
-                                                    정보 접근성에서의 인식의 용이성이란,<br>
-                                                    <em>웹 콘텐츠는 미래의 기술로도 접근할 수 있도록<br>
-                                                    견고하게 만들어야 한다.</em><br>
-                                                    는 것이 핵심입니다.<br>
-                                                    때문에 롯데마트 PC 웹 사이트는 <br>
-                                                    미래 기술발전을 고려하는 방식의<br>
-                                                    기술 구현과 개발을 우선으로하고 있습니다.
+                                                    정보 접근성에서의 인식의 용이성이란,<em>웹 콘텐츠는 미래의 기술로도 접근할 수 있도록 견고하게 만들어야 한다.</em> 는 것이 핵심입니다.<br>
+                                                    때문에 롯데마트 PC 웹 사이트는 미래 기술발전을 고려하는 방식의 기술 구현과 개발을 우선으로하고 있습니다.
                                                 </p>
                                                 <button type="button" class="btn btn-close" data-dismiss="modal">X</button>
                                         </div>
@@ -208,40 +187,29 @@
 
             <!-- 3. #whyWac start -->
             <div class="article" id="whyWac">
-                <h3>정보접근성의 필요성</h3>
-                <p>
-                    <ul>
-                        <li>
+                <div class="inner">
+                  <h3>정보접근성의 필요성</h3>
+                  <p>
+                      <ul>
+                          <li>
 
-                            <dl>
-                                <dt><i class="glyphicon glyphicon-queen"></i> 웹 접근성 보장은 법률에 명시된 의무사항</dt>
-                                <dd>
-                                    웹 접근성의 보장은 「국가정보화기본법」과 <br>
-                                    「장애인차별금지 및 권리구제 등에 관한 법률(이하 "장애인차별금지법")」등의 법률에 명시된 의무사항입니다.<br>
-                                    특히 장애인차별금지법은 행위자에 대한 단계적 범위를 명확히 하였으며,<br>
-                                    불이행시 처벌 등이 구체적으로 성문화 되어 있습니다.<br>
-                                    이에 따라 모든 공공기관은 2009년 4월 11일 부터 웹 접근성을 준수하기 시작했으며,<br>
-                                    2019년 현재 많은 수의 웹 사이트가 웹 접근성을 준수하여 제작되고 운영되고 있는 실정입니다.<br>
-                                </dd>
-                            </dl>
+                              <dl>
+                                  <dt>웹 접근성 보장은 법률에 명시된 의무사항</dt>
+                                  <dd>
+                                    웹 접근성의 보장은 「국가정보화기본법」과 「장애인차별금지 및 권리구제 등에 관한 법률(이하 "장애인차별금지법")」등의 법률에 명시된 의무사항입니다. 특히 장애인차별금지법은 행위자에 대한 단계적 범위를 명확히 하였으며, 불이행시 처벌 등이 구체적으로 성문화 되어있습니다. 이에 따라 모든 공공기관은 2009년 4월 11일 부터 웹 접근성을 준수하기 시작했으며, 2019년 현재 많은 수의 웹 사이트가 웹 접근성을 준수하여 제작되고 운영되고 있는 실정입니다.
+                                  </dd>
+                              </dl>
 
-                            <dl>
-                                <dt><i class="glyphicon glyphicon-equalizer"></i> 누구에게나 동등한 기회 제공을 위해 웹 접근성 준수 필요</dt>
-                                <dd>
-                                    몸이 불편한 장애인분들이나, 시력이 많이 떨어진 고령자 분들도<br>
-                                    웹 사이트에서 제공하는 정보에 접근할 수 있어야 합니다.<br>
-                                    누구에게나 정보는 공평하고 동등하게 제공되어야하며,<br>
-                                    이러한 기회 제공을 가능하게 해 주는 것이 바로 웹 접근성 기술입니다.<br>
-                                    오늘날 우리 사회에서 웹은 교육, 고용, 정부, 전자상거래, 건강, 여가 등<br>
-                                    삶의 여러 가지 측면에서 빼 놓고 말할 수 없는 중요한 자원으로 활용되고 있습니다.<br>
-                                    저희 롯데마트는 생활에 필요한 필수 품목들과 식탁위의 먹거리를 책임지는<br>
-                                    대한민국 최고의 커머스 기업으로써, 모든 정보와 서비스 제공을<br>
-                                    비장애인과 장애인의 차별없이 제공 할 수 있도록 최선을 다하고 있습니다.<br>
-                                </dd>
-                            </dl>
-                        </li>
-                    </ul>
-                </p>
+                              <dl>
+                                  <dt>누구에게나 동등한 기회 제공을 위해 웹 접근성 준수 필요</dt>
+                                  <dd>
+                                      몸이 불편한 장애인분들이나, 시력이 많이 떨어진 고령자 분들도 웹 사이트에서 제공하는 정보에 접근할 수 있어야 합니다. 누구에게나 정보는공평하고 동등하게 제공되어야하며, 이러한 기회 제공을 가능하게 해 주는 것이 바로 웹 접근성 기술입니다. 오늘날 우리 사회에서 웹은 교육,고용, 정부, 전자상거래, 건강, 여가 등 삶의 여러 가지 측면에서 빼 놓고 말할 수 없는 중요한 자원으로 활용되고 있습니다.저희 롯데마트는 생활에 필요한 필수 품목들과 식탁위의 먹거리를 책임지는 대한민국 최고의 커머스 기업으로써, 모든 정보와 서비스 제공을비장애인과 장애인의 차별없이 제공 할 수 있도록 최선을 다하고 있습니다.
+                                  </dd>
+                              </dl>
+                          </li>
+                      </ul>
+                  </p>
+                </div>
             </div>
             <!-- 3. #whyWac end -->
 
@@ -250,22 +218,20 @@
             <div class="article" id="wacGuideLine">
                 <div class="inner">
                     <h3><em class="mobile-block">LOTTE MART</em> PC 접근성 가이드라인</h3>
-                    <p>
-                        <i class="glyphicon glyphicon-transfer"></i> 모두를 위한 웹을 설계합니다. 롯데마트 PC 웹 접근성 가이드라인.
-                    </p>
+                    <p class="font-bold">모두를 위한 웹을 설계합니다. <em class="lotte-red">롯데마트 PC 웹 접근성 가이드라인.</em></p>
 
                     <ol class="guide-list">
                         <li>
-                            - 롯데마트 PC 웹의 경우, 누구나 이용이 가능한 차별없는 웹 서비스를 제공함으로써 오직 고객만을 생각하는 롯데마트의 모토를 실현하고자 합니다.
+                            롯데마트 PC 웹의 경우, 누구나 이용이 가능한 차별없는 웹 서비스를 제공함으로써 오직 고객만을 생각하는 롯데마트의 모토를 실현하고자 합니다.
                         </li>
                         <li>
-                            - 롯데마트 PC에서 제공하는 모든 웹 서비스는 '롯데마트 PC 웹 접근성 가이드라인'을 준수해야 합니다. 회원가입, 로그인, 상품의 검색, 탐색, 장바구니 관리와 주문 결제에 이르기까지 롯데마트 PC 웹 기술을 통해 구현하는 모든 서비스가 이 가이드라인의 적용 대상입니다.
+                            롯데마트 PC에서 제공하는 모든 웹 서비스는 '롯데마트 PC 웹 접근성 가이드라인'을 준수해야 합니다. 회원가입, 로그인, 상품의 검색, 탐색, 장바구니 관리와 주문 결제에 이르기까지 롯데마트 PC 웹 기술을 통해 구현하는 모든 서비스가 이 가이드라인의 적용 대상입니다.
                         </li>
                         <li>
-                            - 이 가이드라인은 한국정보화진흥원 한국형 웹 콘텐츠 접근성 지침 WCAG 2.1이 근간이며 이를 준수하는 범위 내에서 제작되었습니다.
+                            이 가이드라인은 한국정보화진흥원 한국형 웹 콘텐츠 접근성 지침 WCAG 2.1이 근간이며 이를 준수하는 범위 내에서 제작되었습니다.
                         </li>
                         <li>
-                            - 이 가이드라인은 웹 기술(HTML, CSS, JavaScript)에 대한 사전 지식을 요구합니다.
+                            이 가이드라인은 웹 기술(HTML, CSS, JavaScript)에 대한 사전 지식을 요구합니다.
                         </li>
                     </ol>
                 </div>
@@ -276,15 +242,18 @@
             <div id="wacIntro" class="article">
                 <div class="inner">
                     <h3><em class="mobile-block">LOTTE MART</em> 정보 접근성 지침</h3>
-                    <p>
-                        - LOTTE MART 정보 접근성 지침을 알아보겠습니다.<br>
-                        - 정보 접근성 지침에 관련된 문서는 다음과 같이 2가지 항목으로 구성되어 있습니다.
-                    </p>
+                    <ul class="intro-summary">
+                        <li>LOTTE MART 정보 접근성 지침을 알아보겠습니다.</li>
+                        <li>정보 접근성 지침에 관련된 문서는 다음과 같이 2가지 항목으로 구성되어 있습니다.</li>
+                    </ul>
                     <ol class="contents-list">
                         <li>
-                            <em class="circle-num">1</em>롯데마트 PC 접근성 지침과 적용상황
-                            <a href="#WacTable" type="button" class="btn btn-xs btn-info" data-toggle="modal" data-target="#WacTable">PC 접근성 검사항목 지침</a>
-                            <a href="./pc_guide.html" class="btn btn-warning btn-xs">PC 접근성 지침별 예제 보기</a>
+                            롯데마트 PC 접근성 지침과 적용상황
+
+                            <div class="wac-btn-group">
+                              <a href="#WacTable" class="btn-lotte" data-toggle="modal" data-target="#WacTable">PC 접근성 검사항목 지침 &nbsp; +</a>
+                              <a href="./pc_guide.html" class="btn-example">PC 접근성 지침별 예제 보기 &nbsp; ></a>
+                            </div>
 
                             <!-- Modal -->
                             <div class="modal fade" id="WacTable" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -436,10 +405,11 @@
                             </div>
                         </li>
                         <li>
-                            <em class="circle-num">2</em>롯데마트 모바일 접근성 지침과 적용상항
-
-                            <a href="#WacMobileTable" class="btn btn-info btn-xs" data-toggle="modal" data-target="#WacMobileTable">MOBILE 접근성 지침</a>
-                            <a href="./mobile_guide.html" class="btn btn-warning btn-xs">MOBILE 접근성 지침별 예제 보기</a>
+                            롯데마트 모바일 접근성 지침과 적용 상황
+                            <div class="wac-btn-group">
+                              <a href="#WacMobileTable" class="btn-lotte" data-toggle="modal" data-target="#WacMobileTable">MOBILE 접근성 지침 &nbsp; +</a>
+                              <a href="./mobile_guide.html" class="btn-example">MOBILE 접근성 지침별 예제 보기 &nbsp; ></a>
+                            </div>
 
                             <!-- 모바일 Modal -->
                             <div class="modal fade" id="WacMobileTable" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
@@ -660,7 +630,7 @@
     };
 
     if($(window).width() > 1200){
-        scrollMotion();
+        //scrollMotion();
     }
 
 </script>

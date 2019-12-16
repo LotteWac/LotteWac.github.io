@@ -41,12 +41,13 @@
 }
 
 @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
 
 html,body{width:100%;}
 html{overflow-y:scroll; overflow-x: hidden;}
-html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,button,header,nav,aside,footer,option,a,.header,.gnb, .login-box, .footer, .inner,.btn-box,input{margin:0; padding:0; font-size: 15px; box-sizing: border-box; font-family: 'lottemart-dream-Medium','lottemart-dream-Medium','Calibri', 'MalgunGothic', 'sans-serif';-webkit-font-size-adjust:none;}
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,button,header,nav,aside,footer,option,a,.header,.gnb, .login-box, .footer, .inner,.btn-box,input{margin:0; padding:0; font-size: 15px; letter-spacing: -1.5px; box-sizing: border-box; font-family: 'Nanum Gothic', sans-serif; -webkit-font-size-adjust:none;  }
 body,h1,h2,h3,h4,input,button{color:#000;-webkit-font-size-adjust: 100%;}
-body{background-color:#fff;*word-break:break-all;-ms-word-break:break-all; font-family:'lottemart-dream-Medium','Calibri', 'MalgunGothic', 'sans-serif';text-align:left; }
+body{background-color:#fff;*word-break:break-all;-ms-word-break:break-all; font-family:'Nanum Gothic', sans-serif, 'Calibri', 'MalgunGothic', 'sans-serif';text-align:left; }
 
 img,fieldset,iframe{border:0 none}
 li{list-style:none}
@@ -54,8 +55,7 @@ input,select,button{vertical-align:middle}
 img{vertical-align:top}
 i,em,address{font-style:normal;}
 label,button{cursor:pointer}
-button{margin:0;padding:0;}
-
+button{margin:0;padding:0; border-radius: 0!important;}
 
 
 
@@ -119,10 +119,13 @@ nput[type="text"]:focus,textarea:focus,input[type="file"]:focus,button:focus,inp
 .on{display: block;}
 .left{float: left;}
 .right{float: right;}
+
 .align-center{text-align: center;}
+.font-bold{font-weight: bold;}
 
 .skyblue{color: #0174DF;}
 .orange{color: #FF8000;}
+.lotte-red{color: #b33134;}
 
 
 /*mobile reset*/
