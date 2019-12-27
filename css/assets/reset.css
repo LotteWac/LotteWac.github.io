@@ -45,7 +45,7 @@
 
 html,body{width:100%;}
 html{overflow-y:scroll; overflow-x: hidden;}
-html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,button,header,nav,aside,footer,option,a,.header,.gnb, .login-box, .footer, .inner,.btn-box,input{margin:0; padding:0; font-size: 15px; letter-spacing: -1.5px; box-sizing: border-box; font-family: 'Nanum Gothic', sans-serif; -webkit-font-size-adjust:none;  }
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,button,header,nav,aside,footer,option,a,.header,.gnb, .login-box, .footer, .inner,.btn-box,input{margin:0; padding:0; font-size: 15px; letter-spacing: -1px; box-sizing: border-box; font-family: 'Nanum Gothic', sans-serif; -webkit-font-size-adjust:none;  }
 body,h1,h2,h3,h4,input,button{color:#000;-webkit-font-size-adjust: 100%;}
 body{background-color:#fff;*word-break:break-all;-ms-word-break:break-all; font-family:'Nanum Gothic', sans-serif, 'Calibri', 'MalgunGothic', 'sans-serif';text-align:left; }
 
@@ -57,7 +57,7 @@ i,em,address{font-style:normal;}
 label,button{cursor:pointer}
 button{margin:0;padding:0; border-radius: 0!important;}
 
-
+a:focus, input:focus, button:focus, select:focus, option:focus{outline:1px dotted #e1e1e1!important;}
 
 /*사파리 인풋 CSS 제거*/
 input {-webkit-appearance: none;}
@@ -92,7 +92,7 @@ a{color:#000000;text-decoration:none}
 a:hover{text-decoration:none}
 button {position:relative}
 button img{left:-3px;*left:auto}
-button:visited, button:focus, button:active, button:hover{ outline:0 none !important; }
+button:visited, button:focus, button:active, button:hover{ outline:0 none !important;}
 html:first-child select{height:20px;padding-right:6px}
 option{padding-right:6px}
 hr{display:none}
@@ -127,6 +127,7 @@ nput[type="text"]:focus,textarea:focus,input[type="file"]:focus,button:focus,inp
 .orange{color: #FF8000;}
 .lotte-red{color: #b33134;}
 
+.border-bottom{border-bottom: 1px solid #333 !important;}
 
 /*mobile reset*/
 @media only screen and (max-width: 400px) {
