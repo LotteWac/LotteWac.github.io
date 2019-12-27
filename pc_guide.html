@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/assets/reset.css">
     <link rel="stylesheet" href="./css/assets/code-default.css">
     <link rel="stylesheet" href="./css/assets/code-atom-one-dark.css">
-    <link rel="stylesheet" href="./css/assets/wac.css">
+    <link rel="stylesheet" href="./css/assets/wac_ver1.css">
 
     <script src="./js/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
@@ -28,37 +28,35 @@
             <!-- inner start -->
             <div class="inner">
                 <h1>
-                    <a href="./index.html" class="pc">Accessibility Guide</a>
-                    <a href="javascript:;" id="mobileNavBtn">
-                        <span class="blind">접근성 검사지침 목록 보기 메뉴 버튼</span>
-                        <i class="glyphicon glyphicon-list"></i>
+                    <a href="#" class="pc">
+                      <img src="./img/main-logo.png" alt="lottemart 로고">
+                      PC웹 접근성 가이드
                     </a>
-                  
+                    <a href="#" class="mobile"><img src="./img/logo.png" alt="lottemart 로고"></a>
                 </h1>
 
                 <ul class="device">
                     <li>
-                        <a href="./pc_guide.html" class="pc-guide" data-toggle="tooltip" data-placement="bottom" title="PC 지침 보기">
-                            <img src="./img/pc-icon.png" alt="PC 지침 보기">
-                        </a>
+                        <a href="./pc_guide.html" class="pc-guide" data-toggle="tooltip" data-placement="bottom" title="PC 지침 보기">PC 지침 보기</a>
                     </li>
                     <li>
-                        <a href="./mobile_guide.html" class="mobile-guide" data-toggle="tooltip" data-placement="bottom" title="MOBILE 지침 보기">
-                            <img src="./img/mobile-icon.png" alt="MOBILE 지침 보기">
-                        </a>
+                        <a href="./mobile_guide.html" class="mobile-guide" data-toggle="tooltip" data-placement="bottom" title="MOBILE 지침 보기">Mobile 지침 보기</a>
                     </li>
                     <li>
-                        <a href="./wac_focus.html" class="focus-guide" data-toggle="tooltip" data-placement="bottom" title="초점 이동에 관련">
-                            <img src="./img/keyboard-icon.png" alt="초점 이동에 관련 링크 아이콘">
-                         </a>
+                        <a href="./wac_focus.html" class="focus-guide" data-toggle="tooltip" data-placement="bottom" title="초점 이동에 관련">초점 이동에 관련</a>
                     </li>
                 </ul>
 
-               
+
+                <select class="guide-version" name="">
+                  <option value>Guide 버전1</option>
+                  <option value>Guide 버전2</option>
+                </select>
             </div>
             <!-- inner end -->
         </header>
         <!-- gnb end -->
+
         <nav class="btn-fixed-top" id="goTopBtn">
             <a href="#top">
                 <i class="glyphicon glyphicon-eject"></i>
@@ -134,7 +132,7 @@
                                             - 배경이미지 (IR기법) : 의미있는 배경 이미지를 사용하였을 경우, 배경이미지에 대한 대체 텍스트 제공 합니다.
                                         </li>
                                         <li>
-                                            - 링크, 버튼 : 아이콘을 포함한 용도가 명확한 이미지 링크, 이미지 버튼 등은 핵심기능에 대한 설명을 구체적으로 대체 텍스트 제공 합니다. 
+                                            - 링크, 버튼 : 아이콘을 포함한 용도가 명확한 이미지 링크, 이미지 버튼 등은 핵심기능에 대한 설명을 구체적으로 대체 텍스트 제공 합니다.
                                         </li>
                                         <li>
                                             - 웹 애플리케이션을 제공할 때, 동등한 기능을 수행 할 수 있는 대체 콘텐츠를 함께 제공 합니다.
@@ -2152,9 +2150,9 @@ outline: -webkit-focus-ring-color auto 5px;
     var $mobileNavBtn = $('#mobileNavBtn'),
         $guideLnb = $('.wac-guide .lnb'),
         $lastOfGuideLnb = _wac.getFocusables($guideLnb).last();
-       
-        
-    var removeWacEnterd = function(e){ 
+
+
+    var removeWacEnterd = function(e){
         _wac.removeWacEnteredAsync($(this));
     }
     var lnbOpen = function(){
@@ -2189,7 +2187,7 @@ outline: -webkit-focus-ring-color auto 5px;
             }
         }
     }
-    
+
     $mobileNavBtn.on({
         click : mobileNavBtnClickHandler,
         keydown : mobileNavBtnKeydownHandler,
@@ -2201,7 +2199,7 @@ outline: -webkit-focus-ring-color auto 5px;
             $this = $(this);
             targetId = $this.attr('href');
             $target = $(targetId);
-           
+
             if(_wac.isEnterEvent(e) && !_wac.isWacEntered($this)){
                 lnbClose();
             }else if(_wac.isTabEvent(e) && $this.is($lastOfGuideLnb)){
@@ -2244,7 +2242,7 @@ outline: -webkit-focus-ring-color auto 5px;
 
 
     var $codeOpenBtn = $('.code-open-btn');
-        
+
 
     $codeOpenBtn.on('click', function(){
         $targetCodeArea = $(this).next('code')
@@ -2256,7 +2254,7 @@ outline: -webkit-focus-ring-color auto 5px;
             $(this).text('닫기');
         }
     });
-    
+
 </script>
 </body>
 </html>

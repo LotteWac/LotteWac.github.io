@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/assets/reset.css">
     <link rel="stylesheet" href="./css/assets/code-default.css">
     <link rel="stylesheet" href="./css/assets/code-atom-one-dark.css">
-    <link rel="stylesheet" href="./css/assets/wac.css">
+    <link rel="stylesheet" href="./css/assets/wac_ver1.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
@@ -20,37 +20,41 @@
     <title>롯데마트 웹접근성 가이드</title>
 </head>
 <body class="wac-guide mobile">
-        <!-- gnb start -->
-        <header class="gnb">
-        <!-- inner start -->
-        <div class="inner">
-                <h1>
-                    <a href="./index.html" class="pc">Accessibility Guide</a>
-                    <a href="#" class="mobile"><img src="./img/logo.png" alt="lottemart 로고"></a>
-                </h1>
+      <!-- gnb start -->
+      <header class="gnb">
+          <!-- inner start -->
+          <div class="inner">
+              <h1>
+                  <a href="#" class="pc">
+                    <img src="./img/main-logo.png" alt="lottemart 로고">
+                    PC웹 접근성 가이드
+                  </a>
+                  <a href="#" class="mobile"><img src="./img/logo.png" alt="lottemart 로고"></a>
+              </h1>
 
-                <ul class="device">
-                    <li>
-                        <a href="./pc_guide.html" class="pc-guide" data-toggle="tooltip" data-placement="bottom" title="PC 지침 보기">
-                            <img src="./img/pc-icon.png" alt="PC 지침 보기">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./mobile_guide.html" class="mobile-guide" data-toggle="tooltip" data-placement="bottom" title="MOBILE 지침 보기">
-                            <img src="./img/mobile-icon.png" alt="MOBILE 지침 보기">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./wac_focus.html" class="focus-guide" data-toggle="tooltip" data-placement="bottom" title="초점 이동에 관련">
-                            <img src="./img/keyboard-icon.png" alt="초점 이동에 관련 링크 아이콘">
-                        </a>
-                    </li>
-                </ul>
+              <ul class="device">
+                  <li>
+                      <a href="./pc_guide.html" class="pc-guide" data-toggle="tooltip" data-placement="bottom" title="PC 지침 보기">PC 지침 보기</a>
+                  </li>
+                  <li>
+                      <a href="./mobile_guide.html" class="mobile-guide" data-toggle="tooltip" data-placement="bottom" title="MOBILE 지침 보기">Mobile 지침 보기</a>
+                  </li>
+                  <li>
+                      <a href="./wac_focus.html" class="focus-guide" data-toggle="tooltip" data-placement="bottom" title="초점 이동에 관련">초점 이동에 관련</a>
+                  </li>
+              </ul>
 
+
+              <select class="guide-version" name="">
+                <option value>Guide 버전1</option>
+                <option value>Guide 버전2</option>
+              </select>
           </div>
           <!-- inner end -->
-        </header>
-        <!-- gnb end -->
+      </header>
+      <!-- gnb end -->
+
+
         <nav class="btn-fixed-top" id="goTopBtn">
             <a href="#top">
                 <i class="glyphicon glyphicon-eject"></i>
@@ -92,7 +96,7 @@
             <!-- #wac-app start -->
             <div id="wac-app">
                 <div class="inner">
-                    <h3> 
+                    <h3>
                         <em class="title-small">Mobile Web/Apps</em>
                     모바일에서 사용하는 콘텐츠의 접근성</h3>
                     <p class="summary">
@@ -165,7 +169,7 @@
                                 <pre><code class="html">&lt;i&nbsp;class=&quot;icon-common-originalimage&quot;&gt;이미지&nbsp;원본&nbsp;보기&lt;/i&gt;
                                 </code></pre>
                             </div>
-                             
+
                             <div class="sample">
                                 <h5><i class="glyphicon glyphicon-star"></i> 예시 : 쿠폰다운로드 받기 버튼에 대한 올바른 대체텍스트 제공</h5>
                                 <img src="./img/mobile-text02.png" alt="쿠폰다운로드 받기 버튼이 강조된 이미지">
@@ -175,7 +179,7 @@
 
                             <div class="sample">
                                 <h5><i class="glyphicon glyphicon-star"></i> 예시 : 쿠폰다운로드 받기 버튼에 대한 올바른 대체텍스트 제공</h5>
-                                
+
                                 <img src="./img/mobile-text03.png" alt="쿠폰다운로드 받기 버튼이 강조된 이미지">
                                 <pre><code class="html">&lt;li class="swiper-slide" data-swiper-slide-index="4"&gt;
     &lt;a href="http://m.lottemart.com/mobile/cate/PMWMCAT0004_New.do?CategoryID=C001&amp;ProductCD=D000003682312&amp;ad_sect=mml_3" name="productName"&gt;
@@ -186,7 +190,7 @@
 &lt;img src="http://image.lottemart.com/lim/static_root/images/front/banner/20190320022847179.jpg" alt="kokBtn1&quot;냉장" 닭고기="" º오리고기="" 전품목="" l.point="" 20%"=""&gt;
                                 </code></pre>
                             </div>
-                            
+
                             <div class="error-type">
                                 <h5>[오류유형]</h5>
                                 <ul>
@@ -210,9 +214,9 @@
                                     <li>- IR기법으로 대체텍스트를 제공 시 hidden형태가 아니더라도 화면 터치방식으로는 대체정보 인지 불가함(오류) </li>
                                 </ul>
                             </div>
-                        </div> 
+                        </div>
                     </div>
-             
+
                     <div class="item">
                         <h4>
                             2. 자막, 수화 등의 제공 - 영상이나 음성 콘텐츠에는 동등한 내용의 자막, 원고 또는 수화가 제공되어야 한다.
@@ -226,7 +230,7 @@
                                     <li>- 모바일 기기는 디바이스마다 화면의 크기가 다르므로 닫힌 자막의 형태로 제공하는 것이 좋으며 원고로 제공할 경우에는 화면과 함께 볼 수 있도록 제공하는 것을 권장한다.</li>
                                     <li>- 다만 실시간으로 제공하는 멀티미디어 콘텐츠는 대체 콘텐츠를 제공하지 않아도 준수한 것으로 인정한다.</li>
                                 </ul>
-                                    
+
                             </div>
                             <div class="offer">
                                 <h5>[준수 필요성]</h5>
@@ -289,7 +293,7 @@
                             </div>
                         </div>
                     </div>
-                   
+
                     <div class="item">
                         <h4>
                             3. 색에 무관한 인식 - 화면에 표시되는 모든 정보는 색에 관계없이 인식될 수 있어야 한다.
@@ -303,7 +307,7 @@
                                     흑백 인쇄물을 보는 사용자 및 고대비 모드 사용자가 인식할 수 있도록 제공해야 한다.</li>
                                 </ul>
                             </div>
-                            
+
                             <div class="offer">
                                 <h5>[준수 필요성]</h5>
                                 <ul>
@@ -312,7 +316,7 @@
                                     <li>이와 마찬가지로 모바일 애플리케이션 콘텐츠에서 정보를 색으로만 제공할 경우 색맹이나 색약자의 경우 이를 인지할 수 없다.</li>
                                 </ul>
                             </div>
-                            
+
                             <dl class="check-list">
                                 <dt>검사항목</dt>
                                 <dd>
@@ -357,7 +361,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="item">
                         <h4>
                             4. 명도 대비 - 화면에 표시되는 모든 사용자 인터페이스 컴포넌트와 텍스트는 전경색과 배경색이 구분될 수 있도록 제공되어야 한다.
@@ -370,7 +374,7 @@
                                     <li>화면에 표시되는 모든 사용자 인터페이스 컴포넌트와 텍스트는 전경색과 배경색이 구분될 수 있도록 명도 대비를 3:1 이상으로 제공해야 한다.</li>
                                 </ul>
                             </div>
-                            
+
                             <div class="offer">
                                 <h5>[준수 필요성]</h5>
                                 <ul>
@@ -379,7 +383,7 @@
                                     <li>따라서 전경과 배경을 명확하게 인식할 수 있도록 콘텐츠를 제공해야 한다.</li>
                                 </ul>
                             </div>
-                            
+
                             <dl class="check-list">
                                 <dt>검사항목</dt>
                                 <dd>
@@ -403,7 +407,7 @@
                                     - 제공된 색상이 일정하지 않는 콘텐츠(Gradation 등)는 높은 명도 대비를 제공한 픽셀을 기준으로 한다.
                                 </dd>
                             </dl>
-                            
+
                             <div class="sample">
                                 <h5><i class="glyphicon glyphicon-star"></i> 예시 : 색에 무관한 상세페이지 정보 제공</h5>
                                 <p>전경색과 배경색의 대비가 7:1 이상으로, 글자의 구분이 확실히 가능도록 제공되고 있습니다.</p>
@@ -483,7 +487,7 @@
                                 <h5>[주의사항]</h5>
                                 <ul>
                                     <li>
-                                        - 노인이나 약시자의 경우에 브라우저의 글자체를 확대시켜 콘텐츠를 표시하면 콘텐츠의 표시 위치가 지시하는 위치와 달라져 혼란을 줄 수 있으므로 가급적 위치 정보를 이용하여 
+                                        - 노인이나 약시자의 경우에 브라우저의 글자체를 확대시켜 콘텐츠를 표시하면 콘텐츠의 표시 위치가 지시하는 위치와 달라져 혼란을 줄 수 있으므로 가급적 위치 정보를 이용하여
                                             지시하지 않도록 콘텐츠를 구현하는 것을 권장
                                     </li>
                                 </ul>
@@ -501,7 +505,7 @@
                                 <h5>[지침 설명]</h5>
                                 <ul>
                                     <li>
-                                        - 알림 정보를 한 가지 감각으로만 제공하면 해당 감각에 대한 장애를 가진 사용자는 알림을 인식할 수 없다.(ex. 청각 장애인에게 소리 알림, 시각 장애인에게 푸시 알림 등) 
+                                        - 알림 정보를 한 가지 감각으로만 제공하면 해당 감각에 대한 장애를 가진 사용자는 알림을 인식할 수 없다.(ex. 청각 장애인에게 소리 알림, 시각 장애인에게 푸시 알림 등)
                                     </li>
                                     <li>
                                         - 때문에 알림 정보를 두 가지 이상의 감각으로 제공하여 특정 감각에 장애를 가진 사용자도 알림을 인식할 수 있도록 해야 한다.
@@ -559,7 +563,7 @@
                                 <h5>[지침설명]</h5>
                                <ul>
                                    <li>
-                                        모바일 디바이스의 초점은 모바일 스크린리더가 접근하는 개체의 테두리에 생기는 하이라이트를 말한다. 
+                                        모바일 디바이스의 초점은 모바일 스크린리더가 접근하는 개체의 테두리에 생기는 하이라이트를 말한다.
                                    </li>
                                     <li>
                                         때문에 PC에서의 키보드 초점과는 다르게 텍스트를 포함한 의미 있는 모든 개체에 초점이 접근해야하고 모바일 스크린리더의 사용 특성으로 인하여 웹 환경에서는 css사용에 많은 주의가 필요하다.
@@ -640,10 +644,10 @@
                                     <li>- 시각에 장애가 있는 경우에 기본적으로 시각적인 정보를 얻을 수 없으므로 모양 그리기, 위치 바꾸기, 끌어다 놓기 등의 복잡한 동작을 수행하기 어렵다. 이것을 보완하기 위해 단순한 누르기 동작으로도 동등한 기능을 이용할 수 있도록 해야 한다.</li>
                                     <li>- 또한 시각장애인은 화면낭독프로그램을 사용하기 때문에 좌/우 쓸어 넘기기, 위/아래 쓸어 넘기기, 당겼다 놓기, 버튼 실행 등의 동작에도 제한을 겪게 된다. </li>
                                     <li>- 모바일 화면낭독 프로그램을 사용하더라도 동일한 기능을 사용할 수 있도록 모바일 화면낭독프로그램의 제스처(세 손가락 쓸기, 한 손가락 더블 탭 등)로 동일한 기능을 이용할 수 있도록 보완하거나 대체 수단을 제공하는 것이 중요하다.</li>
-                                        
+
                                 </ul>
                             </div>
-                            
+
                            <dl class="check-list">
                                 <dt>검사항목</dt>
                                 <dd>
@@ -684,7 +688,7 @@
                                 <h5>[지침설명]</h5>
                                 <ul>
                                     <li>
-                                        - 장애나 고령, 환경적 요소 등에 의해서 사용자가 시간제한 콘텐츠의 응답시간을 초과할 수 있기 때문에 애플리케이션 콘텐츠 제작 시 시간제한이 있는 콘텐츠는 가급적 포함하지 않는 것이 바람직하며, 보안 등의 사유로 시간제한이 필요한 경우에는 이를 회피할 수 있는 수단을 제공(시간만료가 최소 20초 이상 남았을 때)해야 한다. 
+                                        - 장애나 고령, 환경적 요소 등에 의해서 사용자가 시간제한 콘텐츠의 응답시간을 초과할 수 있기 때문에 애플리케이션 콘텐츠 제작 시 시간제한이 있는 콘텐츠는 가급적 포함하지 않는 것이 바람직하며, 보안 등의 사유로 시간제한이 필요한 경우에는 이를 회피할 수 있는 수단을 제공(시간만료가 최소 20초 이상 남았을 때)해야 한다.
                                     </li>
                                     <li>
                                         - 게임, 경매 등과 같이 시간제한이 필수적인 애플리케이션이나 세션 시간이 20시간 이상인 콘텐츠는 예외로 간주한다.
@@ -723,7 +727,7 @@
                             <div class="sample">
 
                             </div>
-                            
+
                             <div class="error-type">
                             <h5>[오류유형]</h5>
                                 <ul>
@@ -758,7 +762,7 @@
                                         단, 제어 방법을 제공하지 않았더라도 변경되는 콘텐츠의 전체 내용을 접할 수 있는 대체 수단을 제공하면 준수한 것으로 인정한다.
                                     </li>
                                 </ul>
-                            
+
                             </div>
                             <div class="offer">
                                 <h5>[준수 필요성]</h5>
@@ -794,7 +798,7 @@
                                     <li>
                                         - 시간에 따라 변화하는 콘텐츠에 정지, 이전, 다음 기능이 없는 경우
                                     </li>
-                                    <li> 
+                                    <li>
                                         - 시간에 따라 변화하는 콘텐츠가 순차진행 및 임의진행 터치방식으로 제어가 불가능한 경우
                                     </li>
                                 </ul>
@@ -803,12 +807,12 @@
                             <div class="recom-type">
                                 <h5>[주의사항]</h5>
                                 <ul>
-                                    <li> 
+                                    <li>
                                         - 움직이는 배너, 뉴스 등 시간에 따라 변화하는 콘텐츠를 순차진행 및 임의진행 터치방식으로 평가
                                     </li>
-                                    <li> 
+                                    <li>
                                         - 순차진행 및 임의진행 시 콘텐츠의 변화가 멈춰지면 정지 기능이 제공된 것으로 인정
-                                    </li>   
+                                    </li>
                                     <li>
                                         - 검사대상은 자동적으로 움직이는 배너, 자동 변경되는 실시간 검색순위 등이 해당됨
                                     </li>
@@ -852,7 +856,7 @@
                                     - 컨트롤의 터치 공간을 충분히 확보하여 사용자가 컨트롤 영역을 명확히 구분할 수 있도록 제공하는 것이 좋다. <br>
                                     - 사용자의 의도에 따라 컨트롤을 확대하여 사용할 경우, 상대적인 크기로 커져서 손쉽게 활용할 수 있도록 제공하는 것이 좋다.<br>
                                     - 쿼티 입력 등 운영체제에서 제공하는 기본 사용자 인터페이스의 경우에는 예외로 한다.<br>
-                                    
+
                                 </dd>
                                 <dt>점검방법</dt>
                                 <dd>
@@ -976,7 +980,7 @@
                                 <dd>
                                     - 사용자 경험(user experience)에 비추어 일관성 있는 사용자 인터페이스(UI) 사용자 인터페이스 컴포넌트를 제공하는 것이 바람직하다.<br>
                                     - 사용자 인터페이스 컴포넌트들(폰트, 크기, 화면 색상, 링크 제공 방법, 이모티콘 등)을 사용자가 다시 학습하지 않아도 되도록 해당 애플리케이션 내에서 일관성 있게 제공하는 것이 바람직하다.
-                                
+
                                 </dd>
                                 <dt>점검방법</dt>
                                 <dd>
@@ -1023,7 +1027,7 @@
                                     <li>- 그러므로 깜박임과 번쩍이는 효과로 정보를 제공하기 보다는 효과적인 디자인 등을 통해 모바일 애플리케이션 콘텐츠의 정보를 제공하는 것이 바람직하다.</li>
                                 </ul>
                             </div>
-                            
+
                             <dl class="check-list">
                                 <dt>검사항목</dt>
                                 <dd>
@@ -1077,7 +1081,7 @@
                                     <li>- 따라서 이러한 배경음이 필요한 경우 이에 대한 알림 정보를 제공하고, 사용자가 선택할 경우에만 실행이 되도록 제공하는 것이 바람직하다. </li>
                                 </ul>
                             </div>
-                    
+
                             <dl class="check-list">
                                 <dt>검사항목</dt>
                                 <dd>
@@ -1090,7 +1094,7 @@
                                     - 단, 3초 미만의 배경음은 예외로 한다. <br>
                                     - 배경음을 사용할 경우, 반드시 배경음을 제어할 수 있는 수단(멈춤, 일시 정지, 음량 조절 등)이나 배경음 제어로 이동하는 링크를 애플리케이션 첫 부분에 제공하는 것이 좋다. 또한
                                     음량 조절은 운영 체제에서 제공하는 음량과 독립적으로 배경음만 조절할 수 있도록 제공하는 것이 더 좋다.<br>
-                    
+
                                 </dd>
                                 <dt>점검방법</dt>
                                 <dd>
@@ -1100,9 +1104,9 @@
                                     - 초점을 받아 3초 이상 재생되는 배경음을 사용하는지 확인한다.
                                 </dd>
                             </dl>
-                    
+
                             <div class="sample">
-                    
+
                             </div>
                             <div class="error-type">
                                 <h5>[오류유형]</h5>
@@ -1133,13 +1137,13 @@
                                     <li>- 이것을 방지하기 위해 사용자가 예측할 수 없는 기능이 실행되거나 다른 애플리케이션으로 전환이 발생하는 경우 사용자가 사전에 이것을 예측할 수 있는 정보를 제공하여 해당 기능의 이용여부를 선택할 수 있도록 해야 한다.</li>
                                 </ul>
                             </div>
-                    
+
                             <dl class="check-list">
                                 <dt>검사항목</dt>
                                 <dd>
                                     - 화면이 전환되거나 팝업과 같은 이벤트가 실행되는 경우 이를 예측할 수 있는 방법을 제공해야 한다.<br>
                                     - 다른 애플리케이션으로 연결 및 전환되는 경우 이를 예측할 수 있는 방법을 제공해야 한다.<br>
-                                    
+
                                 </dd>
                                 <dt>구현방법</dt>
                                 <dd>
@@ -1151,9 +1155,9 @@
                                     - 사용자가 실행하지 않은 상황에서 예측하지 않은 새창, 초점 변화, 페이지 이동 등이 제공되는지 점검한다.<br>
                                 </dd>
                             </dl>
-                    
+
                             <div class="sample">
-                    
+
                             </div>
                             <div class="error-type">
                                 <h5>[오류유형]</h5>
@@ -1231,7 +1235,7 @@
                                 <ul>
                                     <li>- 폰트 크기 확대 기능을 미제공하고, OS의 폰트 변경 설정도 적용되지 않는 경우</li>
                                     <li>- 텍스트 이미지를 2배 확대 시 가독이 어려운 경우</li>
-                                           
+
                                 </ul>
                             </div>
 
@@ -1280,11 +1284,11 @@
                                 <dt>구현방법</dt>
                                 <dd>
                                     - 모바일 애플리케이션 콘텐츠를 개발함에 있어 기본 사용자 인터페이스 컴포넌트를 최대한 활용하는 것이 접근성을 높이는 데 도움이 된다.<br>
-                                    - 1. 애플의 iOS에서 제공 방법 
+                                    - 1. 애플의 iOS에서 제공 방법
                                     Native UI component에는 UIWindow, UILabel, UIPickerView 등이 있다. 특히 웹 페이지를 내장하는 페이지를 만들 경우에는 UIWebView를 통해 작성을 하게 된다. 부득이 커스텀 사용자 인터페이스 컴포넌트를 사용할 경우 UIAccessibilityContainer protocol을 상속 받아 구현해야 한다.<br>
-                                    - 2. 구글의 안드로이드에서 제공 방법  
+                                    - 2. 구글의 안드로이드에서 제공 방법
                                     Native UI component에는 ImageViewbutton 등이 있다. 부득이 커스텀 사용자 인터페이스 컴포넌트를 사용할 경우 관련 accessibility 속성을 enable 한 후 사용해야 한다.<br>
-                                    
+
                                 </dd>
                                 <dt>점검방법</dt>
                                 <dd>
@@ -1335,8 +1339,8 @@
                     <h3>
                         <em class="title-small">Mobile Device</em>
                     모바일 기기 자체의 접근성</h3>
-                    
-                    <h4>- IOS : Voice Over</h4> 
+
+                    <h4>- IOS : Voice Over</h4>
                     <ul class="iphone">
                         <li>
                             + Apple사 에서 제조한 아이폰의 경우에는 IOS 에 자체 내장된
@@ -1359,7 +1363,7 @@
                     <h4>- ANDROID : Talk Back</h4>
                     <ul class="android">
                         <li>
-                            + Google사 에서 제조한 안드로이드 OS를 사용하는 
+                            + Google사 에서 제조한 안드로이드 OS를 사용하는
                             스마트 디바이스의 경우에는<br> 안드로이드 OS에 자체 내장된
                             Talk Back 기능이<br> 시각장애인들의 편의를 위하여
                             화면을 낭독해줍니다.
@@ -1371,7 +1375,7 @@
                             <img src="./img/and-voice2.png" alt="안드로이드 tts 설정 화면">
                         </li>
                         <li>
-                            + Google에서 운영중인 접근성 페이지를 방문해보시면<br> 
+                            + Google에서 운영중인 접근성 페이지를 방문해보시면<br>
                             해당 기술에 대한 자세한 내용을 확인하실 수 있습니다.
                         </li>
                         <li>
@@ -1383,9 +1387,9 @@
             <!-- #wac-device end -->
 
             <!-- #wac-assistive start -->
-            <div id="wac-assistive"> 
+            <div id="wac-assistive">
                 <div class="inner">
-                    <h3> 
+                    <h3>
                         <em class="title-small">Mobile Assistant Technologies</em>
                     장애인의 이용 편의를
                     위한 보조기기</h3>
@@ -1403,7 +1407,7 @@
                             </li>
                             <li>
                                 <a href="https://support.google.com/accessibility/android/answer/6283677?hl=ko" data-toggle="tooltip" data-placement="bottom" title="안드로이드 OS에 자체적으로 내장되어있는 프로그램으로 화면의 모든 글씨를 소리내어 읽어줍니다.">
-                                    TalkBack 
+                                    TalkBack
                                 </a>
                             </li>
                             <li>
@@ -1422,7 +1426,7 @@
                         <h4>명도 대비</h4>
                         <P>
                             전경색과 배경색의 명도 차이를 비교할 수 있게 도와주는 확장 프로그램과 화면을 고대비로 전환할 수 있는 프로그램입니다.
-                        </P>    
+                        </P>
                         <ul>
                             <li>
                                 <a href="https://www.techworld.com/download/system-desktop-tools/colour-contrast-analyser-250-3331407/" data-toggle="tooltip" data-placement="right" title="대표적인 명도대비 프로그램으로, 적용할 이미지의 내용을 반전하여 확인이 가능합니다.">
@@ -1462,7 +1466,7 @@
                                     WAVE
                                 </a>
                             </li>
-                            
+
 
                             <li>
                                 <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor" data-toggle="tooltip" data-placement="bottom" title="안드로이드용 접근성 자동 검사 앱으로, 모바일(Android) 앱의 접근성 오류를 자동 진단 해줍니다.">

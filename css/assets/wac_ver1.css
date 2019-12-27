@@ -29,7 +29,7 @@ h4{font-weight:900;}
 
 /* pre-fix */
 .inner{width:100%; max-width:1200px; min-width:320px; height: 100%; margin:0 auto; position: relative; padding: 0;}
-.container .inner{max-width: 1040px;}
+.index .container .inner{max-width: 1040px;}
 .blind {
     position: absolute;
     width: 1px;
@@ -324,6 +324,8 @@ button:focus{border:1px dotted #e1e1e1!important;}
         #wacIntro .modal-dialog .modal-content table td{font-size: 13px; border-bottom: 1px solid #dcdcdc; padding: 5px;}
         #wacIntro .modal-dialog .modal-content table td:last-child{border-left: 1px solid #333; border-right: 0;}
     #wacIntro .modal-dialog .modal-footer{border:0; text-align:center;}
+
+    #wacIntro #WacMobileTable tr th{min-width: 85px;}
 
     #wacIntro .modal-dialog .btn.btn-default{width: 118px; height: 40px; background: #333; color: #fff;}
 
