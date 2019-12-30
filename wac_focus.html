@@ -6,11 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> -->
     <link rel="stylesheet" href="./css/assets/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/assets/wac.css">
+    <link rel="stylesheet" href="./css/assets/wac_ver1.css">
 
     <script src="./js/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
@@ -28,28 +26,30 @@
         <!-- inner start -->
         <div class="inner">
             <h1>
-                <a href="./index.html" class="pc">Accessibility Guide</a>
+                <a href="#" class="pc">
+                  <img src="./img/main-logo.png" alt="lottemart 로고">
+                  PC웹 접근성 가이드
+                </a>
                 <a href="#" class="mobile"><img src="./img/logo.png" alt="lottemart 로고"></a>
             </h1>
 
             <ul class="device">
                 <li>
-                    <a href="./pc_guide.html" class="pc-guide" data-toggle="tooltip" data-placement="bottom" title="PC 지침 보기">
-                        <img src="./img/pc-icon.png" alt="PC 지침 보기">
-                    </a>
+                    <a href="./pc_guide.html" class="pc-guide" data-toggle="tooltip" data-placement="bottom" title="PC 지침 보기">PC 지침 보기</a>
                 </li>
                 <li>
-                    <a href="./mobile_guide.html" class="mobile-guide" data-toggle="tooltip" data-placement="bottom" title="MOBILE 지침 보기">
-                        <img src="./img/mobile-icon.png" alt="MOBILE 지침 보기">
-                    </a>
+                    <a href="./mobile_guide.html" class="mobile-guide" data-toggle="tooltip" data-placement="bottom" title="MOBILE 지침 보기">Mobile 지침 보기</a>
                 </li>
                 <li>
-                    <a href="./wac_focus.html" class="focus-guide" data-toggle="tooltip" data-placement="bottom" title="초점 이동에 관련">
-                        <img src="./img/keyboard-icon.png" alt="초점 이동에 관련 링크 아이콘">
-                        </a>
+                    <a href="./wac_focus.html" class="focus-guide" data-toggle="tooltip" data-placement="bottom" title="초점 이동에 관련">초점 이동에 관련</a>
                 </li>
             </ul>
-            
+
+
+            <select class="guide-version" name="">
+              <option value>Guide 버전1</option>
+              <option value>Guide 버전2</option>
+            </select>
         </div>
         <!-- inner end -->
     </header>
@@ -57,24 +57,24 @@
 
     <!-- container start -->
     <div class="container">
+
         <!-- mvisual start -->
         <div class="m-visual">
-            <!-- <img src="./img/keyboard-img.jpg" alt="f1 Help 라고 쓰여있는 키보드 자판이미지" /> -->
-            <h2>롯데마트 웹 접근성 키보드 초점 이동법</h2>
-            <ul>
-                <li>
-                    <img src="./img/menu-icon.png" alt="메뉴형 아이콘"><br>
-                    <a href="#ui-menu">메뉴형</a></li>
-                <li>
-                    <img src="./img/tab-icon.svg" alt="탭형 아이콘"><br>
-                    <a href="#ui-tab">탭형</a>
-                </li>
-                <li>
-                    <img src="./img/slide-icon.png" alt="슬라이드형 아이콘"><br>
-                    <a href="#ui-slide">슬라이드형</a>
-                </li>
 
+          <!-- inner start -->
+          <div class="inner">
+
+            <h2><span class="white">롯데마트<em>중간선</em></span>
+              웹 접근성 키보드 초점 이동법</h2>
+            <ul>
+                <li><a href="#ui-menu" class="btn btn-lotte">메뉴형   +</a></li>
+                <li><a href="#ui-tab" class="btn btn-lotte">탭형   +</a></li>
+                <li><a href="#ui-slide" class="btn btn-lotte">슬라이드형   +</a></li>
             </ul>
+
+          </div>
+          <!-- inner end -->
+
         </div>
         <!-- mvisual end -->
 
@@ -10298,6 +10298,8 @@
         </div>
         <!-- contents end -->
 
+
+
     </div>
     <!-- container end -->
 
@@ -10386,7 +10388,7 @@
                               _wac.preventDefaultAction(e)
                             $nowActiveCont = $complexCont2Depth.filter('.active');
                             _wac.getFocusables($nowActiveCont)[0].focus();
-                           
+
                           }else if($this.is($lastOfNav2Depth)){
                             _wac.preventDefaultAction(e);
                             $complexNav1Depth.filter('.active').focus();

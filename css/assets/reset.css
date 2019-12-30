@@ -123,6 +123,7 @@ nput[type="text"]:focus,textarea:focus,input[type="file"]:focus,button:focus,inp
 .align-center{text-align: center;}
 .font-bold{font-weight: bold;}
 
+.white{color: #fff;}
 .skyblue{color: #0174DF;}
 .orange{color: #FF8000;}
 .lotte-red{color: #b33134;}

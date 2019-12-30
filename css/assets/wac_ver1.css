@@ -202,7 +202,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
 .gnb .inner{overflow: unset;}
     .gnb h1{float: left; margin-top: 11px;}
         .gnb h1 a.pc{display: block; font-size: 30px; color: #fff; font-family: 'nanumgothic'; font-weight: 900; letter-spacing: -2.2px;}
-        .gnb h1 a.pc img{margin-top: 20px;}
+        .gnb h1 a.pc img{margin-top: -5px;}
         .gnb h1 a.mobile{display: none;}
 
         .guide-version{width: 105px; height: 20px; float: right; margin-top: 35px; background: transparent; border: 0px; color: #fff;}
@@ -253,7 +253,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
     /* 1. #mVisual */
     .container .m-visual{width: 100%; height: 616px; overflow: hidden; position: relative;}
     .container .m-visual > img{width: 100%; position: absolute; top:-2px;}
-    .container .m-visual h2{width:80%; max-width: 470px; color:#2a2e38; text-align: left; font-size: 86px; position: relative; top:100px; font-family: 'Noto Sans', 'Calibri', Calibri,'lottemart-dream-bold', 'lottemart-happy-Medium','MalgunGothic', 'sans-serif', sans-serif; line-height: 0.9;}
+    .container .m-visual h2{width:80%; max-width: 470px; color:#2a2e38; text-align: left; font-size: 86px; position: relative; top:100px; font-weight: bold; line-height: 0.9;}
     .container .m-visual p{width: 100%; max-width: 444px; position: relative; margin: 90px 0 0 0;}
     .container .m-visual p span{color:#202020; font-weight: bold; position: absolute; top:-30px; right: -22px; font-size:20px;}
     .container .m-visual p strong{color:#b3000f; display: inline-block; margin-top: 58px; font-weight: 600; font-size: 28px;  letter-spacing: -1px; }
@@ -261,7 +261,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
     /* 2. #infoAccess  */
     .container .info-access{width: 100%; height: 685px; padding-top:60px;}
     .container h3{font-size: 36px; font-weight: 900; margin-bottom:20px; color: #202020;}
-    .container h3::before{content: ''; display:block; width: 40px; height: 5px; background: #202020;}
+    .container h3::before{content: ''; display:block; width: 40px; height: 2px; background: #202020;}
     .container .info-access .btn-lotte{width: 160px; height: 40px; padding-bottom: 16px; font-size: 18px; font-weight: 600; letter-spacing: -1px; line-height: 0.7;}
 
     .container .access-list {overflow: hidden; text-align: center;}
@@ -356,7 +356,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
     .wac-guide .btn-fixed-top i{font-size: 15px; color:#fff;}
 
 .wac-guide .lnb{width:300px; height:100%; position: absolute; left:50%; z-index: 50; margin-left: -600px; overflow-y: scroll; padding: 0 20px 100px 0;}
-.wac-guide .lnb.scroll-fixed{position: fixed; top:60px; left:50%; margin-left: -600px;}
+.wac-guide .lnb.scroll-fixed{position: fixed; top:90px; left:50%; margin-left: -600px;}
 
 .wac-guide .container .lnb .depth1-menu{padding-top:20px; color: #293f54;  margin-bottom: 5px; vertical-align: middle; cursor: pointer;}
 .wac-guide .container .lnb .depth1-menu > a{font-size: 18px;}
@@ -365,19 +365,21 @@ button:focus{border:1px dotted #e1e1e1!important;}
 
 .wac-guide .container .lnb .depth2-menu{margin-left:15px;}
 .wac-guide .container .lnb .depth2-menu li{line-height: 1.5;}
-.wac-guide .container .lnb .depth2-menu li a{font-size:12px;}
+.wac-guide .container .lnb .depth2-menu li a{font-size:14px;}
 /* .wac-guide .container .lnb .depth2-menu li a:hover{text-decoration:underline; color: #369eff;} */
 /* .wac-guide .container .lnb .depth1-menu.active + .depth2-menu{margin-left:15px; display: block;} */
 
 
-.wac-guide .container .contents{width:calc(100% - 280px); float: right; border-left:1px solid #e1e1e1; padding-left:20px; z-index: 90;}
+.wac-guide .container .contents{width:calc(100% - 280px); float: right; border-left:1px solid #b3000f; padding-left:40px; z-index: 90;}
 
 .wac-guide .container .contents .article{margin-bottom : 200px; padding-top:20px;}
-.wac-guide .container .contents .article h3{font-size:25px; color: #293f54;}
+.wac-guide .container .contents .article p{font-size: 18px;}
+.wac-guide .container .contents .article h3{font-size:36px; color: #293f54;}
 
 .wac-guide .container .contents .article > div[id^="item"]:target{padding-top: 70px;}
 .wac-guide.mobile #wac-app h4,
-.wac-guide .container .contents .article > div[id^="item"] > h4{color: #215c6e; width: 100%; height: 50px; padding: 11px 20px; border:1px solid #e1e1e1; border-top:2px solid #16657e; border-bottom:1px solid #e1e1e1; cursor: pointer; border-radius: 5px 5px 0 0; position: relative; font-size: 15px; margin: 0;}
+.wac-guide .container .contents .article > div[id^="item"] > h4{color: #dd0129; width: 100%; height: 50px; padding: 11px 20px; border:1px solid #bebebe; border-bottom:0; cursor: pointer; position: relative; font-size: 22px; margin: 0;}
+.wac-guide .container .contents .article > div[id^="item"] > h4:after{content: ''; display: block; width: 100%; height: 2px; margin: 0 auto; background: #eee; margin-top: 15px;}
 
 
 .wac-guide.mobile .item > h4 i,
@@ -385,9 +387,9 @@ button:focus{border:1px dotted #e1e1e1!important;}
 .wac-guide.mobile .item > h4 i.open,
 .wac-guide .container .contents .article > div[id^="item"] > h4 i.open{ -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); transition: all ease 0.5s 0s;}
 .wac-guide.mobile #wac-app .item-cont,
-.wac-guide .container .contents .article > div[id^="item"] .item-cont{border:1px solid #e1e1e1; border-top:0; padding-bottom:20px;}
+.wac-guide .container .contents .article > div[id^="item"] .item-cont{border:1px solid #bebebe; border-top:0; padding-bottom:20px;}
 .wac-guide.mobile #wac-app p,
-.wac-guide .container .contents .article > div[id^="item"] .item-cont > p{padding:15px 0 0 30px;}
+.wac-guide .container .contents .article > div[id^="item"] .item-cont > p{font-size: 16px; color: #333333; padding: 30px 20px;}
 .wac-guide.mobile .container #wac-app .item .sample p{padding:0; margin-bottom: 20px;}
 
 
@@ -398,9 +400,11 @@ button:focus{border:1px dotted #e1e1e1!important;}
 .wac-guide.mobile #wac-app .sample,
 .wac-guide.mobile #wac-app .definition,
 .wac-guide .container .contents #wacExample .sample,
-.wac-guide .container .contents #wacExample .definition{width:90%; margin: 0 auto; padding:20px 0;}
+.wac-guide .container .contents #wacExample .definition{padding: 0 20px;}
 /* .wac-guide .container .contents #wacExample .sample h5, */
-.wac-guide .container .contents #wacExample .definition h5{margin-bottom:15px;}
+.wac-guide .container .contents #wacExample .definition h5{margin-bottom:15px; font-size: 22px; color: #202020; font-weight: bold;}
+.wac-guide .container .contents #wacExample .definition h5::before{ content: ''; display: inline-block; width: 3px; height: 16px; background: #202020; margin-right: 12px;}
+
 .wac-guide .container .contents #wacExample .definition li ul{padding-left:15px;}
 
 .wac-guide .container .contents #wacExample .sample p{font-size: 15px;}
@@ -503,11 +507,12 @@ button:focus{border:1px dotted #e1e1e1!important;}
 .ui-focus div[id^="ui"]:target{padding-top: 70px;}
 
 /* .m-visual */
-.ui-focus .m-visual{background:url(../../img/keyboard-img.jpg) no-repeat 0 0; position: relative; top:0; width:100%;}
-    .ui-focus .m-visual h2{width: 80%; max-width: 600px; position: relative; margin:0 auto; font-size: 65px;top:20vh;}
-
-    .ui-focus .m-visual ul{width:80%; max-width: 600px; position: relative; font-size: 65px; margin:0 auto; top:23vh;}
-    .ui-focus .m-visual ul li{width:33.33%;  height: 100px; float: left; text-align: center;}
+.ui-focus .m-visual{background:url(../../img/focus-mVisual.png) no-repeat 0 0; position: relative; top:0; width:100%;}
+    .ui-focus .m-visual h2{width: 80%; max-width: 600px; position: relative; font-size: 65px; color: #ffdc78; line-height: 1.2;}
+    .ui-focus .m-visual h2 span{display: block; position: relative;}
+    .ui-focus .m-visual h2 span em{display: inline-block; position: absolute; width: 240px; height: 3px; background: #fff; text-indent: -99999999px; margin-top: 30px;}
+    .ui-focus .m-visual ul{width:80%; max-width: 600px; position: relative; font-size: 65px; margin-top: 150px;}
+    .ui-focus .m-visual ul li{height: 100px; float: left; margin-right: 15px; text-align: center;}
     .ui-focus .m-visual ul li img{width:100%; max-width:138px;}
     .ui-focus .m-visual ul li:nth-child(2) img{width:100%; max-width:100px; margin:12px 0;}
     .ui-focus .m-visual ul li a{font-size: 18px;}
