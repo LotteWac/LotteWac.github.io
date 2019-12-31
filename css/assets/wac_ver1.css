@@ -351,8 +351,8 @@ button:focus{border:1px dotted #e1e1e1!important;}
  **********************/
 .wac-guide #mobileNavBtn{position: absolute; top:1px; left:20px; font-size: 20px; color: #fff; display: none;}
 
-.wac-guide .btn-fixed-top{position: fixed; width: 30px; height:30px; bottom :50px; right:50%; margin:0 -660px 0 0;  z-index: 99; background: #293f54;  border-radius: 15px; padding:0;}
-    .wac-guide .btn-fixed-top a{display: block; text-align: center;}
+.wac-guide .btn-fixed-top{position: fixed; width: 41px; height:41px; top:440px; right:10%; z-index: 99; background: #293f54;  padding:0;}
+    .wac-guide .btn-fixed-top a{display: block; width: 41px; height:41px; background: url(../../img/fix-btn.png) no-repeat 0 0;text-align: center;}
     .wac-guide .btn-fixed-top i{font-size: 15px; color:#fff;}
 
 .wac-guide .lnb{width: 258px; height:100%; position: absolute; left:50%; z-index: 50; margin-left: -600px; overflow-y: scroll; padding: 0 0 100px 0;}
@@ -377,8 +377,10 @@ button:focus{border:1px dotted #e1e1e1!important;}
 
 .wac-guide .container .contents .article > div[id^="item"]:target{padding-top: 120px;}
 .wac-guide.mobile #wac-app h4,
-.wac-guide .container .contents .article > div[id^="item"] > h4{color: color: #6f6f6f; width: 100%; height: 67px; padding: 7px 20px; border:1px solid #bebebe; border-bottom: 2px solid #6f6f6f; cursor: pointer; position: relative; font-size: 22px; margin: 0;}
+.wac-guide .container .contents .article > div[id^="item"] > h4{color: #6f6f6f; width: 100%; height: 67px; padding: 7px 20px; border:1px solid #bebebe; border-bottom: 2px solid #6f6f6f; cursor: pointer; position: relative; font-size: 22px; margin: 0;}
+.wac-guide.mobile #wac-app h4.active,
 .wac-guide .container .contents .article > div[id^="item"] > h4.active{color: #dd0129; border-bottom:0;}
+.wac-guide.mobile #wac-app h4.active::after,
 .wac-guide .container .contents .article > div[id^="item"] > h4.active:after{content: ''; display: block; width: 100%; height: 2px; margin: 0 auto; background: #eee; margin-top: 15px;}
 
 
@@ -401,14 +403,25 @@ button:focus{border:1px dotted #e1e1e1!important;}
 .wac-guide.mobile #wac-app .definition,
 .wac-guide .container .contents #wacExample .sample,
 .wac-guide .container .contents #wacExample .definition{padding: 0 30px;}
+.wac-guide.mobile #wac-app .offer ul li,
+.wac-guide.mobile #wac-app .error-type ul li,
+.wac-guide.mobile #wac-app .recom-type ul li,
 .wac-guide .container .contents #wacExample .expect ul li,
 .wac-guide .container .contents #wacExample .definition ul li{position: relative; padding-left:20px;}
+.wac-guide.mobile #wac-app .offer ul li::before,
+.wac-guide.mobile #wac-app .error-type ul li::before,
+.wac-guide.mobile #wac-app .recom-type ul li::before,
 .wac-guide .container .contents #wacExample .expect ul li::before,
 .wac-guide .container .contents #wacExample .definition ul li::before{content: '·'; display: inline-block; font-weight: bold; position: absolute; left: 12px;; height: 100%;}
 /* .wac-guide .container .contents #wacExample .sample h5, */
 
+.wac-guide.mobile .container #wac-app .item .definition h5,
+.wac-guide.mobile .container #wac-app .item .offer h5,
 .wac-guide .container .contents #wacExample .expect h5,
 .wac-guide .container .contents #wacExample .definition h5{margin-bottom:15px; font-size: 22px; color: #202020; font-weight: bold;}
+
+.wac-guide.mobile .container #wac-app .item .definition h5::before,
+.wac-guide.mobile .container #wac-app .item .offer h5::before,
 .wac-guide .container .contents #wacExample .expect h5::before,
 .wac-guide .container .contents #wacExample .definition h5::before{ content: ''; display: inline-block; width: 3px; height: 16px; background: #202020; margin-right: 12px;}
 
@@ -426,10 +439,10 @@ button:focus{border:1px dotted #e1e1e1!important;}
 .wac-guide.mobile #wac-app .recom-type,
 .wac-guide.mobile #wac-app .offer,
 .container .contents #wacExample .expect,
-.container .contents #wacExample .check-list{width:90%; margin: 0 auto; padding: 20px 0;}
+.container .contents #wacExample .check-list{margin: 0 auto; padding: 20px 30px;}
 .container .contents #wacExample .check-list{max-width: 800px;}
 .check-list dt, .check-list dd,
-.container .contents #wacExample .check-list dd{padding:3px 10px; border-bottom: 1px solid #dcdcdc;}
+.container .contents #wacExample .check-list dd{padding:3px 10px; border: 1px solid #dcdcdc;}
 .check-list dt,
 .container .contents #wacExample .check-list dt{height: 46px; color: #fff; background: #474747; padding-top: 7px;}
 .container .contents #wacExample .check-list dd{background: #efefef; margin-bottom: 5px; padding: 15px;}
@@ -447,7 +460,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
  .wac-guide.mobile .inner{overflow: visible;}
  .wac-guide.mobile .container{width: 100%; padding-top: 60px;}
  .wac-guide.mobile .container h2{font-size: 30px; text-align: center;}
- .wac-guide.mobile .container h3{font-size: 60px; color: #3c7ea9; text-align: left; line-height: 1;}
+ .wac-guide.mobile .container h3{font-size: 60px; color: #202020; text-align: left; line-height: 1;}
 
  .wac-guide.mobile #wac-app,
  .wac-guide.mobile #wac-device,
@@ -509,7 +522,6 @@ button:focus{border:1px dotted #e1e1e1!important;}
 .ui-focus .example-section .inner{overflow: unset;}
 .ui-focus h4{font-size: 25px!important;}
 .price-strike-type1 {font-size: 22px;}
-.ui-focus h3{color:#3c7ea9;}
 .ui-focus h4.title-h4{font-size:35px !important;}
 .ui-focus h5{font-size: 25px;}
 .ui-focus h5:before{content: '- ';}
