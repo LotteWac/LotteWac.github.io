@@ -28,7 +28,7 @@
             <!-- inner start -->
             <div class="inner">
                 <h1>
-                    <a href="#" class="pc">
+                    <a href="./index.html" class="pc">
                       <img src="./img/main-logo.png" alt="lottemart 로고">
                       PC웹 접근성 가이드
                     </a>
@@ -113,32 +113,32 @@
                         <div class="text-alter" id="item01">
                             <h4 class="active">
                                 1. 이미지에 대한 적절한 대체텍스트 제공
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                                <i class="open"></i>
                             </h4>
 
                             <div class="item-cont">
                                 <p>
-                                    - 텍스트 아닌 콘텐츠는 그 의미나 용도를 이해할 수 있도록 대체 텍스트를 제공해야 한다.<br>
-                                    - 대체 텍스트는 중복으로 제공하지 않는다.
+                                    &CenterDot; 텍스트 아닌 콘텐츠는 그 의미나 용도를 이해할 수 있도록 대체 텍스트를 제공해야 한다.<br>
+                                    &CenterDot; 대체 텍스트는 중복으로 제공하지 않는다.
                                 </p>
 
                                 <div class="definition">
                                     <h5>적용기술</h5>
                                     <ul>
                                         <li>
-                                            - &lt;img&gt;, &lt;input type=”image”&gt;, &lt;area&gt;, &lt;applet&gt; : alt 속성으로 의미나 용도를 이해할 수 있도록 적절한 대체 텍스트 제공 합니다.
+                                            &lt;img&gt;, &lt;input type=”image”&gt;, &lt;area&gt;, &lt;applet&gt; : alt 속성으로 의미나 용도를 이해할 수 있도록 적절한 대체 텍스트 제공 합니다.
                                         </li>
                                         <li>
-                                            - 배경이미지 (IR기법) : 의미있는 배경 이미지를 사용하였을 경우, 배경이미지에 대한 대체 텍스트 제공 합니다.
+                                            배경이미지 (IR기법) : 의미있는 배경 이미지를 사용하였을 경우, 배경이미지에 대한 대체 텍스트 제공 합니다.
                                         </li>
                                         <li>
-                                            - 링크, 버튼 : 아이콘을 포함한 용도가 명확한 이미지 링크, 이미지 버튼 등은 핵심기능에 대한 설명을 구체적으로 대체 텍스트 제공 합니다.
+                                            링크, 버튼 : 아이콘을 포함한 용도가 명확한 이미지 링크, 이미지 버튼 등은 핵심기능에 대한 설명을 구체적으로 대체 텍스트 제공 합니다.
                                         </li>
                                         <li>
-                                            - 웹 애플리케이션을 제공할 때, 동등한 기능을 수행 할 수 있는 대체 콘텐츠를 함께 제공 합니다.
+                                            웹 애플리케이션을 제공할 때, 동등한 기능을 수행 할 수 있는 대체 콘텐츠를 함께 제공 합니다.
                                         </li>
                                         <li>
-                                            - 단순 장식이나 시각적인 형태를 위한 의미없는 이미지는 대체 텍스트를 공백문자로 제공 합니다.
+                                            단순 장식이나 시각적인 형태를 위한 의미없는 이미지는 대체 텍스트를 공백문자로 제공 합니다.
                                         </li>
                                     </ul>
                                 </div>
@@ -151,24 +151,24 @@
 
                                     <dt>수동검사방법</dt>
                                     <dd>
-                                        - alt 속성 값이 있는 &lt;img&gt;, &lt;input type=”image”&gt;, &lt;area&gt;, &lt;applet&gt; 요소 중 alt값을 적절한 대체 텍스트로 제공하였는지 체크<br>
-                                        - IR 기법내 적절한 대체 텍스트를 제공 하였는지 체크
+                                        alt 속성 값이 있는 &lt;img&gt;, &lt;input type=”image”&gt;, &lt;area&gt;, &lt;applet&gt; 요소 중 alt값을 적절한 대체 텍스트로 제공하였는지 체크<br>
+                                        IR 기법내 적절한 대체 텍스트를 제공 하였는지 체크
                                     </dd>
                                 </dl>
 
                                 <div class="expect">
-                                    <h5>[기대효과]</h5>
+                                    <h5>기대효과</h5>
                                     <ul>
-                                        <li>- 시각장애 또는 지적장애 등으로 인해 시각적으로 정보를 습득하는데 어려움을 겪는 사용자들이 화면낭독프로그램과 같은 보조기술을 사용하여 해당 콘텐츠를 음성을 통해 들을 수 있으므로 최소한의 접근권을 보장받을 수 있게 된다.</li>
-                                        <li>- 사용자들을 위해 텍스트 아닌 콘텐츠를 텍스트로 표시하거나 대체 텍스트를 수화로 번역함으로써 해당 콘텐츠에 접근할 수 있다. 시청각 중복 장애인들 역시 텍스트 아닌 콘텐츠에 대응하는 대체 텍스트를 점자로 변환하는 보조기술을 이용하여 해당 콘텐츠에 대한 접근권을 보장받을 수 있다.</li>
-                                        <li>- 콘텐츠에 적절한 대체 텍스트를 제공한 경우 시각으로 제공받는 정보가 불충분하여 사용자가 콘텐츠의 핵심내용을 인지할 수 없거나 잘못된 정보를 제공받음으로써 겪게 되는 불필요한 혼동을 줄일 수 있다.</li>
-                                        <li>- 대체 텍스트를 제공함으로써 텍스트 아닌 콘텐츠에 대한 검색이 가능하게 된다.
-                                        <li>- 의미가 있는 배경 이미지가 의미하는 대체 텍스트를 보조기술 사용자가 인지할 수 있어 콘텐츠의 이해와 사용이 가능하게 된다.</li>
+                                        <li>시각장애 또는 지적장애 등으로 인해 시각적으로 정보를 습득하는데 어려움을 겪는 사용자들이 화면낭독프로그램과 같은 보조기술을 사용하여 해당 콘텐츠를 음성을 통해 들을 수 있으므로 최소한의 접근권을 보장받을 수 있게 된다.</li>
+                                        <li>사용자들을 위해 텍스트 아닌 콘텐츠를 텍스트로 표시하거나 대체 텍스트를 수화로 번역함으로써 해당 콘텐츠에 접근할 수 있다. 시청각 중복 장애인들 역시 텍스트 아닌 콘텐츠에 대응하는 대체 텍스트를 점자로 변환하는 보조기술을 이용하여 해당 콘텐츠에 대한 접근권을 보장받을 수 있다.</li>
+                                        <li>콘텐츠에 적절한 대체 텍스트를 제공한 경우 시각으로 제공받는 정보가 불충분하여 사용자가 콘텐츠의 핵심내용을 인지할 수 없거나 잘못된 정보를 제공받음으로써 겪게 되는 불필요한 혼동을 줄일 수 있다.</li>
+                                        <li>대체 텍스트를 제공함으로써 텍스트 아닌 콘텐츠에 대한 검색이 가능하게 된다.
+                                        <li> 의미가 있는 배경 이미지가 의미하는 대체 텍스트를 보조기술 사용자가 인지할 수 있어 콘텐츠의 이해와 사용이 가능하게 된다.</li>
                                     </ul>
                                 </div>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : alt 속성을 이용한 제공방법 (일반적인 방법)</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>alt 속성을 이용한 제공방법 (일반적인 방법)</h5>
                                     <p>
                                         - 롯데마트 로고 이미지의 대체텍스트 제공
                                     </p>
@@ -179,9 +179,9 @@
                                 </div>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : alt 속성을 이용한 제공방법 (일반적인 방법)</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> em<em class="lotte-red02">예시 : </em>alt 속성을 이용한 제공방법 (일반적인 방법)</h5>
                                     <p>
-                                        - 메인 슬라이드 이미지 적용 예시 : 이미지가 제공하는 모든 내용을 alt 속성에 제공하여 이미지의 정보를 이해할 수 있음
+                                        - 메인 슬라이드 이미지 적용 <em class="lotte-red02">예시 : </em>이미지가 제공하는 모든 내용을 alt 속성에 제공하여 이미지의 정보를 이해할 수 있음
 
                                     </p>
                                     <img src="./img/alter-text.png" alt="메인 슬라이드 이미지 적용 예시">
@@ -191,7 +191,7 @@
                                 </div>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : Image Map</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>Image Map</h5>
                                     <p>
                                         - HOT PICK! 기획전 이미지 맵에 대하여 대체 텍스트 제공<br>
                                         - 여러 개가 합쳐진 한 이미지에 대해 접근을 원활히 하기 위해서 대체 텍스트를 제공해야 한다.<br>
@@ -210,7 +210,7 @@
                                 </div>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : IR 기법</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>IR 기법</h5>
                                     <p>
                                         - 일러스트 지도에 대하여 대체 텍스트 제공<br>
                                         - 이미지에 내용이 많은 경우 alt 속성의 값은 이미지 제목 정도로 제공하고, 이미지의 바로 다음에 이미지 내용과 구조 정보를 담은 HTML을 숨겨서 제공한다<br>
@@ -230,7 +230,7 @@
                                 </div>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 의미있는 배경 이미지</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>의미있는 배경 이미지</h5>
                                     <p>
                                         - css 스타일 시트등으로 이미지를 백그라운 이미지로 보여주는 경우 HTML은 이미지와 동일한 내용을 숨김 텍스트로 보여준다.<br>
                                         ※ 주의사항 : 숨김텍스트 제공 시 visibility:hidden / display:none 은 스크린리더기 마다 인식 여부가 다르므로 사용하지 않아야 함
@@ -244,7 +244,7 @@
                                 </div>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 버튼 이미지 숨김 텍스트 제공</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>버튼 이미지 숨김 텍스트 제공</h5>
                                     <p>
                                         - 배경 이미지 형식으로 불러오는 버튼에 대하여 blind 태그를 이용하여 대체 텍스트 제공.<br>
                                         ※ 주의사항 : 숨김텍스트 제공 시 visibility:hidden / display:none 은 스크린리더기 마다 인식 여부가 다르므로 사용하지 않아야 함
@@ -261,7 +261,7 @@
                                 </div>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 상품 이미지 대체 텍스트 제공</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>상품 이미지 대체 텍스트 제공</h5>
                                     <p>
                                         - 상품이미지의 대체 텍스트는 상품명과 동일하게 제공한다.<br>
                                         - 관리자 페이지를 통해 등록하는 경우 관리자 페이지에 해당 상품의 alt값을 넣을 수 있도록 제공 되어야 한다.
@@ -276,7 +276,7 @@
                                 </div>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : QR코드 이미지 대체 텍스트 제공</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>QR코드 이미지 대체 텍스트 제공</h5>
                                     <p>
                                         - QR코드 등과 같이 시각적인 정보만으로 확인이 가능한 콘텐츠는 이동 주소 정보 등을 대체 텍스트 또는 설명, 링크 등으로 제공해야 한다.
                                     </p>
@@ -289,7 +289,7 @@
                                 </div>
 
                                 <div class="sample">
-                                        <h5><i class="glyphicon glyphicon-star"></i> 예시 : 상품평 평점 이미지 정보 제공</h5>
+                                        <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>상품평 평점 이미지 정보 제공</h5>
                                         <p>
                                             - 하나의 이미지로 처리하고 대체 텍스트에 평점을 인지할 수 있도록 제공한다
                                         </p>
@@ -310,27 +310,26 @@
                         <div class="video-caption" id="item02">
                             <h4 class="active">
                                 2. 자막제공
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                                <i class="open"></i>
                             </h4>
                             <div class="item-cont">
                                 <p>
-                                    - 광고성 콘텐츠(자막이 없는 동영상) 의 내용설명 글을 제공한다.<br><br>
-
-                                    - 음성이 없는 경우 : 영상에 대한 설명글 제공<br>
-                                    - 음성이 있는 경우 : 영상에 대한 원고 또는 싱크되는 자막 제공<br>
+                                    &CenterDot; 광고성 콘텐츠(자막이 없는 동영상) 의 내용설명 글을 제공한다.<br>
+                                    &CenterDot; 음성이 없는 경우 : 영상에 대한 설명글 제공<br>
+                                    &CenterDot; 음성이 있는 경우 : 영상에 대한 원고 또는 싱크되는 자막 제공<br>
                                 </p>
 
                                 <div class="definition">
                                     <h5>적용기술</h5>
                                     <ul>
                                         <li>
-                                        -  멀티미디어 콘텐츠를 장애인도 비장애인과 동등하게 인식할 수 있도록 제작해야 한다.
+                                           멀티미디어 콘텐츠를 장애인도 비장애인과 동등하게 인식할 수 있도록 제작해야 한다.
                                         </li>
                                         <li>
-                                            - 가장 바람직한 방법은 닫힌 자막을 오디오와 동기화시켜 제공하는 것이다.
+                                            가장 바람직한 방법은 닫힌 자막을 오디오와 동기화시켜 제공하는 것이다.
                                         </li>
                                         <li>
-                                            - 대체 수단 제공 : 자막제공 / 대본제공 / 수화제공 중 한 가지 이상의 대체 수단을 제공해야 한다
+                                            대체 수단 제공 : 자막제공 / 대본제공 / 수화제공 중 한 가지 이상의 대체 수단을 제공해야 한다
                                         </li>
                                     </ul>
                                 </div>
@@ -343,7 +342,7 @@
 
                                         <dt>수동검사방법</dt>
                                         <dd>
-                                            -멀티미디어 콘텐츠에 대한 자막, 원고, 수화 제공 유무 체크
+                                            멀티미디어 콘텐츠에 대한 자막, 원고, 수화 제공 유무 체크
                                         </dd>
                                 </dl>
                             </div>
@@ -352,13 +351,13 @@
                         <div class="color" id="item03">
                             <h4 class="active">
                                 3. 색에 무관한 콘텐츠 인식
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                                <i class="open"></i>
                             </h4>
 
                             <div class="item-cont">
                                 <p>
-                                    - 컨텐츠는 색에 관계없이 인식될 수 있어야 한다.<br>
-                                    - 특정한 색을 구분할 수 없는 사용자나 흑백 디스플레이 사용자 등이 색을 배제하여도 컨텐츠를 인식할 수 있도록 제공해야 한다.
+                                    &CenterDot; 컨텐츠는 색에 관계없이 인식될 수 있어야 한다.<br>
+                                    &CenterDot; 특정한 색을 구분할 수 없는 사용자나 흑백 디스플레이 사용자 등이 색을 배제하여도 컨텐츠를 인식할 수 있도록 제공해야 한다.
 
                                 </p>
 
@@ -382,13 +381,13 @@
 
                                     <dt>수동검사방법</dt>
                                     <dd>
-                                        - 색상만으로 콘텐츠(그래프, 차트, 지도, 페이지 네비게이션 등)을 분별 하도록 제공 했는지 체크<br>
-                                        - 페이지 네비게이션, 메뉴, 현재 위치 등의 정보를 명암, 패턴 등의 변화없이 색상만으로 제공 했는지 체크
+                                        색상만으로 콘텐츠(그래프, 차트, 지도, 페이지 네비게이션 등)을 분별 하도록 제공 했는지 체크<br>
+                                        페이지 네비게이션, 메뉴, 현재 위치 등의 정보를 명암, 패턴 등의 변화없이 색상만으로 제공 했는지 체크
                                     </dd>
                                 </dl>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 색맹이나 색약자도 알아 볼 수 있는 고객센터의 상담현황</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>색맹이나 색약자도 알아 볼 수 있는 고객센터의 상담현황</h5>
                                     <p>
                                         - 고객센터의 상담현황 안내 부분의 색을 뚜렷한 색상 차이로 제공하여 색맹이나 색약자도 알아 볼 수 있음.<br>
 
@@ -401,7 +400,7 @@
                                 </div>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 색맹이나 색약자도 알아 볼 수 있는 롯데마트의 상품 리스트</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>색맹이나 색약자도 알아 볼 수 있는 롯데마트의 상품 리스트</h5>
                                     <p>
                                         - 롯데마트의 상품 리스트는 영역별로 뚜렷한 색상차이를 두고 제공하여 색맹이나 색약자도 알아 볼 수 있음.<br>
 
@@ -419,15 +418,14 @@
                         <div class="indicator" id="item04">
                             <h4 class="active">
                                 4. 명확한 지시사항 제공
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                                <i class="open"></i>
                             </h4>
 
                             <div class="item-cont">
                                 <p>
-                                - 지시사항은 모양, 크기, 위치, 방향, 색, 소리 등에 관계없이 인식될 수 있어야 한다.<br><br>
-
-                                - 특정한 감각(시각, 청각 등)에 의존하여 지시사항을 제공할 경우 해당 감각에 장애가 있다면 인식할 수 없으므로, 다른 감각을 통해서도 인식할 수 있도록 지시사항을 제공해야 한다.<br>
-                                - 지시사항 정보를 특정 감각(색, 크기, 모양, 방향 등)에만 의존하여 제공했는지 체크<br>
+                                &CenterDot; 지시사항은 모양, 크기, 위치, 방향, 색, 소리 등에 관계없이 인식될 수 있어야 한다.<br>
+                                &CenterDot; 특정한 감각(시각, 청각 등)에 의존하여 지시사항을 제공할 경우 해당 감각에 장애가 있다면 인식할 수 없으므로, 다른 감각을 통해서도 인식할 수 있도록 지시사항을 제공해야 한다.<br>
+                                &CenterDot; 지시사항 정보를 특정 감각(색, 크기, 모양, 방향 등)에만 의존하여 제공했는지 체크<br>
                                 </p>
 
                                 <div class="definition">
@@ -447,12 +445,12 @@
 
                                     <dt>수동검사방법</dt>
                                     <dd>
-                                        - 지시 사항 정보를 특정 감각(색, 크기, 모양, 방향 등)에만 의존하여 제공했는지 체크
+                                        지시 사항 정보를 특정 감각(색, 크기, 모양, 방향 등)에만 의존하여 제공했는지 체크
                                     </dd>
                                 </dl>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 더보기 버튼의 명시</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>더보기 버튼의 명시</h5>
                                     <p>
                                         - 메인화면 전문관 영역의 더보기 버튼 링크의 기능에 대해 정확히 어떤 것을 더 보는 것인지에 대해 설명하는 대체 텍스트를 제공
                                     </p>
@@ -463,7 +461,7 @@
                                 </div>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 이벤트 참여 버튼의 명시</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>이벤트 참여 버튼의 명시</h5>
                                     <p>
                                         - “위에 있는 버튼을 누르십시오” 등 화면 표시 위치나 “빨간색을 누르십시오” 등 색을 매개로 한 전달을 하지 않도록 함.
                                     </p>
@@ -476,15 +474,15 @@
                         <div class="" id="item05">
                             <h4 class="active">
                                 5. 텍스트 콘텐츠의 명도 대비
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                                <i class="open"></i>
                             </h4>
 
                             <div class="item-cont">
                                 <p>
-                                    - 전경 콘텐츠와 배경은 4.5:1 이상의 명도 대비를 유지한다.<br>
-                                    - 전경 콘텐츠는 정보를 전달하고 있는 '문자, 아이콘, 콘트롤(a, button, input, select, textarea)'의 선과 면을 의미한다.<br>
-                                    - 문자 크기가 bold 19px 이상 또는 normal 24px 이상인 경우 3:1 이상의 명도 대비를 유지한다.<br>
-                                    - 아이콘, 콘트롤 등 시각 정보가 3px 이상 두꺼운 경우 3:1 이상의 명도 대비를 유지한다.<br>
+                                    &CenterDot; 전경 콘텐츠와 배경은 4.5:1 이상의 명도 대비를 유지한다.<br>
+                                    &CenterDot; 전경 콘텐츠는 정보를 전달하고 있는 '문자, 아이콘, 콘트롤(a, button, input, select, textarea)'의 선과 면을 의미한다.<br>
+                                    &CenterDot; 문자 크기가 bold 19px 이상 또는 normal 24px 이상인 경우 3:1 이상의 명도 대비를 유지한다.<br>
+                                    &CenterDot; 아이콘, 콘트롤 등 시각 정보가 3px 이상 두꺼운 경우 3:1 이상의 명도 대비를 유지한다.<br>
                                 </p>
 
                                 <div class="definition">
@@ -510,13 +508,13 @@
 
                                     <dt>수동검사방법</dt>
                                     <dd>
-                                        - 텍스트나 이미지 텍스트와 배경 간의 명도 대비를 4.5 : 1 이상으로 제공했는지 체크<br>
-                                        - 명도 대비 확인 유틸리티 Colour Contrast Analyser 로 체크
+                                        텍스트나 이미지 텍스트와 배경 간의 명도 대비를 4.5 : 1 이상으로 제공했는지 체크<br>
+                                        명도 대비 확인 유틸리티 Colour Contrast Analyser 로 체크
                                     </dd>
                                 </dl>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 콘텐츠와 배경간의 충분한 명도 대비 제공</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>콘텐츠와 배경간의 충분한 명도 대비 제공</h5>
                                     <p>
                                         - 글자색과 배경색간의 명도 차이가 작으면 약시자가 보기 힘들어 짐<br>
                                         - 일반적인 크기의 글자는 4.5:1 이상, 18pt 이상의 큰 글자(볼드체는 14pt 이상)는 3:1 이상 필요
@@ -556,12 +554,12 @@
                         <div class="no-bg-music" id="item06">
                             <h4 class="active">
                                 6. 자동 재생 금지
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                                <i class="open"></i>
                             </h4>
 
                             <div class="item-cont">
                                 <p>
-                                    - 자동으로 소리가 재생되지 않아야 한다
+                                   &CenterDot; 자동으로 소리가 재생되지 않아야 한다
                                 </p>
                                 <div class="definition">
                                     <h5>적용기술</h5>
@@ -583,16 +581,15 @@
 
                                     <dt>수동검사방법</dt>
                                     <dd>
-                                        - 3초 이상 자동으로 재생되는 배경음 사용 여부 체크<br>
-                                        - 3초 이상 자동으로 배경음을 제어할 수 있는 수단을 제공하고 있는지 체크<br>
-                                        - 3초 이상 자동으로 배경음을 제어할 수 있는 수단이 화면 낭독 프로그램 음량에 영향을 주는지 체크<br>
-                                        - 마우스 오버, 키보드 초점을 받아 3초이상 재생되는 배경음 사용 여부 체크
-
+                                        3초 이상 자동으로 재생되는 배경음 사용 여부 체크<br>
+                                        3초 이상 자동으로 배경음을 제어할 수 있는 수단을 제공하고 있는지 체크<br>
+                                        3초 이상 자동으로 배경음을 제어할 수 있는 수단이 화면 낭독 프로그램 음량에 영향을 주는지 체크<br>
+                                        마우스 오버, 키보드 초점을 받아 3초이상 재생되는 배경음 사용 여부 체크
                                     </dd>
                                 </dl>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 동영상 콘텐츠의 자동 재생 금지</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>동영상 콘텐츠의 자동 재생 금지</h5>
                                     <p>
                                         - 마우스 클릭하거나 키보드로 접근 후 선택을 해야 동영상이 실행되도록 영상 콘텐츠를 구현하고 있어 배경음으로 인한 방해가 없도록 한다
                                     </p>
@@ -607,12 +604,12 @@
                         <div class="no-bg-music" id="item07">
                             <h4 class="active">
                                 7. 콘텐츠 간의 구분
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                                <i class="open"></i>
                             </h4>
 
                             <div class="item-cont">
                                 <p>
-                                    - 이웃한 콘텐츠는 구별될 수 있어야 한다.
+                                    &CenterDot; 이웃한 콘텐츠는 구별될 수 있어야 한다.
                                 </p>
 
 
@@ -620,13 +617,25 @@
                                     <h5>적용기술</h5>
                                     <ul>
                                         <li>
-                                            - 모든 이웃한 콘텐츠는 시각적으로 구분될 수 있도록 구현함.
-                                            - 테두리를 이용하여 구분함
-                                            - 콘텐츠 사이에 시각적인 구분선을 삽입하여 구분함
-                                            - 서로 다른 무늬를 이용하여 구분함
-                                            - 콘텐츠 배경색 간의 명도대비(채도)를 달리하여 구분함
+                                            모든 이웃한 콘텐츠는 시각적으로 구분될 수 있도록 구현함.
+                                        </li>
+                                        <li>
+                                            테두리를 이용하여 구분함
+                                        </li>
+                                        <li>
+                                            콘텐츠 사이에 시각적인 구분선을 삽입하여 구분함
+                                        </li>
+                                        <li>
+                                            서로 다른 무늬를 이용하여 구분함
+                                        </li>
+                                        <li>
+                                            콘텐츠 배경색 간의 명도대비(채도)를 달리하여 구분함
+                                        </li>
+                                        <li>
                                             줄 간격 및 글자 간격을 조절하여 구분함
-                                            - 기타 콘텐츠를 시각적으로 구분할 수 있는 방법을 제공함
+                                        </li>
+                                        <li>
+                                          기타 콘텐츠를 시각적으로 구분할 수 있는 방법을 제공함
                                         </li>
                                     </ul>
                                 </div>
@@ -639,12 +648,12 @@
 
                                     <dt>수동검사방법</dt>
                                     <dd>
-                                        - 콘텐츠 사이의 시각적인 구분이 가능한지 체크
+                                        콘텐츠 사이의 시각적인 구분이 가능한지 체크
                                     </dd>
                                 </dl>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 메뉴내 이웃한 콘텐츠 간을 테두리로 구분함</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>메뉴내 이웃한 콘텐츠 간을 테두리로 구분함</h5>
                                     <p>
                                         - HTML로 표현되는 콘텐츠 관련 태그들에 border 속성을 추가하여 테두리 선 굵기를 px(픽셀) 단위로 지정하거나, css 스타일시트를 이용하여 콘텐츠에 border 속성을 지정할 수 있다.
                                     </p>
@@ -653,7 +662,7 @@
                                 </div>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 이웃한 콘텐츠 간의 명도대비(채도)를 달리하여 구분하는 방법</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>이웃한 콘텐츠 간의 명도대비(채도)를 달리하여 구분하는 방법</h5>
                                     <p>
                                         -  흑백 스크린(구형 PDA 등) 또는 경조(硬調: 고대비) 모드사용자들도 콘텐츠의 내용이나 구조를 손쉽게 이해할 수 있다.<br>
                                         - 웹 페이지에 보이는 핵심 텍스트 콘텐츠와 배경 간의 충분한 대비를 제공하여 저시력자, 색각 이상자, 고령자 등도 콘텐츠를 인식할 수 있도록 제공한다.
@@ -663,7 +672,7 @@
                                 </div>
 
                                 <div class="sample">
-                                <h5><i class="glyphicon glyphicon-star"></i> 예시 : 기타 콘텐츠를 시각적으로 구분할 수 있는 방법</h5>
+                                <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>기타 콘텐츠를 시각적으로 구분할 수 있는 방법</h5>
                                 <p>
                                     - 텍스트는 CSS의 font-style 속성으로 텍스트 구성 요소를 강조하고 이미지는 CSS의 background-image를 사용하여 텍스트 뒤에 그림을 표시하여 시각적으로 구분한다.
                                 </p>
@@ -676,12 +685,12 @@
                         <div class="keyboard-use" id="item08">
                             <h4 class="active">
                                 8. 키보드 사용 보장 (입력장치 접근성)
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                                <i class="open"></i>
                             </h4>
                             <div class="item-cont">
                                 <p>
-                                    - 모든 기능은 키보드 만으로도 사용할 수 있어야 한다. <br>
-                                    - 키보드에 의한 초점은 논리적으로 이동해야 하며, 시각적으로 구별할 수 있어야 한다.<br>
+                                    &CenterDot; 모든 기능은 키보드 만으로도 사용할 수 있어야 한다. <br>
+                                    &CenterDot; 키보드에 의한 초점은 논리적으로 이동해야 하며, 시각적으로 구별할 수 있어야 한다.<br>
                                 </p>
 
                                 <div class="definition">
@@ -706,12 +715,12 @@
 
                                     <dt>수동검사방법</dt>
                                     <dd>
-                                        - 보드로 Tab 과 Shift + Tab, 서비스내 단축키 그리고 엔터등으로 콘텐츠를 이용할 수 있는지 체크
+                                        보드로 Tab 과 Shift + Tab, 서비스내 단축키 그리고 엔터등으로 콘텐츠를 이용할 수 있는지 체크
                                     </dd>
                                 </dl>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> 예시</h5>
                                     <p>
                                         - 롯데마트 gnb 메뉴의 키보드 이용
                                     </p>
@@ -726,12 +735,12 @@
                         <div class="focus-move" id="item09">
                             <h4 class="active">
                                 9. 초점 이동
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                                <i class="open"></i>
                             </h4>
 
                             <div class="item-cont">
                                 <p>
-                                    - 키보드에 의한 초점은 논리적으로 이동해야 하며 시각적으로 구별할 수 있어야 한다
+                                    &CenterDot; 키보드에 의한 초점은 논리적으로 이동해야 하며 시각적으로 구별할 수 있어야 한다
                                 </p>
 
                                 <div class="definition">
@@ -760,13 +769,13 @@
 
                                     <dt>수동검사방법</dt>
                                     <dd>
-                                        - 키보드 Tab으로 이동이 논리적인지 체크<br>
-                                        - 초점을 받은 요소 (링크, 컨트롤, 입력서식)가 시각적으로 구분이 되는지 체크
+                                        키보드 Tab으로 이동이 논리적인지 체크<br>
+                                        초점을 받은 요소 (링크, 컨트롤, 입력서식)가 시각적으로 구분이 되는지 체크
                                     </dd>
                                 </dl>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> 예시</h5>
                                     <p>
                                         - 롯데마트 메인 화면의 BEST 메뉴내의 키보드 이용
                                     </p>
@@ -977,7 +986,7 @@
                                 </div>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 초점 또는 키보드의 위치를 나타내는 요소가 시각적으로 표현된 모습</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>초점 또는 키보드의 위치를 나타내는 요소가 시각적으로 표현된 모습</h5>
                                     <p>
                                         - onfocus=“this.blur();를 사용한 경우, 키보드 접근이 불가하므로 this.blur()를 제공하지 않아야 함
                                     </p>
@@ -990,7 +999,7 @@ outline: -webkit-focus-ring-color auto 5px;
                                 </div>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 더보기 또는 전체보기 기능은 콘텐츠보다 후순위로 마크업</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>더보기 또는 전체보기 기능은 콘텐츠보다 후순위로 마크업</h5>
                                     <p>
                                         - 시각적으로는 이벤트 더보기 버튼이 컨텐츠 영역 위에 있지만 컨텐츠 영역의 이벤트에 초점 이동을 한 후 이벤트를 더 보고싶을 때 더보기 버튼을 사용하므로 마크업은 마지막에 더보기를 넣어 논리적 순서에 맞게 마크업을 진행해야 한다
                                     </p>
@@ -1043,7 +1052,7 @@ outline: -webkit-focus-ring-color auto 5px;
                         <div class="operatable" id="item10">
                             <h4 class="active">
                                 10. 조작가능
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                                <i class="open"></i>
                             </h4>
 
                             <div class="item-cont">
@@ -1080,7 +1089,7 @@ outline: -webkit-focus-ring-color auto 5px;
                                 </dl>
 
                                 <div class="sample">
-                                        <h5><i class="glyphicon glyphicon-star"></i> 예시 : HTML 태그 속성과 스타일을 이용한 크기와 여백 조절
+                                        <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>HTML 태그 속성과 스타일을 이용한 크기와 여백 조절
                                         </h5>
                                         <p>
                                             - 디스플레이 장치별 화면크기와 해상도에 따라 보여지는 콘텐츠의 크기가 매번 달라지게 된다. 디스플레이 장치와 무관한 콘텐츠 사용의 편의성을 고려하여 콘텐츠의 크기는 window 표준 해상도(96DPI)와 17인치 모니터를 기준으로 대각선 방향 길이로 6mm 이상이 되도록 HTML 태그와 스타일 속성의 width, height를 조절하고 콘텐츠의 선택시 이웃한 콘텐츠와 선택이 중첩되지 않도록 콘텐츠 안쪽 여백은 1픽셀 이상이 되도록 스타일 속성의 padding을 이용하여 조절하면 된다.
@@ -1093,7 +1102,7 @@ outline: -webkit-focus-ring-color auto 5px;
                         <div class="" id="item11">
                             <h4 class="active">
                                 11. 응답시간 조절
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                                <i class="open"></i>
                             </h4>
 
                             <div class="item-cont">
@@ -1123,7 +1132,7 @@ outline: -webkit-focus-ring-color auto 5px;
 
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 응답시간이 제공되는 본인인증 요소</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>응답시간이 제공되는 본인인증 요소</h5>
                                     <p>
                                         - 시각장애인, 상지 장애인의 웹 탐색 속도는 비장애인에 비해 느리므로 자동 변경되는 콘텐츠는 이들의 이용에 큰 방해가 됨.<br>
                                         - 충분한 시간을 제공하거나 제어버튼을 제공해야 함.<br>
@@ -1136,7 +1145,7 @@ outline: -webkit-focus-ring-color auto 5px;
                                 </div>
 
                                 <div class="sample">
-                                        <h5><i class="glyphicon glyphicon-star"></i> 예시 : 응답시간이 3초 이상인 배너 요소</h5>
+                                        <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>응답시간이 3초 이상인 배너 요소</h5>
                                         <p>
                                             - 이벤트 소개 등 일정 주기로 교체되는 콘텐츠는 하나가 최소 3초 이상 노출되어야 함.
 
@@ -1152,7 +1161,7 @@ outline: -webkit-focus-ring-color auto 5px;
                         <div class="" id="item12">
                             <h4 class="active">
                                 12. 정지 기능 제공
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                                <i class="open"></i>
                             </h4>
 
                             <div class="item-cont">
@@ -1161,7 +1170,7 @@ outline: -webkit-focus-ring-color auto 5px;
                                 </p>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> 예시</h5>
                                     <p>
                                         - 포커스 진입시 자동멈춤 처리되는 메인 비주얼 슬라이드
                                     </p>
@@ -1193,12 +1202,12 @@ outline: -webkit-focus-ring-color auto 5px;
                         <div class="" id="item13">
                             <h4 class="active">
                                 13. 깜빡임과 번쩍임 사용 제한
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                                <i class="open"></i>
                             </h4>
 
                             <div class="item-cont">
                                 <P>
-                                    - 초당 3~50회 주기로 깜빡이거나 번쩍이는 콘텐츠를 제공하지 않아야 한다.
+                                    &CenterDot; 초당 3~50회 주기로 깜빡이거나 번쩍이는 콘텐츠를 제공하지 않아야 한다.
                                 </P>
 
                                 <div class="definition">
@@ -1221,8 +1230,8 @@ outline: -webkit-focus-ring-color auto 5px;
 
                                     <dt>수동검사방법</dt>
                                     <dd>
-                                        - 육안으로 확인 했을 때 깜빡이거나 번쩍이는 객체가 있는지 체크<br>
-                                        - 깜빡이거나 번쩍이는 콘텐츠가 있을 경우 깜빡임을 사전 경고 하거나, 중단할 수 있는 수단을 제공하는지 체크
+                                        육안으로 확인 했을 때 깜빡이거나 번쩍이는 객체가 있는지 체크<br>
+                                        깜빡이거나 번쩍이는 콘텐츠가 있을 경우 깜빡임을 사전 경고 하거나, 중단할 수 있는 수단을 제공하는지 체크
                                     </dd>
                                 </dl>
                             </div>
@@ -1231,35 +1240,32 @@ outline: -webkit-focus-ring-color auto 5px;
                         <div class="" id="item14">
                             <h4 class="active">
                                 14. 반복영역 건너뛰기
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                                <i class="open"></i>
                             </h4>
 
                             <div class="item-cont">
-                                <p>- 콘텐츠의 반복되는 영역은 건너뛸 수 있어야 한다.</p>
-                                <p>
-
-
+                                <p>&CenterDot;콘텐츠의 반복되는 영역은 건너뛸 수 있어야 한다.</p>
 
                                 <div class="definition">
                                     <h5>적용기술</h5>
                                     <ul>
                                         <li>
-                                            - 반복적인 콘텐츠 영역의 시작 부분에 건너뛰기 링크 제공
+                                            반복적인 콘텐츠 영역의 시작 부분에 건너뛰기 링크 제공
                                         </li>
                                         <li>
-                                            - 페이지마다 반복되는 콘텐츠(메뉴 등)를 건너뛰어 핵심 콘텐츠로 바로 접근할 수 있도록 페이지 최상단에 제공한다
+                                            페이지마다 반복되는 콘텐츠(메뉴 등)를 건너뛰어 핵심 콘텐츠로 바로 접근할 수 있도록 페이지 최상단에 제공한다
                                         </li>
                                         <li>
-                                            - 해당 링크를 display:none으로 처리하지 않으며, 키보드로 접근이 가능해야 한다.
+                                            해당 링크를 display:none으로 처리하지 않으며, 키보드로 접근이 가능해야 한다.
                                         </li>
                                         <li>
-                                            - 콘텐츠의 최상단(body 바로 아래) 제공해야 한다.
+                                            콘텐츠의 최상단(body 바로 아래) 제공해야 한다.
                                         </li>
                                         <li>
-                                            - 링크명은 목적지를 명확히 알 수 있도록 일관된 형식으로 제공해야 한다.
+                                            링크명은 목적지를 명확히 알 수 있도록 일관된 형식으로 제공해야 한다.
                                         </li>
                                         <li>
-                                            - 메뉴 건너뛰기(x), 본문 바로가기(O)
+                                            메뉴 건너뛰기(x), 본문 바로가기(O)
                                         </li>
                                     </ul>
                                 </div>
@@ -1272,14 +1278,14 @@ outline: -webkit-focus-ring-color auto 5px;
 
                                     <dt>수동검사방법</dt>
                                     <dd>
-                                        - 본문 바로가기” “주메뉴 바로가기” 링크의 유무 체크<br>
-                                        - “본문 바로가기” “주메뉴 바로가기” 클릭했을 시 포커스가 제대로 이동되는지 체크<br>
-                                        - “본문 바로가기” “주메뉴 바로가기” 링크가 키보드 Tab에 의해서도 선택과 실행이 되는지 체크
+                                        본문 바로가기” “주메뉴 바로가기” 링크의 유무 체크<br>
+                                        “본문 바로가기” “주메뉴 바로가기” 클릭했을 시 포커스가 제대로 이동되는지 체크<br>
+                                        “본문 바로가기” “주메뉴 바로가기” 링크가 키보드 Tab에 의해서도 선택과 실행이 되는지 체크
                                     </dd>
                                 </dl>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 롯데마트 상단의 본문 바로가기 버튼</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>롯데마트 상단의 본문 바로가기 버튼</h5>
                                     <p>
                                         - 키보드만을 이용하는 지체 장애인의 탐색 편의를 위해 각 페이지 메뉴시작 부분에 해당 페이지의 핵심 콘텐츠로 바로 이동할 수 있는 링크를 제공<br>
                                         - 가급적이면 항상 드러나도록 하는 것이 좋으며, 드러나기 곤란한 경우 포커스 시에만 드러나도록 함
@@ -1299,13 +1305,13 @@ outline: -webkit-focus-ring-color auto 5px;
                         <div class="offer-title" id="item15">
                             <h4 class="active">
                                 15. 타이틀 및 제목 제공
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                                <i class="open"></i>
                             </h4>
 
                             <div class="item-cont">
                                 <p>
-                                    - 페이지, 프레임, 콘텐츠 블록에는 적절한 제목을 제공해야 한다.<br>
-                                    - 적절한 제목은 페이지, 프레임, 콘텐츠 블록을 유추하여, 사용자가 웹 콘텐츠를 운용하기 쉽게 도와준다.<br>
+                                    &CenterDot; 페이지, 프레임, 콘텐츠 블록에는 적절한 제목을 제공해야 한다.<br>
+                                    &CenterDot; 적절한 제목은 페이지, 프레임, 콘텐츠 블록을 유추하여, 사용자가 웹 콘텐츠를 운용하기 쉽게 도와준다.<br>
 
                                 </p>
 
@@ -1339,20 +1345,20 @@ outline: -webkit-focus-ring-color auto 5px;
                                 <dl class="check-list">
                                     <dt>자동검사방법</dt>
                                     <dd>
-                                        - &lt;head&gt; 내의 &lt;title&gt; 요소 유무 체크<br>
-                                        - &lt;iframe&gt; &lt;frame&gt; 요소의 title 속성 유무 체크
+                                        &lt;head&gt; 내의 &lt;title&gt; 요소 유무 체크<br>
+                                        &lt;iframe&gt; &lt;frame&gt; 요소의 title 속성 유무 체크
                                     </dd>
 
                                     <dt>수동검사방법</dt>
                                     <dd>
-                                        - &lt;head&gt; 내의 &lt;title&gt; 요소 값 체크<br>
-                                        - &lt;iframe&gt; &lt;frame&gt; 요소의 title 속성 값 체크<br>
-                                        - &lt;h&gt; 요소 체크
+                                        &lt;head&gt; 내의 &lt;title&gt; 요소 값 체크<br>
+                                        &lt;iframe&gt; &lt;frame&gt; 요소의 title 속성 값 체크<br>
+                                        &lt;h&gt; 요소 체크
                                     </dd>
                                 </dl>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 브라우저 탭에 표시되는 문서 타이틀 제공</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>브라우저 탭에 표시되는 문서 타이틀 제공</h5>
                                     <p>
                                         - 롯데마트 각페이지에 맞는 올바른 페이지 타이틀 제목 제공
                                     </p>
@@ -1368,7 +1374,7 @@ outline: -webkit-focus-ring-color auto 5px;
                                 </div>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 프레임 제목 제공</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>프레임 제목 제공</h5>
                                     <p>
                                         - frame, iframe, frameset 요소의 title 속성값을 올바르게 제공.<br>
                                         - 상품상세 페이지의 iframe 영역은 bos 영역으로 다양한 상품정보가 입력되기 때문에 iframe의 제목은 탭메뉴와 동일한 상품정보로 제공함.
@@ -1380,7 +1386,7 @@ outline: -webkit-focus-ring-color auto 5px;
                                 </div>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 콘텐츠 블록에 &lt;h1&gt;~&lt;h6&gt;을 사용하여 제목 제공</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>콘텐츠 블록에 &lt;h1&gt;~&lt;h6&gt;을 사용하여 제목 제공</h5>
                                     <p>
                                         - &lt;h1&gt;, &lt;h2&gt; 요소 등을 부여하여 제목과 본문을 구분할 수 있도록 제공. 화면낭독기에서는 제목 간 이동이 가능하므로 더욱 운용이 용이해지게 됨.
                                     </p>
@@ -1395,17 +1401,17 @@ outline: -webkit-focus-ring-color auto 5px;
                         <div class="" id="item16">
                             <h4 class="active">
                                 16. 적절한 링크 텍스트
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                                <i class="open"></i>
                             </h4>
 
                             <div class="item-cont">
                                 <p>
-                                - 링크 텍스트는 용도나 목적을 이해할 수 있도록 제공해야 한다.<br>
-                                - 링크 텍스트를 "여기를 클릭하세요." 나 "여기" 와 같은 애매모호한 표현을 사용하면 시각장애인이나 인지장애인 뿐만 아니라 비장애인들도 링크를 클릭했을 때 어떤 반응이나 어떤 페이지로 이동될 지 예측하기 어렵다.
+                                &CenterDot; 링크 텍스트는 용도나 목적을 이해할 수 있도록 제공해야 한다.<br>
+                                &CenterDot; 링크 텍스트를 "여기를 클릭하세요." 나 "여기" 와 같은 애매모호한 표현을 사용하면 시각장애인이나 인지장애인 뿐만 아니라 비장애인들도 링크를 클릭했을 때 어떤 반응이나 어떤 페이지로 이동될 지 예측하기 어렵다.
                                 </p>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> 예시</h5>
                                     <p>
                                         - 상품 리스트 페이지를 리스트형으로 볼 것인지, 썸네일형으로 볼 것인지 보는 방식을 선택하는 링크 대한 올바른 텍스트를 제공
                                     </p>
@@ -1420,7 +1426,7 @@ outline: -webkit-focus-ring-color auto 5px;
                                 </div>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> 예시</h5>
                                     <p>
                                         - 장바구니 링크 요소의 내용에 알맞는 올바른 링크의 기능에대해 설명하는 대체 텍스트를 제공
                                     </p>
@@ -1438,21 +1444,21 @@ outline: -webkit-focus-ring-color auto 5px;
                         <div class="" id="item17">
                             <h4 class="active">
                                 17. 기본 언어 표시
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                                <i class="open"></i>
                             </h4>
 
                             <div class="item-cont">
                                 <p>
-                                    주로 사용하는 언어를 표시해야 한다.
+                                  &CenterDot; 주로 사용하는 언어를 표시해야 한다.
                                 </p>
                                 <div class="definition">
                                     <h5>적용기술</h5>
                                     <ul>
                                         <li>
-                                            - 기본 언어 명시는 화면 낭독 프로그램이 언어를 인식하여 자동으로 음성을 변환하거나, 해당 언어에 적합한 발음을 제공할 수 있도록 한다.
+                                            기본 언어 명시는 화면 낭독 프로그램이 언어를 인식하여 자동으로 음성을 변환하거나, 해당 언어에 적합한 발음을 제공할 수 있도록 한다.
                                         </li>
                                         <li>
-                                            - 웹 페이지에 주로 사용하는 언어를 &lt;html&gt; 요소에 lang 속성을 지정하여 명시하도록 한다.
+                                            웹 페이지에 주로 사용하는 언어를 &lt;html&gt; 요소에 lang 속성을 지정하여 명시하도록 한다.
                                         </li>
                                     </ul>
                                 </div>
@@ -1465,13 +1471,13 @@ outline: -webkit-focus-ring-color auto 5px;
 
                                     <dt>수동검사방법</dt>
                                     <dd>
-                                        - &lt;html&gt; 요소 lang 속성 값 체크<br>
-                                        - 빈 프레임/내용 없음 프레임의 페이지는 검사하지 않음
+                                        &lt;html&gt; 요소 lang 속성 값 체크<br>
+                                        빈 프레임/내용 없음 프레임의 페이지는 검사하지 않음
                                     </dd>
                                 </dl>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 전체 페이지의 언어 표시</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>전체 페이지의 언어 표시</h5>
                                     <p>
                                         - 웹 페이지에서 주로 사용하는 언어는 페이지 상단에 html Tag에 lang 속성 이용<br>
                                         - 기본 언어 명시는 화면 낭독 프로그램이 언어를 인식하여 자동으로 음성을 변환하거나, 해당 언어에 적합한 발음을 제공할 수 있도록 한다<br>
@@ -1486,24 +1492,24 @@ outline: -webkit-focus-ring-color auto 5px;
                         <div class="" id="item18">
                             <h4 class="active">
                                 18. 사용자 요구에 따른 실행
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                                <i class="open"></i>
                             </h4>
 
                             <div class="item-cont">
                                 <p>
-                                    - 사용자가 의도하지 않은 기능(새 창, 초점 변화 등)은 실행되지 않아야 한다.<br>
+                                    &CenterDot; 사용자가 의도하지 않은 기능(새 창, 초점 변화 등)은 실행되지 않아야 한다.<br>
                                 </p>
                                 <div class="definition">
                                     <h5>적용기술</h5>
                                     <ul>
                                         <li>
-                                            - 실행은 onclick, enter 로 가능하게 적용한다.
+                                            실행은 onclick, enter 로 가능하게 적용한다.
                                         </li>
                                         <li>
-                                            - 새창 및 팝업창의 경우 a 요소에 target="_blank" 로 지정한다.
+                                            새창 및 팝업창의 경우 a 요소에 target="_blank" 로 지정한다.
                                         </li>
                                         <li>
-                                            - 웹 사이트 로딩시 자동으로 실행되는 콘텐츠(팝업창, 레이어 팝업, 배경음 포함) 을 사용하지 않는다.
+                                            웹 사이트 로딩시 자동으로 실행되는 콘텐츠(팝업창, 레이어 팝업, 배경음 포함) 을 사용하지 않는다.
                                         </li>
                                     </ul>
                                 </div>
@@ -1511,21 +1517,21 @@ outline: -webkit-focus-ring-color auto 5px;
                                 <dl class="check-list">
                                     <dt>자동검사방법</dt>
                                     <dd>
-                                        - 새창열림 사전공지<br>
-                                        -- &lt;a&gt; 알려지지 않은 새창열기 유무 체크<br>
-                                        -- &lt;area&gt; 알려지지 않은 새창열기 유무 체크
+                                        새창열림 사전공지<br>
+                                        &lt;a&gt; 알려지지 않은 새창열기 유무 체크<br>
+                                        &lt;area&gt; 알려지지 않은 새창열기 유무 체크
 
                                     </dd>
 
                                     <dt>수동검사방법</dt>
                                     <dd>
-                                        - 새 창 및 팝업으로 동작하는 &lt;a&gt; 요소에 target=”_blank” 제공 여부 체크<br>
-                                        - 웹 사이트 로딩시 자동으로 실행되는 콘텐츠 (팝업창, 레이어 팝업, 배경음 포함) 제공 여부 체크
+                                        새 창 및 팝업으로 동작하는 &lt;a&gt; 요소에 target=”_blank” 제공 여부 체크<br>
+                                        웹 사이트 로딩시 자동으로 실행되는 콘텐츠 (팝업창, 레이어 팝업, 배경음 포함) 제공 여부 체크
                                     </dd>
                                 </dl>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> 예시</h5>
                                     <p>
                                         - L.POINT 카드번호 입력시 자동 초점 넘어가던 현상 제거
                                     </p>
@@ -1541,18 +1547,18 @@ outline: -webkit-focus-ring-color auto 5px;
                         <div class="" id="item19">
                             <h4 class="active">
                                 19. 콘텐츠의 선형화 (콘텐츠의 선형 구조)
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                                <i class="open"></i>
                             </h4>
 
                             <div class="item-cont">
                                 <p>
-                                    콘텐츠는 논리적인 순서로 제공해야 한다
+                                    &CenterDot; 콘텐츠는 논리적인 순서로 제공해야 한다
                                 </p>
 
                                 <div class="definition">
                                     <h5>적용기술</h5>
                                     <ul>
-                                        <li>- 콘텐츠 및 마크업이 논리적인 순서로 구성해야 한다.</li>
+                                        <li>콘텐츠 및 마크업이 논리적인 순서로 구성해야 한다.</li>
                                     </ul>
                                 </div>
 
@@ -1564,12 +1570,12 @@ outline: -webkit-focus-ring-color auto 5px;
 
                                     <dt>수동검사방법</dt>
                                     <dd>
-                                        - 콘텐츠가 논리적인 구조를 가지고 있는지 체크<br>
-                                        - 키보드 초점이 논리적으로 이동되는지 체크
+                                        콘텐츠가 논리적인 구조를 가지고 있는지 체크<br>
+                                        키보드 초점이 논리적으로 이동되는지 체크
                                     </dd>
                                 </dl>
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 공지사항 탭의 논리적 순번을 따른 마크업</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>공지사항 탭의 논리적 순번을 따른 마크업</h5>
                                     <p>
                                         제목과 내용을 연결하여 제공해 내용을 직관적으로 이해할 수 있게 제공한다.
                                     </p>
@@ -1646,12 +1652,12 @@ outline: -webkit-focus-ring-color auto 5px;
                         <div class="" id="item20">
                             <h4 class="active">
                                 20. 표의 구성
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                                <i class="open"></i>
                             </h4>
 
                             <div class="item-cont">
                                 <p>
-                                    - 표는 이해하기 쉽게 구성해야 한다
+                                    &CenterDot; 표는 이해하기 쉽게 구성해야 한다
                                 </p>
 
                                 <div class="definition">
@@ -1672,16 +1678,16 @@ outline: -webkit-focus-ring-color auto 5px;
 
                                     <dt>수동검사방법</dt>
                                     <dd>
-                                        - summary 속성 및 &lt;caption&gt; 요소 유무 체크<br>
-                                        - summary 속성 값과 &lt;caption&gt; 요소 값의 중복 여부 체크<br>
-                                        - &lt;th&gt; 요소 유무 체크<br>
-                                        - scope 속성값이 적절한지 체크<br>
-                                        - 단, HTML5에서 summary 속성은 미적용
+                                        summary 속성 및 &lt;caption&gt; 요소 유무 체크<br>
+                                        summary 속성 값과 &lt;caption&gt; 요소 값의 중복 여부 체크<br>
+                                        &lt;th&gt; 요소 유무 체크<br>
+                                        scope 속성값이 적절한지 체크<br>
+                                        단, HTML5에서 summary 속성은 미적용
                                     </dd>
                                 </dl>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 동영상 콘텐츠의 자동 재생 금지</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>동영상 콘텐츠의 자동 재생 금지</h5>
                                     <p>
                                         - 마우스 클릭하거나 키보드로 접근 후 선택을 해야 동영상이 실행되도록 영상 콘텐츠를 구현하고 있어 배경음으로 인한 방해가 없도록 한다
                                     </p>
@@ -1856,12 +1862,12 @@ outline: -webkit-focus-ring-color auto 5px;
                         <div class="" id="item21">
                             <h4 class="active">
                                 21. 레이블 제공
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                                <i class="open"></i>
                             </h4>
 
                             <div class="item-cont">
                                 <p>
-                                    - 입력 서식에는 대응하는 레이블을 제공해야 한다.
+                                    &CenterDot; 입력 서식에는 대응하는 레이블을 제공해야 한다.
                                 </p>
                                 <div class="definition">
                                     <h5>적용기술</h5>
@@ -1873,19 +1879,19 @@ outline: -webkit-focus-ring-color auto 5px;
                                 <dl class="check-list">
                                     <dt>자동검사방법</dt>
                                     <dd>
-                                        - &lt;input&gt;, &lt;textarea&gt;, &lt;select&gt; 요소 등에 &lt;label&gt;요소, title 속성 유무 체크
+                                        &lt;input&gt;, &lt;textarea&gt;, &lt;select&gt; 요소 등에 &lt;label&gt;요소, title 속성 유무 체크
                                     </dd>
 
                                     <dt>수동검사방법</dt>
                                     <dd>
-                                        - 입력 서식에 레이블이 올바르게 연결되어 있는지 체크<br>
-                                        - 레이블값이 해당 서식을 적절한 내용으로 표현했는지 체크<br>
-                                        - 입력 서식에 중복 레이블을 제공하지 않았는지 체크
+                                        입력 서식에 레이블이 올바르게 연결되어 있는지 체크<br>
+                                        레이블값이 해당 서식을 적절한 내용으로 표현했는지 체크<br>
+                                        입력 서식에 중복 레이블을 제공하지 않았는지 체크
                                     </dd>
                                 </dl>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 고객센터 > FAQ 검색 인풋창의 레이블 제공</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>고객센터 > FAQ 검색 인풋창의 레이블 제공</h5>
                                     <p>
                                         -사용자의 입력, 선택을 요구하는 입력서식에는 그에 대한 제목, 즉 레이블을 제공해야 한다.<br>
                                         - &lt;label&gt;의 for 속성과 서식의 id 값을 일치 시킨다.<br>
@@ -1904,23 +1910,23 @@ outline: -webkit-focus-ring-color auto 5px;
                         <div class="" id="item22">
                             <h4 class="active">
                                 22. 오류정정
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                                <i class="open"></i>
                             </h4>
                             <div class="item-cont">
                                 <p>
-                                    - 입력 오류를 정정할 방법을 제공해야 한다.
+                                    &CenterDot; 입력 오류를 정정할 방법을 제공해야 한다.
                                 </p>
                                 <div class="definition">
                                     <h5>적용기술</h5>
                                     <ul>
                                         <li>
-                                            - 입력 서식을 잘못 작성한 경우, 해당 서식 필드로 초점 이동 제공
+                                            입력 서식을 잘못 작성한 경우, 해당 서식 필드로 초점 이동 제공
                                         </li>
                                         <li>
-                                            - 입력 값 또는 형식에 대한 예시 제공
+                                            입력 값 또는 형식에 대한 예시 제공
                                         </li>
                                         <li>
-                                            - 필수 입력사항이나 일정한 양식에 따른 입력란에 대해 사용자가 입력하지 않거나 잘못 입력한 경우 사용자의 실수가 어떤 것인지 안내 제공
+                                            필수 입력사항이나 일정한 양식에 따른 입력란에 대해 사용자가 입력하지 않거나 잘못 입력한 경우 사용자의 실수가 어떤 것인지 안내 제공
                                         </li>
                                     </ul>
                                 </div>
@@ -1933,13 +1939,13 @@ outline: -webkit-focus-ring-color auto 5px;
 
                                     <dt>수동검사방법</dt>
                                     <dd>
-                                        - 입력 서식을 잘못 작성한 경우, 해당 서식 필드로 초점의 이동 가능 여부 체크<br>
-                                        - 입력 서식을 잘못 작성한 경우, 정정할 수 있는 수단을 제공했는지 체크<br>
-                                        - 입력 정정방식 또는 내용이 올바르게 제공했는지 체크
+                                        입력 서식을 잘못 작성한 경우, 해당 서식 필드로 초점의 이동 가능 여부 체크<br>
+                                        입력 서식을 잘못 작성한 경우, 정정할 수 있는 수단을 제공했는지 체크<br>
+                                        입력 정정방식 또는 내용이 올바르게 제공했는지 체크
                                     </dd>
                                 </dl>
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 엘포인트 사용인증 비밀번호 확인시 오류정정 기능 제공</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>엘포인트 사용인증 비밀번호 확인시 오류정정 기능 제공</h5>
                                     <p>
                                         - 오류 발생 시, 해당 오류 사항을 사용자에게 알리고 해당 서식항목으로 초점 이동시켜 쉽게 수정할 수 있도록 한다.
                                     </p>
@@ -1951,12 +1957,12 @@ outline: -webkit-focus-ring-color auto 5px;
                         <div class="" id="item23">
                             <h4 class="active">
                                 23. 마크업오류방지
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                                <i class="open"></i>
                             </h4>
 
                             <div class="item-cont">
                                 <p>
-                                    - 마크업 언어의 요소는 열고 닫음, 중첩 관계 및 속성 선언에 오류가 없어야 한다.
+                                    &CenterDot; 마크업 언어의 요소는 열고 닫음, 중첩 관계 및 속성 선언에 오류가 없어야 한다.
                                 </p>
                                 <div class="definition">
                                     <h5>적용기술</h5>
@@ -1979,23 +1985,23 @@ outline: -webkit-focus-ring-color auto 5px;
                                 <dl class="check-list">
                                     <dt>자동검사방법</dt>
                                     <dd>
-                                        - id 중복 여부 체크<br>
-                                        - 속성 이름 중복 여부 체크<br>
-                                        - 태그 열고 닫음 누락 체크<br>
-                                        - 태그 중첩 여부 체크
+                                        id 중복 여부 체크<br>
+                                        속성 이름 중복 여부 체크<br>
+                                        태그 열고 닫음 누락 체크<br>
+                                        태그 중첩 여부 체크
                                     </dd>
 
                                     <dt>수동검사방법</dt>
                                     <dd>
-                                        - 태그의 열고 닫음 체크<br>
-                                        - 태그의 중첩이 올바른지 체크<br>
-                                        - 한 요소에 중복된 속성 선언 여부 체크<br>
-                                        - 한 페이지에 중복된 id 속성값 선언 여부 체크
+                                        태그의 열고 닫음 체크<br>
+                                        태그의 중첩이 올바른지 체크<br>
+                                        한 요소에 중복된 속성 선언 여부 체크<br>
+                                        한 페이지에 중복된 id 속성값 선언 여부 체크
                                     </dd>
                                 </dl>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 태그 오류 방지</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>태그 오류 방지</h5>
                                     <p>
                                         - 마크업 언어로 작성된 콘텐츠는 표준에서 특별히 정한 경우를 제외하고는 시작 태그와 끝나는 태그가 정의되어야 한다.<br>
                                         - 열고 닫는 태그가 나타내는 요소는 포함관계가 어긋나지 않도록 해야 한다. (태그 중첩 관계)<br>
@@ -2006,7 +2012,7 @@ outline: -webkit-focus-ring-color auto 5px;
                                 </div>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 하나의 요소에 속성 중복 처리 금지</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>하나의 요소에 속성 중복 처리 금지</h5>
                                     <p>
                                         - 한 페이지에서 아이디는 항상 유일해야 한다.<br>
                                         - 하나의 요소에 속성이 중복 처리되는 오류가 없어야 한다.
@@ -2015,7 +2021,7 @@ outline: -webkit-focus-ring-color auto 5px;
                                 </div>
 
                                 <div class="sample">
-                                    <h5><i class="glyphicon glyphicon-star"></i> 예시 : 특수문자 변환 표기</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>특수문자 변환 표기</h5>
                                     <p>
                                         - 텍스트 및 URL에서 사용한 특수문자(<,>,&)는 Entity코드로 변환하여 사용해야 한다.<br>
                                         - Entity 코드로 표현된 특수문자는 대부분의 브라우저에서 문제없이 출력된다.<br>
@@ -2034,17 +2040,17 @@ outline: -webkit-focus-ring-color auto 5px;
                         <div class="" id="item24">
                             <h4 class="active">
                                 24. 웹 애플리케이션 접근성 준수
-                                <i class="glyphicon glyphicon-menu-down lnb-icon open"></i>
+                                <i class="open"></i>
                             </h4>
                             <div class="item-cont">
                                 <p>
-                                    - 콘텐츠에 포함된 웹 애플리케이션은 접근성이 있어야 한다.
+                                    &CenterDot; 콘텐츠에 포함된 웹 애플리케이션은 접근성이 있어야 한다.
                                 </p>
 
                                 <div class="definition">
                                     <h5>적용기술</h5>
                                     <ul>
-                                        <li>- 웹 애플리케이션(JavaScript, 애플릿, ActiveX, Flash)이 자체적인 접근성을 준수해야 함</li>
+                                        <li>웹 애플리케이션(JavaScript, 애플릿, ActiveX, Flash)이 자체적인 접근성을 준수해야 함</li>
                                     </ul>
                                 </div>
 
@@ -2056,9 +2062,9 @@ outline: -webkit-focus-ring-color auto 5px;
 
                                     <dt>수동검사방법</dt>
                                     <dd>
-                                        - &lt;a&gt; 요소 href 속성값에 JavaScript 사용 여부 체크<br>
-                                        - &lt;form&gt; 요소 action 속성값 체크<br>
-                                        - &lt;form&gt; 요소에 &lt;button type=”submit”&gt;, &lt;input type=”submit”&gt;, &lt;input type=”image”&gt; 유무 체크
+                                        &lt;a&gt; 요소 href 속성값에 JavaScript 사용 여부 체크<br>
+                                        &lt;form&gt; 요소 action 속성값 체크<br>
+                                        &lt;form&gt; 요소에 &lt;button type=”submit”&gt;, &lt;input type=”submit”&gt;, &lt;input type=”image”&gt; 유무 체크
                                     </dd>
                                 </dl>
                             </div>
@@ -2135,12 +2141,12 @@ outline: -webkit-focus-ring-color auto 5px;
         if($(this).hasClass('active')){
             $(this).removeClass('active');
             $(this).next('.item-cont').hide(300);
-            $(this).find('i').removeClass('open');
+            $(this).find('i').removeClass('open').text('+');
 
         }else{
             $(this).addClass('active');
             $(this).next('.item-cont').show(600);
-            $(this).find('i').addClass('open');
+            $(this).find('i').addClass('open').text('');
         }
     });
 
