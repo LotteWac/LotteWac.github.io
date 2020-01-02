@@ -205,7 +205,9 @@ button:focus{border:1px dotted #e1e1e1!important;}
         .gnb h1 a.pc img{margin-top: 20px;}
         .gnb h1 a.mobile{display: none;}
 
-        .guide-version{width: 105px; height: 20px; float: right; margin-top: 35px; background: transparent; border: 0px; color: #fff;}
+        .guide-version-wrap{position: relative; width: 120px; height: 20px; float: right; margin-top: 35px; background: transparent; border: 0px;}
+          .guide-version-wrap label{position: absolute; width: 120px; height: 20px; color: #222; z-index: -1; color: #fff; background: url(../../img/arrow.png) no-repeat 102px 12px;}
+          .guide-version-wrap #guide-version{width: 100%; height: auto; line-height: normal;font-family: inherit;  padding: .8em .5em;  border: 0; opacity: 0; filter:alpha(opacity=0);  -webkit-appearance: none; -moz-appearance: none; appearance: none; margin-top: -20px;}
     .gnb .device{float : left; height: 30px; margin: 29px 0 0 10px;}
     .gnb .device li{display: inline;}
     .gnb .device li a{display: block; float: left;  color: #fff; margin-left:30px; font-weight: bold; letter-spacing: -1px;     font-size: 18px;}
@@ -330,11 +332,11 @@ button:focus{border:1px dotted #e1e1e1!important;}
     #wacIntro .modal-dialog .btn.btn-default{width: 118px; height: 40px; background: #333; color: #fff;}
 
 
-/*************************
- *                       *
+/****************************
+ *                          *
  *   index.html > .footer   *
- *                       *
- *************************/
+ *                          *
+ ****************************/
 
 .footer{background: #595959; color: #fff; height: 50px; padding-top: 10px;}
 
@@ -457,10 +459,13 @@ button:focus{border:1px dotted #e1e1e1!important;}
  *   mobile_guide.html   *
  *                       *
  *************************/
- .wac-guide.mobile .inner{overflow: visible;}
- .wac-guide.mobile .container{width: 100%; padding-top: 60px;}
+ /* .wac-guide.mobile .inner{overflow: visible;} */
+
+ .wac-guide.mobile .container{width: 100%; padding-top: 90px;}
  .wac-guide.mobile .container h2{font-size: 30px; text-align: center;}
  .wac-guide.mobile .container h3{font-size: 60px; color: #202020; text-align: left; line-height: 1;}
+
+ .wac-guide.mobile .container .lnb .depth1-menu > a{font-size: 18px;}
 
  .wac-guide.mobile #wac-app,
  .wac-guide.mobile #wac-device,
@@ -522,9 +527,10 @@ button:focus{border:1px dotted #e1e1e1!important;}
 .ui-focus .example-section .inner{overflow: unset;}
 .ui-focus h4{font-size: 25px!important;}
 .price-strike-type1 {font-size: 22px;}
-.ui-focus h4.title-h4{font-size:35px !important;}
+.ui-focus h4.title-h4{font-size:35px !important; color: #202020;}
+.ui-focus h4.title-h4::before{content: ''; display: inline-block; background: #202020; width: 2px; height: 27px; margin-right: 12px;}
 .ui-focus h5{font-size: 25px;}
-.ui-focus h5:before{content: '- ';}
+/* .ui-focus h5:before{content: '- ';} */
 .ui-menu .inner{overflow: unset;}
 
 .ui-focus div[id^="ui"]:target{padding-top: 70px;}
@@ -550,9 +556,13 @@ button:focus{border:1px dotted #e1e1e1!important;}
         .ui-focus .m-visual li.deco-key span:nth-child(6){position: absolute; top:-30px;
         right: -30px;}
 
+
 /* .ui-menu > .gnb-menu */
+
+/*GNB 타입*/
+.ui-focus .ui-menu{padding-top: 65px;}
 .guide li{padding-left: 20px; position: relative;}
-.guide li:before{content: '+'; position: absolute; top:0; left: 0;}
+.guide li:before{content: '·'; position: absolute; top:0; left: 0;}
 .gnb-menu > a{display:block; position: relative; width: 205px; height:45px; background: url(../../img/sprite_pnb.png) no-repeat 0 0; background-position: 50% 0;}
 .gnb-menu > a.active{background: url(../../img/sprite_pnb_active.png) no-repeat 0 0; background-position: 50% 0;}
 .gnb-menu > a em {visibility: hidden;}
@@ -627,6 +637,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
 
 
 /* .ui-tab > .prodlist-type */
+.ui-tab{padding-top: 115px;}
 .prodlist-type{width:100%;}
 .prodlist-type .wac-tabnav{height:60px;}
 .prodlist-type .wac-tabnav a{display:block; width:196.3px; float: left; height: 60px; font-size: 18px; text-align: center; border: 1px solid #e1e1e1;padding-top: 8px;position: relative;}
@@ -671,7 +682,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
     /* .complex-type .best-conts section.active .wrap-tab-cont.js-tabcont > div:nth-child(1){display: block!important;} */
 
         .complex-type .best-conts section .best-tab {float: left; width: 256px; height: 362px;margin-top: 58px; border-left: 1px solid #000;}
-        .complex-type .nav-link{position:relative; float: left; width: 85px; height: 91px; border-bottom: 1px solid #e2e2e2;text-align: center; vertical-align: middle;}
+        .complex-type .nav-link{position:relative; float: left; width: 85px; height: 91px; border-bottom: 1px solid #e2e2e2;text-align: center; verical-align: middle;}
         .complex-type .nav-link .shift-tab{top:unset; bottom:0; left: unset; right:0;}
         .complex-type .nav-link .tab{top:unset; bottom:23px; left: unset; right:0;}
 
@@ -865,6 +876,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
 /* .ui-slide > .m-visual-type */
 .bx-wrapper{margin:0 auto; box-shadow: unset; border:0;}
 
+.ui-slide{padding-top: 115px; margin-bottom: 115px;}
 .ui-slide .m-visual-type{position:relative;}
 
 .ui-slide .m-visual-type .pager-num{position: absolute; bottom:80px; right:50%; margin-right:-500px; background: #fff; z-index: 80;padding: 3px 10px; border-radius: 3px;}
