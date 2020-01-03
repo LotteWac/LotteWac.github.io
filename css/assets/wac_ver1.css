@@ -442,8 +442,8 @@ button:focus{border:1px dotted #e1e1e1!important;}
 .wac-guide.mobile #wac-app .offer,
 .container .contents #wacExample .expect,
 .container .contents #wacExample .check-list{margin: 0 auto; padding: 20px 30px;}
-.wac-guide.mobile #wac-app .check-list,
-.container .contents #wacExample .check-list{max-width: 800px;}
+/* .wac-guide.mobile #wac-app .check-list,
+.container .contents #wacExample .check-list{max-width: 800px;} */
 .check-list dt, .check-list dd,
 .container .contents #wacExample .check-list dd{padding:3px 10px; border: 1px solid #dcdcdc;}
 .check-list dt,
@@ -1242,7 +1242,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
      .container .contents #wacExample .expect,
      .container .contents #wacExample .check-list {padding: 20px 20px;}
 
-     
+
     /* ******************
      *  wac-focus.html  *
      ********************/
