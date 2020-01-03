@@ -1163,7 +1163,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
      /* ******************
      *  wac-focus.html  *
      ********************/
-     .ui-focus .m-visual{background:url(../../img/keyboard-img-768.jpg) no-repeat 0 0;}
+     .ui-focus .m-visual{background:url(../../img/focus-mVisual.png) no-repeat 0 0;}
      .ui-focus .m-visual h2{max-width: 320px; margin:0 auto; font-size: 35px;}
      .ui-focus .m-visual ul li a{font-size: 14px;}
 
@@ -1172,6 +1172,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
 
 }
 @media (max-width:425px){
+
     /* ******************
      *    index.html    *
      ********************/
@@ -1208,11 +1209,40 @@ button:focus{border:1px dotted #e1e1e1!important;}
     .index #wacIntro .modal-dialog .modal-content table td{padding:5px;}
 
 
+    /* ******************
+     *  pc-guide.html  *
+     ********************/
+     .wac-guide .container .contents .article h3 {font-size: 26px;}
+     .wac-guide .container .contents .article > div[id^="item"] > h4{padding:11px 10px; font-size: 17px;}
 
-    .wac-guide .container .contents .article > div[id^="item"] > h4{padding:11px 10px; font-size: 15px;}
+     .wac-guide.mobile #wac-app p,
+     .wac-guide .container .contents .article > div[id^="item"] .item-cont > p {padding-top: 6px;}
 
+     .wac-guide.mobile #wac-app .sample,
+     .wac-guide.mobile #wac-app .definition,
+     .wac-guide .container .contents #wacExample .sample,
+     .wac-guide .container .contents #wacExample .definition {padding: 0px 17px;}
 
+     .wac-guide.mobile #wac-app .offer ul li,
+     .wac-guide.mobile #wac-app .error-type ul li,
+     .wac-guide.mobile #wac-app .recom-type ul li,
+     .wac-guide .container .contents #wacExample .expect ul li,
+     .wac-guide .container .contents #wacExample .definition ul li {position: relative; padding-left: 10px;}
 
+     .wac-guide.mobile #wac-app .offer ul li::before,
+     .wac-guide.mobile #wac-app .error-type ul li::before,
+     .wac-guide.mobile #wac-app .recom-type ul li::before,
+     .wac-guide .container .contents #wacExample .expect ul li::before,
+     .wac-guide .container .contents #wacExample .definition ul li::before {left:1px;}
+
+     .check-list, .wac-guide.mobile #wac-app .check-way,
+     .wac-guide.mobile #wac-app .error-type,
+     .wac-guide.mobile #wac-app .recom-type,
+     .wac-guide.mobile #wac-app .offer,
+     .container .contents #wacExample .expect,
+     .container .contents #wacExample .check-list {padding: 20px 20px;}
+
+     
     /* ******************
      *  wac-focus.html  *
      ********************/
