@@ -67,7 +67,7 @@
 
             <!-- 1. #mVisual start -->
             <div class="m-visual" id="mVisual">
-                <img src="./img/m-visual.png" alt="메인비주얼 이미지">
+                <div class="m-img"></div>
 
                 <div class="inner">
                   <h2>LotteMart<br>Accessibility<br>Guide</h2>
@@ -523,82 +523,27 @@
         });
     }();
 
-    var scrollMotion = function(){
-        //스크롤 모션 구현
-        var distanceOfTop, offset, $targetPager, tartgetAreaId,
-            windowHeight = $(window).height(),
-            $fixNav = $('.page-anchor > li'),
-            $fixNavPagerAnchor = $fixNav.find('a');
 
-        var goToArea = function(AreaId){
-            //해당 영역으로 이동하는 함수
-            offset = $(AreaId).offset();
-            $('html, body').stop().animate({scrollTop : offset.top}, 1000);
+    var $mBtn = $('.gnb .menu-btn'),
+        $pannel = $('.gnb .device'),
+        $container = $('.container');
 
-            //우측 고정페이지 네비게이션 페이저 색변화
-            $fixNavPagerAnchor.removeClass('active');
-            $targetPager = $fixNavPagerAnchor.filter('[href="'+AreaId+'"]');
-            $targetPager.addClass('active');
+    var mobileMenuBtnMotionHandler = function(e){
+        if(!$pannel.hasClass('active')){
+          $pannel.addClass('active');
+          $container.addClass('gnb-active')
+        }else{
+          $pannel.removeClass('active');
+          $container.removeClass('gnb-active')
         }
-
-        $(window).on('DOMMouseScroll mousewheel', function (e) {
-            distanceOfTop = $(window).scrollTop();
-            //scroll down
-            if( e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0 ) {
-                if(distanceOfTop <= 1000){
-                    preventDefaultAction(e)
-                    goToArea("#infoAccess");
-                } else if(distanceOfTop > 1200 && distanceOfTop <= 2000){
-                    preventDefaultAction(e)
-                    goToArea("#whyWac");
-                } else if(distanceOfTop > 2200 && distanceOfTop <= 3000){
-                    preventDefaultAction(e)
-                    goToArea("#wacGuideLine");
-                } else if(distanceOfTop > 3100){
-                    preventDefaultAction(e)
-                    goToArea("#wacIntro");
-                }
-
-            //scroll up
-            } else {
-                if(distanceOfTop >= 4000){
-                    preventDefaultAction(e)
-                    goToArea("#wacGuideLine");
-                } else if(distanceOfTop >= 3000 && distanceOfTop < 4000){
-                    preventDefaultAction(e)
-                    goToArea("#whyWac");
-                } else if(distanceOfTop >= 2000 && distanceOfTop < 3000){
-                    preventDefaultAction(e)
-                    goToArea("#infoAccess");
-                } else if(distanceOfTop >= 1000 && distanceOfTop < 2000){
-                    preventDefaultAction(e)
-                    goToArea("#mVisual");
-                }
-            }
-         });
-
-        var fixNavHandler = function(){
-            $fixNavPagerAnchor.on('click', function(e){
-                $fixNavPagerAnchor.removeClass('active');
-                $(this).addClass('active')
-            });
-
-            $fixNav.on('click', function(){
-                $(this).toggleClass('active');
-            });
-
-            $fixNavPagerAnchor.each(function(){
-                $(this).on('click', function(){
-                    tartgetAreaId =  $(this).attr('href');
-                    goToArea(tartgetAreaId);
-                });
-            });
-         }();
     };
 
-    if($(window).width() > 1200){
-        //scrollMotion();
-    }
+   $mBtn.on({
+     click : mobileMenuBtnMotionHandler
+   });
+
+
+   var mVisual = $('#mVisual img')
 
 </script>
 </body>
