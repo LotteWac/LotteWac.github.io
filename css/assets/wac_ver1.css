@@ -274,6 +274,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
     .container .access-list li img{width: 100%;}
     .container .access-list li dl dt,
     .container .access-list li dl dd{text-align: center;margin-top: 25px;}
+    .container .access-list li:nth-child(4) dl dt{margin-top: 36px;}
         .container .access-list li dl dt{font-weight:900;}
         .container .access-list li dl dd .modal-dialog{top:45%; left:50%; margin:-200px 0 0 -250px;}
         .container .access-list li dl dd .modal-dialog .modal-content{width:100%; max-width: 550px; background: #fff; padding: 35px;}
@@ -1119,7 +1120,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
      .guide-version-wrap{margin-top: 28px;}
 
 
-     .wac-guide .lnb.scroll-fixed, .wac-guide .lnb{position: absolute; width: 100%; max-width: 640px; z-index: 999; top: 0; left: 0; display: block;}
+     .wac-guide .lnb.scroll-fixed, .wac-guide .lnb{position: absolute; width: 100%; max-width: 640px; z-index: 999; top: 0; left: 0;}
         .wac-guide .container .lnb .depth1-menu {margin: 0;}
         .wac-guide .container .lnb .depth1-menu > a{font-size: 25px; color: #202020;}
         .wac-guide .container .lnb .depth2-menu {padding-left: 20px; background-color: #f7f7f7;}
@@ -1171,12 +1172,15 @@ button:focus{border:1px dotted #e1e1e1!important;}
     /* ******************
      *    index.html    *
      ********************/
+     .container .m-visual .m-img {background: url('../../img/m-visual-768.png') no-repeat top center; background-size: cover; width: 100%; height: 100%; position: absolute; top:-2px;}
+
      .container .m-visual h2{font-size: 76px;}
        .container .m-visual p span{top:20px; left: 0;}
+       .container .m-visual p strong{margin-top: 92px;}
      /* .index .container h3 {font-size: 3.9rem;} */
 
-     .index .container .info-access{height:1500px;}
-     .index .container .access-list {width: 100%; max-width: 590px; margin: 0 auto;}
+     .index .container .info-access{height:auto; margin-bottom: 100px;}
+     .index .container .access-list {width: 100%; max-width: 405px; margin: 0 auto; margin-top: 37px;}
      .index .container .access-list li{margin: 17px; max-width:160px; width: 40%;}
 
      .index #whyWac {width:90%; margin:0 auto; padding:0;}
@@ -1221,14 +1225,13 @@ button:focus{border:1px dotted #e1e1e1!important;}
 
 @media (max-width:640px){
 
-  .gnb .device li a{font-size: 18px; padding-top: 10px;}
-
-
+  .gnb .device li a{font-size: 17px; padding-top: 10px;}
 
     /* ******************
     *  wac-focus.html  *
     ********************/
-    .ui-focus .m-visual{height: auto; background:url(../../img/focus-mVisual-mobile.png) no-repeat;}
+    .m-visual{height: auto;}
+    .ui-focus .m-visual{background:url(../../img/focus-mVisual-mobile.png) no-repeat;}
     .ui-focus .m-visual h2{font-size: 48px; letter-spacing: -5px;}
     .ui-focus .m-visual ul{width: 100%; max-width: 100%;}
     .ui-focus .m-visual ul
@@ -1242,19 +1245,22 @@ button:focus{border:1px dotted #e1e1e1!important;}
      .mobile-block{display: block;}
      .index .container h3{font-size: 35px !important; text-align: center; line-height: 1.3;}
 
-     .container .m-visual{height:800px;}
-     .container .m-visual > img{top:0;}
+     /* .container .m-visual .m-img {background: url('../../img/m-visual-425.png') no-repeat; background-size: cover; width: 100%; height: 100%; position: absolute; top:-2px;} */
+    .container .m-visual p strong{font-size: 20px; margin-top: 60px;}
 
      .index .container .info-access {height:unset;}
      .index .container .info-access p{font-size:15px!important;}
 
         .index .container .access-list li i{padding: 0;}
-        .btn-lotte{widows: 145px; height:40px; font-size: 15px;}
+        .container .info-access .btn-lotte{width: 122px; height:40px; font-size: 15px; padding: 15px 4px;}
             .container .access-list li dl dt{margin-top: 10px;}
+            .container .access-list li:nth-child(4) dl dt{margin-top: 18px;}
+
             .container .access-list li dl dd .modal-dialog{width:95%; top:0; left:0;margin: 0 auto;}
 
+
     .index #whyWac{padding-top: 100px; height: unset;}
-        .index #whyWac dl dt{font-size: 18px;}
+        .index #whyWac dl dt{font-size: 17px;}
         .index #whyWac dl dd{width:90%; margin:0 auto; padding: 0; font-size: 14px;}
 
     .index #wacGuideLine{padding-top: 100px; height: unset; text-align: left;}
@@ -1315,7 +1321,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
      *    index.html    *
      ********************/
     .index .container .m-visual h2{font-size: 46px;}
-    .index .container .m-visual {height:750px;}
+    .index .container .m-visual {height:450px;}
 
     /* *********************
      *    pc_guide.html    *
@@ -1333,9 +1339,10 @@ button:focus{border:1px dotted #e1e1e1!important;}
     /* ******************
      *    index.html    *
      ********************/
-     .index .container .m-visual h2{text-align: center; width: 100%;font-size: 45px;}
-     .index .container .m-visual p{font-size: 18px;}
-     .index .container .m-visual {height:750px;}
+     .index .container .m-visual h2{text-align: center; width: 100%; font-size: 56px;}
+     .index .container .m-visual p, .container .m-visual p strong{font-size: 18px; text-align: center;}
+     .index .container .m-visual p span{top: 20px; left: 0; right: 0;}
+
 
      .index .container .access-list li{margin: 10px;}
 
