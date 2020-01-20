@@ -381,19 +381,21 @@ button:focus{border:1px dotted #e1e1e1!important;}
 .wac-guide .container .contents .article p{font-size: 18px;}
 .wac-guide .container .contents .article h3{font-size:36px; color: #293f54;}
 
+.wac-guide .container .contents div[id^="item"]:target,
 .wac-guide .container .contents .article > div[id^="item"]:target{padding-top: 120px;}
 .wac-guide.mobile #wac-app h4,
-.wac-guide .container .contents .article > div[id^="item"] > h4{color: #6f6f6f; width: 100%; padding: 7px 20px; border:1px solid #bebebe; border-bottom: 2px solid #6f6f6f; cursor: pointer; position: relative; font-size: 22px; margin: 0;}
+.wac-guide .container .contents .article > div[id^="item"] > h4{color: #6f6f6f; width: 100%; padding: 7px 20px; padding-right: 43px; border:1px solid #bebebe; border-bottom: 2px solid #6f6f6f; cursor: pointer; position: relative; font-size: 22px; margin: 0;}
 .wac-guide.mobile #wac-app h4.active,
 .wac-guide .container .contents .article > div[id^="item"] > h4.active{color: #dd0129; border-bottom:0;}
 .wac-guide.mobile #wac-app h4.active::after,
-.wac-guide .container .contents .article > div[id^="item"] > h4.active:after{content: ''; display: block; width: 100%; height: 2px; margin: 0 auto; background: #eee; margin-top: 15px;}
-
+.wac-guide .container .contents .article > div[id^="item"] > h4.active:after{position: absolute; content: ''; display: block; width: 95%; height: 2px; margin: 0 auto; background: #eee; margin-top: 7px;}
 
 .wac-guide.mobile .item > h4 i,
-.wac-guide .container .contents .article > div[id^="item"] > h4 i{width: 20px; height: 20px; font-size: 35px; color: #6f6f6f; float: right; margin-top: -15px; }
+.wac-guide .container .contents .article > div[id^="item"] > h4 i{width: 20px; height: 20px; font-size: 35px; color: #6f6f6f; position: absolute; right: 13px; top:27%; margin-top: -6px; line-height: 1;}
 .wac-guide.mobile .item > h4 i.open,
-.wac-guide .container .contents .article > div[id^="item"] > h4 i.open{background: url(../../img/minus.png) no-repeat 0 0; margin-top: 15px; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); transition: all ease 0.5s 0s;}
+.wac-guide .container .contents .article > div[id^="item"] > h4 i.open{background: url(../../img/minus.png) no-repeat 0 0; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); transition: all ease 0.5s 0s;top:35%;}
+
+
 .wac-guide.mobile #wac-app .item-cont,
 .wac-guide .container .contents .article > div[id^="item"] .item-cont{border:1px solid #bebebe; border-top:0; border-bottom: 2px solid #dd0129; padding-bottom:20px;}
 .wac-guide.mobile #wac-app p,
@@ -1203,11 +1205,15 @@ button:focus{border:1px dotted #e1e1e1!important;}
      .wac-guide.mobile .main-cont ul {height: unset;}
      .wac-guide.mobile .main-cont ul li a{position: relative; top:unset; left: 50%!important; right: unset; bottom:unset;margin: 20px 0 0 -132.5px;}
 
-     .wac-guide.mobile .container h3 {font-size: 40px; text-align: center; line-height: 1.5}
+     .wac-guide.mobile .container h3 {font-size: 40px; line-height: 1.5}
      .wac-guide.mobile .container h3 em{line-height: 1;}
-     .wac-guide.mobile #wac-app h4, .wac-guide.mobile #wac-device h4{font-size: 26px; text-align: center;}
-     .wac-guide.mobile #wac-device li:last-child{text-align: center;}
+     .wac-guide.mobile #wac-app h4, .wac-guide.mobile #wac-device h4{font-size: 20px;}
 
+     .wac-guide.mobile #wac-app h4, .wac-guide .container .contents .article > div[id^="item"] > h4{padding-right:43px;}
+     .wac-guide.mobile .item > h4 i.open, .wac-guide .container .contents .article > div[id^="item"] > h4 i.open{position: absolute; right: 13px; top: 25%;}
+     .wac-guide.mobile .item > h4 i, .wac-guide .container .contents .article > div[id^="item"] > h4 i{position: absolute;
+    top: 25%;
+    right: 13px;}
      /* ******************
      *  wac-focus.html  *
      ********************/
@@ -1216,7 +1222,12 @@ button:focus{border:1px dotted #e1e1e1!important;}
      .ui-focus .m-visual h2 span{display: none;}
      .ui-focus .m-visual ul li a{font-size: 14px;}
 
-     .ui-focus h4.title-h4{font-size: 22px!important;}
+     .ui-focus .container h3{margin-bottom: 0;}
+     .ui-focus .container h3::before{width: 32px;}
+     .ui-focus h4.title-h4{font-size: 28px!important;}
+     .ui-focus h4.title-h4::before{height: 22px;}
+     .ui-focus h5{font-size: 22px; margin: 8px 0;}
+
      .ui-focus .guide li{font-size: 18px;}
      .prodlist-type .wac-tabnav a{font-size: 16px; padding-top:12px;}
 
@@ -1310,7 +1321,20 @@ button:focus{border:1px dotted #e1e1e1!important;}
      .container .contents #wacExample .expect,
      .container .contents #wacExample .check-list {padding: 20px 20px;}
 
+     /* ******************
+     *  wac-focus.html  *
+     ********************/
+     .ui-focus .m-visual {background: url(../../img/focus-mVisual-mobile.png) no-repeat top center;}
+     .ui-focus .m-visual .inner{padding: 0 30px;}
+     .ui-focus .m-visual h2{width: auto; font-size: 32px; letter-spacing: 0; text-align: center;}
+     .ui-focus .m-visual ul{width: 287px; margin: 0 auto; margin-top: 188px;}
+     .ui-focus .m-visual ul li:last-child{margin: 0;}
+     .ui-focus .btn-lotte{padding: 8px 8px 9px 8px;}
 
+     .ui-focus .container h3{font-size: 30px;}
+     .ui-focus .container h3::before{width: 27px;}
+     .ui-focus h4.title-h4::before{height: 18px;}
+     .ui-focus h5{font-size: 18px; line-height: 1.3; margin: 10px 5px;}
 }
 @media (max-width:378px){
   .index .container .access-list li{margin: 14px;}
@@ -1329,10 +1353,6 @@ button:focus{border:1px dotted #e1e1e1!important;}
     .wac-guide .container .lnb .depth1-menu{padding-top:5px;}
 
 
-     /* ******************
-     *  wac-focus.html  *
-     ********************/
-     .ui-focus .m-visual{background:url(../../img/keyboard-img-375.jpg) no-repeat 0 0;}
 
 }
 @media (max-width:320px){

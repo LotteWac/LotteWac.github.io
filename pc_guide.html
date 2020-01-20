@@ -2145,8 +2145,8 @@ outline: -webkit-focus-ring-color auto 5px;
     }();
 
     //article h3 folding
-    $articleH4 = $('.wac-guide .container .contents .article > div[id^="item"] > h4');
-    $h4Icon = $('.wac-guide .container .contents .article > div[id^="item"] > h4 i');
+    var $articleH4 = $('.wac-guide .container .contents .article > div[id^="item"] > h4'),
+      $h4Icon = $('.wac-guide .container .contents .article > div[id^="item"] > h4 i');
 
     $articleH4.on('click', function(){
         if($(this).hasClass('active')){
@@ -2163,7 +2163,6 @@ outline: -webkit-focus-ring-color auto 5px;
 
 
     //모바일 nav 처리
-
     var $mobileNavBtn = $('#mobileNavBtn'),
         $guideLnb = $('.wac-guide .lnb'),
         $lastOfGuideLnb = _wac.getFocusables($guideLnb).last();

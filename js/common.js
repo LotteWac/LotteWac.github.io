@@ -1,13 +1,22 @@
 $(document).ready(function(){
-    
-    //h1 모션
-    $('.gnb h1 a').hover(function(){
-        $( this ).css('text-decoration','underline');
-    }, function(){
-        $( this ).css('text-decoration','');
-    });
 
-    $('[data-toggle="tooltip"]').tooltip();
+    var $mBtn = $('.gnb .menu-btn'),
+        $pannel = $('.gnb .device'),
+        $container = $('.container');
+
+    var mobileMenuBtnMotionHandler = function(e){
+        if(!$pannel.hasClass('active')){
+          $pannel.addClass('active');
+          $container.addClass('gnb-active')
+        }else{
+          $pannel.removeClass('active');
+          $container.removeClass('gnb-active')
+        }
+    };
+
+   $mBtn.on({
+     click : mobileMenuBtnMotionHandler
+   });
 
 
     // var num = 0, $nowActiveEL, $textOfEL;
@@ -34,5 +43,3 @@ $(document).ready(function(){
     // $(document).on({focusin : focusinHandler});
     // $(document).on({focusout : focusoutHandler}, 'a:visible, button:visible, :input:not(:hidden), [tabindex], [href]');
 });
-
-

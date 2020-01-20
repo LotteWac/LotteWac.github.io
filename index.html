@@ -524,27 +524,7 @@
     }();
 
 
-    var $mBtn = $('.gnb .menu-btn'),
-        $pannel = $('.gnb .device'),
-        $container = $('.container');
-
-    var mobileMenuBtnMotionHandler = function(e){
-        if(!$pannel.hasClass('active')){
-          $pannel.addClass('active');
-          $container.addClass('gnb-active')
-        }else{
-          $pannel.removeClass('active');
-          $container.removeClass('gnb-active')
-        }
-    };
-
-   $mBtn.on({
-     click : mobileMenuBtnMotionHandler
-   });
-
-
-   var mVisual = $('#mVisual img')
-
+    
 </script>
 </body>
 </html>
