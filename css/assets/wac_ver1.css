@@ -185,7 +185,8 @@ pre code.active{height: 250px;}
 
 /* button */
 button:focus{border:1px dotted #e1e1e1!important;}
-.code-open-btn{width:32px; height: 30px; border:0;  padding-bottom:3px; color:#000; background:#f5f5f5; font-size:13px; position: absolute; top:0; right:26px; z-index:9;}
+.code-open-btn{width:45px; height: 30px; border:0;  padding-bottom:3px; color:#000; background:#f5f5f5; text-align: left; font-size:13px; position: absolute; top:0; right:6px; z-index:9; padding-top: 3px; background: url(../../img/open-arrow.png) no-repeat 28px 13px;}
+.code-open-btn.active{background: url(../../img/code-close-arrow.png) no-repeat 28px 13px;}
 .btn-lotte{color:#fff; background-color : #dd0129; border:0; font-weight:800; padding-bottom: 11px; border-radius: 0!important;}
 .btn-example{color:#fff; background-color : #6a4613; border:0; font-weight:800; padding-bottom: 15px; border-radius: 0!important;}
 .btn-lotte:hover, .btn-example:hover{color:#fff;}
@@ -502,7 +503,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
 .wac-guide.mobile #wac-device em{font-size:25px; margin: 20px 0;}
 
 .wac-guide.mobile #wac-app .item{margin-top: 20px;}
-.wac-guide.mobile #wac-app .item .sample > img{width : 100%;}
+.wac-guide.mobile #wac-app .item .sample > img{max-width: 100%;}
 .wac-guide.mobile #wac-app .summary{padding: 0;}
 .wac-guide.mobile #wac-app .summary::before{display: inline-block;content: '+ '; }
 
@@ -1082,7 +1083,6 @@ button:focus{border:1px dotted #e1e1e1!important;}
     .index .container .access-list{width:860px; margin:0 auto;}
     .index .container .access-list li{margin: 10px; margin-top: 45px;}
 
-    .index #wacIntro .inner{width:95%;}
 
 
     /* ******************
@@ -1183,10 +1183,9 @@ button:focus{border:1px dotted #e1e1e1!important;}
      /* .index .container h3 {font-size: 3.9rem;} */
 
      .index .container .info-access{height:auto; margin-bottom: 100px;}
-     .index .container .access-list {width: 100%; max-width: 405px; margin: 0 auto; margin-top: 37px;}
-     .index .container .access-list li{margin: 17px; max-width:160px; width: 40%;}
+     .index .container .access-list {width: 100%; max-width: 492px; margin: 0 auto; margin-top: 37px;}
+     .index .container .access-list li{margin: 17px 42px; max-width:160px; width: 40%;}
 
-     .index #whyWac {width:90%; margin:0 auto; padding:0;}
 
 
     /* ******************
@@ -1234,7 +1233,6 @@ button:focus{border:1px dotted #e1e1e1!important;}
 
 
 }
-
 @media (max-width:640px){
 
   .gnb .device li a{font-size: 17px; padding-top: 10px;}
@@ -1248,6 +1246,10 @@ button:focus{border:1px dotted #e1e1e1!important;}
     .ui-focus .m-visual ul{width: 100%; max-width: 100%;}
     .ui-focus .m-visual ul
 }
+@media (max-width:553px){
+  .index .container .access-list{max-width: 405px;}
+  .index .container .access-list li{margin: 14px;}
+}
 @media (max-width:425px){
 
     /* ******************
@@ -1255,23 +1257,23 @@ button:focus{border:1px dotted #e1e1e1!important;}
      ********************/
      /* .index .inner{padding: 10px;} */
      .mobile-block{display: block;}
-     .index .container h3{font-size: 35px !important; text-align: center; line-height: 1.3;}
+     .index .container h3{font-size: 35px !important; line-height: 1.3;}
 
      /* .container .m-visual .m-img {background: url('../../img/m-visual-425.png') no-repeat; background-size: cover; width: 100%; height: 100%; position: absolute; top:-2px;} */
     .container .m-visual p strong{font-size: 20px; margin-top: 60px;}
 
-     .index .container .info-access {height:unset;}
+     .index .container .info-access {height:auto;}
      .index .container .info-access p{font-size:15px!important;}
 
-        .index .container .access-list li i{padding: 0;}
-        .container .info-access .btn-lotte{width: 122px; height:40px; font-size: 15px; padding: 15px 4px;}
-            .container .access-list li dl dt{margin-top: 10px;}
-            .container .access-list li:nth-child(4) dl dt{margin-top: 18px;}
+    .index .container .access-list li i{padding: 0;}
+    .container .info-access .btn-lotte{width: 122px; height:40px; font-size: 15px; padding: 15px 4px;}
+        .container .access-list li dl dt{margin-top: 10px;}
+        .container .access-list li:nth-child(4) dl dt{margin-top: 18px;}
 
-            .container .access-list li dl dd .modal-dialog{width:95%; top:0; left:0;margin: 0 auto;}
+        .container .access-list li dl dd .modal-dialog{width:95%; top:0; left:0;margin: 0 auto;}
 
 
-    .index #whyWac{padding-top: 100px; height: unset;}
+    .index #whyWac{padding-top: 50px; height: auto;}
         .index #whyWac dl dt{font-size: 17px;}
         .index #whyWac dl dd{width:90%; margin:0 auto; padding: 0; font-size: 14px;}
 
@@ -1290,8 +1292,9 @@ button:focus{border:1px dotted #e1e1e1!important;}
     /* ******************
      *  pc-guide.html  *
      ********************/
+     .wac-guide.mobile .container h3,
      .wac-guide .container .contents .article h3 {font-size: 26px;}
-     .wac-guide .container .contents .article > div[id^="item"] > h4{padding:11px 10px; font-size: 17px;}
+     .wac-guide .container .contents .article > div[id^="item"] > h4{font-size: 17px;}
 
      .wac-guide.mobile #wac-app p,
      .wac-guide .container .contents .article > div[id^="item"] .item-cont > p {padding-top: 6px;}
@@ -1322,7 +1325,16 @@ button:focus{border:1px dotted #e1e1e1!important;}
      .container .contents #wacExample .expect,
      .container .contents #wacExample .check-list {padding: 20px 20px;}
 
-     /* ******************
+      /**********************
+      *  mobile_guide.html  *
+      **********************/
+     #wac-app .inner{padding: 0;}
+     .wac-guide.mobile #wac-app h4, .wac-guide .container .contents .article > div[id^="item"] > h4{line-height: 1.5;}
+     .wac-guide.mobile .container #wac-app .item .definition h5{margin-bottom: 0;}
+
+     .wac-guide.mobile .container #wac-app .item .definition h5, .wac-guide.mobile .container #wac-app .item .offer h5, .wac-guide .container .contents #wacExample .expect h5, .wac-guide .container .contents #wacExample .definition h5{padding: 0; margin-top: 10px; margin-bottom: 0;}
+
+     /*******************
      *  wac-focus.html  *
      ********************/
      .ui-focus .m-visual {background: url(../../img/focus-mVisual-mobile.png) no-repeat top center;}
@@ -1336,9 +1348,6 @@ button:focus{border:1px dotted #e1e1e1!important;}
      .ui-focus .container h3::before{width: 27px;}
      .ui-focus h4.title-h4::before{height: 18px;}
      .ui-focus h5{font-size: 18px; line-height: 1.3; margin: 10px 5px;}
-}
-@media (max-width:378px){
-  .index .container .access-list li{margin: 14px;}
 }
 @media (max-width:375px){
     body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, form, fieldset, p, button, header, nav, aside, footer, a, .header, .gnb, .login-box, .footer, .inner, .btn-box{font-size: 14px;}
@@ -1357,15 +1366,26 @@ button:focus{border:1px dotted #e1e1e1!important;}
 
 }
 @media (max-width:320px){
-    /* ******************
+
+    /*********************
+     *    common.html    *
+     ********************/
+     .gnb h1 a.pc{font-size:23px; line-height:3.0;}
+     .gnb h1 a.pc img{width: 76px;}
+
+    /********************
      *    index.html    *
      ********************/
      .index .container .m-visual h2{text-align: center; width: 100%; font-size: 56px;}
      .index .container .m-visual p, .container .m-visual p strong{font-size: 18px; text-align: center;}
      .index .container .m-visual p span{top: 20px; left: 0; right: 0;}
 
-
      .index .container .access-list li{margin: 10px;}
+
+     /**********************
+     *  mobile_guide.html  *
+     **********************/
+     .gnb .device li a {font-size: 14px; padding-top: 15px;}
 
     /* ******************
      *  wac-guide.html  *

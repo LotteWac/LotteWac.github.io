@@ -187,9 +187,9 @@
                                 </div>
 
                                 <div class="sample">
-                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> em<em class="lotte-red02">예시 : </em>alt 속성을 이용한 제공방법 (일반적인 방법)</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>alt 속성을 이용한 제공방법 (일반적인 방법)</h5>
                                     <p>
-                                        - 메인 슬라이드 이미지 적용 <em class="lotte-red02">예시 : </em>이미지가 제공하는 모든 내용을 alt 속성에 제공하여 이미지의 정보를 이해할 수 있음
+                                        - 메인 슬라이드 이미지 적용 예시 : 이미지가 제공하는 모든 내용을 alt 속성에 제공하여 이미지의 정보를 이해할 수 있음
 
                                     </p>
                                     <img src="./img/alter-text.png" alt="메인 슬라이드 이미지 적용 예시">
@@ -2261,11 +2261,14 @@ outline: -webkit-focus-ring-color auto 5px;
 
 
     $codeOpenBtn.on('click', function(){
-        $targetCodeArea = $(this).next('code')
+        var $targetCodeArea = $(this).next('code'),
+            $codeOpenBtn = $('.code-open-btn');
         if($targetCodeArea.hasClass('active')){
+            $codeOpenBtn.removeClass('active');
             $targetCodeArea.removeClass('active');
             $(this).text('열기');
         }else{
+            $codeOpenBtn.addClass('active');
             $targetCodeArea.addClass('active');
             $(this).text('닫기');
         }
