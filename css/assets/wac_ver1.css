@@ -266,6 +266,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
     /* 2. #infoAccess  */
     .container .info-access{width: 100%; height: 685px; padding-top:60px;}
     .container h3{font-size: 36px; font-weight: 900; margin-bottom:20px; color: #202020;}
+      .index .container h3{line-height: 1.5;}
     .container h3::before{content: ''; display:block; width: 40px; height: 2px; background: #202020;}
     .container .info-access .btn-lotte{width: 160px; height: 40px; padding-bottom: 16px; font-size: 18px; font-weight: 600; letter-spacing: -1px; line-height: 0.7;}
 
@@ -293,14 +294,14 @@ button:focus{border:1px dotted #e1e1e1!important;}
     #whyWac dl dd{padding-bottom: 40px; font-size: 18px;}
 
     /* 4. #wacGuideLine */
-    #wacGuideLine{width: 100%; margin-top: 85px; height:441px;}
+    #wacGuideLine{width: 100%; margin-top: 85px; }
     #wacGuideLine p{font-size: 25px; color: #202020; margin-bottom: 15px;}
     #wacGuideLine .guide-list li{font-size: 18px; margin-bottom: 15px; line-height: 1.9;}
     #wacGuideLine .guide-list li::before{content:'·'; font-weight: 900; display: inline-block; height: 100%;}
 
 
     /* 5. #wacIntro */
-    #wacIntro{width: 100%; height:650px; padding-top: 70px;}
+    #wacIntro{width: 100%; height:auto; padding: 70px 0;}
 
     #wacIntro p{ margin:0 auto; text-align: left;}
 
@@ -1244,11 +1245,20 @@ button:focus{border:1px dotted #e1e1e1!important;}
     .ui-focus .m-visual{background:url(../../img/focus-mVisual-mobile.png) no-repeat;}
     .ui-focus .m-visual h2{font-size: 48px; letter-spacing: -5px;}
     .ui-focus .m-visual ul{width: 100%; max-width: 100%;}
-    .ui-focus .m-visual ul
+}
+@media (max-width:609px){
+  #wacIntro .contents-list li .wac-btn-group a{position: relative; width: 200px; text-align: left; height: 80px;}
+  #wacIntro .contents-list li .wac-btn-group a em{display: block; padding-top: 10px; height: 33px;}
+  #wacIntro .contents-list li .wac-btn-group i{position: absolute; top: 50%; right: 25px; margin-top: -20px;}
+
 }
 @media (max-width:553px){
   .index .container .access-list{max-width: 405px;}
   .index .container .access-list li{margin: 14px;}
+}
+@media (max-width:443px){
+  #wacIntro .contents-list li .wac-btn-group a{margin-bottom: 10px;}
+
 }
 @media (max-width:425px){
 
@@ -1275,19 +1285,19 @@ button:focus{border:1px dotted #e1e1e1!important;}
 
     .index #whyWac{padding-top: 50px; height: auto;}
         .index #whyWac dl dt{font-size: 17px;}
-        .index #whyWac dl dd{width:90%; margin:0 auto; padding: 0; font-size: 14px;}
+        .index #whyWac dl dd{width:90%; margin:0 auto; padding: 0; font-size: 17px;}
 
     .index #wacGuideLine{padding-top: 100px; height: unset; text-align: left;}
         .index #wacGuideLine p{font-size: 18px;}
         .index #wacGuideLine .guide-list{width:90%; margin:0 auto;}
-        .index #wacGuideLine .guide-list li {font-size: 14px;}
+        .index #wacGuideLine .guide-list li {font-size: 17px;}
     .index #wacIntro {padding-top: 100px; height: unset;}
     .index #wacIntro p{font-size: 15px;}
     .index #wacIntro .contents-list{padding:0}
+    .index #wacIntro .intro-summary li{font-size: 17px;}
     .index #wacIntro .contents-list li a{margin-left:30px;}
     .index #wacIntro .modal-dialog .modal-content table th{font-size: 14px;}
     .index #wacIntro .modal-dialog .modal-content table td{padding:5px;}
-
 
     /* ******************
      *  pc-guide.html  *
