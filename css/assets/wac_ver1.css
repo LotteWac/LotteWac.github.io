@@ -502,6 +502,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
 .wac-guide.mobile #wac-device em{font-size:25px; margin: 20px 0;}
 
 .wac-guide.mobile #wac-app .item{margin-top: 20px;}
+.wac-guide.mobile #wac-app .item .sample > img{width : 100%;}
 .wac-guide.mobile #wac-app .summary{padding: 0;}
 .wac-guide.mobile #wac-app .summary::before{display: inline-block;content: '+ '; }
 
