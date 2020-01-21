@@ -42,7 +42,7 @@ h4{font-weight:900;}
 }
 .circle-num{display:inline-block; width:15px; height:15px; border-radius:7.5px; background:#293f54; color:#fff; text-align:center; margin: 0 10px; line-height:1;}
 .mobile-block{display: inline;}
-.title-small{font-size: 20px; display :block; letter-spacing: 5px; margin:8px !important;}
+.title-small{font-size: 25px; display :block; margin:8px !important;}
 strong {font-weight: 700; color: #111;}
 .ui-datepicker-trigger, [class|=btn] {
     display: inline-block;
@@ -379,9 +379,10 @@ button:focus{border:1px dotted #e1e1e1!important;}
 
 .wac-guide .container .contents{width:calc(100% - 280px); float: right; border-left:1px solid #b3000f; padding-left:40px; z-index: 90;}
 
-.wac-guide .container .contents .article{margin-bottom : 200px; padding-top:20px;}
+.wac-guide .container .contents .article{margin-bottom : 200px; padding-top:40px;}
 .wac-guide .container .contents .article p{font-size: 18px;}
-.wac-guide .container .contents .article h3{font-size:36px; color: #293f54;}
+.wac-guide.mobile .container h3,
+.wac-guide .container .contents .article h3{font-size:36px; color: #293f54;     line-height: 1.3;}
 
 .wac-guide .container .contents div[id^="item"]:target,
 .wac-guide .container .contents .article > div[id^="item"]:target{padding-top: 120px;}
@@ -473,7 +474,6 @@ button:focus{border:1px dotted #e1e1e1!important;}
 
  .wac-guide.mobile .container{width: 100%; padding-top: 90px;}
  .wac-guide.mobile .container h2{font-size: 30px; text-align: center;}
- .wac-guide.mobile .container h3{font-size: 60px; color: #202020; text-align: left; line-height: 1;}
 
  .wac-guide.mobile .container .lnb .depth1-menu > a{font-size: 18px;}
 
@@ -1165,12 +1165,12 @@ button:focus{border:1px dotted #e1e1e1!important;}
     .gnb .device li{display: block; float: left; width: 33.33333%; height: 100%;}
     .gnb .device li:nth-child(3){border-left: 1px solid #dcdcdc; border-right: 1px solid #dcdcdc;}
       .gnb .device li.gnb-bar{width: 0; margin: 0; display: none;}
-      .gnb .device li a{width: 100%; height: 100%; text-align: center; font-size: 20px; color: #000; padding-top: 7px; margin: 0;}
+      .gnb .device li a{width: 100%; height: 100%; text-align: center; font-size: 20px; color: #000; padding-top: 9px; margin: 0;}
 
     .gnb .menu-btn {display:block; cursor:pointer ; float: right; margin: 29px 0 0 10px}
 
     .ui-focus .container, .container{padding-top: 80px;}
-    .ui-focus .container.gnb-active, .container.gnb-active{padding-top: 120px;}
+    .ui-focus .container.gnb-active, .wac-guide.mobile .container.gnb-active, .container.gnb-active{padding-top: 120px;}
 
 
     /* ******************
@@ -1185,7 +1185,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
 
      .index .container .info-access{height:auto; margin-bottom: 100px;}
      .index .container .access-list {width: 100%; max-width: 492px; margin: 0 auto; margin-top: 37px;}
-     .index .container .access-list li{margin: 17px 42px; max-width:160px; width: 40%;}
+     .index .container .access-list li{margin: 30px 42px; max-width:160px; width: 40%;}
 
 
 
@@ -1203,6 +1203,8 @@ button:focus{border:1px dotted #e1e1e1!important;}
     /***********************
      *  mobile-guide.html  *
      ***********************/
+     .title-small{font-size: 29px;}
+     
      .wac-guide.mobile .main-cont ul {height: unset;}
      .wac-guide.mobile .main-cont ul li a{position: relative; top:unset; left: 50%!important; right: unset; bottom:unset;margin: 20px 0 0 -132.5px;}
 
