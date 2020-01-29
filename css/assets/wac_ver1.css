@@ -1291,7 +1291,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
 
     .index #wacGuideLine{padding-top: 100px; height: unset; text-align: left; margin-top: 0;}
         .index #wacGuideLine p{font-size: 18px;}
-        .index #wacGuideLine .guide-list{width:90%; margin:0 auto;}
+        .index #wacGuideLine .guide-list{width:96%; margin:0 auto;}
         .index #wacGuideLine .guide-list li {font-size: 17px;}
     .index #wacIntro {padding-top: 100px; height: unset;}
     .index #wacIntro p{font-size: 15px;}
@@ -1355,7 +1355,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
      ********************/
      .ui-focus .m-visual {background: url(../../img/focus-mVisual-mobile.png) no-repeat top center;}
      .ui-focus .m-visual .inner{padding: 0 30px;}
-     .ui-focus .m-visual h2{width: auto; font-size: 32px; letter-spacing: 0; text-align: center;}
+     .ui-focus .m-visual h2{width: auto; font-size: 43px; letter-spacing: 0; text-align: center;}
      .ui-focus .m-visual ul{width: 287px; margin: 0 auto; margin-top: 188px;}
      .ui-focus .m-visual ul li:last-child{margin: 0;}
      .ui-focus .btn-lotte{padding: 8px 8px 9px 8px;}
@@ -1408,6 +1408,6 @@ button:focus{border:1px dotted #e1e1e1!important;}
      *  wac-guide.html  *
      ********************/
      .wac-guide .container > .inner{padding:0 10px;}
-
+     .ui-focus .m-visual h2 {width: auto; font-size: 43px;}
 
 }
