@@ -1204,7 +1204,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
      *  mobile-guide.html  *
      ***********************/
      .title-small{font-size: 29px;}
-     
+
      .wac-guide.mobile .main-cont ul {height: unset;}
      .wac-guide.mobile .main-cont ul li a{position: relative; top:unset; left: 50%!important; right: unset; bottom:unset;margin: 20px 0 0 -132.5px;}
 
@@ -1275,7 +1275,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
     .container .m-visual p strong{font-size: 20px; margin-top: 60px;}
 
      .index .container .info-access {height:auto;}
-     .index .container .info-access p{font-size:15px!important;}
+     .index .container .info-access p{font-size:15px!important; line-height: 2.0;}
 
     .index .container .access-list li i{padding: 0;}
     .container .info-access .btn-lotte{width: 122px; height:40px; font-size: 15px; padding: 15px 4px;}
@@ -1287,9 +1287,9 @@ button:focus{border:1px dotted #e1e1e1!important;}
 
     .index #whyWac{padding-top: 50px; height: auto;}
         .index #whyWac dl dt{font-size: 17px;}
-        .index #whyWac dl dd{width:90%; margin:0 auto; padding: 0; font-size: 17px;}
+        .index #whyWac dl dd{width:90%; margin:0 auto; padding: 0; font-size: 15px!important;}
 
-    .index #wacGuideLine{padding-top: 100px; height: unset; text-align: left;}
+    .index #wacGuideLine{padding-top: 100px; height: unset; text-align: left; margin-top: 0;}
         .index #wacGuideLine p{font-size: 18px;}
         .index #wacGuideLine .guide-list{width:90%; margin:0 auto;}
         .index #wacGuideLine .guide-list li {font-size: 17px;}
@@ -1297,9 +1297,13 @@ button:focus{border:1px dotted #e1e1e1!important;}
     .index #wacIntro p{font-size: 15px;}
     .index #wacIntro .contents-list{padding:0}
     .index #wacIntro .intro-summary li{font-size: 17px;}
-    .index #wacIntro .contents-list li a{margin-left:30px;}
+
+    .index #wacIntro .contents-list li{margin-top: 24px;text-align: center;}
+    .index #wacIntro .contents-list li a{margin-left:30px; margin-left: 0;}
+
     .index #wacIntro .modal-dialog .modal-content table th{font-size: 14px;}
     .index #wacIntro .modal-dialog .modal-content table td{padding:5px;}
+    .index #wacGuideLine .font-bold em{display: block;}
 
     /* ******************
      *  pc-guide.html  *
@@ -1383,11 +1387,12 @@ button:focus{border:1px dotted #e1e1e1!important;}
      *    common.html    *
      ********************/
      .gnb h1 a.pc{font-size:23px; line-height:3.0;}
-     .gnb h1 a.pc img{width: 76px;}
+     .gnb h1 a.pc img{width: 76px;margin-top: 26px; margin-right: 8px;}
 
     /********************
      *    index.html    *
      ********************/
+     .index .inner{padding: 0 11px;}
      .index .container .m-visual h2{text-align: center; width: 100%; font-size: 56px;}
      .index .container .m-visual p, .container .m-visual p strong{font-size: 18px; text-align: center;}
      .index .container .m-visual p span{top: 20px; left: 0; right: 0;}
