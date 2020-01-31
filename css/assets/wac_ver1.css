@@ -1209,7 +1209,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
     /***********************
      *  mobile-guide.html  *
      ***********************/
-     .title-small{font-size: 29px;}
+     .title-small{font-size: 29px; margin: 8px 0!important;}
 
      .wac-guide.mobile .main-cont ul {height: unset;}
      .wac-guide.mobile .main-cont ul li a{position: relative; top:unset; left: 50%!important; right: unset; bottom:unset;margin: 20px 0 0 -132.5px;}
