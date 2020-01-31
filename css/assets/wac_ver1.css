@@ -392,6 +392,9 @@ button:focus{border:1px dotted #e1e1e1!important;}
 .wac-guide .container .contents .article > div[id^="item"] > h4 em.numbering{display: block; float:left; height: 100%;}
 .wac-guide.mobile #wac-app h4 span,
 .wac-guide .container .contents .article > div[id^="item"] > h4 span{display: block; height: 100%; margin-left: 25px;}
+.wac-guide.mobile #wac-app h4 span.two-char,
+.wac-guide .container .contents .article > div[id^="item"] > h4 span.two-char{margin-left: 35px;}
+
 .wac-guide.mobile #wac-app h4.active,
 .wac-guide .container .contents .article > div[id^="item"] > h4.active{color: #dd0129; border-bottom:0;}
 .wac-guide.mobile #wac-app h4.active::after,
@@ -1225,7 +1228,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
      *  wac-focus.html  *
      ********************/
      .ui-focus .m-visual{height: auto; background:url(../../img/focus-mVisual-tablet.png) no-repeat;}
-     .ui-focus .m-visual h2{font-size: 52px; letter-spacing: -5px;}
+     .ui-focus .m-visual h2{font-size: 52px; top: 75px; letter-spacing: -5px;}
      .ui-focus .m-visual h2 span{display: none;}
      .ui-focus .m-visual ul li a{font-size: 14px;}
 
@@ -1360,14 +1363,19 @@ button:focus{border:1px dotted #e1e1e1!important;}
      .ui-focus .m-visual {background: url(../../img/focus-mVisual-mobile.png) no-repeat top center;}
      .ui-focus .m-visual .inner{padding: 0 30px;}
      .ui-focus .m-visual h2{width: auto; font-size: 43px; letter-spacing: 0; text-align: center;}
-     .ui-focus .m-visual ul{width: 287px; margin: 0 auto; margin-top: 188px;}
+     .ui-focus .m-visual ul{width: 287px; margin: 0 auto; margin-top:  130px; margin-bottom: 100px;}
      .ui-focus .m-visual ul li:last-child{margin: 0;}
      .ui-focus .btn-lotte{padding: 8px 8px 9px 8px;}
 
      .ui-focus .container h3{font-size: 30px;}
      .ui-focus .container h3::before{width: 27px;}
+     .ui-focus h4.title-h4 {font-size: 24px!important;}
      .ui-focus h4.title-h4::before{height: 18px;}
      .ui-focus h5{font-size: 18px; line-height: 1.3; margin: 10px 5px;}
+
+}
+@media (max-width:410px){
+  .gnb .device li a{font-size: 15px;padding-top: 15px;}
 }
 @media (max-width:375px){
     body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, form, fieldset, p, button, header, nav, aside, footer, a, .header, .gnb, .login-box, .footer, .inner, .btn-box{font-size: 14px;}
@@ -1381,6 +1389,9 @@ button:focus{border:1px dotted #e1e1e1!important;}
      *    pc_guide.html    *
      ***********************/
     .wac-guide .container .lnb .depth1-menu{padding-top:5px;}
+
+
+    .ui-focus .m-visual .inner {padding: 0 15px;}
 
 
 
@@ -1412,6 +1423,6 @@ button:focus{border:1px dotted #e1e1e1!important;}
      *  wac-guide.html  *
      ********************/
      .wac-guide .container > .inner{padding:0 10px;}
-     .ui-focus .m-visual h2 {width: auto; font-size: 43px;}
+     .ui-focus .m-visual h2 {width: auto; font-size: 35px;}
 
 }
