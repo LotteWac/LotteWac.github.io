@@ -267,7 +267,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
     .container .info-access{width: 100%; height: 685px; padding-top:60px;}
     .container h3{font-size: 36px; font-weight: 900; margin-bottom:20px; color: #202020;}
       .index .container h3{line-height: 1.5;}
-    .container h3::before{content: ''; display:block; width: 40px; height: 2px; background: #202020;}
+    .container h3::before{content: ''; display:block; width: 40px; height: 2px; background: #202020;margin-left: 3px;}
     .container .info-access .btn-lotte{width: 160px; height: 40px; padding-bottom: 16px; font-size: 18px; font-weight: 600; letter-spacing: -1px; line-height: 0.7;}
 
     .container .access-list {overflow: hidden; text-align: center;}
@@ -541,7 +541,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
 .active{display: block !important;}
 .relative{position:relative;}
 .ui-focus .inner{max-width: 1040px;}
-.ui-focus .container{padding-top:60px;}
+.ui-focus .container{padding-top:90px;}
 .ui-focus .examples{display: block; width: 100%; border: 1px solid #e1e1e1; padding: 10px; margin: 10px 0;}
 .ui-focus .examples h6{font-size: 15px;;}
 .ui-focus .example-section{width: 100%;}
@@ -1233,12 +1233,12 @@ button:focus{border:1px dotted #e1e1e1!important;}
      .ui-focus .m-visual ul li a{font-size: 14px;}
 
      .ui-focus .container h3{margin-bottom: 0;}
-     .ui-focus .container h3::before{width: 32px;}
+     .ui-focus .container h3::before{width: 29px;}
      .ui-focus h4.title-h4{font-size: 28px!important;}
      .ui-focus h4.title-h4::before{height: 22px;}
      .ui-focus h5{font-size: 22px; margin: 8px 0;}
 
-     .ui-focus .guide li{font-size: 18px;}
+     .ui-focus .guide li{font-size: 17px; line-height: 1.8;}
      .prodlist-type .wac-tabnav a{font-size: 16px; padding-top:12px;}
 
 
