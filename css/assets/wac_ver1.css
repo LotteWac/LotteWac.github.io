@@ -392,13 +392,14 @@ button:focus{border:1px dotted #e1e1e1!important;}
 .wac-guide .container .contents .article > div[id^="item"] > h4 em.numbering{display: block; float:left; height: 100%;}
 .wac-guide.mobile #wac-app h4 span,
 .wac-guide .container .contents .article > div[id^="item"] > h4 span{display: block; height: 100%; margin-left: 25px;}
+.wac-guide.mobile #wac-app h4 span{line-height: 1.5; padding: 10px 0;}
 .wac-guide.mobile #wac-app h4 span.two-char,
 .wac-guide .container .contents .article > div[id^="item"] > h4 span.two-char{margin-left: 35px;}
 
 .wac-guide.mobile #wac-app h4.active,
 .wac-guide .container .contents .article > div[id^="item"] > h4.active{color: #dd0129; border-bottom:0;}
 .wac-guide.mobile #wac-app h4.active::after,
-.wac-guide .container .contents .article > div[id^="item"] > h4.active:after{position: absolute; content: ''; display: block; width: 95%; height: 2px; margin: 0 auto; background: #eee; margin-top: 7px;}
+.wac-guide .container .contents .article > div[id^="item"] > h4.active:after{position: absolute; content: ''; display: block; width: 90%; left: 5%; height: 2px; margin: 0 auto; background: #eee; margin-top: 7px;}
 
 .wac-guide.mobile .item > h4 i,
 .wac-guide .container .contents .article > div[id^="item"] > h4 i{width: 20px; height: 20px; font-size: 35px; color: #6f6f6f; position: absolute; right: 13px; top:50%; margin-top: -10px; line-height: 1;}
@@ -557,7 +558,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
 .ui-focus div[id^="ui"]:target{padding-top: 70px;}
 
 /* .m-visual */
-.ui-focus .m-visual{background:url(../../img/focus-mVisual.png) no-repeat 50% 50%; position: relative; top:0; width:100%;}
+.ui-focus .m-visual{background:url(../../img/focus-mVisual.png) no-repeat 50% 50%; position: relative; top:0; width:100%; background-color: #08090b;}
     .ui-focus .m-visual h2{width: 80%; max-width: 600px; position: relative; font-size: 65px; color: #ffdc78; line-height: 1.2;}
     .ui-focus .m-visual h2 span{display: block; position: relative;}
     .ui-focus .m-visual h2 span em{display: inline-block; position: absolute; width: 240px; height: 3px; background: #fff; text-indent: -99999999px; margin-top: 30px;}
@@ -1178,8 +1179,8 @@ button:focus{border:1px dotted #e1e1e1!important;}
 
     .gnb .menu-btn {display:block; cursor:pointer ; float: right; margin: 29px 0 0 10px}
 
-    .ui-focus .container, .container{padding-top: 80px;}
-    .ui-focus .container.gnb-active, .wac-guide.mobile .container.gnb-active, .container.gnb-active{padding-top: 120px;}
+    .ui-focus .container, .container{padding-top: 140px;}
+    .ui-focus .container.gnb-active, .wac-guide.mobile .container.gnb-active, .container.gnb-active{padding-top: 140px;}
 
 
     /* ******************
@@ -1223,6 +1224,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
 
      .wac-guide.mobile #wac-app h4, .wac-guide .container .contents .article > div[id^="item"] > h4{padding-right:43px;}
      .wac-guide.mobile .item > h4 i.open, .wac-guide .container .contents .article > div[id^="item"] > h4 i.open{right: 13px;}
+     .wac-guide.mobile #wac-app h4 em.numbering, .wac-guide .container .contents .article > div[id^="item"] > h4 em.numbering{position: absolute; top: 50%; margin-top: -20px;}
      .wac-guide.mobile .item > h4 i, .wac-guide .container .contents .article > div[id^="item"] > h4 i{position: absolute; right: 13px;}
      /* ******************
      *  wac-focus.html  *
@@ -1347,6 +1349,8 @@ button:focus{border:1px dotted #e1e1e1!important;}
      .wac-guide.mobile #wac-app .offer,
      .container .contents #wacExample .expect,
      .container .contents #wacExample .check-list {padding: 20px 20px;}
+     .wac-guide.mobile .container #wac-app .item .definition h5::before, .wac-guide.mobile .container #wac-app .item .offer h5::before, .wac-guide .container .contents #wacExample .expect h5::before, .wac-guide .container .contents #wacExample .definition h5::before{height: 18px; margin-right: 6px;}
+
 
       /**********************
       *  mobile_guide.html  *
