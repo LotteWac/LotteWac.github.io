@@ -1,0 +1,55 @@
+<article class="wrap-popup">
+	<h1>L.POINT 온라인 사용인증 서비스</h1>
+	<div class="popup-container">
+		<div class="popup-contents wrap-th-white">
+			<!-- Contents Start -->
+			<section class="lpoint-certify">
+				<p>더 많은 L.POINT 혜택을 원하신다면, <em class="txt-wbrown">L.POINT APP을 다운</em> 받으세요!</p>
+				<div class="tbl-lst-v">
+					<table>
+						<caption>L.POINT 카드정보 입력</caption>
+						<colgroup>
+							<col style="width:25%">
+							<col style="width:auto">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row"><span class="require"><i>필수항목</i></span> 카드번호</th>
+								<td>
+									<input type="text" name="cardNo1" value="" maxlength="4" title="첫번째자리" class="w-type1"> -
+									<input type="password" name="cardNo2" value="" maxlength="4" title="두번째자리" class="w-type1"> -
+									<input type="password" name="cardNo3" value="" maxlength="4" title="세번째자리" class="w-type1"> -
+									<input type="text" name="cardNo4" value="" maxlength="4" title="네번째자리" class="w-type1">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"><span class="require"><i>필수항목</i></span> <label for="cardPW">L.POINT 비밀번호</label></th>
+								<td>
+									<input type="password" id="cardPW" name="cardPW" maxlength="8" class="w-type3">
+									<a href="javascript:lottePointPwChange();" class="txt-wbrown" title="새 창 열림">L.POINT 비밀번호 설정</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- div class="shiprefd-area">
+					<strong>L.POINT 간편조회</strong><br>L.pay로 결제 시 L.POINT 비밀번호 입력없이 간편하게 조회할 수 있습니다.
+					<button type="button" class="btn">간편조회 하기</button>
+				</div -->
+				<div class="set-btn">
+					<button type="button" class="btn-type1" onclick="lottePointConfirm();">확인</button>
+					<button type="button" class="btn-type2" onclick="lottePointConfirmCancel();">취소</button>
+				</div>
+				<div class="chklist">
+					<ul class="bul-circle">
+						<li>카드번호 입력란에는 소유하고 계신 L.POINT 카드 / 롯데카드(신용카드) 번호를 입력해 주시기 바랍니다.</li>
+						<!-- li>본인카드로만 조회 / 사용이 가능합니다.</li -->
+						<li>L.POINT 비밀번호는 롯데카드(신용카드) 비밀번호 (4자리)와 별도로 영 / 숫자 혼합 6~8자리 입니다.</li>
+						<li>5회 이상 비밀번호 입력 오류 시, 새로운 비밀번호를 등록해 주셔야 합니다.</li>
+					</ul>
+				</div>
+			</section>
+			<!-- //Contents End -->
+		</div>
+	</div>
+</article>

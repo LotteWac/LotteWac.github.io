@@ -40,7 +40,7 @@ h4{font-weight:900;}
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-.circle-num{display:inline-block; width:15px; height:15px; border-radius:7.5px; background:#293f54; color:#fff; text-align:center; margin: 0 10px; line-height:1;}
+.circle-num{display:inline-block; width:15px; height:15px; border-radius:7.5px; background:#474747; color:#fff; text-align:center; margin: 0 10px; line-height:1;}
 .mobile-block{display: inline;}
 .title-small{font-size: 25px; display :block; margin:8px !important;}
 strong {font-weight: 700; color: #111;}

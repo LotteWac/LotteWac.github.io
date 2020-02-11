@@ -223,7 +223,7 @@
                                     <p>
                                         - 일러스트 지도에 대하여 대체 텍스트 제공<br>
                                         - 이미지에 내용이 많은 경우 alt 속성의 값은 이미지 제목 정도로 제공하고, 이미지의 바로 다음에 이미지 내용과 구조 정보를 담은 HTML을 숨겨서 제공한다<br>
-                                        - ※ 주의사항 : 숨김텍스트 제공 시 visibility:hidden / display:none 은 스크린리더기 마다 인식 여부가 다르므로 사용하지 않아야 함
+                                        - <em class="alert-red">주의사항</em> : 숨김텍스트 제공 시 visibility:hidden / display:none 은 스크린리더기 마다 인식 여부가 다르므로 사용하지 않아야 함
                                     </p>
                                     <img src="./img/ir-text.png" alt="IR 기법의 대체 텍스트 제공">
 
@@ -242,7 +242,7 @@
                                     <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>의미있는 배경 이미지</h5>
                                     <p>
                                         - css 스타일 시트등으로 이미지를 백그라운 이미지로 보여주는 경우 HTML은 이미지와 동일한 내용을 숨김 텍스트로 보여준다.<br>
-                                        ※ 주의사항 : 숨김텍스트 제공 시 visibility:hidden / display:none 은 스크린리더기 마다 인식 여부가 다르므로 사용하지 않아야 함
+                                        - <em class="alert-red">주의사항</em> : 숨김텍스트 제공 시 visibility:hidden / display:none 은 스크린리더기 마다 인식 여부가 다르므로 사용하지 않아야 한다.
                                     </p>
                                     <img src="./img/alter-text02.png" alt="아이콘 이미지 대체 텍스트 제공">
 
@@ -255,8 +255,9 @@
                                 <div class="sample">
                                     <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>버튼 이미지 숨김 텍스트 제공</h5>
                                     <p>
-                                        - 배경 이미지 형식으로 불러오는 버튼에 대하여 blind 태그를 이용하여 대체 텍스트 제공.<br>
-                                        ※ 주의사항 : 숨김텍스트 제공 시 visibility:hidden / display:none 은 스크린리더기 마다 인식 여부가 다르므로 사용하지 않아야 함
+                                        - 백그라운드 이미지 형식으로 불러오는 버튼<br>
+                                        - css 스타일 시트 등으로 이미지를 백그라운드 이미지로 보여주는 경우, HTML은 이미지와 동일한 내용을 숨김 텍스트로 보여준다.<br>
+                                        - <em class="alert-red">주의사항</em> : 숨김텍스트 제공 시 visibility:hidden / display:none 은 스크린리더기 마다 인식 여부가 다르므로 사용하지 않아야 함
                                     </p>
                                     <img src="./img/img-btn.png" alt="배경 이미지 형식으로 불러오는 버튼에 대하여 blind 태그를 이용하여 대체 텍스트 제공">
 
@@ -798,207 +799,206 @@
                                     </p>
                                     <img src="img/main-best.png" alt="롯데마트 메인 화면의 BEST 메뉴내의 키보드 이용">
 
-                                    <pre><code class="html">
-    &lt;article class="main-best"&gt;
-            &lt;div class="best-nav jq-tab"&gt;
-                &lt;a href="#bestFood" class="best-tab01 active" title="현재 선택"&gt;FOOD&lt;/a&gt;
-                &lt;a href="#bestLife" class="best-tab02"&gt;LIFE&lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div class="best-conts js-tabcontents"&gt;
-                &lt;section class="best-cont clear-after best-cont1 active" id="bestFood"&gt;
-                    &lt;h3 class="blind"&gt;FOOD&lt;/h3&gt;
-                    &lt;nav class="best-tab js-tabnav" id="bestFood"&gt;
-                        &lt;a href="javascript:;" class="nav-link nav-link1-1 active" data-category-id="foodAll" data-tab-index="02" data-current-page="1"&gt;&lt;strong class="inner"&gt;전체&lt;/strong&gt;&lt;/a&gt;
-                        &lt;a href="javascript:;" class="nav-link nav-link1-2" data-category-id="C0010011" data-tab-index="02" data-current-page="2"&gt;&lt;strong class="inner"&gt;쌀/잡곡&lt;/strong&gt;&lt;/a&gt;
-                        &lt;a href="javascript:;" class="nav-link nav-link1-3" data-category-id="C0010012" data-tab-index="02" data-current-page="3"&gt;&lt;strong class="inner"&gt;채소&lt;/strong&gt;&lt;/a&gt;
-                        &lt;a href="javascript:;" class="nav-link nav-link1-4" data-category-id="C0010013" data-tab-index="02" data-current-page="4"&gt;&lt;strong class="inner"&gt;과일&lt;/strong&gt;&lt;/a&gt;
-                        &lt;a href="javascript:;" class="nav-link nav-link1-5" data-category-id="C0010014" data-tab-index="02" data-current-page="5"&gt;&lt;strong class="inner"&gt;정육/계란&lt;/strong&gt;&lt;/a&gt;
-                        &lt;a href="javascript:;" class="nav-link nav-link1-6" data-category-id="C0010015" data-tab-index="02" data-current-page="6"&gt;&lt;strong class="inner"&gt;생선/&lt;br&gt;건해산물&lt;/strong&gt;&lt;/a&gt;
-                        &lt;a href="javascript:;" class="nav-link nav-link1-7" data-category-id="C0010046" data-tab-index="02" data-current-page="7"&gt;&lt;strong class="inner"&gt;견과/선식&lt;/strong&gt;&lt;/a&gt;
-                        &lt;a href="javascript:;" class="nav-link nav-link1-8" data-category-id="C0010016" data-tab-index="02" data-current-page="8"&gt;&lt;strong class="inner"&gt;냉장/냉동/&lt;br&gt;간편식&lt;/strong&gt;&lt;/a&gt;
-                        &lt;a href="javascript:;" class="nav-link nav-link1-9" data-category-id="C0010017" data-tab-index="02" data-current-page="9"&gt;&lt;strong class="inner"&gt;가공식품/&lt;br&gt;대용식&lt;/strong&gt;&lt;/a&gt;
-                        &lt;a href="javascript:;" class="nav-link nav-link1-10" data-category-id="C0010052" data-tab-index="02" data-current-page="10"&gt;&lt;strong class="inner"&gt;친환경식품&lt;/strong&gt;&lt;/a&gt;
-                        &lt;a href="javascript:;" class="nav-link nav-link1-11" data-category-id="C0010053" data-tab-index="02" data-current-page="11"&gt;&lt;strong class="inner"&gt;건강식품&lt;/strong&gt;&lt;/a&gt;
-                        &lt;a href="javascript:;" class="nav-link nav-link1-12" data-category-id="C0010040" data-tab-index="02" data-current-page="12"&gt;&lt;strong class="inner"&gt;조리식품&lt;/strong&gt;&lt;/a&gt;
-                    &lt;/nav&gt;
-                    &lt;div class="wrap-tab-cont js-tabcont"&gt;&lt;div id="bestFood-foodAll" class="tab-cont active"&gt;&lt;div class="wrap-prod-list"&gt;
-                &lt;div class="prod-list clear-after"&gt;
-                    &lt;!-- wrapper tag가 유동적이라서 헷갈릴수 있어 일부러 들여쓰기 이렇게 함 --&gt;
-                                    &lt;article class="product-article" data-panel="product"&gt;
-                                        &lt;!-- TODO : 해당 페이지 사용하는 전체 쿼리 찾아서 CURR_SELL_PRC &gt; 100 조건 걸려있는지 확인후에 제거 필요 --&gt;
-                                        &lt;!-- 베스트 순위 표시 --&gt;
-                                        &lt;!-- ** 추천상품 썸네일 --&gt;
-                                        &lt;div class="wrap-thumb"&gt;
-                                            &lt;a href="javascript:;" onclick="goProductDetail('C001001200040001', '0400669780006', 'N', '', '', '00001');return false; " class="thumb-link" data-category-id="C001001200040001" data-prod-cd="0400669780006"&gt;
-                                                &lt;img src="http://image.lottemart.com/lim/static_root/images/prodimg/04006/0400669780006_1_208.jpg" width="208" id="prodImg_0400669780006" alt="파프리카(개)" class="thumb" onerror="javascript:showNoImage(this)"&gt;
-                                                    &lt;/a&gt;
+                                    <pre><code class="html">&lt;article class="main-best"&gt;
+    &lt;div class="best-nav jq-tab"&gt;
+        &lt;a href="#bestFood" class="best-tab01 active" title="현재 선택"&gt;FOOD&lt;/a&gt;
+        &lt;a href="#bestLife" class="best-tab02"&gt;LIFE&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="best-conts js-tabcontents"&gt;
+        &lt;section class="best-cont clear-after best-cont1 active" id="bestFood"&gt;
+            &lt;h3 class="blind"&gt;FOOD&lt;/h3&gt;
+            &lt;nav class="best-tab js-tabnav" id="bestFood"&gt;
+                &lt;a href="javascript:;" class="nav-link nav-link1-1 active" data-category-id="foodAll" data-tab-index="02" data-current-page="1"&gt;&lt;strong class="inner"&gt;전체&lt;/strong&gt;&lt;/a&gt;
+                &lt;a href="javascript:;" class="nav-link nav-link1-2" data-category-id="C0010011" data-tab-index="02" data-current-page="2"&gt;&lt;strong class="inner"&gt;쌀/잡곡&lt;/strong&gt;&lt;/a&gt;
+                &lt;a href="javascript:;" class="nav-link nav-link1-3" data-category-id="C0010012" data-tab-index="02" data-current-page="3"&gt;&lt;strong class="inner"&gt;채소&lt;/strong&gt;&lt;/a&gt;
+                &lt;a href="javascript:;" class="nav-link nav-link1-4" data-category-id="C0010013" data-tab-index="02" data-current-page="4"&gt;&lt;strong class="inner"&gt;과일&lt;/strong&gt;&lt;/a&gt;
+                &lt;a href="javascript:;" class="nav-link nav-link1-5" data-category-id="C0010014" data-tab-index="02" data-current-page="5"&gt;&lt;strong class="inner"&gt;정육/계란&lt;/strong&gt;&lt;/a&gt;
+                &lt;a href="javascript:;" class="nav-link nav-link1-6" data-category-id="C0010015" data-tab-index="02" data-current-page="6"&gt;&lt;strong class="inner"&gt;생선/&lt;br&gt;건해산물&lt;/strong&gt;&lt;/a&gt;
+                &lt;a href="javascript:;" class="nav-link nav-link1-7" data-category-id="C0010046" data-tab-index="02" data-current-page="7"&gt;&lt;strong class="inner"&gt;견과/선식&lt;/strong&gt;&lt;/a&gt;
+                &lt;a href="javascript:;" class="nav-link nav-link1-8" data-category-id="C0010016" data-tab-index="02" data-current-page="8"&gt;&lt;strong class="inner"&gt;냉장/냉동/&lt;br&gt;간편식&lt;/strong&gt;&lt;/a&gt;
+                &lt;a href="javascript:;" class="nav-link nav-link1-9" data-category-id="C0010017" data-tab-index="02" data-current-page="9"&gt;&lt;strong class="inner"&gt;가공식품/&lt;br&gt;대용식&lt;/strong&gt;&lt;/a&gt;
+                &lt;a href="javascript:;" class="nav-link nav-link1-10" data-category-id="C0010052" data-tab-index="02" data-current-page="10"&gt;&lt;strong class="inner"&gt;친환경식품&lt;/strong&gt;&lt;/a&gt;
+                &lt;a href="javascript:;" class="nav-link nav-link1-11" data-category-id="C0010053" data-tab-index="02" data-current-page="11"&gt;&lt;strong class="inner"&gt;건강식품&lt;/strong&gt;&lt;/a&gt;
+                &lt;a href="javascript:;" class="nav-link nav-link1-12" data-category-id="C0010040" data-tab-index="02" data-current-page="12"&gt;&lt;strong class="inner"&gt;조리식품&lt;/strong&gt;&lt;/a&gt;
+            &lt;/nav&gt;
+            &lt;div class="wrap-tab-cont js-tabcont"&gt;&lt;div id="bestFood-foodAll" class="tab-cont active"&gt;&lt;div class="wrap-prod-list"&gt;
+        &lt;div class="prod-list clear-after"&gt;
+            &lt;!-- wrapper tag가 유동적이라서 헷갈릴수 있어 일부러 들여쓰기 이렇게 함 --&gt;
+                            &lt;article class="product-article" data-panel="product"&gt;
+                                &lt;!-- TODO : 해당 페이지 사용하는 전체 쿼리 찾아서 CURR_SELL_PRC &gt; 100 조건 걸려있는지 확인후에 제거 필요 --&gt;
+                                &lt;!-- 베스트 순위 표시 --&gt;
+                                &lt;!-- ** 추천상품 썸네일 --&gt;
+                                &lt;div class="wrap-thumb"&gt;
+                                    &lt;a href="javascript:;" onclick="goProductDetail('C001001200040001', '0400669780006', 'N', '', '', '00001');return false; " class="thumb-link" data-category-id="C001001200040001" data-prod-cd="0400669780006"&gt;
+                                        &lt;img src="http://image.lottemart.com/lim/static_root/images/prodimg/04006/0400669780006_1_208.jpg" width="208" id="prodImg_0400669780006" alt="파프리카(개)" class="thumb" onerror="javascript:showNoImage(this)"&gt;
+                                            &lt;/a&gt;
 
-                                            &lt;!-- 할인상품 썸네일 할인스티커 --&gt;
-                                            &lt;span class="wrap-tag"&gt;
-            &lt;!-- 우선순위에 의한 1개만 노출 --&gt;
+                                    &lt;!-- 할인상품 썸네일 할인스티커 --&gt;
+                                    &lt;span class="wrap-tag"&gt;
+    &lt;!-- 우선순위에 의한 1개만 노출 --&gt;
 
-            &lt;/span&gt;
+    &lt;/span&gt;
 
-        &lt;span class="wrap-band "&gt;
-            &lt;i class="icon-band-delivery1"&gt;
-                    icon-band-delivery1&lt;/i&gt;
-                &lt;/span&gt;
-        &lt;span class="prod-link"&gt;
-            &lt;a href="javascript:;" data-button-name="btnAddWish" data-category-id="C001001200040001" data-product-code="0400669780006" title="위시리스트 담기" class="dibs "&gt;
-                &lt;span class="blind"&gt;위시리스트&lt;/span&gt;
-            &lt;/a&gt;
-            &lt;a href="javascript:;" class="blank" title="새 창 열림" onclick="goProdZoom('C001001200040001','0400669780006', '001', 'N', 'N','00001'); event.stopPropagation();"&gt;
-                &lt;span class="blind"&gt;새창 보기&lt;/span&gt;
-            &lt;/a&gt;
+&lt;span class="wrap-band "&gt;
+    &lt;i class="icon-band-delivery1"&gt;
+            icon-band-delivery1&lt;/i&gt;
         &lt;/span&gt;
-    &lt;/div&gt;
+&lt;span class="prod-link"&gt;
+    &lt;a href="javascript:;" data-button-name="btnAddWish" data-category-id="C001001200040001" data-product-code="0400669780006" title="위시리스트 담기" class="dibs "&gt;
+        &lt;span class="blind"&gt;위시리스트&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;a href="javascript:;" class="blank" title="새 창 열림" onclick="goProdZoom('C001001200040001','0400669780006', '001', 'N', 'N','00001'); event.stopPropagation();"&gt;
+        &lt;span class="blind"&gt;새창 보기&lt;/span&gt;
+    &lt;/a&gt;
+&lt;/span&gt;
+&lt;/div&gt;
 
-    &lt;!-- 20160925 중량미노출 수정 --&gt;
-    &lt;div class="wrap-info"&gt;
-        &lt;p class="prod-name"&gt;
-            &lt;strong&gt;
-                &lt;a href="javascript:;" class="thumb-link" onclick="goProductDetail('C001001200040001', '0400669780006', 'N', '', '', '00001');return false;" data-category-id="C001001200040001" data-prod-cd="0400669780006"&gt;
-                    파프리카(개)&lt;/a&gt;
-            &lt;/strong&gt;
-        &lt;/p&gt;
+&lt;!-- 20160925 중량미노출 수정 --&gt;
+&lt;div class="wrap-info"&gt;
+&lt;p class="prod-name"&gt;
+    &lt;strong&gt;
+        &lt;a href="javascript:;" class="thumb-link" onclick="goProductDetail('C001001200040001', '0400669780006', 'N', '', '', '00001');return false;" data-category-id="C001001200040001" data-prod-cd="0400669780006"&gt;
+            파프리카(개)&lt;/a&gt;
+    &lt;/strong&gt;
+&lt;/p&gt;
 
-        &lt;p class="price-max"&gt;판매가 &lt;span class="num-n"&gt;&lt;em&gt;1,180&lt;/em&gt;&lt;/span&gt;원
-                    &lt;/p&gt;
-            &lt;div class="wrap-spinner"&gt;
-            &lt;div class="spinner-input" data-is-range="true"&gt;
-                &lt;label for="orderQty_0400669780006" class="blind"&gt;수량&lt;/label&gt;
-                &lt;input id="orderQty_0400669780006" name="orderQty_0400669780006" type="text" value="1" max="200" min="1" data-category-id="C001001200040001" data-prod-cd="0400669780006" style="ime-mode:disabled" maxlength="3" title="수량"&gt;
-            &lt;button type="button" class="sp-minus" title="수량 감소" data-option-yn="N"&gt;&lt;i class="ico-minus"&gt;감소&lt;/i&gt;&lt;/button&gt;&lt;button type="button" class="sp-plus" title="수량 증가" data-option-yn="N"&gt;&lt;i class="ico-plus"&gt;증가&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+&lt;p class="price-max"&gt;판매가 &lt;span class="num-n"&gt;&lt;em&gt;1,180&lt;/em&gt;&lt;/span&gt;원
+            &lt;/p&gt;
+    &lt;div class="wrap-spinner"&gt;
+    &lt;div class="spinner-input" data-is-range="true"&gt;
+        &lt;label for="orderQty_0400669780006" class="blind"&gt;수량&lt;/label&gt;
+        &lt;input id="orderQty_0400669780006" name="orderQty_0400669780006" type="text" value="1" max="200" min="1" data-category-id="C001001200040001" data-prod-cd="0400669780006" style="ime-mode:disabled" maxlength="3" title="수량"&gt;
+    &lt;button type="button" class="sp-minus" title="수량 감소" data-option-yn="N"&gt;&lt;i class="ico-minus"&gt;감소&lt;/i&gt;&lt;/button&gt;&lt;button type="button" class="sp-plus" title="수량 증가" data-option-yn="N"&gt;&lt;i class="ico-plus"&gt;증가&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
 
-            &lt;button id="basketBtn_0400669780006" title="장바구니 담기" type="button" class="btn-basket" data-prod-cd="0400669780006" data-category-id="C001001200040001" data-is-sold-out="false" data-max-qty="200" data-min-qty="1" data-method="basket" data-is-manufacturing-product="false" data-option-yn="N" data-prod-type-cd="01" data-prod-title="파프리카(개)"&gt;
-            &lt;/button&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;/article&gt;
-    &lt;!-- 1depth에서 사용 --&gt;
-    &lt;!-- wrapper tag가 유동적이라서 헷갈릴수 있어 일부러 들여쓰기 이렇게 함 --&gt;
-    &lt;article class="product-article" data-panel="product"&gt;
-    &lt;!-- TODO : 해당 페이지 사용하는 전체 쿼리 찾아서 CURR_SELL_PRC &gt; 100 조건 걸려있는지 확인후에 제거 필요 --&gt;
-    &lt;!-- 베스트 순위 표시 --&gt;
-    &lt;!-- ** 추천상품 썸네일 --&gt;
-    &lt;div class="wrap-thumb"&gt;
-        &lt;a href="javascript:;" onclick="goProductDetail('C001001700130001', '8801056049935', 'N', '', '', '00001');return false; " class="thumb-link" data-category-id="C001001700130001" data-prod-cd="8801056049935"&gt;
-            &lt;img src="http://image.lottemart.com/lim/static_root/images/prodimg/88010/8801056049935_1_208.jpg" width="208" id="prodImg_8801056049935" alt="롯데 아이시스8.0(2L*6)" class="thumb" onerror="javascript:showNoImage(this)"&gt;
-                &lt;/a&gt;
+    &lt;button id="basketBtn_0400669780006" title="장바구니 담기" type="button" class="btn-basket" data-prod-cd="0400669780006" data-category-id="C001001200040001" data-is-sold-out="false" data-max-qty="200" data-min-qty="1" data-method="basket" data-is-manufacturing-product="false" data-option-yn="N" data-prod-type-cd="01" data-prod-title="파프리카(개)"&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/article&gt;
+&lt;!-- 1depth에서 사용 --&gt;
+&lt;!-- wrapper tag가 유동적이라서 헷갈릴수 있어 일부러 들여쓰기 이렇게 함 --&gt;
+&lt;article class="product-article" data-panel="product"&gt;
+&lt;!-- TODO : 해당 페이지 사용하는 전체 쿼리 찾아서 CURR_SELL_PRC &gt; 100 조건 걸려있는지 확인후에 제거 필요 --&gt;
+&lt;!-- 베스트 순위 표시 --&gt;
+&lt;!-- ** 추천상품 썸네일 --&gt;
+&lt;div class="wrap-thumb"&gt;
+&lt;a href="javascript:;" onclick="goProductDetail('C001001700130001', '8801056049935', 'N', '', '', '00001');return false; " class="thumb-link" data-category-id="C001001700130001" data-prod-cd="8801056049935"&gt;
+    &lt;img src="http://image.lottemart.com/lim/static_root/images/prodimg/88010/8801056049935_1_208.jpg" width="208" id="prodImg_8801056049935" alt="롯데 아이시스8.0(2L*6)" class="thumb" onerror="javascript:showNoImage(this)"&gt;
+        &lt;/a&gt;
 
 
-        &lt;span class="wrap-tag"&gt;
-            &lt;/span&gt;
+&lt;span class="wrap-tag"&gt;
+    &lt;/span&gt;
 
-        &lt;span class="wrap-band "&gt;
-            &lt;i class="icon-band-delivery1"&gt;
-                    icon-band-delivery1&lt;/i&gt;
-                &lt;/span&gt;
-        &lt;span class="prod-link"&gt;
-            &lt;a href="javascript:;" data-button-name="btnAddWish" data-category-id="C001001700130001" data-product-code="8801056049935" title="위시리스트 담기" class="dibs "&gt;
-                &lt;span class="blind"&gt;위시리스트&lt;/span&gt;
-            &lt;/a&gt;
-            &lt;a href="javascript:;" class="blank" title="새 창 열림" onclick="goProdZoom('C001001700130001','8801056049935', '001', 'N', 'N','00001'); event.stopPropagation();"&gt;
-                &lt;span class="blind"&gt;새창 보기&lt;/span&gt;
-            &lt;/a&gt;
+&lt;span class="wrap-band "&gt;
+    &lt;i class="icon-band-delivery1"&gt;
+            icon-band-delivery1&lt;/i&gt;
         &lt;/span&gt;
-    &lt;/div&gt;
+&lt;span class="prod-link"&gt;
+    &lt;a href="javascript:;" data-button-name="btnAddWish" data-category-id="C001001700130001" data-product-code="8801056049935" title="위시리스트 담기" class="dibs "&gt;
+        &lt;span class="blind"&gt;위시리스트&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;a href="javascript:;" class="blank" title="새 창 열림" onclick="goProdZoom('C001001700130001','8801056049935', '001', 'N', 'N','00001'); event.stopPropagation();"&gt;
+        &lt;span class="blind"&gt;새창 보기&lt;/span&gt;
+    &lt;/a&gt;
+&lt;/span&gt;
+&lt;/div&gt;
 
-    &lt;!-- 20160925 중량미노출 수정 --&gt;
-    &lt;div class="wrap-info"&gt;
-        &lt;p class="prod-name"&gt;
-            &lt;strong&gt;
-                &lt;a href="javascript:;" class="thumb-link" onclick="goProductDetail('C001001700130001', '8801056049935', 'N', '', '', '00001');return false;" data-category-id="C001001700130001" data-prod-cd="8801056049935"&gt;
-                    롯데 아이시스8.0(2L*6)&lt;/a&gt;
-            &lt;/strong&gt;
-        &lt;/p&gt;
+&lt;!-- 20160925 중량미노출 수정 --&gt;
+&lt;div class="wrap-info"&gt;
+&lt;p class="prod-name"&gt;
+    &lt;strong&gt;
+        &lt;a href="javascript:;" class="thumb-link" onclick="goProductDetail('C001001700130001', '8801056049935', 'N', '', '', '00001');return false;" data-category-id="C001001700130001" data-prod-cd="8801056049935"&gt;
+            롯데 아이시스8.0(2L*6)&lt;/a&gt;
+    &lt;/strong&gt;
+&lt;/p&gt;
 
-        &lt;p class="price-max"&gt;판매가 &lt;span class="num-n"&gt;&lt;em&gt;3,780&lt;/em&gt;&lt;/span&gt;원
-                    &lt;/p&gt;
-            &lt;div class="wrap-spinner"&gt;
-            &lt;div class="spinner-input" data-is-range="true"&gt;
-                &lt;label for="orderQty_8801056049935" class="blind"&gt;수량&lt;/label&gt;
-                &lt;input id="orderQty_8801056049935" name="orderQty_8801056049935" type="text" value="1" max="2" min="1" data-category-id="C001001700130001" data-prod-cd="8801056049935" style="ime-mode:disabled" maxlength="3" title="수량"&gt;
-            &lt;button type="button" class="sp-minus" title="수량 감소" data-option-yn="N"&gt;&lt;i class="ico-minus"&gt;감소&lt;/i&gt;&lt;/button&gt;&lt;button type="button" class="sp-plus" title="수량 증가" data-option-yn="N"&gt;&lt;i class="ico-plus"&gt;증가&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+&lt;p class="price-max"&gt;판매가 &lt;span class="num-n"&gt;&lt;em&gt;3,780&lt;/em&gt;&lt;/span&gt;원
+            &lt;/p&gt;
+    &lt;div class="wrap-spinner"&gt;
+    &lt;div class="spinner-input" data-is-range="true"&gt;
+        &lt;label for="orderQty_8801056049935" class="blind"&gt;수량&lt;/label&gt;
+        &lt;input id="orderQty_8801056049935" name="orderQty_8801056049935" type="text" value="1" max="2" min="1" data-category-id="C001001700130001" data-prod-cd="8801056049935" style="ime-mode:disabled" maxlength="3" title="수량"&gt;
+    &lt;button type="button" class="sp-minus" title="수량 감소" data-option-yn="N"&gt;&lt;i class="ico-minus"&gt;감소&lt;/i&gt;&lt;/button&gt;&lt;button type="button" class="sp-plus" title="수량 증가" data-option-yn="N"&gt;&lt;i class="ico-plus"&gt;증가&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
 
-            &lt;button id="basketBtn_8801056049935" title="장바구니 담기" type="button" class="btn-basket" data-prod-cd="8801056049935" data-category-id="C001001700130001" data-is-sold-out="false" data-max-qty="2" data-min-qty="1" data-method="basket" data-is-manufacturing-product="false" data-option-yn="N" data-prod-type-cd="01" data-prod-title="롯데 아이시스8.0(2L*6)"&gt;
-            &lt;/button&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;/article&gt;
-    &lt;article class="product-article" data-panel="product"&gt;
-    &lt;div class="wrap-thumb"&gt;
-        &lt;a href="javascript:;" onclick="goProductDetail('C001001700140010', '8801062517916', 'N', '', '', '00001');return false; " class="thumb-link" data-category-id="C001001700140010" data-prod-cd="8801062517916"&gt;
-            &lt;img src="http://image.lottemart.com/lim/static_root/images/prodimg/88010/8801062517916_1_208.jpg" width="208" id="prodImg_8801062517916" alt="롯데 칙촉(180G)" class="thumb" onerror="javascript:showNoImage(this)"&gt;
-                &lt;/a&gt;
+    &lt;button id="basketBtn_8801056049935" title="장바구니 담기" type="button" class="btn-basket" data-prod-cd="8801056049935" data-category-id="C001001700130001" data-is-sold-out="false" data-max-qty="2" data-min-qty="1" data-method="basket" data-is-manufacturing-product="false" data-option-yn="N" data-prod-type-cd="01" data-prod-title="롯데 아이시스8.0(2L*6)"&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/article&gt;
+&lt;article class="product-article" data-panel="product"&gt;
+&lt;div class="wrap-thumb"&gt;
+&lt;a href="javascript:;" onclick="goProductDetail('C001001700140010', '8801062517916', 'N', '', '', '00001');return false; " class="thumb-link" data-category-id="C001001700140010" data-prod-cd="8801062517916"&gt;
+    &lt;img src="http://image.lottemart.com/lim/static_root/images/prodimg/88010/8801062517916_1_208.jpg" width="208" id="prodImg_8801062517916" alt="롯데 칙촉(180G)" class="thumb" onerror="javascript:showNoImage(this)"&gt;
+        &lt;/a&gt;
 
-        &lt;span class="wrap-tag"&gt;
+&lt;span class="wrap-tag"&gt;
 
-            &lt;i class="icon-goods-type1"&gt;살수록더싸게&lt;/i&gt;
-                                &lt;/span&gt;
+    &lt;i class="icon-goods-type1"&gt;살수록더싸게&lt;/i&gt;
+                        &lt;/span&gt;
 
-        &lt;span class="wrap-band "&gt;
-            &lt;i class="icon-band-delivery1"&gt;
-                    icon-band-delivery1&lt;/i&gt;
-                &lt;/span&gt;
-        &lt;span class="prod-link"&gt;
-            &lt;a href="javascript:;" data-button-name="btnAddWish" data-category-id="C001001700140010" data-product-code="8801062517916" title="위시리스트 담기" class="dibs "&gt;
-                &lt;span class="blind"&gt;위시리스트&lt;/span&gt;
-            &lt;/a&gt;
-            &lt;a href="javascript:;" class="blank" title="새 창 열림" onclick="goProdZoom('C001001700140010','8801062517916', '001', 'N', 'N','00001'); event.stopPropagation();"&gt;
-                &lt;span class="blind"&gt;새창 보기&lt;/span&gt;
-            &lt;/a&gt;
+&lt;span class="wrap-band "&gt;
+    &lt;i class="icon-band-delivery1"&gt;
+            icon-band-delivery1&lt;/i&gt;
         &lt;/span&gt;
-    &lt;/div&gt;
+&lt;span class="prod-link"&gt;
+    &lt;a href="javascript:;" data-button-name="btnAddWish" data-category-id="C001001700140010" data-product-code="8801062517916" title="위시리스트 담기" class="dibs "&gt;
+        &lt;span class="blind"&gt;위시리스트&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;a href="javascript:;" class="blank" title="새 창 열림" onclick="goProdZoom('C001001700140010','8801062517916', '001', 'N', 'N','00001'); event.stopPropagation();"&gt;
+        &lt;span class="blind"&gt;새창 보기&lt;/span&gt;
+    &lt;/a&gt;
+&lt;/span&gt;
+&lt;/div&gt;
 
-    &lt;!-- 20160925 중량미노출 수정 --&gt;
-    &lt;div class="wrap-info"&gt;
-        &lt;p class="prod-name"&gt;
-            &lt;strong&gt;
-                &lt;a href="javascript:;" class="thumb-link" onclick="goProductDetail('C001001700140010', '8801062517916', 'N', '', '', '00001');return false;" data-category-id="C001001700140010" data-prod-cd="8801062517916"&gt;
-                    롯데 칙촉(180G)&lt;/a&gt;
-            &lt;/strong&gt;
-        &lt;/p&gt;
+&lt;!-- 20160925 중량미노출 수정 --&gt;
+&lt;div class="wrap-info"&gt;
+&lt;p class="prod-name"&gt;
+    &lt;strong&gt;
+        &lt;a href="javascript:;" class="thumb-link" onclick="goProductDetail('C001001700140010', '8801062517916', 'N', '', '', '00001');return false;" data-category-id="C001001700140010" data-prod-cd="8801062517916"&gt;
+            롯데 칙촉(180G)&lt;/a&gt;
+    &lt;/strong&gt;
+&lt;/p&gt;
 
-        &lt;p class="price-max"&gt;판매가 &lt;span class="num-n"&gt;&lt;em&gt;3,840&lt;/em&gt;&lt;/span&gt;원
-                    &lt;/p&gt;
-            &lt;div class="wrap-spinner"&gt;
-            &lt;div class="spinner-input" data-is-range="true"&gt;
-                &lt;label for="orderQty_8801062517916" class="blind"&gt;수량&lt;/label&gt;
-                &lt;input id="orderQty_8801062517916" name="orderQty_8801062517916" type="text" value="1" max="100" min="1" data-category-id="C001001700140010" data-prod-cd="8801062517916" style="ime-mode:disabled" maxlength="3" title="수량"&gt;
-            &lt;button type="button" class="sp-minus" title="수량 감소" data-option-yn="N"&gt;&lt;i class="ico-minus"&gt;감소&lt;/i&gt;&lt;/button&gt;&lt;button type="button" class="sp-plus" title="수량 증가" data-option-yn="N"&gt;&lt;i class="ico-plus"&gt;증가&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+&lt;p class="price-max"&gt;판매가 &lt;span class="num-n"&gt;&lt;em&gt;3,840&lt;/em&gt;&lt;/span&gt;원
+            &lt;/p&gt;
+    &lt;div class="wrap-spinner"&gt;
+    &lt;div class="spinner-input" data-is-range="true"&gt;
+        &lt;label for="orderQty_8801062517916" class="blind"&gt;수량&lt;/label&gt;
+        &lt;input id="orderQty_8801062517916" name="orderQty_8801062517916" type="text" value="1" max="100" min="1" data-category-id="C001001700140010" data-prod-cd="8801062517916" style="ime-mode:disabled" maxlength="3" title="수량"&gt;
+    &lt;button type="button" class="sp-minus" title="수량 감소" data-option-yn="N"&gt;&lt;i class="ico-minus"&gt;감소&lt;/i&gt;&lt;/button&gt;&lt;button type="button" class="sp-plus" title="수량 증가" data-option-yn="N"&gt;&lt;i class="ico-plus"&gt;증가&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
 
-            &lt;button id="basketBtn_8801062517916" title="장바구니 담기" type="button" class="btn-basket" data-prod-cd="8801062517916" data-category-id="C001001700140010" data-is-sold-out="false" data-max-qty="100" data-min-qty="1" data-method="basket" data-is-manufacturing-product="false" data-option-yn="N" data-prod-type-cd="01" data-prod-title="롯데 칙촉(180G)"&gt;
-            &lt;/button&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;/article&gt;
-    &lt;!-- 1depth에서 사용 --&gt;
-    &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;/div&gt;&lt;/div&gt;
-    &lt;/section&gt;
-    &lt;section class="best-cont clear-after best-cont2" id="bestLife"&gt;
-    &lt;h3 class="blind"&gt;LIFE&lt;/h3&gt;
-    &lt;nav class="best-tab js-tabnav" id="bestLife"&gt;
-    &lt;a href="javascript:;" class="nav-link nav-link2-1" data-category-id="lifeAll" data-tab-index="03" data-current-page="13"&gt;&lt;strong class="inner"&gt;전체&lt;/strong&gt;&lt;/a&gt;
-    &lt;a href="javascript:;" class="nav-link nav-link2-2" data-category-id="C0010021" data-tab-index="03" data-current-page="14"&gt;&lt;strong class="inner"&gt;유아/&lt;br&gt;출산용품&lt;/strong&gt;&lt;/a&gt;
-    &lt;a href="javascript:;" class="nav-link nav-link2-3" data-category-id="C0010023" data-tab-index="03" data-current-page="15"&gt;&lt;strong class="inner"&gt;세제/휴지&lt;/strong&gt;&lt;/a&gt;
-    &lt;a href="javascript:;" class="nav-link nav-link2-4" data-category-id="C0010024" data-tab-index="03" data-current-page="16"&gt;&lt;strong class="inner"&gt;헤어/바디&lt;/strong&gt;&lt;/a&gt;
-    &lt;a href="javascript:;" class="nav-link nav-link2-5" data-category-id="C0010025" data-tab-index="03" data-current-page="17"&gt;&lt;strong class="inner"&gt;가구/수납/조명/보수&lt;/strong&gt;&lt;/a&gt;
-    &lt;a href="javascript:;" class="nav-link nav-link2-6" data-category-id="C0010026" data-tab-index="03" data-current-page="18"&gt;&lt;strong class="inner"&gt;주방/&lt;br&gt;청소용품&lt;/strong&gt;&lt;/a&gt;
-    &lt;a href="javascript:;" class="nav-link nav-link2-7" data-category-id="C0010027" data-tab-index="03" data-current-page="19"&gt;&lt;strong class="inner"&gt;문구/&lt;br&gt;사무용품&lt;/strong&gt;&lt;/a&gt;
-    &lt;a href="javascript:;" class="nav-link nav-link2-8" data-category-id="C0010115" data-tab-index="03" data-current-page="20"&gt;&lt;strong class="inner"&gt;침구/원예/데코&lt;/strong&gt;&lt;/a&gt;
-    &lt;a href="javascript:;" class="nav-link nav-link2-9" data-category-id="C0010028" data-tab-index="03" data-current-page="21"&gt;&lt;strong class="inner"&gt;패션의류/&lt;br&gt;언더웨어&lt;/strong&gt;&lt;/a&gt;
-    &lt;a href="javascript:;" class="nav-link nav-link2-10" data-category-id="C0010029" data-tab-index="03" data-current-page="22"&gt;&lt;strong class="inner"&gt;신발/잡화&lt;/strong&gt;&lt;/a&gt;
-    &lt;a href="javascript:;" class="nav-link nav-link2-11" data-category-id="C0010030" data-tab-index="03" data-current-page="23"&gt;&lt;strong class="inner"&gt;스포츠/레저&lt;/strong&gt;&lt;/a&gt;
-    &lt;a href="javascript:;" class="nav-link nav-link2-12" data-category-id="C0010054" data-tab-index="03" data-current-page="24" value="C0010054"&gt;&lt;strong class="inner"&gt;친환경&lt;br&gt;생활용품&lt;/strong&gt;&lt;/a&gt;
-    &lt;/nav&gt;
-    &lt;div class="wrap-tab-cont js-tabcont"&gt;&lt;/div&gt;
-    &lt;/section&gt;
-    &lt;/div&gt;
-    &lt;a href="/best/bestMain.do?SITELOC=AC023" class="list-more"&gt;베스트 더보기&lt;/a&gt;
-    &lt;/article&gt;
+    &lt;button id="basketBtn_8801062517916" title="장바구니 담기" type="button" class="btn-basket" data-prod-cd="8801062517916" data-category-id="C001001700140010" data-is-sold-out="false" data-max-qty="100" data-min-qty="1" data-method="basket" data-is-manufacturing-product="false" data-option-yn="N" data-prod-type-cd="01" data-prod-title="롯데 칙촉(180G)"&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/article&gt;
+&lt;!-- 1depth에서 사용 --&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/section&gt;
+&lt;section class="best-cont clear-after best-cont2" id="bestLife"&gt;
+&lt;h3 class="blind"&gt;LIFE&lt;/h3&gt;
+&lt;nav class="best-tab js-tabnav" id="bestLife"&gt;
+&lt;a href="javascript:;" class="nav-link nav-link2-1" data-category-id="lifeAll" data-tab-index="03" data-current-page="13"&gt;&lt;strong class="inner"&gt;전체&lt;/strong&gt;&lt;/a&gt;
+&lt;a href="javascript:;" class="nav-link nav-link2-2" data-category-id="C0010021" data-tab-index="03" data-current-page="14"&gt;&lt;strong class="inner"&gt;유아/&lt;br&gt;출산용품&lt;/strong&gt;&lt;/a&gt;
+&lt;a href="javascript:;" class="nav-link nav-link2-3" data-category-id="C0010023" data-tab-index="03" data-current-page="15"&gt;&lt;strong class="inner"&gt;세제/휴지&lt;/strong&gt;&lt;/a&gt;
+&lt;a href="javascript:;" class="nav-link nav-link2-4" data-category-id="C0010024" data-tab-index="03" data-current-page="16"&gt;&lt;strong class="inner"&gt;헤어/바디&lt;/strong&gt;&lt;/a&gt;
+&lt;a href="javascript:;" class="nav-link nav-link2-5" data-category-id="C0010025" data-tab-index="03" data-current-page="17"&gt;&lt;strong class="inner"&gt;가구/수납/조명/보수&lt;/strong&gt;&lt;/a&gt;
+&lt;a href="javascript:;" class="nav-link nav-link2-6" data-category-id="C0010026" data-tab-index="03" data-current-page="18"&gt;&lt;strong class="inner"&gt;주방/&lt;br&gt;청소용품&lt;/strong&gt;&lt;/a&gt;
+&lt;a href="javascript:;" class="nav-link nav-link2-7" data-category-id="C0010027" data-tab-index="03" data-current-page="19"&gt;&lt;strong class="inner"&gt;문구/&lt;br&gt;사무용품&lt;/strong&gt;&lt;/a&gt;
+&lt;a href="javascript:;" class="nav-link nav-link2-8" data-category-id="C0010115" data-tab-index="03" data-current-page="20"&gt;&lt;strong class="inner"&gt;침구/원예/데코&lt;/strong&gt;&lt;/a&gt;
+&lt;a href="javascript:;" class="nav-link nav-link2-9" data-category-id="C0010028" data-tab-index="03" data-current-page="21"&gt;&lt;strong class="inner"&gt;패션의류/&lt;br&gt;언더웨어&lt;/strong&gt;&lt;/a&gt;
+&lt;a href="javascript:;" class="nav-link nav-link2-10" data-category-id="C0010029" data-tab-index="03" data-current-page="22"&gt;&lt;strong class="inner"&gt;신발/잡화&lt;/strong&gt;&lt;/a&gt;
+&lt;a href="javascript:;" class="nav-link nav-link2-11" data-category-id="C0010030" data-tab-index="03" data-current-page="23"&gt;&lt;strong class="inner"&gt;스포츠/레저&lt;/strong&gt;&lt;/a&gt;
+&lt;a href="javascript:;" class="nav-link nav-link2-12" data-category-id="C0010054" data-tab-index="03" data-current-page="24" value="C0010054"&gt;&lt;strong class="inner"&gt;친환경&lt;br&gt;생활용품&lt;/strong&gt;&lt;/a&gt;
+&lt;/nav&gt;
+&lt;div class="wrap-tab-cont js-tabcont"&gt;&lt;/div&gt;
+&lt;/section&gt;
+&lt;/div&gt;
+&lt;a href="/best/bestMain.do?SITELOC=AC023" class="list-more"&gt;베스트 더보기&lt;/a&gt;
+&lt;/article&gt;
                                     </code></pre>
                                 </div>
 
@@ -1009,9 +1009,7 @@
                                     </p>
 
                                     <img src="./img/focus.png" alt="초점이 파란색 테두리로 확연하게 나타난 이미지">
-                                    <pre><code>:focus {
-outline: -webkit-focus-ring-color auto 5px;
-}
+                                    <pre><code>:focus {outline: -webkit-focus-ring-color auto 5px;}
                                     </code></pre>
                                 </div>
 
@@ -1197,23 +1195,23 @@ outline: -webkit-focus-ring-color auto 5px;
 
                                     <img src="./img/stop.png" alt="포커스 진입시 자동멈춤 처리되는 메인 비주얼 슬라이드">
                                     <pre><code>//gnb마지막 요소에서 상단 모양 컨틀롤러로 촛점이동
-    var fixGnbLastFocusable = function(){
-        var $gnb = $('#gnbScrollFixed'),
-            $gnbToggles = $gnb.find('.wrap-toggle'),
-            $gnbLastMenu = _wac.getFocusables($gnbToggles.last().find('.wrap-subnav')).last(),
-            $nextEl = $directionFocusables.first();
+var fixGnbLastFocusable = function(){
+    var $gnb = $('#gnbScrollFixed'),
+        $gnbToggles = $gnb.find('.wrap-toggle'),
+        $gnbLastMenu = _wac.getFocusables($gnbToggles.last().find('.wrap-subnav')).last(),
+        $nextEl = $directionFocusables.first();
 
-        var tabHandler = function(e){
-            !_wac.isShiftTabEvent(e)
-                && _wac.isTabEvent(e)
-                && !_wac.isEmpty($nextEl)
-                && _wac.onNextAsync(e, $nextEl);
-                contSlider.stopAuto();
-        };
-
-        _wac.wireUpEventAsync($gnbLastMenu, 'keydown', tabHandler);
-        return $gnbLastMenu;
+    var tabHandler = function(e){
+        !_wac.isShiftTabEvent(e)
+            && _wac.isTabEvent(e)
+            && !_wac.isEmpty($nextEl)
+            && _wac.onNextAsync(e, $nextEl);
+            contSlider.stopAuto();
     };
+
+    _wac.wireUpEventAsync($gnbLastMenu, 'keydown', tabHandler);
+    return $gnbLastMenu;
+};
                                     </code></pre>
                                 </div>
                             </div>
@@ -1314,11 +1312,10 @@ outline: -webkit-focus-ring-color auto 5px;
                                     </p>
 
                                     <img src="./img/skipbtn.png" alt="건너뛰기 버튼 이미지">
-                                    <pre><code>
-    &lt;nav class="skip-menu"&gt;
-        &lt;a href="#contents"&gt;본문 바로가기&lt;/a&gt;
-        &lt;a href="#gnbScrollFixed"&gt;주메뉴 바로가기&lt;/a&gt;
-    &lt;/nav&gt;
+                                    <pre><code>&lt;nav class="skip-menu"&gt;
+    &lt;a href="#contents"&gt;본문 바로가기&lt;/a&gt;
+    &lt;a href="#gnbScrollFixed"&gt;주메뉴 바로가기&lt;/a&gt;
+&lt;/nav&gt;
                                     </code></pre>
                                 </div>
                             </div>
@@ -1343,25 +1340,24 @@ outline: -webkit-focus-ring-color auto 5px;
                                     <dl>
                                         <dt>
                                             <em class="circle-num">1</em>
-                                            웹 페이지 제목
+                                            웹 페이지 제목 제공
                                         </dt>
-                                        <dd>
-                                            문서 내용을 표현하는데 사용하여야 하며, 여러 페이지간 콘텐츠 파악 용도 사용된다. 서로 다른 내용의 페이지를 동일한 제목 제공 시 문서 내용을 파악하는데 어려움이 발생한다.
-                                        </dd>
+                                        <dd>문서 내용을 표현하는데 사용하여야 하며, 여러 페이지간 콘텐츠 파악 용도 사용된다.</dd>
+                                        <dd>서로 다른 내용의 페이지를 동일한 제목 제공 시 문서 내용을 파악하는데 어려움이 발생한다.</dd>
+
                                         <dt>
                                             <em class="circle-num">2</em>
-                                            프레임 제목
+                                            프레임 제목 제공
                                         </dt>
-                                        <dd>
-                                            사용자(시각 장애인, 인지장애인, 심각한 지체장애인)는 프레임에 초점 이동시 어떠한 프레임인지 쉽게 알 수 있도록 한다.
+                                        <dd>사용자(시각 장애인, 인지장애인, 심각한 지체장애인)는 프레임에 초점 이동시 어떠한 프레임인지 쉽게 알 수 있도록 한다.
                                         </dd>
+
                                         <dt>
                                             <em class="circle-num">3</em>
-                                            콘텐츠 블록 제목
+                                            콘텐츠 블록에 &lt;h1&gt;~&lt;h6&gt;을 사용하여 제목 제공
                                         </dt>
-                                        <dd>
-                                            &lt;h1&gt;, &lt;h2&gt; 등 제목요소를 사용할 경우, 제목과 본문을 구분할 수 있으며, 제목간 이동 기능을 가능하게 한다. 또한 목차 기능으로 활용하여 문맥을 파악하는데 도움을 준다. 이 외 다양하게 활용할 수 있다.
-                                        </dd>
+                                        <dd>&lt;h1&gt;, &lt;h2&gt; 등 제목요소를 사용할 경우, 제목과 본문을 구분할 수 있으며, 제목간 이동 기능을 가능하게 한다.</dd>
+                                        <dd>또한 목차 기능으로 활용하여 문맥을 파악하는데 도움을 준다. 이 외 다양하게 활용할 수 있다.</dd>
                                     </dl>
                                 </div>
 
@@ -1415,7 +1411,61 @@ outline: -webkit-focus-ring-color auto 5px;
                                     </p>
 
                                     <img src="./img/title03.png" alt="고객만족센터의 h 태그 사용 용례" >
-                                    <pre><code>&lt;iframe id="iframeProdInfo" name="iframeProdInfo" src="http://www.lottemart.com/iframe/ProductDesc.do?CategoryID=C20200010006&amp;ProductCD=8809581180161" style="width: 100%;" title="상품정보" frameborder="0" scrolling="no" height="15820px"&gt;&lt;/iframe&gt;
+                                    <pre><code>&lt;article class="wrap-popup"&gt;
+&lt;h1&gt;L.POINT 온라인 사용인증 서비스&lt;/h1&gt;
+&lt;div class="popup-container"&gt;
+    &lt;div class="popup-contents wrap-th-white"&gt;
+        &lt;!-- Contents Start --&gt;
+        &lt;section class="lpoint-certify"&gt;
+            &lt;p&gt;더 많은 L.POINT 혜택을 원하신다면, &lt;em class="txt-wbrown"&gt;L.POINT APP을 다운&lt;/em&gt; 받으세요!&lt;/p&gt;
+            &lt;div class="tbl-lst-v"&gt;
+                &lt;table&gt;
+                    &lt;caption&gt;L.POINT 카드정보 입력&lt;/caption&gt;
+                    &lt;colgroup&gt;
+                        &lt;col style="width:25%"&gt;
+                        &lt;col style="width:auto"&gt;
+                    &lt;/colgroup&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;th scope="row"&gt;&lt;span class="require"&gt;&lt;i&gt;필수항목&lt;/i&gt;&lt;/span&gt; 카드번호&lt;/th&gt;
+                            &lt;td&gt;
+                                &lt;input type="text" name="cardNo1" value="" maxlength="4" title="첫번째자리" class="w-type1"&gt; -
+                                &lt;input type="password" name="cardNo2" value="" maxlength="4" title="두번째자리" class="w-type1"&gt; -
+                                &lt;input type="password" name="cardNo3" value="" maxlength="4" title="세번째자리" class="w-type1"&gt; -
+                                &lt;input type="text" name="cardNo4" value="" maxlength="4" title="네번째자리" class="w-type1"&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;th scope="row"&gt;&lt;span class="require"&gt;&lt;i&gt;필수항목&lt;/i&gt;&lt;/span&gt; &lt;label for="cardPW"&gt;L.POINT 비밀번호&lt;/label&gt;&lt;/th&gt;
+                            &lt;td&gt;
+                                &lt;input type="password" id="cardPW" name="cardPW" maxlength="8" class="w-type3"&gt;
+                                &lt;a href="javascript:lottePointPwChange();" class="txt-wbrown" title="새 창 열림"&gt;L.POINT 비밀번호 설정&lt;/a&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+            &lt;/div&gt;
+            &lt;!-- div class="shiprefd-area"&gt;
+                &lt;strong&gt;L.POINT 간편조회&lt;/strong&gt;&lt;br&gt;L.pay로 결제 시 L.POINT 비밀번호 입력없이 간편하게 조회할 수 있습니다.
+                &lt;button type="button" class="btn"&gt;간편조회 하기&lt;/button&gt;
+            &lt;/div --&gt;
+            &lt;div class="set-btn"&gt;
+                &lt;button type="button" class="btn-type1" onclick="lottePointConfirm();"&gt;확인&lt;/button&gt;
+                &lt;button type="button" class="btn-type2" onclick="lottePointConfirmCancel();"&gt;취소&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class="chklist"&gt;
+                &lt;ul class="bul-circle"&gt;
+                    &lt;li&gt;카드번호 입력란에는 소유하고 계신 L.POINT 카드 / 롯데카드(신용카드) 번호를 입력해 주시기 바랍니다.&lt;/li&gt;
+                    &lt;!-- li&gt;본인카드로만 조회 / 사용이 가능합니다.&lt;/li --&gt;
+                    &lt;li&gt;L.POINT 비밀번호는 롯데카드(신용카드) 비밀번호 (4자리)와 별도로 영 / 숫자 혼합 6~8자리 입니다.&lt;/li&gt;
+                    &lt;li&gt;5회 이상 비밀번호 입력 오류 시, 새로운 비밀번호를 등록해 주셔야 합니다.&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+        &lt;!-- //Contents End --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/article&gt;
                                     </code></pre>
                                 </div>
                             </div>
@@ -1434,6 +1484,25 @@ outline: -webkit-focus-ring-color auto 5px;
                                 &CenterDot; 링크 텍스트를 "여기를 클릭하세요." 나 "여기" 와 같은 애매모호한 표현을 사용하면 시각장애인이나 인지장애인 뿐만 아니라 비장애인들도 링크를 클릭했을 때 어떤 반응이나 어떤 페이지로 이동될 지 예측하기 어렵다.
                                 </p>
 
+                                <div class="definition">
+                                    <h5>적용기술</h5>
+                                    <ul>
+                                        <li>
+                                            링크 텍스트만으로도 링크의 용도나 목적을 이해할 수 있도록 제공한다.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <dl class="check-list">
+                                    <dt>자동검사방법</dt>
+                                    <dd>-</dd>
+
+                                    <dt>수동검사방법</dt>
+                                    <dd>
+                                        적절한 링크 텍스트 제공 여부 체크
+                                    </dd>
+                                </dl>
+
                                 <div class="sample">
                                     <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> 예시</h5>
                                     <p>
@@ -1441,11 +1510,10 @@ outline: -webkit-focus-ring-color auto 5px;
                                     </p>
 
                                     <img src="./img/link-text02.png" alt="상품 리스트 페이지를 보는 방법 선택 링크 버튼" >
-                                    <pre><code>
-    &lt;div class="set-sort"&gt;
-        &lt;a id="aList" name="btnViewType" href="javascript:;" data-type="list" class="list-sort"&gt;&lt;span class="blind"&gt;리스트형 보기&lt;/span&gt;&lt;/a&gt;
-        &lt;a id="aImg" name="btnViewType" href="javascript:;" data-type="img" class="image-sort active" title="현재 선택"&gt;&lt;span class="blind"&gt;썸네일형 보기&lt;/span&gt;&lt;/a&gt;
-    &lt;/div&gt;
+                                    <pre><code>&lt;div class="set-sort"&gt;
+    &lt;a id="aList" name="btnViewType" href="javascript:;" data-type="list" class="list-sort"&gt;&lt;span class="blind"&gt;리스트형 보기&lt;/span&gt;&lt;/a&gt;
+    &lt;a id="aImg" name="btnViewType" href="javascript:;" data-type="img" class="image-sort active" title="현재 선택"&gt;&lt;span class="blind"&gt;썸네일형 보기&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;
                                     </code></pre>
                                 </div>
 
@@ -1456,10 +1524,9 @@ outline: -webkit-focus-ring-color auto 5px;
                                     </p>
 
                                     <img src="./img/link-text01.png" alt="장바구니 링크 텍스트"  >
-                                    <pre><code>
-    &lt;button type="button" class="btn-large-type1" title="장바구니 담기" data-prod-cd="D000003514313" data-category-id="C001013400080002" data-max-qty="100000" data-min-qty="1" data-method="basket" data-is-sold-out="false" data-option-yn="Y" data-prod-type-cd="05" data-is-manufacturing-product="false" data-prod-title="울트라히트 아동/주니어 9부세트 " id="basketBtn_D000003514313" tabindex="0"&gt;
-    &lt;i class="ico-basket"&gt;장바구니&lt;/i&gt;
-    &lt;/button&gt;
+                                    <pre><code>&lt;button type="button" class="btn-large-type1" title="장바구니 담기" data-prod-cd="D000003514313" data-category-id="C001013400080002" data-max-qty="100000" data-min-qty="1" data-method="basket" data-is-sold-out="false" data-option-yn="Y" data-prod-type-cd="05" data-is-manufacturing-product="false" data-prod-title="울트라히트 아동/주니어 9부세트 " id="basketBtn_D000003514313" tabindex="0"&gt;
+&lt;i class="ico-basket"&gt;장바구니&lt;/i&gt;
+&lt;/button&gt;
                                     </code></pre>
                                 </div>
                             </div>
@@ -1529,10 +1596,10 @@ outline: -webkit-focus-ring-color auto 5px;
                                     <h5>적용기술</h5>
                                     <ul>
                                         <li>
-                                            실행은 onclick, enter 로 가능하게 적용한다.
+                                            실행은 마우스의 경우 CLICK, 키보의 경우 ENTER 키를 눌렀을 때에 가능하게 적용한다.
                                         </li>
                                         <li>
-                                            새창 및 팝업창의 경우 a 요소에 target="_blank" 로 지정한다.
+                                            새창 및 팝업창의 경우 &lt;a&gt; 태그 요소에 target="_blank" 로 지정한다.
                                         </li>
                                         <li>
                                             웹 사이트 로딩시 자동으로 실행되는 콘텐츠(팝업창, 레이어 팝업, 배경음 포함) 을 사용하지 않는다.
@@ -1543,10 +1610,9 @@ outline: -webkit-focus-ring-color auto 5px;
                                 <dl class="check-list">
                                     <dt>자동검사방법</dt>
                                     <dd>
-                                        새창열림 사전공지<br>
+                                        새창열림 사전공지 체크<br>
                                         &lt;a&gt; 알려지지 않은 새창열기 유무 체크<br>
                                         &lt;area&gt; 알려지지 않은 새창열기 유무 체크
-
                                     </dd>
 
                                     <dt>수동검사방법</dt>
@@ -1563,9 +1629,89 @@ outline: -webkit-focus-ring-color auto 5px;
                                     </p>
                                     <img src="img/prevent-auto.png" alt="L.POINT 온라인 사용인증 서비스">
 
-                                    <pre><code class="html">&lt;img src="http://image.lottemart.com/v3/images/layout/h1_logo_01.gif" alt="롯데마트 Mall 새로운 생활의 큐레이터"&gt;
-                                    </code></pre>
+                                    <pre><code class="html">&lt;article class="wrap-popup"&gt;
+    &lt;h1&gt;L.POINT 온라인 사용인증 서비스&lt;/h1&gt;
+    &lt;div class="popup-container"&gt;
+        &lt;div class="popup-contents wrap-th-white"&gt;
+            &lt;!-- Contents Start --&gt;
+            &lt;section class="lpoint-certify"&gt;
+                &lt;p&gt;더 많은 L.POINT 혜택을 원하신다면, &lt;em class="txt-wbrown"&gt;L.POINT APP을 다운&lt;/em&gt; 받으세요!&lt;/p&gt;
+                &lt;div class="tbl-lst-v"&gt;
+                    &lt;table&gt;
+                        &lt;caption&gt;L.POINT 카드정보 입력&lt;/caption&gt;
+                        &lt;colgroup&gt;
+                            &lt;col style="width:25%"&gt;
+                            &lt;col style="width:auto"&gt;
+                        &lt;/colgroup&gt;
+                        &lt;tbody&gt;
+                            &lt;tr&gt;
+                                &lt;th scope="row"&gt;&lt;span class="require"&gt;&lt;i&gt;필수항목&lt;/i&gt;&lt;/span&gt; 카드번호&lt;/th&gt;
+                                &lt;td&gt;
+                                    &lt;input type="text" name="cardNo1" value="" maxlength="4" title="첫번째자리" class="w-type1"&gt; - 
+                                    &lt;input type="password" name="cardNo2" value="" maxlength="4" title="두번째자리" class="w-type1"&gt; - 
+                                    &lt;input type="password" name="cardNo3" value="" maxlength="4" title="세번째자리" class="w-type1"&gt; - 
+                                    &lt;input type="text" name="cardNo4" value="" maxlength="4" title="네번째자리" class="w-type1"&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;th scope="row"&gt;&lt;span class="require"&gt;&lt;i&gt;필수항목&lt;/i&gt;&lt;/span&gt; &lt;label for="cardPW"&gt;L.POINT 비밀번호&lt;/label&gt;&lt;/th&gt;
+                                &lt;td&gt;
+                                    &lt;input type="password" id="cardPW" name="cardPW" maxlength="8" class="w-type3"&gt;
+                                    &lt;a href="javascript:lottePointPwChange();" class="txt-wbrown" title="새 창 열림"&gt;L.POINT 비밀번호 설정&lt;/a&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                    &lt;/table&gt;
+                &lt;/div&gt;
+                &lt;!-- div class="shiprefd-area"&gt;
+                    &lt;strong&gt;L.POINT 간편조회&lt;/strong&gt;&lt;br&gt;L.pay로 결제 시 L.POINT 비밀번호 입력없이 간편하게 조회할 수 있습니다.
+                    &lt;button type="button" class="btn"&gt;간편조회 하기&lt;/button&gt;
+                &lt;/div --&gt;
+                &lt;div class="set-btn"&gt;
+                    &lt;button type="button" class="btn-type1" onclick="lottePointConfirm();"&gt;확인&lt;/button&gt;
+                    &lt;button type="button" class="btn-type2" onclick="lottePointConfirmCancel();"&gt;취소&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class="chklist"&gt;
+                    &lt;ul class="bul-circle"&gt;
+                        &lt;li&gt;카드번호 입력란에는 소유하고 계신 L.POINT 카드 / 롯데카드(신용카드) 번호를 입력해 주시기 바랍니다.&lt;/li&gt;
+                        &lt;!-- li&gt;본인카드로만 조회 / 사용이 가능합니다.&lt;/li --&gt;
+                        &lt;li&gt;L.POINT 비밀번호는 롯데카드(신용카드) 비밀번호 (4자리)와 별도로 영 / 숫자 혼합 6~8자리 입니다.&lt;/li&gt;
+                        &lt;li&gt;5회 이상 비밀번호 입력 오류 시, 새로운 비밀번호를 등록해 주셔야 합니다.&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/section&gt;
+            &lt;!-- //Contents End --&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/article&gt;
+&lt;script&gt;
+var $lottePointForm  = $('#LMCSDIV'),
+    $cancelBtn = $lottePointForm.find('button.btn-type2'),
+    $closeBtn = $lottePointForm.find('.btn_payment_wrap_close');
 
+var closeBtnKeydownHandler = function(e){
+    if(_wac.isEnterEvent(e) || _wac.isTabEvent(e)){
+    $(this).trigger('click')
+    $('#userConfirmBtn').focus();
+    }
+}
+
+var cancelBtnKeydownHandler = function(e){
+    if(_wac.isEnterEvent(e)){
+        _wac.preventDefaultAction(e);
+        $closeBtn.trigger('click')
+        $('#userConfirmBtn').focus();
+    }
+}
+$cancelBtn.on({
+    keydown : cancelBtnKeydownHandler
+})
+
+$closeBtn.on({
+    keydown : closeBtnKeydownHandler
+})
+&lt;/script&gt;
+                                    </code></pre>
                                 </div>
                             </div>
                         </div>
@@ -1573,13 +1719,13 @@ outline: -webkit-focus-ring-color auto 5px;
                         <div class="" id="item19">
                             <h4 class="active">
                                 <em class="numbering">19</em>
-                                <span class="two-char">콘텐츠의 선형화 (콘텐츠의 선형 구조)</span>
+                                <span class="two-char">콘텐츠 선형화</span>
                                 <i class="open"></i>
                             </h4>
 
                             <div class="item-cont">
                                 <p>
-                                    &CenterDot; 콘텐츠는 논리적인 순서로 제공해야 한다
+                                    &CenterDot; 콘텐츠는 제목과 내용을 연결하여 논리적인 순서로 내용을 이해하기 쉽게 제공해야 한다.
                                 </p>
 
                                 <div class="definition">
@@ -1592,7 +1738,7 @@ outline: -webkit-focus-ring-color auto 5px;
                                 <dl class="check-list">
                                     <dt>자동검사방법</dt>
                                     <dd>
-                                        &lt;img&gt;, &lt;input type=”image”&gt;, &lt;area&gt;, &lt;applet&gt; 요소의 alt 속성 유무 체크
+                                        -
                                     </dd>
 
                                     <dt>수동검사방법</dt>
@@ -1602,9 +1748,10 @@ outline: -webkit-focus-ring-color auto 5px;
                                     </dd>
                                 </dl>
                                 <div class="sample">
-                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>공지사항 탭의 논리적 순번을 따른 마크업</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>더보기 버튼이 있는 공지사항 탭의 논리적 순서을 따른 마크업</h5>
                                     <p>
-                                        제목과 내용을 연결하여 제공해 내용을 직관적으로 이해할 수 있게 제공한다.
+                                        더보기 버튼이 존재하는 경우 제목 - 내용 - 더보기 순으로 제공하는 것이 권장된다.
+                                        제목과 내용을 연결하여 제공하게 되므로 내용을 보다 직관적으로 이해할 수 있다.
                                     </p>
                                     <img src="./img/logical.png" alt="공지사항 탭의 논리적 순번을 따른 마크업">
 
@@ -1672,7 +1819,6 @@ outline: -webkit-focus-ring-color auto 5px;
 &lt;/div&gt;
                                     </code></pre>
                                 </div>
-
                             </div>
                         </div>
 
@@ -1715,9 +1861,9 @@ outline: -webkit-focus-ring-color auto 5px;
                                 </dl>
 
                                 <div class="sample">
-                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>동영상 콘텐츠의 자동 재생 금지</h5>
+                                    <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>제목과 데이터를 알기 쉽게 마크업 한 표의 구성</h5>
                                     <p>
-                                        - 마우스 클릭하거나 키보드로 접근 후 선택을 해야 동영상이 실행되도록 영상 콘텐츠를 구현하고 있어 배경음으로 인한 방해가 없도록 한다
+                                        - 적절한 &lt;th&gt;, &lt;td&gt; 사용과 scope 속성의 제공으로 표의 정보를 이해하기 쉽다.
                                     </p>
 
                                     <img src="./img/table.png" alt="소시지 동영상이 정지된 이미지"  >
@@ -1922,7 +2068,7 @@ outline: -webkit-focus-ring-color auto 5px;
                                 <div class="sample">
                                     <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>고객센터 > FAQ 검색 인풋창의 레이블 제공</h5>
                                     <p>
-                                        -사용자의 입력, 선택을 요구하는 입력서식에는 그에 대한 제목, 즉 레이블을 제공해야 한다.<br>
+                                        - 사용자의 입력, 선택을 요구하는 입력서식에는 그에 대한 제목, 즉 레이블을 제공해야 한다.<br>
                                         - &lt;label&gt;의 for 속성과 서식의 id 값을 일치 시킨다.<br>
                                         - &lt;label&gt;을 사용할 수 없는 특수한 경우 해당 요소에 title 속성을 부여한다.
 
@@ -2054,12 +2200,12 @@ outline: -webkit-focus-ring-color auto 5px;
                                 <div class="sample">
                                     <h5><img src="./img/example-icon.png" alt="예시 아이콘" class="example-icon"> <em class="lotte-red02">예시 : </em>특수문자 변환 표기</h5>
                                     <p>
-                                        - 텍스트 및 URL에서 사용한 특수문자(<,>,&)는 Entity코드로 변환하여 사용해야 한다.<br>
+                                        - 텍스트 및 URL에서 사용한 특수문자(&lt; , &gt; , &amp;)는 Entity코드로 변환하여 사용해야 한다.<br>
                                         - Entity 코드로 표현된 특수문자는 대부분의 브라우저에서 문제없이 출력된다.<br>
                                         - 대표적인 오류 유형<br>
-                                        &emsp;a. `꺽쇠기호 < ,> 등을 Entity로 처리하지 않는 경우 브라우저들은 이것을 HTML Tag의 시작이나 끝으로 인식할 수 있음  <br>
-                                        &emsp;b. 따옴표 “ “는 HTML 속성의 값이 시작되거나 끝난 것으로 인식할 수 있음<br>
-                                        &emsp;c. & 기호는 Entity 기호의 시작으로 오인할 수 있음<br>
+                                        &emsp;a. 꺽쇠기호 &lt; , &gt; 등을 Entity로 처리하지 않는 경우 브라우저들은 이것을 HTML Tag의 시작이나 끝으로 인식할 수 있음  <br>
+                                        &emsp;b. 따옴표 &quot; &quot; 는 HTML 속성의 값이 시작되거나 끝난 것으로 인식할 수 있음<br>
+                                        &emsp;c. &amp; 기호는 Entity 기호의 시작으로 오인할 수 있음<br>
                                         - 이와 같은 이유로 Entity 코드로 사용하지 않는 경우 W3C Validator는 오류메시지로 출력한다.<br>
                                         <a href="https://www.digitalmediaminute.com/reference/entity/index.php"> 참고 : XHTML Character Entity Reference 보기 </a>
                                     </p>
