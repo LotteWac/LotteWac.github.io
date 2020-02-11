@@ -399,7 +399,7 @@ button:focus{border:1px dotted #e1e1e1!important;}
 .wac-guide.mobile #wac-app h4.active,
 .wac-guide .container .contents .article > div[id^="item"] > h4.active{color: #dd0129; border-bottom:0;}
 .wac-guide.mobile #wac-app h4.active::after,
-.wac-guide .container .contents .article > div[id^="item"] > h4.active:after{position: absolute; content: ''; display: block; width: 90%; left: 5%; height: 2px; margin: 0 auto; background: #eee; margin-top: 7px;}
+.wac-guide .container .contents .article > div[id^="item"] > h4.active:after{position: absolute; content: ''; display: block; width: 95%; left: 2.5%; height: 2px; margin: 0 auto; background: #eee; margin-top: 7px;}
 
 .wac-guide.mobile .item > h4 i,
 .wac-guide .container .contents .article > div[id^="item"] > h4 i{width: 20px; height: 20px; font-size: 35px; color: #6f6f6f; position: absolute; right: 13px; top:50%; margin-top: -10px; line-height: 1;}
