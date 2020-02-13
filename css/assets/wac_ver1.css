@@ -526,7 +526,9 @@ button:focus{border:1px dotted #e1e1e1!important;}
 .wac-guide.mobile #wac-device dd{font-size: 18px; margin: 15px 0;}
 .wac-guide.mobile #wac-device dd img{width: 100%; max-width: 860px;}
 .wac-guide.mobile #wac-device dd.link-line{text-align: center;}
-.wac-guide.mobile #wac-device dd.link-line a{width: 280px; height: 45px;font-size: 18px; text-align: left; padding-top: 3px; background: url(../../img/link-arrow.png) no-repeat 248px 12px #6a4613;}
+
+.wac-guide.mobile #wac-device dd.link-line a.iphone{width: 280px; height: 45px;font-size: 18px; text-align: left; padding-top: 3px; background: url(../../img/link-arrow.png) no-repeat 248px 14px #6a4613;background-size: 10px;}
+.wac-guide.mobile #wac-device dd.link-line a.android{width: 330px; height: 45px;font-size: 18px; text-align: left; padding-top: 3px; background: url(../../img/link-arrow.png) no-repeat 298px 14px #6a4613;background-size: 10px;}
 
 .wac-guide.mobile #wac-app .item{margin-top: 20px;}
 .wac-guide.mobile #wac-app .item .sample > img{max-width: 100%;}
@@ -535,11 +537,10 @@ button:focus{border:1px dotted #e1e1e1!important;}
 
 .wac-guide.mobile #wac-assistive{padding-bottom: 100px;}
 .wac-guide.mobile #wac-assistive .item h4{margin-bottom: 0;}
-.wac-guide.mobile #wac-assistive .item p{margin-bottom:10px }
-.wac-guide.mobile #wac-assistive .item p:before{display: inline; content: '+ '; }
+.wac-guide.mobile #wac-assistive .item p{margin-bottom:10px; font-size: 18px; }
 
 .wac-guide.mobile #wac-assistive .item li{display:inline;}
-.wac-guide.mobile #wac-assistive .item li a{display:inline-block; background: #043b80; padding: 2px 10px;  margin-bottom: 10px; margin-right: 15px; color: #fff; font-size: 13px;}
+.wac-guide.mobile #wac-assistive .item li a{display:inline-block; width: 300px; height:45px; padding: 3px 20px;  margin-bottom: 10px; margin-right: 15px; color: #fff; font-size: 18px; background: url(../../img/link-arrow.png) no-repeat 268px 14px #043b80;background-size: 10px;}
 .wac-guide.mobile #wac-assistive .item li .tooltip.bottom .tooltip-arrow{border-bottom-color:#589ecc!important;}
 .wac-guide.mobile #wac-assistive .item li .tooltip.top .tooltip-arrow{border-top-color:#589ecc!important;}
 .wac-guide.mobile #wac-assistive .item li .tooltip.right .tooltip-arrow{border-right-color:#589ecc!important;}
